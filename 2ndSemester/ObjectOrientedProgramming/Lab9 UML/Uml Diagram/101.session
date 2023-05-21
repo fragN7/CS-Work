@@ -1,0 +1,21 @@
+window_sizes 1800 892 450 1344 838 0
+
+diagrams
+  active  classdiagram_ref 128101 // class
+    1332 776 110 A4 0 0
+end
+show_stereotypes
+selected class_ref 129125 // Event_Service
+open
+  classview_ref 128229 // domain
+  
+package_ref 128357 // errors
+  classview_ref 128485 // repo
+  classview_ref 128613 // service
+  classview_ref 128741 // validation
+  classview_ref 128869 // tests
+  classview_ref 128997 // ui
+  
+package_ref 130149 // main
+end
+end

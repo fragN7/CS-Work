@@ -1,0 +1,3 @@
+C:/Users/Alen/Documents/UBB Docs/DataStructures/Lab1/Stack/cmake-build-debug/CMakeFiles/Stack.dir
+C:/Users/Alen/Documents/UBB Docs/DataStructures/Lab1/Stack/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Alen/Documents/UBB Docs/DataStructures/Lab1/Stack/cmake-build-debug/CMakeFiles/rebuild_cache.dir

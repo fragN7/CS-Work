@@ -1,0 +1,43 @@
+2)
+
+4) x = e^(-t)(c1*cos(t/2) + e^(t)(c2*sin(t/2))
+5) 
+
+
+
+
+
+
+1) sint d/dt = cost
+cost d/dt = -sint
+-sint d/dt = -cost
+-cost d/dt = sint
+
+sint - sint = 0
+ is ok
+
+
+cost d/dt = -sint
+-sint d/dt = -cost
+-cost d/dt = sint
+sint d/dt = -cost 
+
+-cost - cost = 0
+-2cost = 0
+cost = 0 false
+
+sinht d/dt = cosht
+cosht d/dt = sinht
+sinht d/dt = cosht
+cosht d/dt = sinht
+
+sinht - sinht = 0
+ok
+
+cosht d/dt = sinht
+sinht d/dt = cosht
+cosht d/dt = sinht
+sinht d/dt = cosht
+
+cosht - cosht = 0 
+ok

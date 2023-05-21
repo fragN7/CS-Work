@@ -1,0 +1,270 @@
+format 224
+"errors" // a8-9-913-Iaguta-Alen-Mihael::errors
+  revision 1
+  modified_by 101 "Alen"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  cpp_h_dir "C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/errors/"
+  cpp_src_dir "C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/errors/"
+  classview 128357 "errors"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 128229 "RepoError"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128101 // <generalisation>
+	relation 128101 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 128101 // <generalisation>
+	  b parent class_ref 128357 // typedef1
+      end
+
+      attribute 128741 "message"
+	private explicit_type "std::string"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 130149 "RepoError"
+	cpp_inline public explicit_return_type ""
+	nparams 1
+	  param in name "message" explicit_type "std::string"
+	cpp_decl "    ${comment}${inline}explicit ${name}${(}${t0} ${p0}${v0}${)}${volatile}${throw}${abstract} :message(std::move(message)) {};
+"
+	
+	
+	
+	
+      end
+
+      operation 130277 "get_message"
+	cpp_inline public explicit_return_type "std::string"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract} { return this->message; };
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 128357 "typedef1"
+      visibility package stereotype "typedef" explicit_base_type "std::exception"
+      cpp_decl "${comment}typedef ${type} ${name};
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 128485 "ValidError"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128229 // <generalisation>
+	relation 128229 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 128229 // <generalisation>
+	  b parent class_ref 128357 // typedef1
+      end
+
+      attribute 128869 "message"
+	private explicit_type "std::string"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 130405 "ValidError"
+	cpp_inline public explicit_return_type ""
+	nparams 1
+	  param in name "message" explicit_type "std::string"
+	cpp_decl "    ${comment}${inline}explicit ${name}${(}${t0} ${p0}${v0}${)}${volatile}${throw}${abstract} :message(std::move(message)) {};
+"
+	
+	
+	
+	
+      end
+
+      operation 130533 "get_message"
+	cpp_inline public explicit_return_type "std::string"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract} { return this->message; };
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 128613 "UserError"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128357 // <generalisation>
+	relation 128357 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 128357 // <generalisation>
+	  b parent class_ref 128357 // typedef1
+      end
+
+      attribute 128997 "message"
+	private explicit_type "std::string"
+	cpp_decl "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 130661 "UserError"
+	cpp_inline public explicit_return_type ""
+	nparams 1
+	  param in name "message" explicit_type "std::string"
+	cpp_decl "    ${comment}${inline}explicit ${name}${(}${t0} ${p0}${v0}${)}${volatile}${throw}${abstract} :message(std::move(message)) {};
+"
+	
+	
+	
+	
+      end
+
+      operation 130789 "get_message"
+	cpp_inline public explicit_return_type "std::string"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract} { return this->message; };
+"
+	
+	
+	
+	
+      end
+    end
+  end
+
+  deploymentview 128229 "errors"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 128229 "exceptions"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 128357 // typedef1
+	class_ref 128229 // RepoError
+	class_ref 128485 // ValidError
+	class_ref 128613 // UserError
+      end
+    end
+  end
+end

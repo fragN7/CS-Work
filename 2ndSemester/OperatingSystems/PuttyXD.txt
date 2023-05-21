@@ -1,0 +1,15 @@
+A file containg the following format is given: Firstname Lastname grade1 grade 2 ... graden
+
+Using AWK obtain the average grade of each line and display the fisrtname,
+the lastname and the average of the lines where the average is below a
+threshold. The threshold will be given as a predifined variable in the
+command line.
+
+--------------------------------------------------------------------------------
+Using GREP display on the all lines from a file that contain a number of
+characters witch is not a multiple of 5.
+
+--------------------------------------------------------------------------------
+Using SED delete al lines from a file that contain an odd number of even
+digits.
+

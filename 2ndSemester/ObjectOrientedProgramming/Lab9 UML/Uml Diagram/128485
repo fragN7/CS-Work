@@ -1,0 +1,414 @@
+format 224
+"repo" // a8-9-913-Iaguta-Alen-Mihael::repo
+  revision 1
+  modified_by 101 "Alen"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  cpp_h_dir "C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/repo/"
+  cpp_src_dir "C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/repo/"
+  classview 128485 "repo"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 128741 "Event_Repo"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128485 // events (<directional composition>)
+	relation 128485 *-->
+	  stereotype "std::vector"
+	  a role_name "events" protected
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 128485 // events (<directional composition>)
+	  b parent class_ref 128101 // Event
+      end
+
+      operation 130917 "find"
+	preserve_cpp_body_indent private explicit_return_type "int"
+	nparams 1
+	  param in name "link" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}const ${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Event finder by link
+/ \\param link Unique identifier
+/ \\return The event's index if it's found, -1 otherwise"
+      end
+
+      operation 131045 "Event_Repo"
+	cpp_defaulted public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${inline}${name}${(}${)}${volatile}${throw}${abstract};
+"
+	
+	
+	
+	
+	comment "/ Event Repo constructor
+/ \\param dynamic_array Inherited from Array class"
+      end
+
+      operation 131173 "add"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "event" type class_ref 128101 // Event
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Adds an event to the dynamic array
+/ \\param event Event to be added"
+      end
+
+      operation 131301 "remove"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "link" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}const ${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Removes an event from the dynamic array
+/ \\param link Link from the event to be removed"
+      end
+
+      operation 131429 "update"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "event" type class_ref 128101 // Event
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Updates and event from the dynamic array
+/ \\param event The new event"
+      end
+
+      operation 131557 "get_event_number"
+	preserve_cpp_body_indent public explicit_return_type "unsigned long long"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Number of events getter
+/ \\return Number of events"
+      end
+
+      operation 131685 "get_all_events"
+	preserve_cpp_body_indent public explicit_return_type "std::vector<Event>"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ All events getter
+/ \\return All events"
+      end
+
+      operation 131813 "operator []"
+	cpp_inline public return_type class_ref 128101 // Event
+	nparams 1
+	  param in name "index" explicit_type "int"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} & ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract} {return events[index];};
+"
+	
+	
+	
+	
+      end
+
+      operation 131941 "file_write"
+	cpp_virtual cpp_inline public explicit_return_type "void"
+	nparams 1
+	  param in name "file_name" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract} {};
+"
+	
+	
+	
+	
+      end
+
+      operation 132069 "file_write_txt"
+	preserve_cpp_body_indent cpp_virtual public explicit_return_type "void"
+	nparams 1
+	  param in name "file_name" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 132197 "file_read"
+	cpp_virtual cpp_inline public explicit_return_type "void"
+	nparams 1
+	  param in name "file_name" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract} {};
+"
+	
+	
+	
+	
+      end
+
+      operation 132325 "file_read_txt"
+	preserve_cpp_body_indent cpp_virtual public explicit_return_type "void"
+	nparams 1
+	  param in name "file_name" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 132453 "file_open"
+	cpp_virtual cpp_inline public explicit_return_type "void"
+	nparams 1
+	  param in name "file_name" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}const ${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract} {};
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 128869 "Event_CSV_Repo"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128613 // <generalisation>
+	relation 128613 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 128613 // <generalisation>
+	  b parent class_ref 128741 // Event_Repo
+      end
+
+      operation 132581 "file_write"
+	preserve_cpp_body_indent cpp_override public explicit_return_type "void"
+	nparams 1
+	  param in name "file_name" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 132709 "file_read"
+	preserve_cpp_body_indent cpp_override public explicit_return_type "void"
+	nparams 1
+	  param in name "file_name" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 132837 "file_open"
+	cpp_override public explicit_return_type "void"
+	nparams 1
+	  param in name "file_name" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	
+	
+	
+	
+      end
+    end
+
+    class 128997 "Event_HTML_Repo"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128741 // <generalisation>
+	relation 128741 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 128741 // <generalisation>
+	  b parent class_ref 128741 // Event_Repo
+      end
+
+      operation 132965 "file_write"
+	preserve_cpp_body_indent cpp_override public explicit_return_type "void"
+	nparams 1
+	  param in name "file_name" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 133093 "file_open"
+	cpp_override public explicit_return_type "void"
+	nparams 1
+	  param in name "file_name" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	
+	
+	
+	
+      end
+    end
+  end
+
+  deploymentview 128357 "repo"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 128357 "repository"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 128741 // Event_Repo
+	class_ref 128869 // Event_CSV_Repo
+	class_ref 128997 // Event_HTML_Repo
+      end
+    end
+  end
+end

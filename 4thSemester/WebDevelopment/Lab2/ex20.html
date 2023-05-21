@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arsenal</title>
+    <style>
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+        }
+        .menu li {
+            color: transparent;
+            text-shadow: 0 0 10px #000;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .menu li:hover {
+            text-shadow: 0 0 0 #000;
+            transform: scale(1.5);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<ul class="menu">
+    <li>Arsenal</li>
+    <li>Will</li>
+    <li>Win</li>
+    <li>The</li>
+    <li>League</li>
+</ul>
+</body>
+</html>

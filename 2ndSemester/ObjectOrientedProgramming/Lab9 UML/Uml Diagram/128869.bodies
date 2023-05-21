@@ -1,0 +1,27 @@
+class Event_CSV_Repo
+!!!132581.cpp!!!	file_write(in file_name : std::string) : void
+
+
+    std::ofstream file;
+    file.open(file_name, std::ofstream::out | std::ofstream::trunc);
+    file.close();
+    file.open(file_name);
+
+    for(auto& event : this->events)
+        file << event;
+
+    file.close();
+!!!132709.cpp!!!	file_read(in file_name : std::string) : void
+
+
+    std::ifstream file;
+    file.open(file_name);
+
+    for(auto& old_event : this->events)
+        this->remove(old_event.get_link());
+
+    Event event;
+    while(file >> event)
+        this->add(event);
+
+    file.close();

@@ -1,0 +1,76 @@
+class Event_Repo
+!!!130917.cpp!!!	find(in link : std::string) : int
+
+
+    std::vector<Event> the_events = this->events;
+    for (auto& event : the_events)
+    {
+        if(event.get_link() == link)
+            return &event - &the_events[0];
+    }
+    return -1;
+!!!131173.cpp!!!	add(in event : Event) : void
+
+    if(find(event.get_link()) != -1)
+        throw RepoError("Event already exists");
+    this->events.push_back(event);
+
+    ///this->dynamic_array + event;
+    ///this->dynamic_array = event + this->dynamic_array;
+!!!131301.cpp!!!	remove(in link : std::string) : void
+
+
+    int index = find(link);
+    if (index == -1)
+        throw RepoError("Event doesn't exist");
+    this->events.erase(this->events.begin() + index);
+
+!!!131429.cpp!!!	update(in event : Event) : void
+
+
+    int index = find(event.get_link());
+    if (index == -1)
+        throw RepoError("Event doesn't exist");
+    this->events[index] = event;
+
+!!!131557.cpp!!!	get_event_number() : unsigned long long
+
+
+    return this->events.size();
+!!!131685.cpp!!!	get_all_events() : std::vector<Event>
+
+
+    return this->events;
+!!!132069.cpp!!!	file_write_txt(in file_name : std::string) : void
+
+
+    std::ofstream file;
+    file.open(file_name, std::ofstream::out | std::ofstream::trunc);
+    file.close();
+    file.open(file_name);
+    for(auto& event: events) {
+        file << event;
+    }
+    file.close();
+!!!132325.cpp!!!	file_read_txt(in file_name : std::string) : void
+
+
+    std::ifstream file;
+    file.open(file_name);
+
+    for(auto& old_event : this->events)
+        this->remove(old_event.get_link());
+
+    Event event;
+    while(file >> event)
+    {
+        try {
+            Event_Validation::validate_event(event.get_link(), event.get_title(), event.get_description(), event.get_date_time());
+            this->add(event);
+        }
+        catch(ValidError& ve) {
+            std::cout << ve.get_message();
+        }
+    }
+
+    file.close();

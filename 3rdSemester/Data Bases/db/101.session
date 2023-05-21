@@ -1,0 +1,9 @@
+window_sizes 1800 892 450 1344 706 128
+
+show_stereotypes
+selected classview_ref 128101 // Provider
+open
+  
+  package_ref 128101 // lol
+end
+end

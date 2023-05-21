@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arsenal</title>
+    <style>
+        body {
+            background-image: url("Resources/bg1.jpg");
+            background-size: cover;
+            transition: background-image 2s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+
+<button onclick="changeBackground(); return false;">Change Background</button>
+<button onclick="changeLinks()">Change Links</button>
+
+<ul>
+    <li><a href="https://www.google.com">Google</a></li>
+    <li><a href="https://www.wikipedia.org">Wikipedia</a></li>
+    <li><a href="https://www.nytimes.com">The New York Times</a></li>
+    <li><a href="https://www.github.com">GitHub</a></li>
+    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+    <li><a href="https://www.youtube.com">YouTube</a></li>
+    <li><a href="https://www.reddit.com">Reddit</a></li>
+    <li><a href="https://www.amazon.com">Amazon</a></li>
+    <li><a href="https://www.netflix.com">Netflix</a></li>
+    <li><a href="https://www.twitter.com">Twitter</a></li>
+</ul>
+
+<script>
+    let backgrounds = ["Resources/bg1.jpg", "Resources/bg2.jpg", "Resources/bg3.jpg", "Resources/bg4.jpg", "Resources/bg5.jpg"];
+    let currentBg = 0;
+
+    function changeBackground() {
+        currentBg = (currentBg + 1) % backgrounds.length;
+        document.body.style.backgroundImage = "url('" + backgrounds[currentBg] + "')";
+    }
+
+    let colors = ["red", "blue", "green", "yellow", "orange"];
+    let fontWeight = ["bold", "light", "thin"];
+    let textDecoration = ["solid", "wavy", "dashed", "double"];
+
+    function get_random (list) {
+        return list[Math.floor((Math.random() * list.length))];
+    }
+
+    function changeLinks() {
+        let links = document.getElementsByTagName("a");
+        for (let i = 0; i < links.length; i++) {
+            links[i].style.color = get_random(colors);
+            links[i].style.fontWeight = get_random(fontWeight);
+            links[i].style.textDecoration = get_random(textDecoration);
+        }
+    }
+</script>
+</body>
+</html>

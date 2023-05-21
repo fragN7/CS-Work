@@ -1,0 +1,34 @@
+a not b:
+^[^b]*a+[^b]*$
+
+A B C /bin/echo:
+"A\n" exec call replaces process, cuz its succesfull
+echo will print A and also new line character
+
+pipe(p) dup2(p[1], 1):
+dup2(p[0], 0)
+
+risk on mutex threads:
+risk of deadlock cuz every mutex blocks the other mutex
+
+barrier:
+T = N1 = N2 = N3 = 3, number of threads == T and everything
+
+3 process fifo:
+first rdonly then wronly
+
+n++ add to code:
+initialize and lock mutexes 
+
+hard-link:
+Because inodes are unique to a filesystem,
+ and hard links are mappings of name:inode,
+ you cannot create links across filesystems.
+
+singur fifo citire:
+la final de cod gen lol
+
+
+
+
+

@@ -1,0 +1,70 @@
+format 224
+
+classcanvas 128101 class_ref 128101 // Event
+  classdiagramsettings member_max_width 0 end
+  xyz 223.8 287.6 2000
+end
+classcanvas 128229 class_ref 129509 // UserInterface
+  classdiagramsettings member_max_width 0 end
+  xyz 646.9 322.4 2000
+end
+classcanvas 128357 class_ref 129381 // Testing
+  classdiagramsettings member_max_width 0 end
+  xyz 444.5 362.3 2000
+end
+classcanvas 128485 class_ref 129253 // Event_Validation
+  classdiagramsettings member_max_width 0 end
+  xyz 703.6 3.6 2005
+end
+classcanvas 128613 class_ref 128741 // Event_Repo
+  classdiagramsettings member_max_width 0 end
+  xyz 187.7 -4 2010
+end
+classcanvas 128869 class_ref 128869 // Event_CSV_Repo
+  classdiagramsettings member_max_width 0 end
+  xyz 25.3 11.8 2016
+end
+classcanvas 129125 class_ref 128997 // Event_HTML_Repo
+  classdiagramsettings member_max_width 0 end
+  xyz 19.8 203.4 2016
+end
+classcanvas 129381 class_ref 129125 // Event_Service
+  classdiagramsettings member_max_width 0 end
+  xyz 413.5 13.4 3005
+end
+relationcanvas 128741 relation_ref 128485 // <directional composition>
+  from ref 128613 z 2011 stereotype "<<:vector>>" xyz 270.5 264.5 2011 to ref 128101
+  role_a_pos 310 280 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128997 relation_ref 128613 // <generalisation>
+  from ref 128869 z 2017 to ref 128613
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129253 relation_ref 128741 // <generalisation>
+  from ref 129125 z 2017 to ref 128613
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129509 relation_ref 128869 // <unidirectional association>
+  from ref 129381 z 3006 to ref 128613
+  role_a_pos 320 113 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129637 relation_ref 128997 // <directional composition>
+  from ref 129381 z 3006 to ref 128485
+  role_a_pos 624 132 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129765 relation_ref 129125 // <directional composition>
+  from ref 128229 z 3006 to ref 129381
+  role_a_pos 633 296 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129893 relation_ref 129253 // <directional composition>
+  from ref 128229 z 3006 to ref 129381
+  role_a_pos 605 276 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+end

@@ -1,0 +1,12 @@
+Write a shell script that receives as command line arguments a vaid username
+followed by a list of directories.
+
+The script will display all the files form the directories given as command
+line arguments that belong to the user given as the first argument.
+
+
+
+okish All input data must be validated.
+
+okish Apropriate messages will be displayed on the console in the case of invalid
+data or unexpected events.

@@ -1,0 +1,2341 @@
+[Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{}
+Execution Stack:
+[int v; v = 10; (while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{}
+Execution Stack:
+[v = 10; (while(v>0)Print(v); v = v - 1), int v]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{}
+Execution Stack:
+[v = 10; (while(v>0)Print(v); v = v - 1), int v]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=0}
+Execution Stack:
+[v = 10; (while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=0}
+Execution Stack:
+[v = 10; (while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=0}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = 10]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=0}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = 10]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+Symbol Table:
+{v=0}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+Symbol Table:
+{v=0}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+Symbol Table:
+{v=0}
+Execution Stack:
+[]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{}
+Execution Stack:
+[int v; v = 10; (while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{}
+Execution Stack:
+[v = 10; (while(v>0)Print(v); v = v - 1), int v]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{}
+Execution Stack:
+[v = 10; (while(v>0)Print(v); v = v - 1), int v]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=0}
+Execution Stack:
+[v = 10; (while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=0}
+Execution Stack:
+[v = 10; (while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=0}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = 10]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=0}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = 10]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=10}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=9}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=8}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=7}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=6}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=5}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=4}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=3}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=2}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), Print(v); v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1, Print(v)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+Symbol Table:
+{v=1}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1), v = v - 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+Symbol Table:
+{v=0}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+Symbol Table:
+{v=0}
+Execution Stack:
+[(while(v>0)Print(v); v = v - 1)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+Symbol Table:
+{v=0}
+Execution Stack:
+[]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+]

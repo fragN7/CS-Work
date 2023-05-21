@@ -1,0 +1,235 @@
+[Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{}
+Execution Stack:
+[int a; int b; a = 2 + 3 * 5; b = a + 1; Print(b)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{}
+Execution Stack:
+[int b; a = 2 + 3 * 5; b = a + 1; Print(b), int a]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{}
+Execution Stack:
+[int b; a = 2 + 3 * 5; b = a + 1; Print(b), int a]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{a=0}
+Execution Stack:
+[int b; a = 2 + 3 * 5; b = a + 1; Print(b)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{a=0}
+Execution Stack:
+[int b; a = 2 + 3 * 5; b = a + 1; Print(b)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{a=0}
+Execution Stack:
+[a = 2 + 3 * 5; b = a + 1; Print(b), int b]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{a=0}
+Execution Stack:
+[a = 2 + 3 * 5; b = a + 1; Print(b), int b]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{a=0, b=0}
+Execution Stack:
+[a = 2 + 3 * 5; b = a + 1; Print(b)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{a=0, b=0}
+Execution Stack:
+[a = 2 + 3 * 5; b = a + 1; Print(b)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{a=0, b=0}
+Execution Stack:
+[b = a + 1; Print(b), a = 2 + 3 * 5]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{a=0, b=0}
+Execution Stack:
+[b = a + 1; Print(b), a = 2 + 3 * 5]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{a=17, b=0}
+Execution Stack:
+[b = a + 1; Print(b)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{a=17, b=0}
+Execution Stack:
+[b = a + 1; Print(b)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{a=17, b=0}
+Execution Stack:
+[Print(b), b = a + 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{a=17, b=0}
+Execution Stack:
+[Print(b), b = a + 1]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{a=17, b=18}
+Execution Stack:
+[Print(b)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[]
+Symbol Table:
+{a=17, b=18}
+Execution Stack:
+[Print(b)]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+][Program State with ID:1
+--------------------------------------------------------
+Output List:
+[18]
+Symbol Table:
+{a=17, b=18}
+Execution Stack:
+[]
+File Table:
+{}
+Heap Table:
+{}
+--------------------------------------------------------
+]

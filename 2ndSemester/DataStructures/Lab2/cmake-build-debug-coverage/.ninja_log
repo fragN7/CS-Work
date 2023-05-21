@@ -1,0 +1,7 @@
+# ninja log v5
+12	123	6709462953152450	CMakeFiles/Lab2.dir/ListIterator.cpp.obj	465bbc4622db7174
+14	303	6709469235785624	CMakeFiles/Lab2.dir/IteratedList.cpp.obj	2a715c09b427bc81
+9	415	6709462956052432	CMakeFiles/Lab2.dir/App.cpp.obj	8c4958546089a51e
+396	514	6709471709608854	Lab2.exe	2330b667fb62518f
+15	438	6709462956252447	CMakeFiles/Lab2.dir/ShortTest.cpp.obj	8bfa6381f92bbc72
+2	395	6709471708509092	CMakeFiles/Lab2.dir/ExtendedTest.cpp.obj	b0686101bbdc3883

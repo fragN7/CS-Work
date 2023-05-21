@@ -1,0 +1,3 @@
+C:/Users/Alen/Documents/UBB/2nd Semester/DataStructures/Lab4/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Alen/Documents/UBB/2nd Semester/DataStructures/Lab4/cmake-build-debug/CMakeFiles/Lab4.dir
+C:/Users/Alen/Documents/UBB/2nd Semester/DataStructures/Lab4/cmake-build-debug/CMakeFiles/rebuild_cache.dir

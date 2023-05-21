@@ -1,0 +1,188 @@
+format 224
+"validation" // a8-9-913-Iaguta-Alen-Mihael::validation
+  revision 1
+  modified_by 101 "Alen"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  cpp_h_dir "C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/validation/"
+  cpp_src_dir "C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/validation/"
+  classview 128741 "validation"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 129253 "Event_Validation"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 137445 "validate_title"
+	class_operation preserve_cpp_body_indent private explicit_return_type "void"
+	nparams 1
+	  param in name "title" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}const ${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Title Validation
+/ \\param title Title"
+      end
+
+      operation 137573 "validate_description"
+	class_operation preserve_cpp_body_indent private explicit_return_type "void"
+	nparams 1
+	  param in name "description" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}const ${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Description validator
+/ \\param description Description"
+      end
+
+      operation 137701 "validate_date_time"
+	class_operation preserve_cpp_body_indent private explicit_return_type "void"
+	nparams 1
+	  param in name "date_time" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}const ${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Date and time validator
+/ \\param date_time Date and time"
+      end
+
+      operation 137829 "validate_link"
+	class_operation preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "link" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}const ${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Link validator (ID)
+/ \\param link Link"
+      end
+
+      operation 137957 "validate_event"
+	class_operation preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 4
+	  param in name "link" explicit_type "std::string"
+	  param in name "description" explicit_type "std::string"
+	  param in name "title" explicit_type "std::string"
+	  param in name "date_time" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}const ${t0} & ${p0}${v0}, const ${t1} & ${p1}${v1}, const ${t2} & ${p2}${v2}, const ${t3} & ${p3}${v3}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Event Validator (Whole event)
+/ \\param link Link
+/ \\param title Title
+/ \\param description Description
+/ \\param date_time Date and time"
+      end
+    end
+  end
+
+  deploymentview 128869 "validation"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 128869 "validation"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 129253 // Event_Validation
+      end
+    end
+  end
+end

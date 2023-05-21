@@ -1,0 +1,37 @@
+class Event_HTML_Repo
+!!!132965.cpp!!!	file_write(in file_name : std::string) : void
+
+
+    std::ofstream file;
+    file.open(file_name, std::ofstream::out | std::ofstream::trunc);
+    file.close();
+    file.open(file_name);
+
+    file << "<!DOCTYPE html> \n";
+    file << "<html> \n";
+    file << "<head> \n";
+    file << "<title>Events</title> \n";
+    file << "</head> \n";
+    file << "<body> \n";
+    file << "<table border=1> \n";
+    file << "<tr> \n";
+    file << "<td>Link</td> \n";
+    file << "<td>Title</td> \n";
+    file << "<td>Description</td> \n";
+    file << "<td>Date & Time</td> \n";
+    file << "<td>Number of people</td> \n";
+    file << "</tr> \n";
+
+    for (auto& event : this->events){
+        file << "<tr>\n";
+        file << "<td><a href=\"" << event.get_link() << "\">Link</a></td> \n";
+        file << "<td>\n" << event.get_title() <<"</td> \n";
+        file << "<td>\n" << event.get_description() <<"</td> \n";
+        file << "<td>\n" << event.get_date_time() <<"</td> \n";
+        file << "<td>\n" << event.get_people_number() <<"</td> \n";
+        file << "</tr>\n";
+    }
+
+    file << "</table>";
+    file << "</body>";
+    file << "</html> \n";

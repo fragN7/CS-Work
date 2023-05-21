@@ -1,0 +1,61 @@
+class Event
+!!!128357.cpp!!!	Event(inout link : std::string, inout title : std::string, inout description : std::string, inout date_time : std::string, in people_number : uint)
+    this->link = link;
+    this->title = title;
+    this->description = description;
+    this->date_time = date_time;
+    this->people_number = people_number;
+!!!128485.cpp!!!	get_link() : std::string
+    return link;
+!!!128613.cpp!!!	get_title() : std::string
+    return title;
+!!!128741.cpp!!!	get_description() : std::string
+    return description;
+!!!128869.cpp!!!	get_date_time() : std::string
+    return date_time;
+!!!128997.cpp!!!	get_month() : uint
+
+    std::string new_month;
+    char first_month, second_month;
+
+    first_month = date_time[3];
+    second_month = date_time[4];
+
+    if (first_month == '0')
+        return second_month - '0';
+
+    new_month[0] = first_month;
+    new_month[1] = second_month;
+
+    return stoi(new_month);
+!!!129125.cpp!!!	get_people_number() : uint
+    return people_number;
+!!!129253.cpp!!!	set_link(inout new_link : std::string) : void
+    this->link = new_link;
+!!!129381.cpp!!!	set_title(inout new_title : std::string) : void
+    this->title = new_title;
+!!!129509.cpp!!!	set_description(inout new_description : std::string) : void
+    this->description = new_description;
+!!!129637.cpp!!!	set_date_time(inout new_date_time : std::string) : void
+    this->date_time = new_date_time;
+!!!129765.cpp!!!	set_people_number(in new_people_number : uint) : void
+    this->people_number = new_people_number;
+!!!129893.cpp!!!	operator <<(inout output : std::ostream, in event_to_print : Event) : std::ostream
+
+    output << event_to_print.link << " | " << event_to_print.title << " | " << event_to_print.description << " | " << event_to_print.date_time << " | " << event_to_print.people_number << "\n";
+    return output;
+!!!130021.cpp!!!	operator >>(inout inputStream : std::istream, inout event_to_read : Event) : std::istream
+
+    if (inputStream.eof())
+        inputStream.setstate(std::ios_base::failbit);
+    else
+    {
+        std::getline(inputStream, event_to_read.link, '|');
+        std::getline(inputStream, event_to_read.title, '|');
+        std::getline(inputStream, event_to_read.description, '|');
+        std::getline(inputStream, event_to_read.date_time, '|');
+        std::string people_number;
+        std::getline(inputStream, people_number, '\n');
+        event_to_read.set_people_number(std::stoi(people_number));
+    }
+    return inputStream;

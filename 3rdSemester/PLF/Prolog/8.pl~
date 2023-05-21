@@ -1,0 +1,28 @@
+paranthesis('(').
+paranthesis(')').
+
+check([], 0).
+check([H|T], C) :-
+    H == '(',
+    C1 is C + 1,
+    check(T, C1).
+
+check([H|T], C) :-
+    H == ')',
+    C > 0,
+    C1 is C - 1,
+    check(T, C1).
+
+combinations(N, N, C, C) :- !.
+combinations(N, I, C, R) :-
+    paranthesis(X),
+    N1 is I + 1,
+    combinations(N, N1, [X|C], R).
+
+solution(N, R) :-
+    combinations(N, 0, [], R),
+    check(R, 0).
+
+allsolutions(N, R) :-
+    findall(R1, solution(N, R1), R).
+

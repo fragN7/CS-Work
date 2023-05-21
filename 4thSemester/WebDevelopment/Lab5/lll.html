@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabbed-based Navigation</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tabs {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #ddd;
+    }
+
+    .tabs li {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-bottom: none;
+    }
+
+    .tabs li.active {
+      background-color: #fff;
+      border-bottom: 1px solid #fff;
+    }
+
+    .visited {
+      color: red;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab-content img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<ul class="tabs">
+  <li class="active" data-tab="tab-1">Tab 1</li>
+  <li data-tab="tab-2">Tab 2</li>
+  <li data-tab="tab-3">Tab 3</li>
+  <li data-tab="tab-4">Tab 4</li>
+  <li data-tab="tab-5">Tab 5</li>
+</ul>
+
+<div class="tab-content active" id="tab-1">
+  <div>
+    <img src="Resources/image1.JPG" alt="Image 1">
+    <img src="Resources/image2.JPG" alt="Image 2">
+  </div>
+  <div>
+    <p>No. 8 is my friend which I mentioned</p>
+    <p>Goalie was the ladies man, he had a girlfriend tho</p>
+    <p>Traian Lalescu Resita</p>
+  </div>
+</div>
+
+<div class="tab-content" id="tab-2">
+  <div>
+    <img src="Resources/image3.JPG" alt="Image 3">
+    <img src="Resources/image4.JPG" alt="Image 4">
+  </div>
+  <div>
+    <p>The goalie was a pro goalie</p>
+    <p>I am out of breath</p>
+    <p>Kinda miss the school, my brother goes there now</p>
+  </div>
+</div>
+
+<div class="tab-content" id="tab-3">
+  <div>
+    <img src="Resources/image5.JPG" alt="Image 5">
+    <img src="Resources/image6.JPG" alt="Image 6">
+  </div>
+  <div>
+    <p>Successfully tackled my diriginte</p>
+    <p>He was a good man, everyone hated him, noobs</p>
+    <p>Looking back i should've slide tackled</p>
+  </div>
+</div>
+
+<div class="tab-content" id="tab-4">
+  <div>
+    <img src="Resources/image7.JPG" alt="Image 7">
+    <img src="Resources/image8.JPG" alt="Image 8">
+  </div>
+  <div>
+    <p>Maths teacher is balding</p>
+    <p>That guy with long hair was a good friend</p>
+    <p>At what am I staring fam</p>
+  </div>
+
+</div>
+<div class="tab-content" id="tab-5">
+  <div>
+    <img src="Resources/image9.JPG" alt="Image 9">
+    <img src="Resources/image10.JPG" alt="Image 10">
+  </div>
+  <div>
+    <p>The teachers teaching us some football</p>
+    <p>Second picture teacher wasn't even teaching at my school</p>
+    <p>We got demolished</p>
+  </div>
+</div>
+<script>
+  $(document).ready(function() {
+    // Pojavi prvu
+    $(".tab-content").first().addClass("active");
+
+    let urlParams = new URLSearchParams(window.location.search);
+    let activeTab = urlParams.get('tab');
+    if (activeTab) {
+      $("#" + activeTab).addClass("active");
+      $(".tabs li").removeClass("active");
+      $(".tabs li[data-tab='" + activeTab + "']").addClass("active");
+    }
+
+    $(".tabs li").click(function() {
+      let tab_id = $(this).attr("data-tab");
+
+      let url = new URL(window.location.href);
+      url.searchParams.set("tab", tab_id);
+      window.history.replaceState(null, null, url);
+
+      $(".tabs li").removeClass("active");
+      $(this).addClass("active");
+
+      $(".tab-content").removeClass("active");
+      $("#" + tab_id).addClass("active");
+    });
+
+      $(".tabs li").click(function() {
+        $(this).addClass("visited");
+      });
+
+  });
+
+</script>
+</body>
+</html>

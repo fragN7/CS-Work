@@ -1,0 +1,54 @@
+format 224
+"a8-9-913-Iaguta-Alen-Mihael" // a8-9-913-Iaguta-Alen-Mihael
+  revision 1
+  modified_by 101 "Alen"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  cpp_h_dir "C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/"
+  cpp_src_dir "C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/"
+  package_ref 128229 // domain
+
+  package_ref 128357 // errors
+
+  package_ref 128485 // repo
+
+  package_ref 128613 // service
+
+  package_ref 128741 // validation
+
+  package_ref 128869 // tests
+
+  package_ref 128997 // ui
+
+  package_ref 129125 // cmake-build-debug
+
+  package_ref 129637 // cmake-build-debug-coverage
+
+  package_ref 130149 // main
+end

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+<style>
+    .rectangle {
+        width: 500px;
+        height: 150px;
+        background-color: red;
+        border-radius: 20px;
+        opacity: 50%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        align-items: center;
+        text-align: center;
+        transform: translate(-50%, -50%);
+
+        transition: border-radius 0.2s ease-in-out;
+        transform-origin: top left;
+
+    }
+    .rectangle:hover {
+
+        animation-name: example;
+        animation-duration: 2s;
+
+        border-radius: 0;
+    }
+    @keyframes example {
+        from {background-color: red; rotate: 0deg;}
+        to {background-color: blue; rotate: 180deg;}
+    }
+
+</style>
+<head>
+    <title>Arsenal</title>
+</head>
+<body>
+<div class="rectangle">
+        <h1>Arsenal will win the league</h1>
+        <h2>Fuck all Manchester teams and real madrid</h2>
+</div>
+</body>
+</html>

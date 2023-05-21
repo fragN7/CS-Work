@@ -1,0 +1,338 @@
+format 224
+"service" // a8-9-913-Iaguta-Alen-Mihael::service
+  revision 1
+  modified_by 101 "Alen"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  cpp_h_dir "C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/service/"
+  cpp_src_dir "C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/service/"
+  classview 128613 "service"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 129125 "Event_Service"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128869 // event_repo (<unidirectional association>)
+	relation 128869 --->
+	  a role_name "event_repo" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 128869 // event_repo (<unidirectional association>)
+	  b parent class_ref 128741 // Event_Repo
+      end
+
+      classrelation 128997 // event_validator (<directional composition>)
+	relation 128997 *-->
+	  a role_name "event_validator" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 128997 // event_validator (<directional composition>)
+	  b parent class_ref 129253 // Event_Validation
+      end
+
+      operation 133221 "Event_Service"
+	cpp_inline public explicit_return_type ""
+	nparams 2
+	  param inout name "event_repo" type class_ref 128741 // Event_Repo
+	  param in name "event_validator" type class_ref 129253 // Event_Validation
+	cpp_decl "    ${comment}${inline}${name}${(}${t0} * ${p0}${v0}, ${t1} ${p1}${v1}${)}${volatile}${throw}${abstract} : event_repo(event_repo), event_validator(event_validator){};
+"
+	
+	
+	
+	
+	comment "/ Service constructor with inherited repo and validator
+/ \\param event_repo Repo of events
+/ /// \\param event_validator Validator of the event"
+      end
+
+      operation 133349 "add_event"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 5
+	  param in name "link" explicit_type "std::string"
+	  param in name "title" explicit_type "std::string"
+	  param in name "description" explicit_type "std::string"
+	  param in name "date_time" explicit_type "std::string"
+	  param in name "people_number" explicit_type "uint"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}, ${t2} ${p2}${v2}, ${t3} ${p3}${v3}, ${t4} ${p4}${v4}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Calls the repo and validator to add and validate the event
+/ \\param link Link
+/ \\param title Title
+/ \\param description Description
+/ \\param date_time Date and time
+/ \\param people_number Number of people"
+      end
+
+      operation 133477 "remove_event"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "link" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}const ${t0} & ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Removes the event by link, by calling the repo
+/ \\param link Unique identifier"
+      end
+
+      operation 133605 "update_event"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 5
+	  param in name "link" explicit_type "std::string"
+	  param in name "title" explicit_type "std::string"
+	  param in name "description" explicit_type "std::string"
+	  param in name "date_time" explicit_type "std::string"
+	  param in name "people_number" explicit_type "uint"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}, ${t1} ${p1}${v1}, ${t2} ${p2}${v2}, ${t3} ${p3}${v3}, ${t4} ${p4}${v4}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Updates and event by calling the repo
+/ \\param link Link
+/ \\param title Title
+/ \\param description Description
+/ \\param date_time Date and time
+/ \\param people_number Number of people"
+      end
+
+      operation 133733 "populate_array"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Populates the array with random valid events"
+      end
+
+      operation 133861 "get_number_events_for_month"
+	preserve_cpp_body_indent public explicit_return_type "uint"
+	nparams 1
+	  param in name "month" explicit_type "uint"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Getter for number of events for a given month
+/ \\return Number of events for a given month"
+      end
+
+      operation 133989 "get_number_events"
+	preserve_cpp_body_indent public explicit_return_type "unsigned long long"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Getter for number of events
+/ \\return Number of events"
+      end
+
+      operation 134117 "filter_array"
+	preserve_cpp_body_indent public explicit_return_type "std::vector<Event>"
+	nparams 1
+	  param in name "month" explicit_type "uint"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Sorts array by a certain function"
+      end
+
+      operation 134245 "list_events"
+	preserve_cpp_body_indent public explicit_return_type "std::vector<Event>"
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+	comment "/ Returns the list of events
+/ \\return List of events"
+      end
+
+      operation 134373 "add_to_generic_file"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "file_name" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 134501 "open_file"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "file_name" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 134629 "add_to_file"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "file_name" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      operation 134757 "read_from_file"
+	preserve_cpp_body_indent public explicit_return_type "void"
+	nparams 1
+	  param in name "file_name" explicit_type "std::string"
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${typeprefix}${type} ${name}${(}${t0} ${p0}${v0}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${typeprefix}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+    end
+  end
+
+  deploymentview 128485 "service"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 128485 "service"
+      stereotype "source"
+      cpp_h "#ifndef ${NAMESPACE}_${NAME}_H
+#define ${NAMESPACE}_${NAME}_H
+
+${comment}
+${includes}
+${declarations}
+${namespace_start}
+${definition}
+${namespace_end}
+#endif
+"
+      cpp_src "${comment}
+${includes}
+${namespace_start}
+${members}
+${namespace_end}"
+      associated_elems
+	class_ref 129125 // Event_Service
+      end
+    end
+  end
+end

@@ -1,0 +1,90 @@
+/*
+This is a UI file (.ui.qml) that is intended to be edited in Qt Design Studio only.
+It is supposed to be strictly declarative and only uses a subset of QML. If you edit
+this file manually, you might introduce QML code that is not supported by Qt Design Studio.
+Check out https://doc.qt.io/qtcreator/creator-quick-ui-forms.html for details on .ui.qml files.
+*/
+
+import QtQuick
+import QtQuick.Controls
+import Lab11
+
+Rectangle {
+    width: Constants.width
+    height: Constants.height
+
+    color: Constants.backgroundColor
+    
+    Rectangle {
+        id: rectangle
+        x: 684
+        y: 343
+        width: 200
+        height: 244
+        color: "#ffffff"
+    }
+    
+    Rectangle {
+        id: rectangle1
+        x: 1055
+        y: 343
+        width: 200
+        height: 200
+        color: "#ffffff"
+    }
+    
+    TabButton {
+        id: tabButton
+        x: 934
+        y: 372
+        text: qsTr("Admin Mode")
+    }
+    
+    TabButton {
+        id: tabButton1
+        x: 934
+        y: 452
+        width: 81
+        height: 40
+        text: qsTr("User Mode")
+    }
+    
+    TabButton {
+        id: tabButton2
+        x: 696
+        y: 634
+        width: 83
+        height: 40
+        text: qsTr("Add Event")
+    }
+    
+    TabButton {
+        id: tabButton3
+        x: 797
+        y: 634
+        text: qsTr("Delete Event")
+    }
+    
+    TabButton {
+        id: tabButton4
+        x: 696
+        y: 705
+        text: qsTr("Update Event")
+    }
+    
+    TabButton {
+        id: tabButton5
+        x: 797
+        y: 705
+        text: qsTr("Filter Events")
+    }
+    
+    TabButton {
+        id: tabButton6
+        x: 1121
+        y: 627
+        width: 80
+        height: 40
+        text: qsTr("Start")
+    }
+}

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ "$#" -lt 2 ];then
+    echo "ERROR"
+    exit 1
+fi
+
+number=$1
+shift 1
+
+for file in "$@"
+do
+    echo "${file}:"
+    freq=$(cat "$file" | tr ' ' '\n' | sort | uniq -c | sort -number -r -k 1,1 | awk -v number="$number" '{if($1>number) print $1, $2}')
+    echo $freq
+done
