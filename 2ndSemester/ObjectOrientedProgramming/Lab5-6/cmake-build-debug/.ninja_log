@@ -1,0 +1,9 @@
+# ninja log v5
+19	1917	6719149418944032	CMakeFiles/a5_6_913_Iaguta_Alen_Mihael.dir/main/main.cpp.obj	417a4011d0bfff6e
+58	1134	6713890379443707	CMakeFiles/a5_6_913_Iaguta_Alen_Mihael.dir/validation/validation.cpp.obj	a21e9d4dc65bd6
+3	752	6715063620283464	CMakeFiles/a5_6_913_Iaguta_Alen_Mihael.dir/repo/repository.cpp.obj	5e7463a64a68d1f4
+12	1653	6714845903122361	CMakeFiles/a5_6_913_Iaguta_Alen_Mihael.dir/service/service.cpp.obj	eadbdd5851074e43
+13	968	6714789605296888	CMakeFiles/a5_6_913_Iaguta_Alen_Mihael.dir/domain/domain.cpp.obj	6e6076106e5c58db
+5	1996	6719149419734117	CMakeFiles/a5_6_913_Iaguta_Alen_Mihael.dir/ui/Ui.cpp.obj	c554897b01265601
+24	739	6719149407153320	CMakeFiles/a5_6_913_Iaguta_Alen_Mihael.dir/tests/tests.cpp.obj	569c27b407c90fa6
+1997	2174	6719149421474066	a5_6_913_Iaguta_Alen_Mihael.exe	db4d507d8b91d72e

@@ -1,0 +1,4 @@
+Name:mike Income:321.000000
+Name:michael Income:123.000000
+Name:company Income:2312.000000 Money from investments:321.000000
+Name:some company Income:232.000000 Money from investments:365.000000

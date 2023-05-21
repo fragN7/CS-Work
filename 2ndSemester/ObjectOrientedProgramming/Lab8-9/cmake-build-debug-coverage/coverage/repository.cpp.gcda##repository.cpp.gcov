@@ -1,0 +1,811 @@
+        -:    0:Source:C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/repo/repository.cpp
+        -:    0:Graph:C:\Users\Alen\Documents\GitHub\a8-9-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a8_9_913_Iaguta_Alen_Mihael.dir\repo\repository.cpp.gcno
+        -:    0:Data:C:\Users\Alen\Documents\GitHub\a8-9-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a8_9_913_Iaguta_Alen_Mihael.dir\repo\repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Alen on 16/03/2022.
+        -:    3://
+        -:    4:
+        -:    5:#include <windows.h>
+        -:    6:#include "repository.h"
+        -:    7:#include "../validation/validation.h"
+        -:    8:
+        -:    9:
+function _ZN10Event_Repo4findERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 32 returned 100% blocks executed 86%
+       32:   10:int Event_Repo::find(const std::string& link) {
+        -:   11:
+       32:   12:    std::vector<Event> the_events = this->events;
+       32:   12-block  0
+call    0 returned 32
+branch  1 taken 32 (fallthrough)
+branch  2 taken 0 (throw)
+      113:   13:    for (auto& event : the_events)
+       32:   13-block  0
+call    0 returned 32
+call    1 returned 32
+       95:   13-block  1
+call    2 returned 95
+       81:   13-block  2
+call    3 returned 81
+      113:   13-block  3
+call    4 returned 113
+branch  5 taken 95
+branch  6 taken 18 (fallthrough)
+        -:   14:    {
+       95:   15:        if(event.get_link() == link)
+call    0 returned 95
+branch  1 taken 95 (fallthrough)
+branch  2 taken 0 (throw)
+       95:   15-block  0
+call    3 returned 95
+call    4 returned 95
+branch  5 taken 14 (fallthrough)
+branch  6 taken 81
+       14:   16:            return &event - &the_events[0];
+       14:   16-block  0
+call    0 returned 14
+        -:   17:    }
+       18:   18:    return -1;
+       18:   18-block  0
+       32:   19:}
+       32:   19-block  0
+call    0 returned 32
+    $$$$$:   19-block  1
+call    1 never executed
+        -:   20:
+function _ZN10Event_Repo3addE5Event called 23 returned 70% blocks executed 67%
+       23:   21:void Event_Repo::add(Event event)
+        -:   22:{
+       23:   23:    if(find(event.get_link()) != -1)
+       23:   23-block  0
+call    0 returned 23
+call    1 returned 23
+branch  2 taken 23 (fallthrough)
+branch  3 taken 0 (throw)
+       23:   23-block  1
+call    4 returned 23
+branch  5 taken 7 (fallthrough)
+branch  6 taken 16
+    $$$$$:   23-block  2
+call    7 never executed
+    $$$$$:   23-block  3
+call    8 never executed
+        7:   24:        throw RepoError("Event already exists");
+        7:   24-block  0
+call    0 returned 7
+call    1 returned 7
+call    2 returned 7
+branch  3 taken 7 (fallthrough)
+branch  4 taken 0 (throw)
+        7:   24-block  1
+call    5 returned 7
+call    6 returned 7
+call    7 returned 7
+call    8 returned 0
+    $$$$$:   24-block  2
+call    9 never executed
+    $$$$$:   24-block  3
+    $$$$$:   24-block  4
+call   10 never executed
+       16:   25:    this->events.push_back(event);
+       16:   25-block  0
+call    0 returned 16
+        -:   26:
+        -:   27:    ///this->dynamic_array + event;
+        -:   28:    ///this->dynamic_array = event + this->dynamic_array;
+       16:   29:}
+        -:   30:
+function _ZN10Event_Repo6removeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 67% blocks executed 68%
+        3:   31:void Event_Repo::remove(const std::string& link) {
+        -:   32:
+        3:   33:    int index = find(link);
+        3:   33-block  0
+call    0 returned 3
+        3:   34:    if (index == -1)
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   35:        throw RepoError("Event doesn't exist");
+        1:   35-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   35-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:   35-block  2
+call    9 never executed
+    $$$$$:   35-block  3
+    $$$$$:   35-block  4
+call   10 never executed
+        2:   36:    this->events.erase(this->events.begin() + index);
+        2:   36-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   36-block  1
+    $$$$$:   36-block  2
+        -:   37:
+        2:   38:}
+        2:   38-block  0
+        -:   39:
+function _ZN10Event_Repo6updateE5Event called 6 returned 83% blocks executed 68%
+        6:   40:void Event_Repo::update(Event event) {
+        -:   41:
+        6:   42:    int index = find(event.get_link());
+        6:   42-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   42-block  1
+call    4 returned 6
+    $$$$$:   42-block  2
+call    5 never executed
+    $$$$$:   42-block  3
+call    6 never executed
+        6:   43:    if (index == -1)
+branch  0 taken 1 (fallthrough)
+branch  1 taken 5
+        1:   44:        throw RepoError("Event doesn't exist");
+        1:   44-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   44-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:   44-block  2
+call    9 never executed
+    $$$$$:   44-block  3
+    $$$$$:   44-block  4
+call   10 never executed
+        5:   45:    this->events[index] = event;
+        5:   45-block  0
+call    0 returned 5
+call    1 returned 5
+        -:   46:
+        5:   47:}
+        -:   48:
+function _ZN10Event_Repo14get_all_eventsEv called 13 returned 100% blocks executed 100%
+       13:   49:std::vector<Event> Event_Repo::get_all_events() {
+        -:   50:
+       13:   51:    return this->events;
+       13:   51-block  0
+call    0 returned 13
+        -:   52:}
+        -:   53:
+function _ZN10Event_Repo16get_event_numberEv called 21 returned 100% blocks executed 100%
+       21:   54:unsigned long long Event_Repo::get_event_number() {
+        -:   55:
+       21:   56:    return this->events.size();
+       21:   56-block  0
+call    0 returned 21
+        -:   57:}
+        -:   58:
+function _ZN10Event_Repo14file_write_txtENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   59:void Event_Repo::file_write_txt(std::string file_name) {
+        -:   60:
+    #####:   61:    std::ofstream file;
+    %%%%%:   61-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   62:    file.open(file_name, std::ofstream::out | std::ofstream::trunc);
+    %%%%%:   62-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   63:    file.close();
+    %%%%%:   63-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   64:    file.open(file_name);
+    %%%%%:   64-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   65:    for(auto& event: events) {
+    %%%%%:   65-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:   65-block  1
+call    2 never executed
+    %%%%%:   65-block  2
+call    3 never executed
+    %%%%%:   65-block  3
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:   66:        file << event;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   67:    }
+    #####:   68:    file.close();
+    %%%%%:   68-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   69:}
+    %%%%%:   69-block  0
+call    0 never executed
+    $$$$$:   69-block  1
+call    1 never executed
+        -:   70:
+function _ZN10Event_Repo13file_read_txtENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   71:void Event_Repo::file_read_txt(std::string file_name) {
+        -:   72:
+    #####:   73:    std::ifstream file;
+    %%%%%:   73-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   74:    file.open(file_name);
+    %%%%%:   74-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   75:
+    #####:   76:    for(auto& old_event : this->events)
+    %%%%%:   76-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:   76-block  1
+call    2 never executed
+    %%%%%:   76-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   77:        this->remove(old_event.get_link());
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   77-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   77-block  1
+call    6 never executed
+call    7 never executed
+    $$$$$:   77-block  2
+call    8 never executed
+    $$$$$:   77-block  3
+        -:   78:
+    #####:   79:    Event event;
+    %%%%%:   79-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   80:    while(file >> event)
+    %%%%%:   80-block  0
+    %%%%%:   80-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   80-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   80-block  3
+branch  6 never executed
+branch  7 never executed
+        -:   81:    {
+        -:   82:        try {
+    #####:   83:            Event_Validation::validate_event(event.get_link(), event.get_title(), event.get_description(), event.get_date_time());
+    %%%%%:   83-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   83-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   83-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   83-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   83-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   83-block  5
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+    $$$$$:   83-block  6
+call   19 never executed
+    $$$$$:   83-block  7
+    $$$$$:   83-block  8
+call   20 never executed
+    $$$$$:   83-block  9
+    $$$$$:   83-block 10
+call   21 never executed
+    $$$$$:   83-block 11
+    $$$$$:   83-block 12
+call   22 never executed
+    $$$$$:   83-block 13
+    #####:   84:            this->add(event);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   84-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   84-block  1
+call    6 never executed
+    $$$$$:   84-block  2
+call    7 never executed
+    $$$$$:   84-block  3
+        -:   85:        }
+    =====:   86:        catch(ValidError& ve) {
+    $$$$$:   86-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$:   86-block  1
+call    2 never executed
+    =====:   87:            std::cout << ve.get_message();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   87-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:   87-block  1
+call    6 never executed
+    $$$$$:   87-block  2
+call    7 never executed
+    $$$$$:   87-block  3
+    =====:   88:        }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   88-block  0
+call    3 never executed
+        -:   89:    }
+        -:   90:
+    #####:   91:    file.close();
+    %%%%%:   91-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   92:}
+    %%%%%:   92-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:   92-block  1
+call    2 never executed
+    $$$$$:   92-block  2
+call    3 never executed
+        -:   93:
+function _ZN14Event_CSV_Repo10file_writeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 84%
+        2:   94:void Event_CSV_Repo::file_write(std::string file_name) {
+        -:   95:
+        2:   96:    std::ofstream file;
+        2:   96-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   97:    file.open(file_name, std::ofstream::out | std::ofstream::trunc);
+        2:   97-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   98:    file.close();
+        2:   98-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   99:    file.open(file_name);
+        2:   99-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  100:
+        8:  101:    for(auto& event : this->events)
+        2:  101-block  0
+call    0 returned 2
+call    1 returned 2
+        6:  101-block  1
+call    2 returned 6
+        6:  101-block  2
+call    3 returned 6
+        8:  101-block  3
+call    4 returned 8
+branch  5 taken 6
+branch  6 taken 2 (fallthrough)
+        6:  102:        file << event;
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  103:
+        2:  104:    file.close();
+        2:  104-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  105:}
+        2:  105-block  0
+call    0 returned 2
+    $$$$$:  105-block  1
+call    1 never executed
+        -:  106:
+function _ZN14Event_CSV_Repo9file_readENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:  107:void Event_CSV_Repo::file_read(std::string file_name) {
+        -:  108:
+    #####:  109:    std::ifstream file;
+    %%%%%:  109-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  110:    file.open(file_name);
+    %%%%%:  110-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  111:
+    #####:  112:    for(auto& old_event : this->events)
+    %%%%%:  112-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  112-block  1
+call    2 never executed
+    %%%%%:  112-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  113:        this->remove(old_event.get_link());
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  113-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  113-block  1
+call    6 never executed
+call    7 never executed
+    $$$$$:  113-block  2
+call    8 never executed
+    $$$$$:  113-block  3
+        -:  114:
+    #####:  115:    Event event;
+    %%%%%:  115-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  116:    while(file >> event)
+    %%%%%:  116-block  0
+    %%%%%:  116-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  116-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  116-block  3
+branch  6 never executed
+branch  7 never executed
+    #####:  117:        this->add(event);
+    %%%%%:  117-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  117-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  117-block  2
+call    6 never executed
+    $$$$$:  117-block  3
+call    7 never executed
+    $$$$$:  117-block  4
+        -:  118:
+    #####:  119:    file.close();
+    %%%%%:  119-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  120:}
+    %%%%%:  120-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:  120-block  1
+call    2 never executed
+    $$$$$:  120-block  2
+call    3 never executed
+        -:  121:
+function _ZN14Event_CSV_Repo9file_openENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 62%
+        2:  122:void Event_CSV_Repo::file_open(const std::string file_name) {
+        -:  123:
+        2:  124:    std::string path = "notepad \"" + file_name + "\"";
+        2:  124-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  124-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:  124-block  2
+        2:  125:    system(path.c_str());
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:  126:}
+        2:  126-block  0
+call    0 returned 2
+    $$$$$:  126-block  1
+call    1 never executed
+        -:  127:
+function _ZN15Event_HTML_Repo10file_writeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:  128:void Event_HTML_Repo::file_write(std::string file_name) {
+        -:  129:
+    #####:  130:    std::ofstream file;
+    %%%%%:  130-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  131:    file.open(file_name, std::ofstream::out | std::ofstream::trunc);
+    %%%%%:  131-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  132:    file.close();
+    %%%%%:  132-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  133:    file.open(file_name);
+    %%%%%:  133-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  134:
+    #####:  135:    file << "<!DOCTYPE html> \n";
+    %%%%%:  135-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  136:    file << "<html> \n";
+    %%%%%:  136-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  137:    file << "<head> \n";
+    %%%%%:  137-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  138:    file << "<title>Events</title> \n";
+    %%%%%:  138-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  139:    file << "</head> \n";
+    %%%%%:  139-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  140:    file << "<body> \n";
+    %%%%%:  140-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  141:    file << "<table border=1> \n";
+    %%%%%:  141-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  142:    file << "<tr> \n";
+    %%%%%:  142-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  143:    file << "<td>Link</td> \n";
+    %%%%%:  143-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  144:    file << "<td>Title</td> \n";
+    %%%%%:  144-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  145:    file << "<td>Description</td> \n";
+    %%%%%:  145-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  146:    file << "<td>Date & Time</td> \n";
+    %%%%%:  146-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  147:    file << "<td>Number of people</td> \n";
+    %%%%%:  147-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  148:    file << "</tr> \n";
+    %%%%%:  148-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  149:
+    #####:  150:    for (auto& event : this->events){
+    %%%%%:  150-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  150-block  1
+call    2 never executed
+    %%%%%:  150-block  2
+call    3 never executed
+    %%%%%:  150-block  3
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  151:        file << "<tr>\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  152:        file << "<td><a href=\"" << event.get_link() << "\">Link</a></td> \n";
+    %%%%%:  152-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  152-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  152-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  152-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  152-block  4
+call   12 never executed
+    $$$$$:  152-block  5
+call   13 never executed
+    $$$$$:  152-block  6
+    #####:  153:        file << "<td>\n" << event.get_title() <<"</td> \n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  153-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  153-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  153-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  153-block  3
+call   12 never executed
+    $$$$$:  153-block  4
+call   13 never executed
+    $$$$$:  153-block  5
+    #####:  154:        file << "<td>\n" << event.get_description() <<"</td> \n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  154-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  154-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  154-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  154-block  3
+call   12 never executed
+    $$$$$:  154-block  4
+call   13 never executed
+    $$$$$:  154-block  5
+    #####:  155:        file << "<td>\n" << event.get_date_time() <<"</td> \n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  155-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  155-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  155-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  155-block  3
+call   12 never executed
+    $$$$$:  155-block  4
+call   13 never executed
+    $$$$$:  155-block  5
+    #####:  156:        file << "<td>\n" << event.get_people_number() <<"</td> \n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  156-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  156-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  156-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    #####:  157:        file << "</tr>\n";
+    %%%%%:  157-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  158:    }
+        -:  159:
+    #####:  160:    file << "</table>";
+    %%%%%:  160-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  161:    file << "</body>";
+    %%%%%:  161-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  162:    file << "</html> \n";
+    %%%%%:  162-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  163:}
+    %%%%%:  163-block  0
+call    0 never executed
+    $$$$$:  163-block  1
+call    1 never executed
+        -:  164:
+function _ZN15Event_HTML_Repo9file_openENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:  165:void Event_HTML_Repo::file_open(const std::string file_name) {
+        -:  166:
+    #####:  167:    ShellExecute(nullptr, "open", file_name.c_str(), nullptr, nullptr, SW_SHOWNORMAL);
+    %%%%%:  167-block  0
+call    0 never executed
+call    1 never executed
+    #####:  168:}

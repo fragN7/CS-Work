@@ -1,0 +1,1839 @@
+        -:    0:Source:C:/Users/Alen/Documents/GitHub/UBB Github/a5-6-913-Iaguta-Alen-Mihael/ui/Ui.cpp
+        -:    0:Graph:C:\Users\Alen\Documents\GitHub\UBB Github\a5-6-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iaguta_Alen_Mihael.dir\ui\Ui.cpp.gcno
+        -:    0:Data:C:\Users\Alen\Documents\GitHub\UBB Github\a5-6-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iaguta_Alen_Mihael.dir\ui\Ui.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Alen on 16/03/2022.
+        -:    3://
+        -:    4:
+        -:    5:#include "Ui.h"
+        -:    6:
+function _ZN13UserInterface6ui_addEv called 0 returned 0% blocks executed 0%
+    #####:    7:void UserInterface::ui_add() {
+        -:    8:
+        -:    9:    char link[61], title[41], description[41], date_time[41], people_number[41];
+        -:   10:    unsigned int new_people_number;
+        -:   11:
+    #####:   12:    std::cout << "Link:\n";
+    %%%%%:   12-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   13:    std::cin.getline(link, 61);
+    %%%%%:   13-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   14:    if (link[0] == '\0')
+    %%%%%:   14-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   15:        throw UserError("Invalid link\n");
+    %%%%%:   15-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   15-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   15-block  2
+call    9 never executed
+    $$$$$:   15-block  3
+    $$$$$:   15-block  4
+call   10 never executed
+        -:   16:
+    #####:   17:    std::cout << "Title:\n";
+    %%%%%:   17-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   18:    std::cin.getline(title, 41);
+    %%%%%:   18-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   19:    if (title[0] == '\0')
+    %%%%%:   19-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   20:        throw UserError("Invalid title\n");
+    %%%%%:   20-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   20-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   20-block  2
+call    9 never executed
+    $$$$$:   20-block  3
+    $$$$$:   20-block  4
+call   10 never executed
+        -:   21:
+    #####:   22:    std::cout << "Description:\n";
+    %%%%%:   22-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   23:    std::cin.getline(description, 41);
+    %%%%%:   23-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   24:    if (description[0] == '\0')
+    %%%%%:   24-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   25:        throw UserError("Invalid description\n");
+    %%%%%:   25-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   25-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   25-block  2
+call    9 never executed
+    $$$$$:   25-block  3
+    $$$$$:   25-block  4
+call   10 never executed
+        -:   26:
+    #####:   27:    std::cout << "Date and time (dd/mm/yyyy hh:mm):\n";
+    %%%%%:   27-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   28:    std::cin.getline(date_time, 41);
+    %%%%%:   28-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   29:    if (date_time[0] == '\0')
+    %%%%%:   29-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   30:        throw UserError("Invalid date and time\n");
+    %%%%%:   30-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   30-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   30-block  2
+call    9 never executed
+    $$$$$:   30-block  3
+    $$$$$:   30-block  4
+call   10 never executed
+        -:   31:
+    #####:   32:    std::cout << "Number of people:\n";
+    %%%%%:   32-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   33:    std::cin.getline(people_number, 41);
+    %%%%%:   33-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   34:    if (people_number[0] == '\0')
+    %%%%%:   34-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   35:        throw UserError("Invalid number of people\n");
+    %%%%%:   35-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   35-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   35-block  2
+call    9 never executed
+    $$$$$:   35-block  3
+    $$$$$:   35-block  4
+call   10 never executed
+    #####:   36:    new_people_number = std::stoi(people_number);
+    %%%%%:   36-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   36-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   36-block  2
+call    7 never executed
+call    8 never executed
+    $$$$$:   36-block  3
+call    9 never executed
+    $$$$$:   36-block  4
+    $$$$$:   36-block  5
+call   10 never executed
+    $$$$$:   36-block  6
+        -:   37:
+    #####:   38:    this->event_service.add_event(link, title, description, date_time, new_people_number);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   38-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   38-block  1
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   38-block  2
+call   12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   38-block  3
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   38-block  4
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 never executed
+call   24 never executed
+call   25 never executed
+call   26 never executed
+    $$$$$:   38-block  5
+call   27 never executed
+    $$$$$:   38-block  6
+    $$$$$:   38-block  7
+call   28 never executed
+    $$$$$:   38-block  8
+    $$$$$:   38-block  9
+call   29 never executed
+    $$$$$:   38-block 10
+    $$$$$:   38-block 11
+call   30 never executed
+    $$$$$:   38-block 12
+    $$$$$:   38-block 13
+call   31 never executed
+    $$$$$:   38-block 14
+    $$$$$:   38-block 15
+call   32 never executed
+    $$$$$:   38-block 16
+    $$$$$:   38-block 17
+call   33 never executed
+    $$$$$:   38-block 18
+    $$$$$:   38-block 19
+call   34 never executed
+    $$$$$:   38-block 20
+    #####:   39:}
+        -:   40:
+function _ZN13UserInterface9ui_deleteEv called 0 returned 0% blocks executed 0%
+    #####:   41:void UserInterface::ui_delete() {
+        -:   42:
+        -:   43:    char link[61];
+    #####:   44:    std::cout << "Link:\n";
+    %%%%%:   44-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   45:    std::cin.getline(link, 61);
+    %%%%%:   45-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   46:    if (link[0] == '\0')
+    %%%%%:   46-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   47:        throw UserError("Invalid link\n");
+    %%%%%:   47-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   47-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   47-block  2
+call    9 never executed
+    $$$$$:   47-block  3
+    $$$$$:   47-block  4
+call   10 never executed
+    #####:   48:    this->event_service.remove_event(link);
+    %%%%%:   48-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   48-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   48-block  2
+call    7 never executed
+call    8 never executed
+    $$$$$:   48-block  3
+call    9 never executed
+    $$$$$:   48-block  4
+    $$$$$:   48-block  5
+call   10 never executed
+    $$$$$:   48-block  6
+    #####:   49:}
+        -:   50:
+function _ZN13UserInterface9ui_updateEv called 0 returned 0% blocks executed 0%
+    #####:   51:void UserInterface::ui_update() {
+        -:   52:
+        -:   53:    char link[41], title[41], description[41], date_time[41], people_number[41];
+        -:   54:    unsigned int new_people_number;
+        -:   55:
+    #####:   56:    std::cout << "Link:\n";
+    %%%%%:   56-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   57:    std::cin.getline(link, 41);
+    %%%%%:   57-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   58:    if (link[0] == '\0')
+    %%%%%:   58-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   59:        throw UserError("Invalid link\n");
+    %%%%%:   59-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   59-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   59-block  2
+call    9 never executed
+    $$$$$:   59-block  3
+    $$$$$:   59-block  4
+call   10 never executed
+        -:   60:
+    #####:   61:    std::cout << "Title:\n";
+    %%%%%:   61-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   62:    std::cin.getline(title, 41);
+    %%%%%:   62-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   63:    if (title[0] == '\0')
+    %%%%%:   63-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   64:        throw UserError("Invalid title\n");
+    %%%%%:   64-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   64-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   64-block  2
+call    9 never executed
+    $$$$$:   64-block  3
+    $$$$$:   64-block  4
+call   10 never executed
+        -:   65:
+    #####:   66:    std::cout << "Description:\n";
+    %%%%%:   66-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   67:    std::cin.getline(description, 41);
+    %%%%%:   67-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   68:    if (description[0] == '\0')
+    %%%%%:   68-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   69:        throw UserError("Invalid description\n");
+    %%%%%:   69-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   69-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   69-block  2
+call    9 never executed
+    $$$$$:   69-block  3
+    $$$$$:   69-block  4
+call   10 never executed
+        -:   70:
+    #####:   71:    std::cout << "Date and time (dd/mm/yyyy hh:mm):\n";
+    %%%%%:   71-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   72:    std::cin.getline(date_time, 41);
+    %%%%%:   72-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   73:    if (date_time[0] == '\0')
+    %%%%%:   73-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   74:        throw UserError("Invalid date and time\n");
+    %%%%%:   74-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   74-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   74-block  2
+call    9 never executed
+    $$$$$:   74-block  3
+    $$$$$:   74-block  4
+call   10 never executed
+        -:   75:
+    #####:   76:    std::cout << "Number of people:\n";
+    %%%%%:   76-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   77:    std::cin.getline(people_number, 41);
+    %%%%%:   77-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   78:    if (people_number[0] == '\0')
+    %%%%%:   78-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   79:        throw UserError("Invalid number of people\n");
+    %%%%%:   79-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:   79-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:   79-block  2
+call    9 never executed
+    $$$$$:   79-block  3
+    $$$$$:   79-block  4
+call   10 never executed
+    #####:   80:    new_people_number = std::stoi(people_number);
+    %%%%%:   80-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   80-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   80-block  2
+call    7 never executed
+call    8 never executed
+    $$$$$:   80-block  3
+call    9 never executed
+    $$$$$:   80-block  4
+    $$$$$:   80-block  5
+call   10 never executed
+    $$$$$:   80-block  6
+        -:   81:
+    #####:   82:    this->event_service.update_event(link, title, description, date_time, new_people_number);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   82-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   82-block  1
+call    8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   82-block  2
+call   12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   82-block  3
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   82-block  4
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 never executed
+call   24 never executed
+call   25 never executed
+call   26 never executed
+    $$$$$:   82-block  5
+call   27 never executed
+    $$$$$:   82-block  6
+    $$$$$:   82-block  7
+call   28 never executed
+    $$$$$:   82-block  8
+    $$$$$:   82-block  9
+call   29 never executed
+    $$$$$:   82-block 10
+    $$$$$:   82-block 11
+call   30 never executed
+    $$$$$:   82-block 12
+    $$$$$:   82-block 13
+call   31 never executed
+    $$$$$:   82-block 14
+    $$$$$:   82-block 15
+call   32 never executed
+    $$$$$:   82-block 16
+    $$$$$:   82-block 17
+call   33 never executed
+    $$$$$:   82-block 18
+    $$$$$:   82-block 19
+call   34 never executed
+    $$$$$:   82-block 20
+    #####:   83:}
+        -:   84:
+function _ZN13UserInterface7ui_listEv called 0 returned 0% blocks executed 0%
+    #####:   85:void UserInterface::ui_list() {
+        -:   86:
+    #####:   87:    std::vector<Event> events = this->event_service.list_events();
+    %%%%%:   87-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   88:    for(const auto& event: events)
+    %%%%%:   88-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:   88-block  1
+call    2 never executed
+    %%%%%:   88-block  2
+call    3 never executed
+    %%%%%:   88-block  3
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:   89:        std::cout << event;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   90:}
+    %%%%%:   90-block  0
+call    0 never executed
+    $$$$$:   90-block  1
+call    1 never executed
+        -:   91:
+function _ZN13UserInterface19ui_user_show_eventsEv called 0 returned 0% blocks executed 0%
+    #####:   92:void UserInterface::ui_user_show_events() {
+        -:   93:
+        -:   94:    char command[41], month[41];
+        -:   95:    unsigned int int_month;
+        -:   96:
+        -:   97:    while(true)
+        -:   98:    {
+        -:   99:        try {
+    #####:  100:            std::cout << "Please enter a month (1-12):\n";
+    %%%%%:  100-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  101:            std::cin.getline(month, 41);
+    %%%%%:  101-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  102:                int_month = std::stoi(month);
+    %%%%%:  102-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  102-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  102-block  2
+call    7 never executed
+call    8 never executed
+    $$$$$:  102-block  3
+call    9 never executed
+    $$$$$:  102-block  4
+    $$$$$:  102-block  5
+call   10 never executed
+    $$$$$:  102-block  6
+    #####:  103:                if (int_month <= 0 || int_month >= 13)
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  103-block  0
+branch  2 never executed
+branch  3 never executed
+    #####:  104:                    throw ValidError("Invalid month");
+    %%%%%:  104-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    %%%%%:  104-block  1
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    $$$$$:  104-block  2
+call    9 never executed
+    $$$$$:  104-block  3
+    $$$$$:  104-block  4
+call   10 never executed
+    #####:  105:                break;
+    %%%%%:  105-block  0
+        -:  106:        }
+    =====:  107:        catch (ValidError &valid_error) {
+    $$$$$:  107-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  107-block  1
+call    3 never executed
+    =====:  108:            std::cout << valid_error.get_message() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  108-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  108-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  108-block  2
+call    9 never executed
+    $$$$$:  108-block  3
+call   10 never executed
+    $$$$$:  108-block  4
+    =====:  109:        }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  109-block  0
+call    3 never executed
+    =====:  110:        catch (const std::invalid_argument &ia) {
+    $$$$$:  110-block  0
+call    0 never executed
+    =====:  111:            std::cout << "Invalid month" << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  111-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    =====:  112:        }
+    $$$$$:  112-block  0
+call    0 never executed
+    $$$$$:  112-block  1
+call    1 never executed
+    =====:  113:    }
+    $$$$$:  113-block  0
+        -:  114:
+    #####:  115:    if(this->event_service.get_number_events_for_month(int_month) == 0)
+    %%%%%:  115-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  115-block  1
+branch  3 never executed
+branch  4 never executed
+        -:  116:    {
+    #####:  117:        std::cout << "No events for this month\n";
+    %%%%%:  117-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  118:        return;
+    %%%%%:  118-block  0
+    %%%%%:  118-block  1
+        -:  119:    }
+        -:  120:
+    #####:  121:    if(this->event_service.get_number_events_for_month(int_month) == this->user_event_service.get_number_events_for_month(int_month))
+    %%%%%:  121-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  121-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  121-block  2
+branch  6 never executed
+branch  7 never executed
+        -:  122:    {
+    #####:  123:        std::cout << "All events available for this month are already in your list of events\n";
+    %%%%%:  123-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  124:        return;
+    %%%%%:  124-block  0
+        -:  125:    }
+        -:  126:
+    #####:  127:    std::cout << "Here are your options:\n";
+    %%%%%:  127-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  128:    std::cout << "'add' - Add event to your list\n";
+    %%%%%:  128-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  129:    std::cout << "'next' - Ignore this event\n";
+    %%%%%:  129-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  130:    std::cout << "'exit' - Exit this menu\n";
+    %%%%%:  130-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  131:
+        -:  132:    bool valid1, valid2;
+        -:  133:
+    #####:  134:    std::vector<Event> all_events = this->event_service.list_events();
+    %%%%%:  134-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  135:    while(!all_events.empty()) {
+    %%%%%:  135-block  0
+    %%%%%:  135-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  136:        for (auto &event: all_events) {
+    %%%%%:  136-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  136-block  1
+call    2 never executed
+    %%%%%:  136-block  2
+call    3 never executed
+    %%%%%:  136-block  3
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+        -:  137:
+    #####:  138:            valid2 = true;
+    #####:  139:            if (event.get_month() != int_month)
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  139-block  0
+branch  3 never executed
+branch  4 never executed
+    #####:  140:                valid2 = false;
+    %%%%%:  140-block  0
+        -:  141:
+    #####:  142:            valid1 = true;
+    #####:  143:            std::vector<Event> user_events = this->user_event_service.list_events();
+    %%%%%:  143-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  144:
+    #####:  145:            if (valid2) {
+    %%%%%:  145-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  146:                for (auto &user_event: user_events)
+    %%%%%:  146-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  146-block  1
+call    2 never executed
+    %%%%%:  146-block  2
+call    3 never executed
+    %%%%%:  146-block  3
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  147:                    if (event.get_link() == user_event.get_link()) {
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  147-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  147-block  1
+call    6 never executed
+call    7 never executed
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    $$$$$:  147-block  2
+call   11 never executed
+    $$$$$:  147-block  3
+    #####:  148:                        valid1 = false;
+    #####:  149:                        break;
+    %%%%%:  149-block  0
+        -:  150:                    }
+        -:  151:            }
+        -:  152:
+    #####:  153:            if (valid1 && valid2) {
+    %%%%%:  153-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  153-block  1
+branch  2 never executed
+branch  3 never executed
+        -:  154:
+    #####:  155:                std::cout << event;
+    %%%%%:  155-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  156:                system(std::string("start " + event.get_link()).c_str());
+    %%%%%:  156-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  156-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  156-block  2
+call    6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:  156-block  3
+call   10 never executed
+call   11 never executed
+    $$$$$:  156-block  4
+call   12 never executed
+    $$$$$:  156-block  5
+    $$$$$:  156-block  6
+call   13 never executed
+    $$$$$:  156-block  7
+        -:  157:
+        -:  158:                while (true) {
+    #####:  159:                    std::cout << "Please enter your option:\n";
+    %%%%%:  159-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  160:                    std::cin.getline(command, 41);
+    %%%%%:  160-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  161:                    if (!strcmp(command, "add")) {
+    %%%%%:  161-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  162:                        this->user_event_service.add_event(event.get_link(),
+    %%%%%:  162-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  162-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  162-block  2
+call    6 never executed
+    $$$$$:  162-block  3
+call    7 never executed
+    $$$$$:  162-block  4
+    #####:  163:                                                           event.get_title(),
+    %%%%%:  163-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+    $$$$$:  163-block  1
+call    4 never executed
+    $$$$$:  163-block  2
+    #####:  164:                                                           event.get_description(),
+    %%%%%:  164-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+    $$$$$:  164-block  1
+call    4 never executed
+    $$$$$:  164-block  2
+    #####:  165:                                                           event.get_date_time(),
+call    0 never executed
+    $$$$$:  165-block  0
+call    1 never executed
+    $$$$$:  165-block  1
+    #####:  166:                                                           event.get_people_number() + 1);
+    %%%%%:  166-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  166-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:  167:
+    #####:  168:                        this->event_service.update_event(event.get_link(),
+    %%%%%:  168-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  168-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  168-block  2
+call    6 never executed
+    $$$$$:  168-block  3
+call    7 never executed
+    $$$$$:  168-block  4
+    #####:  169:                                                         event.get_title(),
+    %%%%%:  169-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+    $$$$$:  169-block  1
+call    4 never executed
+    $$$$$:  169-block  2
+    #####:  170:                                                         event.get_description(),
+    %%%%%:  170-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+    $$$$$:  170-block  1
+call    4 never executed
+    $$$$$:  170-block  2
+    #####:  171:                                                         event.get_date_time(),
+call    0 never executed
+    $$$$$:  171-block  0
+call    1 never executed
+    $$$$$:  171-block  1
+    #####:  172:                                                         event.get_people_number() + 1);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  172-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  173:                        command[0] = '\0';
+    #####:  174:                        if (this->event_service.get_number_events_for_month(int_month) ==
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  175:                            this->user_event_service.get_number_events_for_month(int_month)) {
+    %%%%%:  175-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  175-block  1
+branch  3 never executed
+branch  4 never executed
+    #####:  176:                            std::cout << "All events available for this month are already in your list of events\n";
+    %%%%%:  176-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  177:                            return;
+    %%%%%:  177-block  0
+        -:  178:                        }
+    #####:  179:                        break;
+    %%%%%:  179-block  0
+    #####:  180:                    } else if (!strcmp(command, "next")) {
+    %%%%%:  180-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  181:                        command[0] = '\0';
+    #####:  182:                        break;
+    %%%%%:  182-block  0
+    #####:  183:                    } else if (!strcmp(command, "exit"))
+    %%%%%:  183-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  184:                        return;
+    %%%%%:  184-block  0
+        -:  185:                    else {
+    #####:  186:                        std::cout << "Invalid command\n";
+    %%%%%:  186-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  187:                        command[0] = '\0';
+    %%%%%:  187-block  0
+        -:  188:                    }
+        -:  189:                }
+        -:  190:            }
+    #####:  191:        }
+    %%%%%:  191-block  0
+    %%%%%:  191-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  191-block  2
+call    3 never executed
+        -:  192:    }
+    #####:  193:    std::cout << "All events available for this month are already in your list of events\n";
+    %%%%%:  193-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  194:}
+    %%%%%:  194-block  0
+    %%%%%:  194-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  194-block  2
+call    3 never executed
+        -:  195:
+function _ZN13UserInterface17ui_user_my_eventsEv called 0 returned 0% blocks executed 0%
+    #####:  196:void UserInterface::ui_user_my_events() {
+        -:  197:
+        -:  198:    char command[41];
+        -:  199:
+    #####:  200:    if(this->user_event_service.get_number_events() == 0)
+    %%%%%:  200-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  200-block  1
+branch  3 never executed
+branch  4 never executed
+        -:  201:    {
+    #####:  202:        std::cout << "You are not interested in any event\n";
+    %%%%%:  202-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  203:        return;
+    %%%%%:  203-block  0
+    %%%%%:  203-block  1
+        -:  204:    }
+        -:  205:
+    #####:  206:    std::vector<Event> user_events = this->user_event_service.list_events();
+    %%%%%:  206-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  207:    for(const auto& user_event: user_events)
+    %%%%%:  207-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  207-block  1
+call    2 never executed
+    %%%%%:  207-block  2
+call    3 never executed
+    %%%%%:  207-block  3
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  208:        std::cout << user_event;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  209:
+        -:  210:    while(true)
+        -:  211:    {
+        -:  212:        try {
+    #####:  213:            std::cout << "Please enter your option:\n";
+    %%%%%:  213-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  214:            std::cin.getline(command, 41);
+    %%%%%:  214-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  215:            if (!strcmp(command, "delete"))
+    %%%%%:  215-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  216:            {
+        -:  217:                char link[61];
+    #####:  218:                std::cout << "Link:\n";
+    %%%%%:  218-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  219:                std::cin.getline(link, 61);
+    %%%%%:  219-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  220:                this->user_event_service.remove_event(link);
+    %%%%%:  220-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  220-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  220-block  2
+call    7 never executed
+call    8 never executed
+    $$$$$:  220-block  3
+call    9 never executed
+    $$$$$:  220-block  4
+    $$$$$:  220-block  5
+call   10 never executed
+    $$$$$:  220-block  6
+        -:  221:
+    #####:  222:                std::vector<Event> events = this->event_service.list_events();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  223:                for(auto& event: user_events)
+    %%%%%:  223-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  223-block  1
+call    2 never executed
+    %%%%%:  223-block  2
+call    3 never executed
+    %%%%%:  223-block  3
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  224:                    if(event.get_link() == link)
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  224-block  0
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:  225:                        this->event_service.update_event(event.get_link(), event.get_title(), event.get_description(), event.get_date_time(), event.get_people_number() - 1);
+    %%%%%:  225-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  225-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  225-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  225-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  225-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  225-block  5
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:  225-block  6
+call   18 never executed
+call   19 never executed
+call   20 never executed
+call   21 never executed
+    $$$$$:  225-block  7
+call   22 never executed
+    $$$$$:  225-block  8
+    $$$$$:  225-block  9
+call   23 never executed
+    $$$$$:  225-block 10
+    $$$$$:  225-block 11
+call   24 never executed
+    $$$$$:  225-block 12
+    $$$$$:  225-block 13
+call   25 never executed
+    $$$$$:  225-block 14
+        -:  226:
+    #####:  227:                break;
+    %%%%%:  227-block  0
+    #####:  228:            }
+    %%%%%:  228-block  0
+call    0 never executed
+    $$$$$:  228-block  1
+call    1 never executed
+    #####:  229:            else if (!strcmp(command, "exit"))
+    %%%%%:  229-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  230:                return;
+    %%%%%:  230-block  0
+        -:  231:            else
+        -:  232:            {
+    #####:  233:                std::cout << "Invalid command\n";
+    %%%%%:  233-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  234:                command[0] = '\0';
+    %%%%%:  234-block  0
+        -:  235:            }
+        -:  236:        }
+    =====:  237:        catch (RepoError &repo_error) {
+    $$$$$:  237-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:  237-block  1
+call    4 never executed
+    =====:  238:            std::cout << repo_error.get_message() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  238-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  238-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  238-block  2
+call    9 never executed
+    $$$$$:  238-block  3
+call   10 never executed
+    $$$$$:  238-block  4
+    =====:  239:        }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  239-block  0
+call    3 never executed
+    =====:  240:        catch (ValidError &valid_error) {
+    $$$$$:  240-block  0
+call    0 never executed
+    =====:  241:            std::cout << valid_error.get_message() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  241-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  241-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  241-block  2
+call    9 never executed
+    $$$$$:  241-block  3
+call   10 never executed
+    $$$$$:  241-block  4
+    =====:  242:        }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  242-block  0
+call    3 never executed
+    =====:  243:        catch (UserError &user_error) {
+    $$$$$:  243-block  0
+call    0 never executed
+    =====:  244:            std::cout << user_error.get_message() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  244-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  244-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  244-block  2
+call    9 never executed
+    $$$$$:  244-block  3
+call   10 never executed
+    $$$$$:  244-block  4
+    =====:  245:        }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  245-block  0
+call    3 never executed
+    #####:  246:    }
+    %%%%%:  246-block  0
+    #####:  247:}
+    %%%%%:  247-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  247-block  1
+call    3 never executed
+        -:  248:
+function _ZN13UserInterface16print_admin_menuEv called 0 returned 0% blocks executed 0%
+    #####:  249:void UserInterface::print_admin_menu() {
+        -:  250:
+    #####:  251:    std::cout << "Here is a list of your options (Admin Mode):\n";
+    %%%%%:  251-block  0
+call    0 never executed
+    #####:  252:    std::cout << "-------------------------------\n";
+call    0 never executed
+    #####:  253:    std::cout << "'add': Add an event\n";
+call    0 never executed
+    #####:  254:    std::cout << "'delete': Delete an event\n";
+call    0 never executed
+    #####:  255:    std::cout << "'update': Update an event\n";
+call    0 never executed
+    #####:  256:    std::cout << "-------------------------\n";
+call    0 never executed
+    #####:  257:    std::cout << "'list': List all events\n";
+call    0 never executed
+    #####:  258:    std::cout << "-----------------------\n";
+call    0 never executed
+    #####:  259:    std::cout << "'exit': Exit admin mode\n";
+call    0 never executed
+    #####:  260:}
+        -:  261:
+function _ZN13UserInterface15print_user_menuEv called 0 returned 0% blocks executed 0%
+    #####:  262:void UserInterface::print_user_menu() {
+        -:  263:
+    #####:  264:    std::cout << "Here is a list of your options (User Mode):\n";
+    %%%%%:  264-block  0
+call    0 never executed
+    #####:  265:    std::cout << "-------------------------------\n";
+call    0 never executed
+    #####:  266:    std::cout << "'show events': Lists all available events for a month for you to choose\n";
+call    0 never executed
+    #####:  267:    std::cout << "'my events': Lists all events you're interested in\n";
+call    0 never executed
+    #####:  268:    std::cout << "'exit' - Exit user mode\n";
+call    0 never executed
+    #####:  269:}
+        -:  270:
+function _ZN13UserInterface3runEv called 1 returned 100% blocks executed 12%
+        1:  271:void UserInterface::run()
+        -:  272:{
+        -:  273:    char command[41], user_command[41], admin_command[41];
+        -:  274:
+        1:  275:    std::cout << "Welcome to the Event Calendar!!!\n";
+        1:  275-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  276:    std::cout << "Please enter a option: \n'admin' - To enter admin mode\n'user' - To enter user mode\n'exit' - Exit\n";
+        1:  276-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  277:
+        -:  278:    ///this->event_service.populate_array();
+        1:  279:    this->event_service.load_events("../files/file_admin.txt");
+        1:  279-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  279-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  279-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  279-block  3
+call    9 never executed
+    $$$$$:  279-block  4
+    $$$$$:  279-block  5
+call   10 never executed
+    $$$$$:  279-block  6
+        1:  280:    this->event_service.save_repo("../files/user_list");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  280-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  280-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  280-block  2
+call    9 never executed
+    $$$$$:  280-block  3
+    $$$$$:  280-block  4
+call   10 never executed
+    $$$$$:  280-block  5
+        -:  281:
+        -:  282:    while (true)
+        -:  283:    {
+        1:  284:        std::cout << "Please enter a mode (Admin or User):\n";
+        1:  284-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  285:        std::cin.getline(command, 41);
+        1:  285-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  286:        if (!strcmp(command, "user"))
+        1:  286-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        -:  287:        {
+        -:  288:            while (true)
+        -:  289:            {
+    #####:  290:                this->print_user_menu();
+    %%%%%:  290-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  291:                std::cout << "Please enter your option:\n";
+    %%%%%:  291-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  292:                std::cin.getline(user_command, 41);
+    %%%%%:  292-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  293:                try {
+    #####:  294:                    if(!strcmp(user_command, "show events"))
+    %%%%%:  294-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  295:                    {
+    #####:  296:                        this->ui_user_show_events();
+    %%%%%:  296-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  297:                        user_command[0] = '\0';
+    %%%%%:  297-block  0
+        -:  298:                    }
+    #####:  299:                    else if (!strcmp(user_command, "my events"))
+    %%%%%:  299-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  300:                    {
+    #####:  301:                        this->ui_user_my_events();
+    %%%%%:  301-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  302:                        user_command[0] = '\0';
+    %%%%%:  302-block  0
+        -:  303:                    }
+    #####:  304:                    else if (!strcmp(user_command, "exit"))
+    %%%%%:  304-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  305:                    {
+    #####:  306:                        user_command[0] = '\0';
+    #####:  307:                        break;
+    %%%%%:  307-block  0
+        -:  308:                    }
+        -:  309:                    else
+        -:  310:                    {
+    #####:  311:                        std::cout << "Invalid command\n";
+    %%%%%:  311-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  312:                        user_command[0] = '\0';
+    %%%%%:  312-block  0
+        -:  313:                    }
+        -:  314:                }
+    =====:  315:                catch (RepoError &repo_error) {
+    $$$$$:  315-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:  315-block  1
+call    4 never executed
+    =====:  316:                    std::cout << repo_error.get_message() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  316-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  316-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  316-block  2
+call    9 never executed
+    $$$$$:  316-block  3
+call   10 never executed
+    $$$$$:  316-block  4
+    =====:  317:                }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  317-block  0
+call    3 never executed
+    =====:  318:                catch (ValidError &valid_error) {
+    $$$$$:  318-block  0
+call    0 never executed
+    =====:  319:                    std::cout << valid_error.get_message() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  319-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  319-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  319-block  2
+call    9 never executed
+    $$$$$:  319-block  3
+call   10 never executed
+    $$$$$:  319-block  4
+    =====:  320:                }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  320-block  0
+call    3 never executed
+    =====:  321:                catch (UserError &user_error) {
+    $$$$$:  321-block  0
+call    0 never executed
+    =====:  322:                    std::cout << user_error.get_message() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  322-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  322-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  322-block  2
+call    9 never executed
+    $$$$$:  322-block  3
+call   10 never executed
+    $$$$$:  322-block  4
+    =====:  323:                }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  323-block  0
+call    3 never executed
+    #####:  324:            }
+    %%%%%:  324-block  0
+    #####:  325:            this->event_service.save_repo("../files/user_list");
+    %%%%%:  325-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  325-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  325-block  2
+call    7 never executed
+call    8 never executed
+    $$$$$:  325-block  3
+call    9 never executed
+    $$$$$:  325-block  4
+    $$$$$:  325-block  5
+call   10 never executed
+    $$$$$:  325-block  6
+        -:  326:        }
+        1:  327:        else if (!strcmp(command, "admin"))
+        1:  327-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        -:  328:        {
+    #####:  329:            this->print_admin_menu();
+    %%%%%:  329-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  330:            while (true) {
+    #####:  331:                std::cout << "Please enter your option:\n";
+    %%%%%:  331-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  332:                std::cin.getline(admin_command, 41);
+    %%%%%:  332-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  333:                try {
+    #####:  334:                    if (!strcmp(admin_command, "add")) {
+    %%%%%:  334-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  335:                        this->ui_add();
+    %%%%%:  335-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  336:                        admin_command[0] = '\0';
+    %%%%%:  336-block  0
+    #####:  337:                    } else if (!strcmp(admin_command, "delete")) {
+    %%%%%:  337-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  338:                        this->ui_delete();
+    %%%%%:  338-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  339:                        admin_command[0] = '\0';
+    %%%%%:  339-block  0
+    #####:  340:                    } else if (!strcmp(admin_command, "update")) {
+    %%%%%:  340-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  341:                        this->ui_update();
+    %%%%%:  341-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  342:                        admin_command[0] = '\0';
+    %%%%%:  342-block  0
+    #####:  343:                    } else if (!strcmp(admin_command, "list")) {
+    %%%%%:  343-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  344:                        this->ui_list();
+    %%%%%:  344-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  345:                        admin_command[0] = '\0';
+    %%%%%:  345-block  0
+    #####:  346:                    } else if (!strcmp(admin_command, "exit"))
+    %%%%%:  346-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  347:                        break;
+    %%%%%:  347-block  0
+        -:  348:                    else
+    #####:  349:                        std::cout << "Invalid command!\n";
+    %%%%%:  349-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  350:                }
+    =====:  351:                catch (RepoError &repo_error) {
+    $$$$$:  351-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+    $$$$$:  351-block  1
+call    5 never executed
+    =====:  352:                    std::cout << repo_error.get_message() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  352-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  352-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  352-block  2
+call    9 never executed
+    $$$$$:  352-block  3
+call   10 never executed
+    $$$$$:  352-block  4
+    =====:  353:                }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  353-block  0
+call    3 never executed
+    =====:  354:                catch (ValidError &valid_error) {
+    $$$$$:  354-block  0
+call    0 never executed
+    =====:  355:                    std::cout << valid_error.get_message() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  355-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  355-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  355-block  2
+call    9 never executed
+    $$$$$:  355-block  3
+call   10 never executed
+    $$$$$:  355-block  4
+    =====:  356:                }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  356-block  0
+call    3 never executed
+    =====:  357:                catch (UserError &user_error) {
+    $$$$$:  357-block  0
+call    0 never executed
+    =====:  358:                    std::cout << user_error.get_message() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  358-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  358-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  358-block  2
+call    9 never executed
+    $$$$$:  358-block  3
+call   10 never executed
+    $$$$$:  358-block  4
+    =====:  359:                }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  359-block  0
+call    3 never executed
+    =====:  360:                catch (const std::invalid_argument &ia) {
+    $$$$$:  360-block  0
+call    0 never executed
+    =====:  361:                    std::cout << "Invalid number of people" << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  361-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    =====:  362:                }
+    $$$$$:  362-block  0
+call    0 never executed
+    $$$$$:  362-block  1
+call    1 never executed
+    #####:  363:            }
+    %%%%%:  363-block  0
+    #####:  364:            command[0] = '\0';
+    #####:  365:            this->event_service.save_repo("../files/admin_list");
+    %%%%%:  365-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  365-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  365-block  2
+call    7 never executed
+call    8 never executed
+    $$$$$:  365-block  3
+call    9 never executed
+    $$$$$:  365-block  4
+    $$$$$:  365-block  5
+call   10 never executed
+    $$$$$:  365-block  6
+        -:  366:        }
+        1:  367:        else if (!strcmp(command, "exit"))
+        1:  367-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  368:            return;
+        1:  368-block  0
+        1:  368-block  1
+        -:  369:        else
+        -:  370:        {
+    #####:  371:            std::cout << "Invalid mode!\n";
+    %%%%%:  371-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  372:            command[0] = '\0';
+    %%%%%:  372-block  0
+        -:  373:        }
+    #####:  374:    }
+    %%%%%:  374-block  0
+        -:  375:}

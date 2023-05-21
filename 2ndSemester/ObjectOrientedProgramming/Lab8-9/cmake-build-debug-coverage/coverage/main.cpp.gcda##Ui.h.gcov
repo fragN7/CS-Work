@@ -1,0 +1,51 @@
+        -:    0:Source:C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/ui/Ui.h
+        -:    0:Graph:C:\Users\Alen\Documents\GitHub\a8-9-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a8_9_913_Iaguta_Alen_Mihael.dir\main\main.cpp.gcno
+        -:    0:Data:C:\Users\Alen\Documents\GitHub\a8-9-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a8_9_913_Iaguta_Alen_Mihael.dir\main\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Alen on 16/03/2022.
+        -:    3://
+        -:    4:
+        -:    5:#include <iostream>
+        -:    6:#include <string>
+        -:    7:#include <utility>
+        -:    8:#include <cstdlib>
+        -:    9:#include <cstring>
+        -:   10:#include <cstdlib>
+        -:   11:#include <windows.h>
+        -:   12:#include <shellapi.h>
+        -:   13:#include "../validation/validation.h"
+        -:   14:#include "../service/service.h"
+        -:   15:#include "../errors/exceptions.h"
+        -:   16:#include "../repo/repository.h"
+        -:   17:#pragma once
+        -:   18:
+        -:   19:
+        -:   20:class UserInterface {
+        -:   21:
+        -:   22:private:
+        -:   23:
+        -:   24:    Event_Service event_service;
+        -:   25:    Event_Service user_service;
+        -:   26:
+        -:   27:    static void print_admin_menu();
+        -:   28:    static void print_user_menu();
+        -:   29:
+        -:   30:    void ui_add();
+        -:   31:    void ui_delete();
+        -:   32:    void ui_update();
+        -:   33:    void ui_list();
+        -:   34:    void ui_save(const std::string& file_name);
+        -:   35:    void ui_read(const std::string& file_name);
+        -:   36:
+        -:   37:    void ui_user_show_events();
+        -:   38:    void ui_user_my_events();
+        -:   39:    void ui_user_save(const std::string& file_name);
+        -:   40:
+        -:   41:public:
+        -:   42:
+function _ZN13UserInterfaceC1E13Event_ServiceS0_ called 1 returned 100% blocks executed 100%
+        1:   43:    explicit UserInterface(Event_Service event_service, Event_Service user_service) : event_service(event_service), user_service(user_service) {};
+        -:   44:    void run(const std::string& repo_type);
+        -:   45:
+        -:   46:};

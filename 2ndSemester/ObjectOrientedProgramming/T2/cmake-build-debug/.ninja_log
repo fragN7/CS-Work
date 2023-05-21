@@ -1,0 +1,24 @@
+# ninja log v5
+22	126	6733726066685825	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/dwelling.cpp.obj	ca3f712108a1e060
+12	345	6733726068883251	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/client.cpp.obj	1fd8852fdd95c287
+49	390	6733726069195700	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/person.cpp.obj	796d89f74b785244
+53	404	6733726069351819	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/company.cpp.obj	90e7caeee68fad2b
+18	474	6733726070138827	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/ui.cpp.obj	4016d1a3df5fd881
+0	513	6733726070451210	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/main.cpp.obj	7091d42f6f53077e
+13	364	6733726859130304	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/ui.cpp.obj	4016d1a3df5fd881
+2	402	6733726859599060	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/main.cpp.obj	7091d42f6f53077e
+16	574	6733726861330305	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/service.cpp.obj	af959a1fe941e94c
+575	711	6733726862585250	t2_913_Iaguta_Alen_Mihael_1.exe	97358c901fafa8de
+13	390	6733728178272362	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/ui.cpp.obj	4016d1a3df5fd881
+3	616	6733728180522420	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/service.cpp.obj	af959a1fe941e94c
+617	767	6733728182006356	t2_913_Iaguta_Alen_Mihael_1.exe	97358c901fafa8de
+2	528	6733730059217392	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/service.cpp.obj	af959a1fe941e94c
+529	657	6733730060512152	t2_913_Iaguta_Alen_Mihael_1.exe	97358c901fafa8de
+19	377	6733731514527002	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/client.cpp.obj	1fd8852fdd95c287
+13	439	6733731515116253	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/dwelling.cpp.obj	ca3f712108a1e060
+29	447	6733731515116253	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/person.cpp.obj	796d89f74b785244
+35	455	6733731515272443	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/company.cpp.obj	90e7caeee68fad2b
+23	575	6733731516532476	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/ui.cpp.obj	4016d1a3df5fd881
+2	605	6733731516844374	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/main.cpp.obj	7091d42f6f53077e
+16	786	6733731518573262	CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir/service.cpp.obj	af959a1fe941e94c
+786	918	6733731519829136	t2_913_Iaguta_Alen_Mihael_1.exe	97358c901fafa8de

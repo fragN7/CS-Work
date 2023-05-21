@@ -1,0 +1,56 @@
+        -:    0:Source:C:/Users/Alen/Documents/GitHub/UBB Github/a5-6-913-Iaguta-Alen-Mihael/repo/repository.h
+        -:    0:Graph:C:\Users\Alen\Documents\GitHub\UBB Github\a5-6-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iaguta_Alen_Mihael.dir\main\main.cpp.gcno
+        -:    0:Data:C:\Users\Alen\Documents\GitHub\UBB Github\a5-6-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iaguta_Alen_Mihael.dir\main\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Alen on 16/03/2022.
+        -:    3://
+        -:    4:
+        -:    5:#include <iostream>
+        -:    6:#include <cstdlib>
+        -:    7:#include "domain.h"
+        -:    8:#include "../errors/exceptions.h"
+        -:    9:#include "../array/Array.h"
+        -:   10:#include <vector>
+        -:   11:#pragma once
+        -:   12:
+        -:   13:
+        -:   14:class Event_Repo{
+        -:   15:
+        -:   16:private:
+        -:   17:    std::vector<Event> events;
+        -:   18:
+        -:   19:    /// Event finder by link
+        -:   20:    /// \param link Unique identifier
+        -:   21:    /// \return The event's index if it's found, -1 otherwise
+        -:   22:    int find(const std::string& link);
+        -:   23:
+        -:   24:public:
+        -:   25:
+        -:   26:    /// Event Repo constructor
+        -:   27:    /// \param dynamic_array Inherited from Array class
+function _ZN10Event_RepoC1Ev called 4 returned 100% blocks executed 100%
+        4:   28:    Event_Repo() = default;
+        4:   28-block  0
+call    0 returned 4
+        -:   29:
+        -:   30:    /// Adds an event to the dynamic array
+        -:   31:    /// \param event Event to be added
+        -:   32:    void add(Event event);
+        -:   33:
+        -:   34:    /// Removes an event from the dynamic array
+        -:   35:    /// \param link Link from the event to be removed
+        -:   36:    void remove(const std::string& link);
+        -:   37:
+        -:   38:    /// Updates and event from the dynamic array
+        -:   39:    /// \param event The new event
+        -:   40:    void update(Event event);
+        -:   41:
+        -:   42:    /// Number of events getter
+        -:   43:    /// \return Number of events
+        -:   44:    unsigned long long get_event_number();
+        -:   45:
+        -:   46:    /// All events getter
+        -:   47:    /// \return All events
+        -:   48:    std::vector<Event> get_all_events();
+        -:   49:};

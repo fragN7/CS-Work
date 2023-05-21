@@ -1,0 +1,10 @@
+# ninja log v5
+23	138	6685156841163546	CMakeFiles/Lab34Help.dir/domain/domain.c.obj	9929ae1f5cdec628
+33	109	6685156840863473	CMakeFiles/Lab34Help.dir/testing/tests.c.obj	1d22b3e20f491a42
+3	125	6685156841043509	CMakeFiles/Lab34Help.dir/array/array.c.obj	9973ae9f4d4c6b6a
+20	132	6685156841103542	CMakeFiles/Lab34Help.dir/main/main.c.obj	7f7acc2ec3540486
+14	115	6685156840913485	CMakeFiles/Lab34Help.dir/repo/repository.c.obj	7e4672b77c9b2dbe
+17	132	6685156841103542	CMakeFiles/Lab34Help.dir/service/service.c.obj	fb13de0d36fbcce7
+28	166	6685156841453596	CMakeFiles/Lab34Help.dir/ui/ui.c.obj	c1268067340181bb
+166	296	6685156842733884	Lab34Help.exe	9193024db1f5ec3e
+1	148	6685160438976309	CMakeFiles/a3_4_913_Iaguta_Alen_Mihael.dir/src/domain.obj	3feb31cd28b80f60

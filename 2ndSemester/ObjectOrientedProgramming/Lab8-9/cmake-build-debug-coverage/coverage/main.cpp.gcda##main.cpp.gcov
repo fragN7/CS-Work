@@ -1,0 +1,96 @@
+        -:    0:Source:C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/main/main.cpp
+        -:    0:Graph:C:\Users\Alen\Documents\GitHub\a8-9-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a8_9_913_Iaguta_Alen_Mihael.dir\main\main.cpp.gcno
+        -:    0:Data:C:\Users\Alen\Documents\GitHub\a8-9-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a8_9_913_Iaguta_Alen_Mihael.dir\main\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Alen on 16/03/2022.
+        -:    3://
+        -:    4:
+        -:    5:#include "../ui/Ui.h"
+        -:    6:#include "../tests/tests.h"
+        -:    7:
+        -:    8:/// Main function, run the tests and creating the repo's
+        -:    9:/// \return 0
+function main called 1 returned 0% blocks executed 50%
+        1:   10:int main()
+        -:   11:{
+        1:   12:    Testing::run_tests();
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   13:
+        1:   14:    std::cout << "Please enter the type of repo CSV or HTML:\n";
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15:    std::string html_csv;
+        1:   15-block  0
+call    0 returned 1
+        1:   16:    getline(std::cin, html_csv);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   17:
+        1:   18:    Event_CSV_Repo csv_repo;
+        1:   18-block  0
+call    0 returned 1
+        1:   19:    Event_HTML_Repo html_repo;
+call    0 returned 1
+        1:   20:    Event_Repo user_event_repo;
+call    0 returned 1
+        -:   21:
+        1:   22:    Event_Repo* user_repo = &user_event_repo;
+        -:   23:
+        1:   24:    Event_Repo old_admin_repo;
+call    0 returned 1
+        1:   25:    Event_Repo* admin_repo = &old_admin_repo;
+        -:   26:
+        -:   27:    Event_Validation event_validation;
+        -:   28:
+        1:   29:    if(html_csv == "html")
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    #####:   30:        user_repo = &html_repo;
+    %%%%%:   30-block  0
+        1:   31:    else if(html_csv == "csv")
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   32:        user_repo = &csv_repo;
+        1:   32-block  0
+        -:   33:
+        1:   34:    Event_Service event_service(admin_repo, event_validation);
+        1:   34-block  0
+call    0 returned 1
+        1:   35:    Event_Service user_service(user_repo, event_validation);
+call    0 returned 1
+        -:   36:
+        1:   37:    UserInterface ui(event_service, user_service);
+call    0 returned 1
+        1:   38:    ui.run(html_csv);
+call    0 returned 0
+branch  1 taken 0 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   39:
+    #####:   40:    return 0;
+    #####:   41:}
+    %%%%%:   41-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+    $$$$$:   41-block  1
+call    5 never executed
+    $$$$$:   41-block  2
+call    6 never executed
+    $$$$$:   41-block  3
+call    7 never executed
+    $$$$$:   41-block  4
+call    8 never executed
+    $$$$$:   41-block  5
+call    9 never executed

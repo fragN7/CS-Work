@@ -1,0 +1,760 @@
+        -:    0:Source:C:/Users/Alen/Documents/GitHub/UBB Github/a5-6-913-Iaguta-Alen-Mihael/service/service.cpp
+        -:    0:Graph:C:\Users\Alen\Documents\GitHub\UBB Github\a5-6-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iaguta_Alen_Mihael.dir\service\service.cpp.gcno
+        -:    0:Data:C:\Users\Alen\Documents\GitHub\UBB Github\a5-6-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iaguta_Alen_Mihael.dir\service\service.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Alen on 16/03/2022.
+        -:    3://
+        -:    4:
+        -:    5:#include "service.h"
+        -:    6:
+        -:    7:
+function _ZN13Event_Service9add_eventENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_S5_S5_j called 1 returned 100% blocks executed 56%
+        1:    8:void Event_Service::add_event(std::string link, std::string title, std::string description, std::string date_time, unsigned int people_number) {
+        -:    9:
+        1:   10:    Event event(link, title, description, date_time, people_number);
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11:    this->event_validator.validate_event(link, title, description, date_time);
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   11-block  2
+call    6 returned 1
+    $$$$$:   11-block  3
+call    7 never executed
+    $$$$$:   11-block  4
+        1:   12:    this->event_repo.add(event);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   12-block  1
+call    6 returned 1
+    $$$$$:   12-block  2
+call    7 never executed
+    $$$$$:   12-block  3
+        1:   13:}
+call    0 returned 1
+    $$$$$:   13-block  0
+call    1 never executed
+        -:   14:
+function _ZN13Event_Service12remove_eventERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 75%
+        1:   15:void Event_Service::remove_event(const std::string& link) {
+        -:   16:
+        1:   17:    this->event_validator.validate_link(link);
+        1:   17-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   17-block  1
+call    4 returned 1
+    $$$$$:   17-block  2
+call    5 never executed
+        1:   18:    this->event_repo.remove(link);
+call    0 returned 1
+        1:   19:}
+        -:   20:
+function _ZN13Event_Service12update_eventENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_S5_S5_j called 1 returned 100% blocks executed 56%
+        1:   21:void Event_Service::update_event(std::string link, std::string title, std::string description, std::string date_time, unsigned int people_number) {
+        -:   22:
+        1:   23:    Event event(link, title, description, date_time, people_number);
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24:    this->event_validator.validate_event(link, title, description, date_time);
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   24-block  2
+call    6 returned 1
+    $$$$$:   24-block  3
+call    7 never executed
+    $$$$$:   24-block  4
+        1:   25:    this->event_repo.update(event);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   25-block  1
+call    6 returned 1
+    $$$$$:   25-block  2
+call    7 never executed
+    $$$$$:   25-block  3
+        1:   26:}
+call    0 returned 1
+    $$$$$:   26-block  0
+call    1 never executed
+        -:   27:
+function _ZN13Event_Service11list_eventsEv called 1 returned 100% blocks executed 100%
+        1:   28:std::vector<Event> Event_Service::list_events() {
+        1:   29:    return this->event_repo.get_all_events();
+        1:   29-block  0
+call    0 returned 1
+        -:   30:}
+        -:   31:
+function _ZN13Event_Service17get_number_eventsEv called 2 returned 100% blocks executed 100%
+        2:   32:unsigned long long Event_Service::get_number_events() {
+        2:   33:    return this->event_repo.get_event_number();
+        2:   33-block  0
+call    0 returned 2
+        -:   34:}
+        -:   35:
+function _ZN13Event_Service27get_number_events_for_monthEj called 1 returned 100% blocks executed 82%
+        1:   36:unsigned int Event_Service::get_number_events_for_month(unsigned int month) {
+        -:   37:
+        1:   38:    unsigned int number_of_events = 0;
+        1:   39:    std::vector<Event> events = this->event_repo.get_all_events();
+        1:   39-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   40:    for (auto& event: events)
+        1:   40-block  0
+call    0 returned 1
+call    1 returned 1
+        1:   40-block  1
+call    2 returned 1
+        1:   40-block  2
+call    3 returned 1
+        2:   40-block  3
+call    4 returned 2
+branch  5 taken 1
+branch  6 taken 1 (fallthrough)
+        1:   41:        if(event.get_month() == month)
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   41-block  0
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0
+        1:   42:            number_of_events++;
+        1:   42-block  0
+        -:   43:
+        1:   44:    return number_of_events;
+        1:   44-block  0
+        1:   45:}
+        1:   45-block  0
+call    0 returned 1
+    $$$$$:   45-block  1
+call    1 never executed
+        -:   46:
+function _ZN13Event_Service14populate_arrayEv called 0 returned 0% blocks executed 0%
+    #####:   47:void Event_Service::populate_array() {
+        -:   48:
+        -:   49:    std::string link[12] = {"www.neversea.com", "www.tomorrowland.com", "www.untold.com", "www.limejeypopularcrea.editorx.io/broadway",
+        -:   50:                            "www.musicfinland.com","www.arsenal.com","www.nba.com","www.fifa.com",
+    #####:   51:                            "www.rocnation.com","www.eminem.com", "www.thebeatles.com", "www.steveaoki.com"};
+    %%%%%:   51-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   51-block  1
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   51-block  2
+call    9 never executed
+call   10 never executed
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   51-block  3
+call   14 never executed
+call   15 never executed
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   51-block  4
+call   19 never executed
+call   20 never executed
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:   51-block  5
+call   24 never executed
+call   25 never executed
+call   26 never executed
+branch 27 never executed
+branch 28 never executed
+    %%%%%:   51-block  6
+call   29 never executed
+call   30 never executed
+call   31 never executed
+branch 32 never executed
+branch 33 never executed
+    %%%%%:   51-block  7
+call   34 never executed
+call   35 never executed
+call   36 never executed
+branch 37 never executed
+branch 38 never executed
+    %%%%%:   51-block  8
+call   39 never executed
+call   40 never executed
+call   41 never executed
+branch 42 never executed
+branch 43 never executed
+    %%%%%:   51-block  9
+call   44 never executed
+call   45 never executed
+call   46 never executed
+branch 47 never executed
+branch 48 never executed
+    %%%%%:   51-block 10
+call   49 never executed
+call   50 never executed
+call   51 never executed
+branch 52 never executed
+branch 53 never executed
+    %%%%%:   51-block 11
+call   54 never executed
+call   55 never executed
+call   56 never executed
+branch 57 never executed
+branch 58 never executed
+    %%%%%:   51-block 12
+call   59 never executed
+    %%%%%:   51-block 13
+    %%%%%:   51-block 14
+call   60 never executed
+    $$$$$:   51-block 15
+call   61 never executed
+    $$$$$:   51-block 16
+    $$$$$:   51-block 17
+call   62 never executed
+    $$$$$:   51-block 18
+    $$$$$:   51-block 19
+call   63 never executed
+    $$$$$:   51-block 20
+    $$$$$:   51-block 21
+call   64 never executed
+    $$$$$:   51-block 22
+    $$$$$:   51-block 23
+call   65 never executed
+    $$$$$:   51-block 24
+    $$$$$:   51-block 25
+call   66 never executed
+    $$$$$:   51-block 26
+    $$$$$:   51-block 27
+call   67 never executed
+    $$$$$:   51-block 28
+    $$$$$:   51-block 29
+call   68 never executed
+    $$$$$:   51-block 30
+    $$$$$:   51-block 31
+call   69 never executed
+    $$$$$:   51-block 32
+    $$$$$:   51-block 33
+call   70 never executed
+    $$$$$:   51-block 34
+    $$$$$:   51-block 35
+call   71 never executed
+    $$$$$:   51-block 36
+    $$$$$:   51-block 37
+call   72 never executed
+    $$$$$:   51-block 38
+    $$$$$:   51-block 39
+    $$$$$:   51-block 40
+call   73 never executed
+    $$$$$:   51-block 41
+    $$$$$:   51-block 42
+call   74 never executed
+        -:   52:    std::string title[12] = {"Chain-Smokers", "Eminem", "50 Cent", "Dr.Dre",
+        -:   53:                            "Avicii", "Busta Rhymes", "KSI", "2 Chainz",
+    #####:   54:                            "Thor", "Iron-Man", "Ramen-Noodles", "Lionel Messi"};
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   54-block  0
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   54-block  1
+call    9 never executed
+call   10 never executed
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   54-block  2
+call   14 never executed
+call   15 never executed
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   54-block  3
+call   19 never executed
+call   20 never executed
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:   54-block  4
+call   24 never executed
+call   25 never executed
+call   26 never executed
+branch 27 never executed
+branch 28 never executed
+    %%%%%:   54-block  5
+call   29 never executed
+call   30 never executed
+call   31 never executed
+branch 32 never executed
+branch 33 never executed
+    %%%%%:   54-block  6
+call   34 never executed
+call   35 never executed
+call   36 never executed
+branch 37 never executed
+branch 38 never executed
+    %%%%%:   54-block  7
+call   39 never executed
+call   40 never executed
+call   41 never executed
+branch 42 never executed
+branch 43 never executed
+    %%%%%:   54-block  8
+call   44 never executed
+call   45 never executed
+call   46 never executed
+branch 47 never executed
+branch 48 never executed
+    %%%%%:   54-block  9
+call   49 never executed
+call   50 never executed
+call   51 never executed
+branch 52 never executed
+branch 53 never executed
+    %%%%%:   54-block 10
+call   54 never executed
+call   55 never executed
+call   56 never executed
+branch 57 never executed
+branch 58 never executed
+    %%%%%:   54-block 11
+call   59 never executed
+    %%%%%:   54-block 12
+    %%%%%:   54-block 13
+call   60 never executed
+    $$$$$:   54-block 14
+call   61 never executed
+    $$$$$:   54-block 15
+    $$$$$:   54-block 16
+call   62 never executed
+    $$$$$:   54-block 17
+    $$$$$:   54-block 18
+call   63 never executed
+    $$$$$:   54-block 19
+    $$$$$:   54-block 20
+call   64 never executed
+    $$$$$:   54-block 21
+    $$$$$:   54-block 22
+call   65 never executed
+    $$$$$:   54-block 23
+    $$$$$:   54-block 24
+call   66 never executed
+    $$$$$:   54-block 25
+    $$$$$:   54-block 26
+call   67 never executed
+    $$$$$:   54-block 27
+    $$$$$:   54-block 28
+call   68 never executed
+    $$$$$:   54-block 29
+    $$$$$:   54-block 30
+call   69 never executed
+    $$$$$:   54-block 31
+    $$$$$:   54-block 32
+call   70 never executed
+    $$$$$:   54-block 33
+    $$$$$:   54-block 34
+call   71 never executed
+    $$$$$:   54-block 35
+    $$$$$:   54-block 36
+call   72 never executed
+    $$$$$:   54-block 37
+    $$$$$:   54-block 38
+    $$$$$:   54-block 39
+call   73 never executed
+    $$$$$:   54-block 40
+    $$$$$:   54-block 41
+call   74 never executed
+    #####:   55:    std::string description[5] = {"Music", "Arts", "Sports", "Group","Reggae"};
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   55-block  0
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   55-block  1
+call    9 never executed
+call   10 never executed
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   55-block  2
+call   14 never executed
+call   15 never executed
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   55-block  3
+call   19 never executed
+call   20 never executed
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:   55-block  4
+call   24 never executed
+    %%%%%:   55-block  5
+    %%%%%:   55-block  6
+call   25 never executed
+    $$$$$:   55-block  7
+call   26 never executed
+    $$$$$:   55-block  8
+    $$$$$:   55-block  9
+call   27 never executed
+    $$$$$:   55-block 10
+    $$$$$:   55-block 11
+call   28 never executed
+    $$$$$:   55-block 12
+    $$$$$:   55-block 13
+call   29 never executed
+    $$$$$:   55-block 14
+    $$$$$:   55-block 15
+call   30 never executed
+    $$$$$:   55-block 16
+    $$$$$:   55-block 17
+    $$$$$:   55-block 18
+call   31 never executed
+    $$$$$:   55-block 19
+    $$$$$:   55-block 20
+call   32 never executed
+        -:   56:    std::string date_time[8] = {"20/03/2022 17:52", "30/09/2002 23:00", "18/09/2002 11:00", "30/06/2023 20:45",
+    #####:   57:                                "06/07/2022 18:15","05/03/1953 21:50", "14/12/1799 13:13", "01/01/2022 00:00"};
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   57-block  0
+call    4 never executed
+call    5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   57-block  1
+call    9 never executed
+call   10 never executed
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   57-block  2
+call   14 never executed
+call   15 never executed
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   57-block  3
+call   19 never executed
+call   20 never executed
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:   57-block  4
+call   24 never executed
+call   25 never executed
+call   26 never executed
+branch 27 never executed
+branch 28 never executed
+    %%%%%:   57-block  5
+call   29 never executed
+call   30 never executed
+call   31 never executed
+branch 32 never executed
+branch 33 never executed
+    %%%%%:   57-block  6
+call   34 never executed
+call   35 never executed
+call   36 never executed
+branch 37 never executed
+branch 38 never executed
+    %%%%%:   57-block  7
+call   39 never executed
+    %%%%%:   57-block  8
+    %%%%%:   57-block  9
+call   40 never executed
+    $$$$$:   57-block 10
+call   41 never executed
+    $$$$$:   57-block 11
+    $$$$$:   57-block 12
+call   42 never executed
+    $$$$$:   57-block 13
+    $$$$$:   57-block 14
+call   43 never executed
+    $$$$$:   57-block 15
+    $$$$$:   57-block 16
+call   44 never executed
+    $$$$$:   57-block 17
+    $$$$$:   57-block 18
+call   45 never executed
+    $$$$$:   57-block 19
+    $$$$$:   57-block 20
+call   46 never executed
+    $$$$$:   57-block 21
+    $$$$$:   57-block 22
+call   47 never executed
+    $$$$$:   57-block 23
+    $$$$$:   57-block 24
+call   48 never executed
+    $$$$$:   57-block 25
+    $$$$$:   57-block 26
+    $$$$$:   57-block 27
+call   49 never executed
+    $$$$$:   57-block 28
+    $$$$$:   57-block 29
+call   50 never executed
+        -:   58:    unsigned int link_index, title_index, description_index, date_time_index, price;
+    #####:   59:    srand(time(nullptr));
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   59-block  0
+call    3 never executed
+    #####:   60:    while(this->event_repo.get_event_number() != 10)
+    %%%%%:   60-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   60-block  1
+branch  3 never executed
+branch  4 never executed
+        -:   61:    {
+    #####:   62:        link_index = rand() % 12;
+    %%%%%:   62-block  0
+call    0 never executed
+    #####:   63:        title_index = rand() % 12;
+call    0 never executed
+    #####:   64:        description_index = rand() % 5;
+call    0 never executed
+    #####:   65:        date_time_index = rand() % 8;
+call    0 never executed
+    #####:   66:        price = rand() % 1000;
+call    0 never executed
+        -:   67:        try{
+    #####:   68:            add_event(link[link_index], title[title_index], description[description_index], date_time[date_time_index], price);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   68-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   68-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   68-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   68-block  3
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   68-block  4
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+    $$$$$:   68-block  5
+call   19 never executed
+    $$$$$:   68-block  6
+    $$$$$:   68-block  7
+call   20 never executed
+    $$$$$:   68-block  8
+    $$$$$:   68-block  9
+call   21 never executed
+    $$$$$:   68-block 10
+    $$$$$:   68-block 11
+call   22 never executed
+    $$$$$:   68-block 12
+        -:   69:        }
+    =====:   70:        catch (RepoError& repo_error) {}
+    $$$$$:   70-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$:   70-block  1
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:   71:    }
+    #####:   72:}
+    %%%%%:   72-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   72-block  1
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   72-block  2
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   72-block  3
+branch  6 never executed
+branch  7 never executed
+    %%%%%:   72-block  4
+    $$$$$:   72-block  5
+branch  8 never executed
+branch  9 never executed
+    $$$$$:   72-block  6
+branch 10 never executed
+branch 11 never executed
+    $$$$$:   72-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   72-block  8
+branch 14 never executed
+branch 15 never executed
+        -:   73:
+function _ZN13Event_Service11load_eventsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 68%
+        1:   74:void Event_Service::load_events(const std::string &file_name)
+        -:   75:{
+        1:   76:    std::ifstream file(file_name);
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   77:    Event event{};
+        1:   77-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   78:
+       11:   79:    while(file >> event) {
+        1:   79-block  0
+       11:   79-block  1
+call    0 returned 11
+branch  1 taken 11 (fallthrough)
+branch  2 taken 0 (throw)
+       11:   79-block  2
+call    3 returned 11
+branch  4 taken 11 (fallthrough)
+branch  5 taken 0 (throw)
+       11:   79-block  3
+branch  6 taken 10
+branch  7 taken 1 (fallthrough)
+       10:   80:        this->event_repo.add(event);
+       10:   80-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   80-block  1
+call    3 returned 10
+branch  4 taken 10 (fallthrough)
+branch  5 taken 0 (throw)
+       10:   80-block  2
+call    6 returned 10
+    $$$$$:   80-block  3
+call    7 never executed
+    $$$$$:   80-block  4
+        -:   81:    }
+        1:   82:    file.close();
+        1:   82-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   83:}
+        1:   83-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   83-block  1
+call    2 never executed
+    $$$$$:   83-block  2
+call    3 never executed
+        -:   84:
+function _ZN13Event_Service9save_repoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 74%
+        1:   85:void Event_Service::save_repo(const std::string &file_name) {
+        -:   86:
+        1:   87:    std::ofstream output_file(file_name);
+        1:   87-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   88:    if(!output_file.is_open())
+        1:   88-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   88-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    #####:   89:        return;
+    %%%%%:   89-block  0
+        -:   90:
+        1:   91:    std::vector<Event> events = this->event_repo.get_all_events();
+        1:   91-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       11:   92:    for(const auto& event: events){
+        1:   92-block  0
+call    0 returned 1
+call    1 returned 1
+       10:   92-block  1
+call    2 returned 10
+       10:   92-block  2
+call    3 returned 10
+       11:   92-block  3
+call    4 returned 11
+branch  5 taken 10
+branch  6 taken 1 (fallthrough)
+       10:   93:        output_file << event;
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   94:    }
+        -:   95:
+        1:   96:    output_file.close();
+        1:   96-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   97:}
+        1:   97-block  0
+call    0 returned 1
+        1:   97-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+    $$$$$:   97-block  2
+call    4 never executed
+    $$$$$:   97-block  3
+call    5 never executed

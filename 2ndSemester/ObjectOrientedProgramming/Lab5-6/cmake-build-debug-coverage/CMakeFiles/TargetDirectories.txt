@@ -1,0 +1,3 @@
+C:/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug-coverage/CMakeFiles/a5_6_913_Iaguta_Alen_Mihael.dir
+C:/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
+C:/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir

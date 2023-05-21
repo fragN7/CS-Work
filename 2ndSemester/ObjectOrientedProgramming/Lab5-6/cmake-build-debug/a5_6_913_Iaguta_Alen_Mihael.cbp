@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="a5_6_913_Iaguta_Alen_Mihael"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a5_6_913_Iaguta_Alen_Mihael">
+				<Option output="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/a5_6_913_Iaguta_Alen_Mihael" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/array"/>
+					<Add directory="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/domain"/>
+					<Add directory="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/repo"/>
+					<Add directory="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/service"/>
+					<Add directory="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/tests"/>
+					<Add directory="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/ui"/>
+					<Add directory="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/validation"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 a5_6_913_Iaguta_Alen_Mihael"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a5_6_913_Iaguta_Alen_Mihael/fast">
+				<Option output="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/a5_6_913_Iaguta_Alen_Mihael" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/array"/>
+					<Add directory="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/domain"/>
+					<Add directory="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/repo"/>
+					<Add directory="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/service"/>
+					<Add directory="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/tests"/>
+					<Add directory="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/ui"/>
+					<Add directory="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/validation"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 a5_6_913_Iaguta_Alen_Mihael/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/array/Array.h">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/domain/domain.cpp">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/domain/domain.h">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/errors/exceptions.h">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/main/main.cpp">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/repo/file_repo.cpp">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/repo/file_repo.h">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/repo/repository.cpp">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/repo/repository.h">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/service/service.cpp">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/service/service.h">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/tests/tests.cpp">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/tests/tests.h">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/ui/Ui.cpp">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/ui/Ui.h">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/validation/validation.cpp">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/validation/validation.h">
+			<Option target="a5_6_913_Iaguta_Alen_Mihael"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alen/Documents/GitHub/a5-6-913-Iaguta-Alen-Mihael/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

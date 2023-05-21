@@ -1,0 +1,3 @@
+C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/cmake-build-debug/CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir
+C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/cmake-build-debug/CMakeFiles/rebuild_cache.dir

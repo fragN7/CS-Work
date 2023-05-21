@@ -1,0 +1,842 @@
+        -:    0:Source:C:/Users/Alen/Documents/GitHub/UBB Github/a5-6-913-Iaguta-Alen-Mihael/validation/validation.cpp
+        -:    0:Graph:C:\Users\Alen\Documents\GitHub\UBB Github\a5-6-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iaguta_Alen_Mihael.dir\validation\validation.cpp.gcno
+        -:    0:Data:C:\Users\Alen\Documents\GitHub\UBB Github\a5-6-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iaguta_Alen_Mihael.dir\validation\validation.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Alen on 16/03/2022.
+        -:    3://
+        -:    4:
+        -:    5:#include "validation.h"
+        -:    6:
+        -:    7:
+function _ZN16Event_Validation13validate_linkENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 21 returned 14% blocks executed 74%
+       21:    8:void Event_Validation::validate_link(std::string link) {
+        -:    9:
+       21:   10:    if (link.empty())
+       21:   10-block  0
+call    0 returned 21
+branch  1 taken 16 (fallthrough)
+branch  2 taken 5
+       16:   11:        throw ValidError("Invalid link");
+       16:   11-block  0
+call    0 returned 16
+call    1 returned 16
+call    2 returned 16
+branch  3 taken 16 (fallthrough)
+branch  4 taken 0 (throw)
+       16:   11-block  1
+call    5 returned 16
+call    6 returned 16
+call    7 returned 16
+call    8 returned 0
+    $$$$$:   11-block  2
+call    9 never executed
+    $$$$$:   11-block  3
+    $$$$$:   11-block  4
+call   10 never executed
+        5:   12:    if (link.length() < 5)
+        5:   12-block  0
+call    0 returned 5
+branch  1 taken 1 (fallthrough)
+branch  2 taken 4
+        1:   13:        throw ValidError("Invalid link");
+        1:   13-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   13-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:   13-block  2
+call    9 never executed
+    $$$$$:   13-block  3
+    $$$$$:   13-block  4
+call   10 never executed
+        4:   14:    if (!(link[0] == link[1] && link[1] == link[2] && link[2] == 'w' && link[3] == '.'))
+        4:   14-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0
+        4:   14-block  1
+call    4 returned 4
+call    5 returned 4
+branch  6 taken 3 (fallthrough)
+branch  7 taken 1
+        3:   14-block  2
+call    8 returned 3
+branch  9 taken 3 (fallthrough)
+branch 10 taken 0
+        3:   14-block  3
+call   11 returned 3
+branch 12 taken 0 (fallthrough)
+branch 13 taken 3
+        1:   14-block  4
+        3:   14-block  5
+        4:   14-block  6
+branch 14 taken 1 (fallthrough)
+branch 15 taken 3
+        1:   15:            throw ValidError("Invalid link");
+        1:   15-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   15-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:   15-block  2
+call    9 never executed
+    $$$$$:   15-block  3
+    $$$$$:   15-block  4
+call   10 never executed
+        3:   16:}
+        3:   16-block  0
+        -:   17:
+function _ZN16Event_Validation14validate_titleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 17 returned 12% blocks executed 73%
+       17:   18:void Event_Validation::validate_title(const std::string& title) {
+        -:   19:
+       17:   20:    if (title.empty())
+       17:   20-block  0
+call    0 returned 17
+branch  1 taken 15 (fallthrough)
+branch  2 taken 2
+       15:   21:        throw ValidError("Invalid title");
+       15:   21-block  0
+call    0 returned 15
+call    1 returned 15
+call    2 returned 15
+branch  3 taken 15 (fallthrough)
+branch  4 taken 0 (throw)
+       15:   21-block  1
+call    5 returned 15
+call    6 returned 15
+call    7 returned 15
+call    8 returned 0
+    $$$$$:   21-block  2
+call    9 never executed
+    $$$$$:   21-block  3
+    $$$$$:   21-block  4
+call   10 never executed
+        2:   22:}
+        2:   22-block  0
+        -:   23:
+function _ZN16Event_Validation20validate_descriptionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 17 returned 12% blocks executed 73%
+       17:   24:void Event_Validation::validate_description(const std::string& description) {
+        -:   25:
+       17:   26:    if (description.empty())
+       17:   26-block  0
+call    0 returned 17
+branch  1 taken 15 (fallthrough)
+branch  2 taken 2
+       15:   27:        throw ValidError("Invalid title");
+       15:   27-block  0
+call    0 returned 15
+call    1 returned 15
+call    2 returned 15
+branch  3 taken 15 (fallthrough)
+branch  4 taken 0 (throw)
+       15:   27-block  1
+call    5 returned 15
+call    6 returned 15
+call    7 returned 15
+call    8 returned 0
+    $$$$$:   27-block  2
+call    9 never executed
+    $$$$$:   27-block  3
+    $$$$$:   27-block  4
+call   10 never executed
+        2:   28:}
+        2:   28-block  0
+        -:   29:
+function _ZN16Event_Validation18validate_date_timeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 17 returned 18% blocks executed 72%
+       17:   30:void Event_Validation::validate_date_time(const std::string& date_time) {
+        -:   31:
+       17:   32:    if(date_time.empty())
+       17:   32-block  0
+call    0 returned 17
+branch  1 taken 1 (fallthrough)
+branch  2 taken 16
+        1:   33:        throw ValidError("Invalid date and time");
+        1:   33-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   33-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   33-block  2
+call    9 never executed
+    $$$$$:   33-block  3
+    $$$$$:   33-block  4
+call   10 never executed
+        -:   34:
+       16:   35:    if(date_time.length() != 16)
+       16:   35-block  0
+call    0 returned 16
+branch  1 taken 1 (fallthrough)
+branch  2 taken 15
+        1:   36:        throw ValidError("Invalid date and time");
+        1:   36-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   36-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   36-block  2
+call    9 never executed
+    $$$$$:   36-block  3
+    $$$$$:   36-block  4
+call   10 never executed
+        -:   37:
+       15:   38:    std::string date, time;
+       15:   38-block  0
+call    0 returned 15
+call    1 returned 15
+       15:   39:    size_t s = date_time.find(' ');
+call    0 returned 15
+        -:   40:
+       15:   41:    date = date_time;
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   42:    date.erase(s, date.length());
+       15:   42-block  0
+call    0 returned 15
+call    1 returned 15
+branch  2 taken 15 (fallthrough)
+branch  3 taken 0 (throw)
+        -:   43:
+       15:   44:    if(date.length() != 10)
+       15:   44-block  0
+call    0 returned 15
+branch  1 taken 1 (fallthrough)
+branch  2 taken 14
+        1:   45:        throw ValidError("Invalid date");
+        1:   45-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   45-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   45-block  2
+call    9 never executed
+    $$$$$:   45-block  3
+    $$$$$:   45-block  4
+call   10 never executed
+        -:   46:
+       14:   47:    if(date[2] != '/' && date[5] != '/')
+       14:   47-block  0
+call    0 returned 14
+branch  1 taken 14 (fallthrough)
+branch  2 taken 0 (throw)
+       14:   47-block  1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 13
+        1:   47-block  2
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   47-block  3
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+        1:   47-block  4
+       13:   47-block  5
+       14:   47-block  6
+branch 10 taken 1 (fallthrough)
+branch 11 taken 13
+        1:   48:        throw ValidError("Invalid date");
+        1:   48-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   48-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   48-block  2
+call    9 never executed
+    $$$$$:   48-block  3
+    $$$$$:   48-block  4
+call   10 never executed
+        -:   49:
+       13:   50:    if(date[0] != '0' && date[0] != '1' && date[0] != '2' && date[0] != '3')
+       13:   50-block  0
+call    0 returned 13
+branch  1 taken 13 (fallthrough)
+branch  2 taken 0 (throw)
+       13:   50-block  1
+branch  3 taken 13 (fallthrough)
+branch  4 taken 0
+       13:   50-block  2
+call    5 returned 13
+branch  6 taken 13 (fallthrough)
+branch  7 taken 0 (throw)
+       13:   50-block  3
+branch  8 taken 1 (fallthrough)
+branch  9 taken 12
+        1:   50-block  4
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   50-block  5
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:   50-block  6
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   50-block  7
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0
+        1:   50-block  8
+       12:   50-block  9
+       13:   50-block 10
+branch 20 taken 1 (fallthrough)
+branch 21 taken 12
+        1:   51:        throw ValidError("Invalid date");
+        1:   51-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   51-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   51-block  2
+call    9 never executed
+    $$$$$:   51-block  3
+    $$$$$:   51-block  4
+call   10 never executed
+        -:   52:
+       12:   53:    if(std::isalpha(date[1]))
+       12:   53-block  0
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
+branch  2 taken 0 (throw)
+       12:   53-block  1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 11
+        1:   54:        throw ValidError("Invalid date");
+        1:   54-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   54-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   54-block  2
+call    9 never executed
+    $$$$$:   54-block  3
+    $$$$$:   54-block  4
+call   10 never executed
+        -:   55:
+       11:   56:    if(date[3] != '0' && date[3] != '1')
+       11:   56-block  0
+call    0 returned 11
+branch  1 taken 11 (fallthrough)
+branch  2 taken 0 (throw)
+       11:   56-block  1
+branch  3 taken 11 (fallthrough)
+branch  4 taken 0
+       11:   56-block  2
+call    5 returned 11
+branch  6 taken 11 (fallthrough)
+branch  7 taken 0 (throw)
+       11:   56-block  3
+branch  8 taken 1 (fallthrough)
+branch  9 taken 10
+        1:   56-block  4
+       10:   56-block  5
+       11:   56-block  6
+branch 10 taken 1 (fallthrough)
+branch 11 taken 10
+        1:   57:        throw ValidError("Invalid date");
+        1:   57-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   57-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   57-block  2
+call    9 never executed
+    $$$$$:   57-block  3
+    $$$$$:   57-block  4
+call   10 never executed
+        -:   58:
+       10:   59:    if(std::isalpha(date[4]))
+       10:   59-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   59-block  1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 9
+        1:   60:        throw ValidError("Invalid date");
+        1:   60-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   60-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   60-block  2
+call    9 never executed
+    $$$$$:   60-block  3
+    $$$$$:   60-block  4
+call   10 never executed
+        -:   61:
+        9:   62:    if(std::isalpha(date[6]) || std::isalpha(date[7]) || std::isalpha(date[8]) || std::isalpha(date[9]))
+        9:   62-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   62-block  1
+branch  3 taken 9 (fallthrough)
+branch  4 taken 0
+        9:   62-block  2
+call    5 returned 9
+branch  6 taken 9 (fallthrough)
+branch  7 taken 0 (throw)
+        9:   62-block  3
+branch  8 taken 8 (fallthrough)
+branch  9 taken 1
+        8:   62-block  4
+call   10 returned 8
+branch 11 taken 8 (fallthrough)
+branch 12 taken 0 (throw)
+        8:   62-block  5
+branch 13 taken 8 (fallthrough)
+branch 14 taken 0
+        8:   62-block  6
+call   15 returned 8
+branch 16 taken 8 (fallthrough)
+branch 17 taken 0 (throw)
+        8:   62-block  7
+branch 18 taken 0 (fallthrough)
+branch 19 taken 8
+        1:   62-block  8
+        8:   62-block  9
+        9:   62-block 10
+branch 20 taken 1 (fallthrough)
+branch 21 taken 8
+        1:   63:        throw ValidError("Invalid date");
+        1:   63-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   63-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   63-block  2
+call    9 never executed
+    $$$$$:   63-block  3
+    $$$$$:   63-block  4
+call   10 never executed
+        -:   64:
+        8:   65:    time = date_time;
+        8:   65-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   66:    time.erase(0, s + 1);
+        8:   66-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   67:
+        8:   68:    if(time[2] != ':')
+        8:   68-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   68-block  1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 7
+        1:   69:        throw ValidError("Invalid time");
+        1:   69-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   69-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   69-block  2
+call    9 never executed
+    $$$$$:   69-block  3
+    $$$$$:   69-block  4
+call   10 never executed
+        -:   70:
+        7:   71:    if(time[0] != '0' && time[0] != '1' && time[0] != '2')
+        7:   71-block  0
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:   71-block  1
+branch  3 taken 7 (fallthrough)
+branch  4 taken 0
+        7:   71-block  2
+call    5 returned 7
+branch  6 taken 7 (fallthrough)
+branch  7 taken 0 (throw)
+        7:   71-block  3
+branch  8 taken 1 (fallthrough)
+branch  9 taken 6
+        1:   71-block  4
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   71-block  5
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:   71-block  6
+        6:   71-block  7
+        7:   71-block  8
+branch 15 taken 1 (fallthrough)
+branch 16 taken 6
+        1:   72:        throw ValidError("Invalid time");
+        1:   72-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   72-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   72-block  2
+call    9 never executed
+    $$$$$:   72-block  3
+    $$$$$:   72-block  4
+call   10 never executed
+        -:   73:
+        6:   74:    if(std::isalpha(time[1]))
+        6:   74-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   74-block  1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 5
+        1:   75:        throw ValidError("Invalid time");
+        1:   75-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   75-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   75-block  2
+call    9 never executed
+    $$$$$:   75-block  3
+    $$$$$:   75-block  4
+call   10 never executed
+        -:   76:
+        5:   77:    if(time[3] < '0' || time[3] > '5')
+        5:   77-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   77-block  1
+branch  3 taken 5 (fallthrough)
+branch  4 taken 0
+        5:   77-block  2
+call    5 returned 5
+branch  6 taken 5 (fallthrough)
+branch  7 taken 0 (throw)
+        5:   77-block  3
+branch  8 taken 1 (fallthrough)
+branch  9 taken 4
+        1:   77-block  4
+        4:   77-block  5
+        5:   77-block  6
+branch 10 taken 1 (fallthrough)
+branch 11 taken 4
+        1:   78:        throw ValidError("Invalid time");
+        1:   78-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   78-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   78-block  2
+call    9 never executed
+    $$$$$:   78-block  3
+    $$$$$:   78-block  4
+call   10 never executed
+        -:   79:
+        4:   80:    if(std::isalpha(time[4]))
+        4:   80-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   80-block  1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 3
+        1:   81:        throw ValidError("Invalid time");
+        1:   81-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   81-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   81-block  2
+call    9 never executed
+    $$$$$:   81-block  3
+    $$$$$:   81-block  4
+call   10 never executed
+       27:   82:}
+        3:   82-block  0
+call    0 returned 3
+call    1 returned 3
+       12:   82-block  1
+call    2 returned 12
+       12:   82-block  2
+call    3 returned 12
+        -:   83:
+function _ZN16Event_Validation14validate_eventENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKS5_S7_S7_ called 17 returned 12% blocks executed 66%
+       17:   84:void Event_Validation::validate_event(std::string link, const std::string& description, const std::string& title, const std::string& date_time) {
+        -:   85:
+       17:   86:    std::string err;
+       17:   86-block  0
+call    0 returned 17
+        -:   87:
+        -:   88:    try {
+       32:   89:        validate_link(std::move(link));
+call    0 returned 17
+call    1 returned 17
+call    2 returned 17
+branch  3 taken 2 (fallthrough)
+branch  4 taken 15 (throw)
+        2:   89-block  0
+call    5 returned 2
+       15:   89-block  1
+call    6 returned 15
+       15:   89-block  2
+        -:   90:    }
+       15:   91:    catch (ValidError &ve) {
+       15:   91-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 15
+       15:   91-block  1
+call    2 returned 15
+       15:   92:        err += ve.get_message();
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   92-block  0
+call    3 returned 15
+branch  4 taken 15 (fallthrough)
+branch  5 taken 0 (throw)
+       15:   92-block  1
+call    6 returned 15
+    $$$$$:   92-block  2
+call    7 never executed
+    $$$$$:   92-block  3
+       15:   93:        err += "\n";
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   94:    }
+       15:   94-block  0
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   94-block  1
+call    3 never executed
+        -:   95:
+        -:   96:    try {
+       17:   97:        validate_title(title);
+       17:   97-block  0
+call    0 returned 17
+branch  1 taken 2 (fallthrough)
+branch  2 taken 15 (throw)
+        -:   98:    }
+       15:   99:    catch (ValidError &ve) {
+       15:   99-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 15
+       15:   99-block  1
+call    2 returned 15
+       15:  100:        err += ve.get_message();
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:  100-block  0
+call    3 returned 15
+branch  4 taken 15 (fallthrough)
+branch  5 taken 0 (throw)
+       15:  100-block  1
+call    6 returned 15
+    $$$$$:  100-block  2
+call    7 never executed
+    $$$$$:  100-block  3
+       15:  101:        err += "\n";
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:  102:    }
+       15:  102-block  0
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  102-block  1
+call    3 never executed
+        -:  103:
+        -:  104:    try {
+       17:  105:        validate_description(description);
+       17:  105-block  0
+call    0 returned 17
+branch  1 taken 2 (fallthrough)
+branch  2 taken 15 (throw)
+        -:  106:    }
+       15:  107:    catch (ValidError &ve) {
+       15:  107-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 15
+       15:  107-block  1
+call    2 returned 15
+       15:  108:        err += ve.get_message();
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:  108-block  0
+call    3 returned 15
+branch  4 taken 15 (fallthrough)
+branch  5 taken 0 (throw)
+       15:  108-block  1
+call    6 returned 15
+    $$$$$:  108-block  2
+call    7 never executed
+    $$$$$:  108-block  3
+       15:  109:        err += "\n";
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:  110:    }
+       15:  110-block  0
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  110-block  1
+call    3 never executed
+        -:  111:
+        -:  112:    try {
+       17:  113:        validate_date_time(date_time);
+       17:  113-block  0
+call    0 returned 17
+branch  1 taken 3 (fallthrough)
+branch  2 taken 14 (throw)
+        -:  114:    }
+       14:  115:    catch (ValidError &ve) {
+       14:  115-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 14
+       14:  115-block  1
+call    2 returned 14
+       14:  116:        err += ve.get_message();
+call    0 returned 14
+branch  1 taken 14 (fallthrough)
+branch  2 taken 0 (throw)
+       14:  116-block  0
+call    3 returned 14
+branch  4 taken 14 (fallthrough)
+branch  5 taken 0 (throw)
+       14:  116-block  1
+call    6 returned 14
+    $$$$$:  116-block  2
+call    7 never executed
+    $$$$$:  116-block  3
+       14:  117:    }
+call    0 returned 14
+branch  1 taken 14 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  117-block  0
+call    3 never executed
+        -:  118:
+       17:  119:    if (!err.empty())
+       17:  119-block  0
+call    0 returned 17
+branch  1 taken 15 (fallthrough)
+branch  2 taken 2
+       15:  120:        throw ValidError(err);
+       15:  120-block  0
+call    0 returned 15
+call    1 returned 15
+branch  2 taken 15 (fallthrough)
+branch  3 taken 0 (throw)
+       15:  120-block  1
+call    4 returned 15
+call    5 returned 15
+call    6 returned 15
+    $$$$$:  120-block  2
+call    7 never executed
+       17:  121:}
+        2:  121-block  0
+call    0 returned 2
+       15:  121-block  1
+call    1 returned 15

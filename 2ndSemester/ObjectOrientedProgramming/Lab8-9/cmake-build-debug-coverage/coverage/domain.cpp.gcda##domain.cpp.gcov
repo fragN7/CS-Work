@@ -1,0 +1,255 @@
+        -:    0:Source:C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/domain/domain.cpp
+        -:    0:Graph:C:\Users\Alen\Documents\GitHub\a8-9-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a8_9_913_Iaguta_Alen_Mihael.dir\domain\domain.cpp.gcno
+        -:    0:Data:C:\Users\Alen\Documents\GitHub\a8-9-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a8_9_913_Iaguta_Alen_Mihael.dir\domain\domain.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Alen on 16/03/2022.
+        -:    3://
+        -:    4:
+        -:    5:#include "domain.h"
+        -:    6:#include <iostream>
+        -:    7:#include <string>
+        -:    8:
+function _ZN5EventC2Ev called 2 returned 100% blocks executed 100%
+        2:    9:Event::Event() = default;
+        2:    9-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+        -:   10:
+function _ZN5EventC2ERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_S6_S6_j called 29 returned 100% blocks executed 59%
+       29:   11:Event::Event(std::string& link, std::string& title, std::string& description, std::string& date_time, unsigned int people_number)
+       29:   11-block  0
+call    0 returned 29
+call    1 returned 29
+call    2 returned 29
+call    3 returned 29
+        -:   12:{
+       29:   13:    this->link = link;
+call    0 returned 29
+branch  1 taken 29 (fallthrough)
+branch  2 taken 0 (throw)
+       29:   14:    this->title = title;
+       29:   14-block  0
+call    0 returned 29
+branch  1 taken 29 (fallthrough)
+branch  2 taken 0 (throw)
+       29:   15:    this->description = description;
+       29:   15-block  0
+call    0 returned 29
+branch  1 taken 29 (fallthrough)
+branch  2 taken 0 (throw)
+       29:   16:    this->date_time = date_time;
+       29:   16-block  0
+call    0 returned 29
+branch  1 taken 29 (fallthrough)
+branch  2 taken 0 (throw)
+       29:   17:    this->people_number = people_number;
+       29:   18:}
+       29:   18-block  0
+    $$$$$:   18-block  1
+call    0 never executed
+    $$$$$:   18-block  2
+call    1 never executed
+    $$$$$:   18-block  3
+call    2 never executed
+    $$$$$:   18-block  4
+call    3 never executed
+        -:   19:
+function _ZN5EventD2Ev called 295 returned 100% blocks executed 100%
+      295:   20:Event::~Event() = default;
+      295:   20-block  0
+call    0 returned 295
+call    1 returned 295
+call    2 returned 295
+call    3 returned 295
+        -:   21:
+function _ZN5Event9get_titleB5cxx11Ev called 8 returned 100% blocks executed 100%
+        8:   22:std::string Event::get_title() {
+        8:   23:    return title;
+        8:   23-block  0
+call    0 returned 8
+        -:   24:}
+        -:   25:
+function _ZN5Event15get_descriptionB5cxx11Ev called 8 returned 100% blocks executed 100%
+        8:   26:std::string Event::get_description() {
+        8:   27:    return description;
+        8:   27-block  0
+call    0 returned 8
+        -:   28:}
+        -:   29:
+function _ZN5Event13get_date_timeB5cxx11Ev called 8 returned 100% blocks executed 100%
+        8:   30:std::string Event::get_date_time() {
+        8:   31:    return date_time;
+        8:   31-block  0
+call    0 returned 8
+        -:   32:}
+        -:   33:
+function _ZN5Event9get_monthEv called 69 returned 100% blocks executed 87%
+       69:   34:unsigned int Event::get_month() {
+        -:   35:
+       69:   36:    std::string new_month;
+       69:   36-block  0
+call    0 returned 69
+        -:   37:    char first_month, second_month;
+        -:   38:
+       69:   39:    first_month = date_time[3];
+call    0 returned 69
+branch  1 taken 69 (fallthrough)
+branch  2 taken 0 (throw)
+       69:   40:    second_month = date_time[4];
+       69:   40-block  0
+call    0 returned 69
+branch  1 taken 69 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   41:
+       69:   42:    if (first_month == '0')
+       69:   42-block  0
+branch  0 taken 61 (fallthrough)
+branch  1 taken 8
+       61:   43:        return second_month - '0';
+       61:   43-block  0
+        -:   44:
+        8:   45:    new_month[0] = first_month;
+        8:   45-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   46:    new_month[1] = second_month;
+        8:   46-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   47:
+        8:   48:    return stoi(new_month);
+        8:   48-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   48-block  1
+       69:   49:}
+       69:   49-block  0
+call    0 returned 69
+    $$$$$:   49-block  1
+call    1 never executed
+        -:   50:
+function _ZN5Event8get_linkB5cxx11Ev called 134 returned 100% blocks executed 100%
+      134:   51:std::string Event::get_link() {
+      134:   52:    return link;
+      134:   52-block  0
+call    0 returned 134
+        -:   53:}
+        -:   54:
+function _ZNK5Event17get_people_numberEv called 9 returned 100% blocks executed 100%
+        9:   55:unsigned int Event::get_people_number() const {
+        9:   56:    return people_number;
+        9:   56-block  0
+        -:   57:}
+        -:   58:
+function _ZN5Event8set_linkERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   59:void Event::set_link(std::string &new_link) {
+        1:   60:    this->link = new_link;
+        1:   60-block  0
+call    0 returned 1
+        1:   61:}
+        -:   62:
+function _ZN5Event9set_titleERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   63:void Event::set_title(std::string &new_title) {
+        1:   64:    this->title = new_title;
+        1:   64-block  0
+call    0 returned 1
+        1:   65:}
+        -:   66:
+function _ZN5Event15set_descriptionERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   67:void Event::set_description(std::string &new_description) {
+        1:   68:    this->description = new_description;
+        1:   68-block  0
+call    0 returned 1
+        1:   69:}
+        -:   70:
+function _ZN5Event13set_date_timeERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   71:void Event::set_date_time(std::string &new_date_time) {
+        1:   72:    this->date_time = new_date_time;
+        1:   72-block  0
+call    0 returned 1
+        1:   73:}
+        -:   74:
+function _ZN5Event17set_people_numberEj called 1 returned 100% blocks executed 100%
+        1:   75:void Event::set_people_number(unsigned int new_people_number) {
+        1:   76:    this->people_number = new_people_number;
+        1:   77:}
+        -:   78:
+function _ZlsRSoRK5Event called 11 returned 100% blocks executed 100%
+       11:   79:std::ostream &operator<<(std::ostream &output, const Event &event_to_print) {
+        -:   80:
+       11:   81:    output << event_to_print.link << " | " << event_to_print.title << " | " << event_to_print.description << " | " << event_to_print.date_time << " | " << event_to_print.people_number << "\n";
+       11:   81-block  0
+call    0 returned 11
+call    1 returned 11
+call    2 returned 11
+call    3 returned 11
+call    4 returned 11
+call    5 returned 11
+call    6 returned 11
+call    7 returned 11
+call    8 returned 11
+call    9 returned 11
+       11:   82:    return output;
+        -:   83:}
+        -:   84:
+function _ZrsRSiR5Event called 0 returned 0% blocks executed 0%
+    #####:   85:std::istream &operator>>(std::istream &inputStream, Event& event_to_read) {
+        -:   86:
+    #####:   87:    if (inputStream.eof())
+    %%%%%:   87-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   88:        inputStream.setstate(std::ios_base::failbit);
+    %%%%%:   88-block  0
+call    0 never executed
+        -:   89:    else
+        -:   90:    {
+    #####:   91:        std::getline(inputStream, event_to_read.link, '|');
+    %%%%%:   91-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   92:        std::getline(inputStream, event_to_read.title, '|');
+    %%%%%:   92-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   93:        std::getline(inputStream, event_to_read.description, '|');
+    %%%%%:   93-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   94:        std::getline(inputStream, event_to_read.date_time, '|');
+    %%%%%:   94-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   95:        std::string people_number;
+    %%%%%:   95-block  0
+call    0 never executed
+    #####:   96:        std::getline(inputStream, people_number, '\n');
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   97:        event_to_read.set_people_number(std::stoi(people_number));
+    %%%%%:   97-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   97-block  1
+call    3 never executed
+    #####:   98:    }
+call    0 never executed
+    $$$$$:   98-block  0
+call    1 never executed
+    #####:   99:    return inputStream;
+    %%%%%:   99-block  0
+    %%%%%:   99-block  1
+        -:  100:}

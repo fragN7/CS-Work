@@ -1,0 +1,60 @@
+        -:    0:Source:C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/errors/exceptions.h
+        -:    0:Graph:C:\Users\Alen\Documents\GitHub\a8-9-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a8_9_913_Iaguta_Alen_Mihael.dir\ui\Ui.cpp.gcno
+        -:    0:Data:C:\Users\Alen\Documents\GitHub\a8-9-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a8_9_913_Iaguta_Alen_Mihael.dir\ui\Ui.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Alen on 19/03/2022.
+        -:    3://
+        -:    4:
+        -:    5:#pragma once
+        -:    6:#include <exception>
+        -:    7:#include <string>
+        -:    8:#include <utility>
+        -:    9:
+        -:   10:
+        -:   11:class RepoError : public std::exception {
+        -:   12:    std::string message;
+        -:   13:public:
+        -:   14:    explicit RepoError(std::string message) :message(std::move(message)) {};
+function _ZN9RepoError11get_messageB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   15:    std::string get_message() { return this->message; };
+    %%%%%:   15-block  0
+call    0 never executed
+        -:   16:};
+        -:   17:
+        -:   18:class ValidError : public std::exception {
+        -:   19:    std::string message;
+        -:   20:public:
+function _ZN10ValidErrorC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 77 returned 100% blocks executed 100%
+       77:   21:    explicit ValidError(std::string message) :message(std::move(message)) {};
+       77:   21-block  0
+call    0 returned 77
+call    1 returned 77
+call    2 returned 77
+function _ZN10ValidError11get_messageB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   22:    std::string get_message() { return this->message; };
+    %%%%%:   22-block  0
+call    0 never executed
+        -:   23:};
+        -:   24:
+        -:   25:class UserError : public std::exception {
+        -:   26:    std::string message;
+        -:   27:public:
+function _ZN9UserErrorC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   28:    explicit UserError(std::string message) :message(std::move(message)) {};
+    %%%%%:   28-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+function _ZN9UserError11get_messageB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   29:    std::string get_message() { return this->message; };
+    %%%%%:   29-block  0
+call    0 never executed
+        -:   30:};
+        -:   31:
+        -:   32:class FileError : public std::exception {
+        -:   33:    std::string message;
+        -:   34:public:
+        -:   35:    explicit FileError(std::string message) :message(std::move(message)) {};
+        -:   36:    std::string getMessage() { return this->message; };
+        -:   37:};

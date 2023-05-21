@@ -1,0 +1,1657 @@
+        -:    0:Source:C:/Users/Alen/Documents/GitHub/UBB Github/a5-6-913-Iaguta-Alen-Mihael/tests/tests.cpp
+        -:    0:Graph:C:\Users\Alen\Documents\GitHub\UBB Github\a5-6-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iaguta_Alen_Mihael.dir\tests\tests.cpp.gcno
+        -:    0:Data:C:\Users\Alen\Documents\GitHub\UBB Github\a5-6-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a5_6_913_Iaguta_Alen_Mihael.dir\tests\tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Alen on 16/03/2022.
+        -:    3://
+        -:    4:
+        -:    5:#include "tests.h"
+        -:    6:
+function _ZN7TestingD2Ev called 0 returned 0% blocks executed 0%
+    #####:    7:Testing::~Testing() = default;
+        -:    8:
+        -:    9:
+function _ZN7Testing11test_domainEv called 1 returned 100% blocks executed 50%
+        1:   10:void Testing::test_domain() {
+        -:   11:
+        1:   12:    Event default_event{};
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   13:
+        1:   14:    std::string link = "www.1.com";
+        1:   14-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   14-block  1
+        1:   15:    std::string title = "title";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   15-block  0
+        1:   16:    std::string description = "desc";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   16-block  0
+        1:   17:    std::string date_time = "12/12/1222 12:12";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   17-block  0
+        1:   18:    Event test_event(link, title, description, date_time, 45);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   19:
+       1*:   20:    assert(test_event.get_link() == link);
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   20-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   20-block  3
+    %%%%%:   20-block  4
+        1:   20-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   20-block  6
+call   11 returned 1
+    $$$$$:   20-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   20-block  8
+call   14 never executed
+    $$$$$:   20-block  9
+       1*:   21:    assert(test_event.get_title() == title);
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   21-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   21-block  3
+    %%%%%:   21-block  4
+        1:   21-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   21-block  6
+call   11 returned 1
+    $$$$$:   21-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   21-block  8
+call   14 never executed
+    $$$$$:   21-block  9
+       1*:   22:    assert(test_event.get_description() == description);
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   22-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   22-block  3
+    %%%%%:   22-block  4
+        1:   22-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   22-block  6
+call   11 returned 1
+    $$$$$:   22-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   22-block  8
+call   14 never executed
+    $$$$$:   22-block  9
+       1*:   23:    assert(test_event.get_date_time() == date_time);
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   23-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   23-block  3
+    %%%%%:   23-block  4
+        1:   23-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   23-block  6
+call   11 returned 1
+    $$$$$:   23-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   23-block  8
+call   14 never executed
+    $$$$$:   23-block  9
+       1*:   24:    assert(test_event.get_people_number() == 45);
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   24-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   24-block  3
+    %%%%%:   24-block  4
+        -:   25:
+        1:   26:    std::string link1 = "www.2.com";
+        1:   26-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   26-block  1
+        1:   27:    std::string title1= "title";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   27-block  0
+        1:   28:    std::string description1 = "desc";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   28-block  0
+        1:   29:    std::string date_time1 = "12/09/1222 12:12";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   29-block  0
+        1:   30:    Event test_event1(link1, title1, description1, date_time1, 90);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   31:
+       1*:   32:    assert(test_event1.get_month() == 9);
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   32-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   32-block  3
+    %%%%%:   32-block  4
+       1*:   33:    assert(test_event.get_month() == 12);
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   33-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   33-block  3
+    %%%%%:   33-block  4
+        -:   34:
+        1:   35:    std::string new_link = "www.lacoste.com";
+        1:   35-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   35-block  1
+        1:   36:    test_event.set_link(new_link);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   37:    assert(test_event.get_link() == new_link);
+        1:   37-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   37-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   37-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   37-block  3
+    %%%%%:   37-block  4
+        1:   37-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   37-block  6
+call   11 returned 1
+    $$$$$:   37-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   37-block  8
+call   14 never executed
+    $$$$$:   37-block  9
+        -:   38:
+        1:   39:    std::string new_title = "new title";
+        1:   39-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   39-block  1
+        1:   40:    test_event.set_title(new_title);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   41:    assert(test_event.get_title() == new_title);
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   41-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   41-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   41-block  3
+    %%%%%:   41-block  4
+        1:   41-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   41-block  6
+call   11 returned 1
+    $$$$$:   41-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   41-block  8
+call   14 never executed
+    $$$$$:   41-block  9
+        -:   42:
+        1:   43:    std::string new_description = "new description";
+        1:   43-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   43-block  1
+        1:   44:    test_event.set_description(new_description);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   45:    assert(test_event.get_description() == new_description);
+        1:   45-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   45-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   45-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   45-block  3
+    %%%%%:   45-block  4
+        1:   45-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   45-block  6
+call   11 returned 1
+    $$$$$:   45-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   45-block  8
+call   14 never executed
+    $$$$$:   45-block  9
+        -:   46:
+        1:   47:    std::string new_date_time = "new date_time";
+        1:   47-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   47-block  1
+        1:   48:    test_event.set_date_time(new_date_time);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   49:    assert(test_event.get_date_time() == new_date_time);
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   49-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   49-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   49-block  3
+    %%%%%:   49-block  4
+        1:   49-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   49-block  6
+call   11 returned 1
+    $$$$$:   49-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   49-block  8
+call   14 never executed
+    $$$$$:   49-block  9
+        -:   50:
+        1:   51:    test_event.set_people_number(80);
+        1:   51-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   52:    assert(test_event.get_people_number() == 80);
+        1:   52-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   52-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   52-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   52-block  3
+    %%%%%:   52-block  4
+        -:   53:
+        1:   54:    std::stringstream string_event;
+        1:   54-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55:    string_event << test_event;
+        1:   55-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   56:    assert(string_event.str() == "www.lacoste.com | new title | new description | new date_time | 80\n");
+        1:   56-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   56-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   56-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   56-block  3
+    %%%%%:   56-block  4
+        1:   56-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   56-block  6
+call   11 returned 1
+    $$$$$:   56-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   56-block  8
+call   14 never executed
+    $$$$$:   56-block  9
+        1:   57:}
+        1:   57-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+    $$$$$:   57-block  1
+call   16 never executed
+    $$$$$:   57-block  2
+call   17 never executed
+    $$$$$:   57-block  3
+call   18 never executed
+    $$$$$:   57-block  4
+call   19 never executed
+    $$$$$:   57-block  5
+call   20 never executed
+    $$$$$:   57-block  6
+call   21 never executed
+    $$$$$:   57-block  7
+call   22 never executed
+    $$$$$:   57-block  8
+call   23 never executed
+    $$$$$:   57-block  9
+call   24 never executed
+    $$$$$:   57-block 10
+call   25 never executed
+    $$$$$:   57-block 11
+call   26 never executed
+    $$$$$:   57-block 12
+call   27 never executed
+    $$$$$:   57-block 13
+call   28 never executed
+    $$$$$:   57-block 14
+call   29 never executed
+    $$$$$:   57-block 15
+call   30 never executed
+    $$$$$:   57-block 16
+call   31 never executed
+        -:   58:
+function _ZN7Testing9test_repoEv called 1 returned 100% blocks executed 55%
+        1:   59:void Testing::test_repo() {
+        -:   60:
+        1:   61:    Event_Repo test_event_repo{};
+        1:   61-block  0
+call    0 returned 1
+        1:   62:    Event default_event{};
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   63:
+        1:   64:    std::string link = "www.1.com";
+        1:   64-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   64-block  1
+        1:   65:    std::string title = "title";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   65-block  0
+        1:   66:    std::string description = "desc";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   66-block  0
+        1:   67:    std::string date_time = "12/12/1222 12:12";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   67-block  0
+        1:   68:    Event test_event(link, title, description, date_time, 45);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   69:
+        1:   70:    test_event_repo.add(test_event);
+        1:   70-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   70-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   70-block  2
+call    6 returned 1
+    $$$$$:   70-block  3
+call    7 never executed
+    $$$$$:   70-block  4
+       1*:   71:    assert(test_event_repo.get_event_number() == 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   71-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   71-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   71-block  2
+    %%%%%:   71-block  3
+        -:   72:
+        -:   73:    try {
+       2*:   74:        test_event_repo.add(test_event);
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   74-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:   74-block  2
+call    6 never executed
+        1:   74-block  3
+call    7 returned 1
+        1:   74-block  4
+        -:   75:    }
+        1:   76:    catch(RepoError& re){
+        1:   76-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   76-block  1
+call    2 returned 1
+        -:   77:        assert(true);
+        1:   78:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   79:
+        1:   80:    std::string link1 = "www.2.com";
+        1:   80-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   80-block  1
+        1:   81:    Event test_event1(link1, title, description, date_time, 80);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   82:
+        -:   83:    try {
+       2*:   84:        test_event_repo.update(test_event1);
+        1:   84-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   84-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:   84-block  2
+call    6 never executed
+        1:   84-block  3
+call    7 returned 1
+        1:   84-block  4
+        -:   85:    }
+        1:   86:    catch(RepoError& re){
+        1:   86-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   86-block  1
+call    2 returned 1
+        -:   87:        assert(true);
+        1:   88:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   89:
+        1:   90:    test_event_repo.update(test_event);
+        1:   90-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   90-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   90-block  2
+call    6 returned 1
+    $$$$$:   90-block  3
+call    7 never executed
+    $$$$$:   90-block  4
+        -:   91:
+        1:   92:    std::string link2 = "www.3.com";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   92-block  0
+        1:   93:    Event test_event2(link2, title, description, date_time, 60);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   94:    test_event_repo.add(test_event2);
+        1:   94-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   94-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   94-block  2
+call    6 returned 1
+    $$$$$:   94-block  3
+call    7 never executed
+    $$$$$:   94-block  4
+        -:   95:
+        -:   96:    try {
+       2*:   97:        test_event_repo.remove(test_event1.get_link());
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   97-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:   97-block  1
+call    6 never executed
+        1:   97-block  2
+call    7 returned 1
+        1:   97-block  3
+        -:   98:    }
+        1:   99:    catch (RepoError& re) {
+        1:   99-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   99-block  1
+call    2 returned 1
+        -:  100:        assert(true);
+        1:  101:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  102:
+        1:  103:    test_event_repo.remove(test_event.get_link());
+        1:  103-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  103-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  103-block  2
+call    6 returned 1
+    $$$$$:  103-block  3
+call    7 never executed
+    $$$$$:  103-block  4
+       1*:  104:    assert(test_event_repo.get_event_number() == 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  104-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  104-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:  104-block  2
+    %%%%%:  104-block  3
+        1:  105:}
+        1:  105-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+    $$$$$:  105-block  1
+call   11 never executed
+    $$$$$:  105-block  2
+call   12 never executed
+    $$$$$:  105-block  3
+call   13 never executed
+    $$$$$:  105-block  4
+call   14 never executed
+    $$$$$:  105-block  5
+call   15 never executed
+    $$$$$:  105-block  6
+call   16 never executed
+    $$$$$:  105-block  7
+call   17 never executed
+    $$$$$:  105-block  8
+call   18 never executed
+    $$$$$:  105-block  9
+call   19 never executed
+    $$$$$:  105-block 10
+call   20 never executed
+    $$$$$:  105-block 11
+call   21 never executed
+        -:  106:
+function _ZN7Testing12test_serviceEv called 1 returned 100% blocks executed 49%
+        1:  107:void Testing::test_service() {
+        -:  108:
+        1:  109:    Event_Repo test_event_repo;
+        1:  109-block  0
+call    0 returned 1
+        -:  110:    Event_Validation test_event_validation;
+        1:  111:    Event_Service test_event_service(test_event_repo, test_event_validation);
+call    0 returned 1
+        -:  112:
+        1:  113:    std::string link = "www.1.com";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  113-block  0
+        1:  114:    std::string title = "title";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  114-block  0
+        1:  115:    std::string description = "desc";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  115-block  0
+        1:  116:    std::string date_time = "12/12/1222 12:12";
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  116-block  0
+        -:  117:
+        1:  118:    test_event_service.add_event(link, title, description, date_time, 10);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  118-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  118-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  118-block  2
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  118-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  118-block  4
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+    $$$$$:  118-block  5
+call   19 never executed
+    $$$$$:  118-block  6
+    $$$$$:  118-block  7
+call   20 never executed
+    $$$$$:  118-block  8
+    $$$$$:  118-block  9
+call   21 never executed
+    $$$$$:  118-block 10
+    $$$$$:  118-block 11
+call   22 never executed
+    $$$$$:  118-block 12
+       1*:  119:    assert(test_event_service.get_number_events() == 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  119-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  119-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:  119-block  2
+    %%%%%:  119-block  3
+        -:  120:
+        1:  121:    test_event_service.update_event(link, title, description, date_time, 50);
+        1:  121-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  121-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  121-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  121-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  121-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  121-block  5
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+    $$$$$:  121-block  6
+call   19 never executed
+    $$$$$:  121-block  7
+    $$$$$:  121-block  8
+call   20 never executed
+    $$$$$:  121-block  9
+    $$$$$:  121-block 10
+call   21 never executed
+    $$$$$:  121-block 11
+    $$$$$:  121-block 12
+call   22 never executed
+    $$$$$:  121-block 13
+       1*:  122:    assert(test_event_service.list_events()[0].get_people_number() == 50);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  122-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  122-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  122-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+        1:  122-block  3
+    %%%%%:  122-block  4
+        1:  122-block  5
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0
+        1:  122-block  6
+call   14 returned 1
+    $$$$$:  122-block  7
+branch 15 never executed
+branch 16 never executed
+    $$$$$:  122-block  8
+call   17 never executed
+    $$$$$:  122-block  9
+        -:  123:
+       1*:  124:    assert(test_event_service.get_number_events_for_month(12) == 1);
+        1:  124-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  124-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  124-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:  124-block  3
+    %%%%%:  124-block  4
+        -:  125:
+        1:  126:    test_event_service.remove_event(link);
+        1:  126-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  127:    assert(test_event_service.get_number_events() == 0);
+        1:  127-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  127-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  127-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:  127-block  3
+    %%%%%:  127-block  4
+        -:  128:
+        1:  129:}
+        1:  129-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+    $$$$$:  129-block  1
+call    6 never executed
+    $$$$$:  129-block  2
+call    7 never executed
+    $$$$$:  129-block  3
+call    8 never executed
+    $$$$$:  129-block  4
+call    9 never executed
+    $$$$$:  129-block  5
+call   10 never executed
+    $$$$$:  129-block  6
+call   11 never executed
+        -:  130:
+function _ZN7Testing15test_validationEv called 1 returned 100% blocks executed 60%
+        1:  131:void Testing::test_validation() {
+        -:  132:
+        1:  133:    std::string link;
+        1:  133-block  0
+call    0 returned 1
+        -:  134:    try {
+       2*:  135:        Event_Validation::validate_link(link);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  135-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  135-block  1
+call    6 never executed
+        1:  135-block  2
+call    7 returned 1
+        1:  135-block  3
+        -:  136:    }
+        1:  137:    catch(ValidError& ve){
+        1:  137-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  137-block  1
+call    2 returned 1
+        -:  138:        assert(true);
+        1:  139:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  140:
+        1:  141:    std::string link1 = "121";
+        1:  141-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  141-block  1
+        -:  142:    try {
+       2*:  143:        Event_Validation::validate_link(link1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  143-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  143-block  1
+call    6 never executed
+        1:  143-block  2
+call    7 returned 1
+        1:  143-block  3
+        -:  144:    }
+        1:  145:    catch(ValidError& ve){
+        1:  145-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  145-block  1
+call    2 returned 1
+        -:  146:        assert(true);
+        1:  147:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  148:    std::string link2 = "ww2.olm.moc";
+        1:  148-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  148-block  1
+        -:  149:    try {
+       2*:  150:        Event_Validation::validate_link(link2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  150-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  150-block  1
+call    6 never executed
+        1:  150-block  2
+call    7 returned 1
+        1:  150-block  3
+        -:  151:    }
+        1:  152:    catch(ValidError& ve){
+        1:  152-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  152-block  1
+call    2 returned 1
+        -:  153:        assert(true);
+        1:  154:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  155:
+        1:  156:    std::string link3;
+        1:  156-block  0
+call    0 returned 1
+        1:  157:    std::string title;
+call    0 returned 1
+        1:  158:    std::string description;
+call    0 returned 1
+        1:  159:    std::string date;
+call    0 returned 1
+        -:  160:    try {
+       2*:  161:        Event_Validation::validate_event(link3, title, description, date);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  161-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  161-block  1
+call    6 never executed
+        1:  161-block  2
+call    7 returned 1
+        1:  161-block  3
+        -:  162:    }
+        1:  163:    catch(ValidError& ve){
+        1:  163-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  163-block  1
+call    2 returned 1
+        -:  164:        assert(true);
+        1:  165:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  166:
+        1:  167:    std::string date0 = "123";
+        1:  167-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  167-block  1
+        -:  168:    try {
+       2*:  169:        Event_Validation::validate_event(link3, title, description, date0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  169-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  169-block  1
+call    6 never executed
+        1:  169-block  2
+call    7 returned 1
+        1:  169-block  3
+        -:  170:    }
+        1:  171:    catch(ValidError& ve){
+        1:  171-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  171-block  1
+call    2 returned 1
+        -:  172:        assert(true);
+        1:  173:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  174:
+        1:  175:    std::string date1 = "11 1111111111111";
+        1:  175-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  175-block  1
+        -:  176:    try {
+       2*:  177:        Event_Validation::validate_event(link3, title, description, date1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  177-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  177-block  1
+call    6 never executed
+        1:  177-block  2
+call    7 returned 1
+        1:  177-block  3
+        -:  178:    }
+        1:  179:    catch(ValidError& ve){
+        1:  179-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  179-block  1
+call    2 returned 1
+        -:  180:        assert(true);
+        1:  181:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  182:
+        1:  183:    std::string date2 = "1111111111 11111";
+        1:  183-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  183-block  1
+        -:  184:    try {
+       2*:  185:        Event_Validation::validate_event(link3, title, description, date2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  185-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  185-block  1
+call    6 never executed
+        1:  185-block  2
+call    7 returned 1
+        1:  185-block  3
+        -:  186:    }
+        1:  187:    catch(ValidError& ve){
+        1:  187-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  187-block  1
+call    2 returned 1
+        -:  188:        assert(true);
+        1:  189:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  190:
+        1:  191:    std::string date3 = "91/11/1111 11:11";
+        1:  191-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  191-block  1
+        -:  192:    try {
+       2*:  193:        Event_Validation::validate_event(link3, title, description, date3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  193-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  193-block  1
+call    6 never executed
+        1:  193-block  2
+call    7 returned 1
+        1:  193-block  3
+        -:  194:    }
+        1:  195:    catch(ValidError& ve){
+        1:  195-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  195-block  1
+call    2 returned 1
+        -:  196:        assert(true);
+        1:  197:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  198:
+        1:  199:    std::string date4 = "1a/11/1111 11:11";
+        1:  199-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  199-block  1
+        -:  200:    try {
+       2*:  201:        Event_Validation::validate_event(link3, title, description, date4);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  201-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  201-block  1
+call    6 never executed
+        1:  201-block  2
+call    7 returned 1
+        1:  201-block  3
+        -:  202:    }
+        1:  203:    catch(ValidError& ve){
+        1:  203-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  203-block  1
+call    2 returned 1
+        -:  204:        assert(true);
+        1:  205:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  206:
+        1:  207:    std::string date5 = "11/51/1111 11:11";
+        1:  207-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  207-block  1
+        -:  208:    try {
+       2*:  209:        Event_Validation::validate_event(link3, title, description, date5);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  209-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  209-block  1
+call    6 never executed
+        1:  209-block  2
+call    7 returned 1
+        1:  209-block  3
+        -:  210:    }
+        1:  211:    catch(ValidError& ve){
+        1:  211-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  211-block  1
+call    2 returned 1
+        -:  212:        assert(true);
+        1:  213:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  214:
+        1:  215:    std::string date6 = "11/1s/1111 11:11";
+        1:  215-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  215-block  1
+        -:  216:    try {
+       2*:  217:        Event_Validation::validate_event(link3, title, description, date6);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  217-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  217-block  1
+call    6 never executed
+        1:  217-block  2
+call    7 returned 1
+        1:  217-block  3
+        -:  218:    }
+        1:  219:    catch(ValidError& ve){
+        1:  219-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  219-block  1
+call    2 returned 1
+        -:  220:        assert(true);
+        1:  221:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  222:
+        1:  223:    std::string date7 = "11/11/1a11 11:11";
+        1:  223-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  223-block  1
+        -:  224:    try {
+       2*:  225:        Event_Validation::validate_event(link3, title, description, date7);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  225-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  225-block  1
+call    6 never executed
+        1:  225-block  2
+call    7 returned 1
+        1:  225-block  3
+        -:  226:    }
+        1:  227:    catch(ValidError& ve){
+        1:  227-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  227-block  1
+call    2 returned 1
+        -:  228:        assert(true);
+        1:  229:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  230:
+        1:  231:    std::string date8 = "11/11/1111 31:11";
+        1:  231-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  231-block  1
+        -:  232:    try {
+       2*:  233:        Event_Validation::validate_event(link3, title, description, date8);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  233-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  233-block  1
+call    6 never executed
+        1:  233-block  2
+call    7 returned 1
+        1:  233-block  3
+        -:  234:    }
+        1:  235:    catch(ValidError& ve){
+        1:  235-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  235-block  1
+call    2 returned 1
+        -:  236:        assert(true);
+        1:  237:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  238:
+        1:  239:    std::string date9 = "11/11/1111 1a:11";
+        1:  239-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  239-block  1
+        -:  240:    try {
+       2*:  241:        Event_Validation::validate_event(link3, title, description, date9);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  241-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  241-block  1
+call    6 never executed
+        1:  241-block  2
+call    7 returned 1
+        1:  241-block  3
+        -:  242:    }
+        1:  243:    catch(ValidError& ve){
+        1:  243-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  243-block  1
+call    2 returned 1
+        -:  244:        assert(true);
+        1:  245:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  246:
+        1:  247:    std::string date10 = "11/11/1111 11:61";
+        1:  247-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  247-block  1
+        -:  248:    try {
+       2*:  249:        Event_Validation::validate_event(link3, title, description, date10);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  249-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  249-block  1
+call    6 never executed
+        1:  249-block  2
+call    7 returned 1
+        1:  249-block  3
+        -:  250:    }
+        1:  251:    catch(ValidError& ve){
+        1:  251-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  251-block  1
+call    2 returned 1
+        -:  252:        assert(true);
+        1:  253:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  254:
+        1:  255:    std::string date11 = "11/11/1111 11:1a";
+        1:  255-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  255-block  1
+        -:  256:    try {
+       2*:  257:        Event_Validation::validate_event(link3, title, description, date11);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  257-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  257-block  1
+call    6 never executed
+        1:  257-block  2
+call    7 returned 1
+        1:  257-block  3
+        -:  258:    }
+        1:  259:    catch(ValidError& ve){
+        1:  259-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  259-block  1
+call    2 returned 1
+        -:  260:        assert(true);
+        1:  261:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  262:
+        1:  263:    std::string date12 = "11/11/1111 11111";
+        1:  263-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  263-block  1
+        -:  264:    try {
+       2*:  265:        Event_Validation::validate_event(link3, title, description, date12);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  265-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  265-block  1
+call    6 never executed
+        1:  265-block  2
+call    7 returned 1
+        1:  265-block  3
+        -:  266:    }
+        1:  267:    catch(ValidError& ve){
+        1:  267-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  267-block  1
+call    2 returned 1
+        -:  268:        assert(true);
+        1:  269:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  270:
+        1:  271:    std::string date13 = "11/11/1111 11:11";
+        1:  271-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  271-block  1
+        -:  272:    try {
+       2*:  273:        Event_Validation::validate_event(link3, title, description, date13);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  273-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  273-block  1
+call    6 never executed
+        1:  273-block  2
+call    7 returned 1
+        1:  273-block  3
+        -:  274:    }
+        1:  275:    catch(ValidError& ve){
+        1:  275-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  275-block  1
+call    2 returned 1
+        -:  276:        assert(true);
+        1:  277:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  278:}
+        1:  278-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:  278-block  1
+call   21 never executed
+    $$$$$:  278-block  2
+call   22 never executed
+    $$$$$:  278-block  3
+call   23 never executed
+    $$$$$:  278-block  4
+call   24 never executed
+    $$$$$:  278-block  5
+call   25 never executed
+    $$$$$:  278-block  6
+call   26 never executed
+    $$$$$:  278-block  7
+call   27 never executed
+    $$$$$:  278-block  8
+call   28 never executed
+    $$$$$:  278-block  9
+call   29 never executed
+    $$$$$:  278-block 10
+call   30 never executed
+    $$$$$:  278-block 11
+call   31 never executed
+    $$$$$:  278-block 12
+call   32 never executed
+    $$$$$:  278-block 13
+call   33 never executed
+    $$$$$:  278-block 14
+call   34 never executed
+    $$$$$:  278-block 15
+call   35 never executed
+    $$$$$:  278-block 16
+call   36 never executed
+    $$$$$:  278-block 17
+call   37 never executed
+    $$$$$:  278-block 18
+call   38 never executed
+    $$$$$:  278-block 19
+call   39 never executed
+    $$$$$:  278-block 20
+call   40 never executed
+    $$$$$:  278-block 21
+call   41 never executed
+        -:  279:
+function _ZN7Testing9run_testsEv called 1 returned 100% blocks executed 100%
+        1:  280:void Testing::run_tests() {
+        -:  281:
+        1:  282:    test_domain();
+        1:  282-block  0
+call    0 returned 1
+        1:  283:    test_repo();
+call    0 returned 1
+        1:  284:    test_service();
+call    0 returned 1
+        1:  285:    test_validation();
+call    0 returned 1
+        1:  286:}

@@ -1,0 +1,3 @@
+C:/Users/Alen/Documents/GitHub/t2-913-Iaguta-Alen-Mihael-1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Alen/Documents/GitHub/t2-913-Iaguta-Alen-Mihael-1/cmake-build-debug/CMakeFiles/t2_913_Iaguta_Alen_Mihael_1.dir
+C:/Users/Alen/Documents/GitHub/t2-913-Iaguta-Alen-Mihael-1/cmake-build-debug/CMakeFiles/edit_cache.dir

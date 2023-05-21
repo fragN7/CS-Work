@@ -1,0 +1,19 @@
+# ninja log v5
+54	1248	6721736813730010	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/domain/fileuserdomain.cpp.obj	987d8c73a6f300fd
+14	298	6737172085796777	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/validation/validation.cpp.obj	4b08ed10fa00f414
+5	747	6737099860710554	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/domain/domain.cpp.obj	b138ee809401899e
+22	1784	6737165111384137	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/repo/repository.cpp.obj	2eca050bb047b95
+16	3024	6721736832672315	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/domain/csvdomain.cpp.obj	9308ca3bff2c4aea
+22	1350	6721736814610141	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/domain/userdomain.cpp.obj	caffed14c566ea43
+58	1352	6721736815720070	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/repo/repofile.cpp.obj	90765a3bff7a3698
+41	3261	6721736835034331	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/domain/htmluserdomain.cpp.obj	c1d5bcfc818b2d60
+3	485	6737169157286597	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/service/service.cpp.obj	390b092b07e25133
+3	1445	6737183210576583	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/main/main.cpp.obj	32b256c54e144db0
+5	2043	6737173285396096	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/ui/Ui.cpp.obj	5a3f285e249e3edb
+12	497	6737183201083225	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/tests/tests.cpp.obj	f758a072642e50df
+0	232	6739744416932344	build.ninja	cad628e60498d025
+9	415	6721741423927152	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/repo/fileuserrepo.cpp.obj	cda9110b8e567c8c
+12	442	6721741424217137	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/repo/userrepo.cpp.obj	48d40a5117fc4def
+3	1416	6721741433936988	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/repo/csvrepo.cpp.obj	cb8ba2fa36f0686a
+6	1419	6721741433976978	CMakeFiles/a8_9_913_Iaguta_Alen_Mihael.dir/repo/htmlrepo.cpp.obj	27b9b6679ff8cd31
+1445	1574	6737183211788024	a8_9_913_Iaguta_Alen_Mihael.exe	25799783dc7d1c8e

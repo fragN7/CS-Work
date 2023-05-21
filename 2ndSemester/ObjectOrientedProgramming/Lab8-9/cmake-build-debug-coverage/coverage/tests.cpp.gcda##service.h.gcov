@@ -1,0 +1,72 @@
+        -:    0:Source:C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/service/service.h
+        -:    0:Graph:C:\Users\Alen\Documents\GitHub\a8-9-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a8_9_913_Iaguta_Alen_Mihael.dir\tests\tests.cpp.gcno
+        -:    0:Data:C:\Users\Alen\Documents\GitHub\a8-9-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a8_9_913_Iaguta_Alen_Mihael.dir\tests\tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Alen on 16/03/2022.
+        -:    3://
+        -:    4:
+        -:    5:#pragma once
+        -:    6:#include <utility>
+        -:    7:#include <algorithm>
+        -:    8:#include "../repo/repository.h"
+        -:    9:#include "../validation/validation.h"
+        -:   10:
+        -:   11:
+        -:   12:class Event_Service {
+        -:   13:
+        -:   14:private:
+        -:   15:    Event_Repo* event_repo;
+        -:   16:    Event_Validation event_validator;
+        -:   17:
+        -:   18:public:
+        -:   19:    /// Service constructor with inherited repo and validator
+        -:   20:    /// \param event_repo Repo of events
+        -:   21:    /// /// \param event_validator Validator of the event
+function _ZN13Event_ServiceC1EP10Event_Repo16Event_Validation called 0 returned 0% blocks executed 0%
+    #####:   22:    Event_Service(Event_Repo* event_repo, Event_Validation event_validator) : event_repo(event_repo), event_validator(event_validator){};
+        -:   23:
+        -:   24:    /// Calls the repo and validator to add and validate the event
+        -:   25:    /// \param link Link
+        -:   26:    /// \param title Title
+        -:   27:    /// \param description Description
+        -:   28:    /// \param date_time Date and time
+        -:   29:    /// \param people_number Number of people
+        -:   30:    void add_event(std::string link, std::string title, std::string description, std::string date_time, unsigned int people_number);
+        -:   31:
+        -:   32:    /// Removes the event by link, by calling the repo
+        -:   33:    /// \param link Unique identifier
+        -:   34:    void remove_event(const std::string& link);
+        -:   35:
+        -:   36:    /// Updates and event by calling the repo
+        -:   37:    /// \param link Link
+        -:   38:    /// \param title Title
+        -:   39:    /// \param description Description
+        -:   40:    /// \param date_time Date and time
+        -:   41:    /// \param people_number Number of people
+        -:   42:    void update_event(std::string link, std::string title, std::string description, std::string date_time, unsigned int people_number);
+        -:   43:
+        -:   44:    /// Populates the array with random valid events
+        -:   45:    void populate_array();
+        -:   46:
+        -:   47:    /// Getter for number of events for a given month
+        -:   48:    /// \return Number of events for a given month
+        -:   49:    unsigned int get_number_events_for_month(unsigned int month);
+        -:   50:
+        -:   51:    /// Getter for number of events
+        -:   52:    /// \return Number of events
+        -:   53:    unsigned long long get_number_events();
+        -:   54:
+        -:   55:    /// Sorts array by a certain function
+        -:   56:    std::vector<Event> filter_array(unsigned int month);
+        -:   57:
+        -:   58:    /// Returns the list of events
+        -:   59:    /// \return List of events
+        -:   60:    std::vector<Event> list_events();
+        -:   61:
+        -:   62:    void add_to_generic_file(std::string file_name);
+        -:   63:    void open_file(std::string file_name);
+        -:   64:
+        -:   65:    void add_to_file(std::string file_name);
+        -:   66:    void read_from_file(std::string file_name);
+        -:   67:};

@@ -1,0 +1,83 @@
+        -:    0:Source:C:/Users/Alen/Documents/GitHub/a8-9-913-Iaguta-Alen-Mihael/repo/repository.h
+        -:    0:Graph:C:\Users\Alen\Documents\GitHub\a8-9-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a8_9_913_Iaguta_Alen_Mihael.dir\tests\tests.cpp.gcno
+        -:    0:Data:C:\Users\Alen\Documents\GitHub\a8-9-913-Iaguta-Alen-Mihael\cmake-build-debug-coverage\CMakeFiles\a8_9_913_Iaguta_Alen_Mihael.dir\tests\tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Alen on 16/03/2022.
+        -:    3://
+        -:    4:
+        -:    5:#include <iostream>
+        -:    6:#include <cstdlib>
+        -:    7:#include "domain.h"
+        -:    8:#include "../errors/exceptions.h"
+        -:    9:#include "../array/Array.h"
+        -:   10:#include <vector>
+        -:   11:#pragma once
+        -:   12:
+        -:   13:
+        -:   14:class Event_Repo{
+        -:   15:
+        -:   16:protected:
+        -:   17:    std::vector<Event> events;
+        -:   18:
+        -:   19:private:
+        -:   20:
+        -:   21:    /// Event finder by link
+        -:   22:    /// \param link Unique identifier
+        -:   23:    /// \return The event's index if it's found, -1 otherwise
+        -:   24:    int find(const std::string& link);
+        -:   25:
+        -:   26:public:
+        -:   27:
+        -:   28:    /// Event Repo constructor
+        -:   29:    /// \param dynamic_array Inherited from Array class
+function _ZN10Event_RepoC1Ev called 0 returned 0% blocks executed 0%
+    #####:   30:    Event_Repo() = default;
+    %%%%%:   30-block  0
+call    0 never executed
+        -:   31:
+        -:   32:    /// Adds an event to the dynamic array
+        -:   33:    /// \param event Event to be added
+        -:   34:    void add(Event event);
+        -:   35:
+        -:   36:    /// Removes an event from the dynamic array
+        -:   37:    /// \param link Link from the event to be removed
+        -:   38:    void remove(const std::string& link);
+        -:   39:
+        -:   40:    /// Updates and event from the dynamic array
+        -:   41:    /// \param event The new event
+        -:   42:    void update(Event event);
+        -:   43:
+        -:   44:    /// Number of events getter
+        -:   45:    /// \return Number of events
+        -:   46:    unsigned long long get_event_number();
+        -:   47:
+        -:   48:    /// All events getter
+        -:   49:    /// \return All events
+        -:   50:    std::vector<Event> get_all_events();
+        -:   51:
+        -:   52:    Event& operator[](int index) {return events[index];}
+        -:   53:
+        -:   54:    virtual void file_write(std::string file_name){};
+        -:   55:    virtual void file_write_txt(std::string file_name);
+        -:   56:    virtual void file_read(std::string file_name){};
+        -:   57:    virtual void file_read_txt(std::string file_name);
+        -:   58:    virtual void file_open(const std::string file_name){};
+        -:   59:};
+        -:   60:
+        -:   61:class Event_CSV_Repo : public Event_Repo {
+        -:   62:
+        -:   63:public:
+        -:   64:    void file_write(std::string file_name) override;
+        -:   65:    void file_read(std::string file_name) override;
+        -:   66:    void file_open(std::string file_name) override;
+        -:   67:};
+        -:   68:
+        -:   69:class Event_HTML_Repo : public Event_Repo {
+        -:   70:
+        -:   71:public:
+        -:   72:
+        -:   73:    void file_write(std::string file_name) override;
+        -:   74:    void file_open(std::string file_name) override;
+        -:   75:};
+        -:   76:
