@@ -1,0 +1,4 @@
+repository=something else
+students=students.pickle
+assignments=assignments.pickle
+grades=grades.pickle

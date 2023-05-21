@@ -1,0 +1,4 @@
+repository=textfiles
+students=students.txt
+assignments=assignments.txt
+grades=grades.txt
