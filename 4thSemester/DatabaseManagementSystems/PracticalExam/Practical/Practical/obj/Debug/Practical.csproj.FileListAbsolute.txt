@@ -1,0 +1,11 @@
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\PracticalExam\Practical\Practical\bin\Debug\Practical.exe.config
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\PracticalExam\Practical\Practical\bin\Debug\Practical.exe
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\PracticalExam\Practical\Practical\bin\Debug\Practical.pdb
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\PracticalExam\Practical\Practical\obj\Debug\Practical.csproj.AssemblyReference.cache
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\PracticalExam\Practical\Practical\obj\Debug\Practical.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\PracticalExam\Practical\Practical\obj\Debug\Practical.Properties.Resources.resources
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\PracticalExam\Practical\Practical\obj\Debug\Practical.csproj.GenerateResource.cache
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\PracticalExam\Practical\Practical\obj\Debug\Practical.csproj.CoreCompileInputs.cache
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\PracticalExam\Practical\Practical\obj\Debug\Practical.exe
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\PracticalExam\Practical\Practical\obj\Debug\Practical.pdb
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\PracticalExam\Practical\Practical\obj\Debug\Practical.Form1.resources
