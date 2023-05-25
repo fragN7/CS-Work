@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Multimedia Files</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<style>
+    .center-container {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<div class="center-container">
+    <div class="container-fluid">
+        <h1 class="text-center mb-4">Multimedia Files</h1>
+        <hr class="style13">
+        <div class="center-container">
+        <div class="row">
+            <div class="col-md-12">
+                <form id="search-form">
+                    <div class="form-group">
+                        <label class="form-label" for="filter-by-genre" style="text-align: center;">Filter:</label>
+                        <div class="input-group mb-3">
+                            <select class="form-select" id="filter-by-genre">
+                                <option value="">All</option>
+                                <option value="image">Image</option>
+                                <option value="video">Video</option>
+                                <option value="audio">Audio</option>
+                                <option value="document">Document</option>
+                                <option value="executable">Executable</option>
+                            </select>
+                            <div class="btn-group-vertical" style="margin-left: 20px;">
+                                <a href="add.html" class="btn btn-success">Add File</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="results" class="center-container"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function() {
+
+        var savedFilter = localStorage.getItem('filterByGenre');
+        if (savedFilter) {
+            $('#filter-by-genre').val(savedFilter);
+        }
+
+        $(document).on('click', '.delete-button', function() {
+            var id = $(this).data('id');
+            if (confirm('Are you sure you want to delete this multimedia file?')) {
+                $.ajax({
+                    type: 'POST',
+                    url: 'delete.php',
+                    data: { id: id },
+                    dataType: 'json',
+                    success: function() {
+                        // Reload the browse page to show the updated list of multimedia files
+                        window.location.href = 'browse.html';
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("Error: " + error.message);
+                        alert('Error deleting multimedia file: ' + error.message);
+                    }
+                });
+            }
+        });
+
+        $(document).on('click', '.update-button', function() {
+            var id = $(this).data('id');
+            console.log(id);
+            window.location.href = 'update.html?id=' + id;
+        });
+
+        $('#filter-by-genre').change(function() {
+            var genre = $(this).val();
+            localStorage.setItem('filterByGenre', genre);
+            loadData(genre);
+        });
+
+        function loadData(genre) {
+            $.ajax({
+                type: 'GET',
+                url: 'browse.php',
+                data: {
+                    filter_by_genre: genre
+                },
+                dataType: 'json',
+                success: function(data) {
+                    // Build the table to display the search results
+                    let table = '<table class="mt-1 table table-striped mx-auto" style="width: 80%">';
+                    table += '<thead><tr><th style="width: 30%">Title</th><th style="width: 30%">Format</th><th style="width: 30%">Genre</th><th style="width: 30%">Path</th><th style="width: 10%">Options</th></tr></thead><tbody>';
+                    $.each(data, function(index, entry) {
+                        table += '<tr>';
+                        table += '<td style="width: 30%">' + entry.title + '</td>';
+                        table += '<td style="width: 30%">' + entry.format + '</td>';
+                        table += '<td style="width: 30%">' + entry.genre + '</td>';
+                        table += '<td style="width: 30%">' + entry.path + '</td>';
+                        table += '<td><button class="btn btn-primary update-button" data-id="' + entry.id + '">Update</button></td>';
+                        table += '<td><button class="btn btn-danger delete-button" data-id="' + entry.id + '">Delete</button></td>';
+                        table += '</tr>';
+                    });
+                    table += '</tbody></table>';
+                    var centeredTable = '<div class="text-center">' + table + '</div>';
+                    $('#results').html(centeredTable);
+
+
+
+                },
+                error: function(xhr, status, error) {
+                    console.log("Error: " + error.message);
+                    $('#results').html('Error retrieving data: ' + error.message);
+                }
+            });
+        }
+
+        $('#filter-by-genre').trigger('change');
+    });
+</script>
+</body>
+</html>

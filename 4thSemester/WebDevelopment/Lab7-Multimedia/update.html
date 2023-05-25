@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Files</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+
+        function validateForm() {
+            var title = document.forms["myForm"]["Title"].value;
+            var format = document.forms["myForm"]["Format"].value;
+            var path = document.forms["myForm"]["Path"].value;
+
+            if (title === "") {
+                alert("Please enter a title");
+                return false;
+            }
+
+            if (format === "") {
+                alert("Please enter a format");
+                return false;
+            }
+
+            if (path === "") {
+                alert("Please enter a path");
+                return false;
+            }
+
+            var dotPosition = path.lastIndexOf('.');
+            if (dotPosition !== -1) {
+                var substringAfterDot = path.substring(dotPosition + 1);
+                console.log(substringAfterDot);
+            }
+
+            $('#formatInput').val(substringAfterDot);
+
+            alert("File has been updated!");
+            return "File has been updated!";
+
+        }
+
+        $(document).ready(function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var id = urlParams.get('id');
+            $('#id').val(id);
+
+            // AJAX request to retrieve multimedia file data
+            $.ajax({
+                url: 'getFiles.php',
+                method: 'GET',
+                data: { id: id },
+                dataType: 'json',
+                success: function(response) {
+                    var multimediaFile = response[0];
+
+                    /*$('input[name="Title"]').attr('placeholder', multimediaFile.title);
+                    $('input[name="Format"]').attr('placeholder', multimediaFile.format);
+                    $('select[name="Genre"]').val(multimediaFile.genre);
+                    $('input[name="Path"]').attr('placeholder', multimediaFile.path);*/
+
+                    $('input[name="Title"]').val(multimediaFile.title);
+                    $('input[name="Format"]').val(multimediaFile.format);
+                    $('select[name="Genre"]').val(multimediaFile.genre);
+                    $('input[name="Path"]').val(multimediaFile.path);
+                },
+                error: function(xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#pathInput').on('input', function() {
+                var pathValue = $(this).val();
+                console.log(pathValue);
+
+                var dotPosition = pathValue.lastIndexOf('.');
+                if (dotPosition !== -1) {
+                    var substringAfterDot = pathValue.substring(dotPosition + 1);
+                }
+                $('#formatInput').val(substringAfterDot);
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1 class="my-5">Update Multimedia</h1>
+    <hr>
+    <form name="myForm" method="POST" action="update.php" onsubmit="return validateForm()">
+        <input type="hidden" name="Id" id="id" value="">
+        <div class="form-group">
+            <label>Title:</label>
+            <input type="text" class="form-control" name="Title" required>
+        </div>
+        <div class="form-group" >
+            <label>Format:</label>
+            <input type="text" class="form-control" name="Format" id="formatInput" required>
+        </div>
+        <div class="form-group">
+            <label>Genre:</label>
+            <select class="form-control" name="Genre">
+                <option value="image">Image</option>
+                <option value="video">Video</option>
+                <option value="audio">Audio</option>
+                <option value="document">Document</option>
+                <option value="executable">Executable</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Path:</label>
+            <input type="text" class="form-control" name="Path" id="pathInput" required>
+        </div>
+        <form action="browse.html">
+            <button type="submit" class="btn btn-primary my-3">Update Multimedia File</button>
+        </form>
+    </form>
+    <hr>
+    <div class="my-5">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="browse.html">Browse Multimedia</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+</body>
+</html>
