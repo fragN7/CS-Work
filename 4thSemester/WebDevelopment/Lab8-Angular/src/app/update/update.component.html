@@ -1,0 +1,40 @@
+<div class="container">
+  <h1 class="my-5">Update Multimedia</h1>
+  <hr>
+  <form name="myForm" (ngSubmit)="updateFile()" #addForm="ngForm">
+    <div class="form-group">
+      <label>Title:</label>
+      <input type="text" class="form-control" name="title" required [(ngModel)]="file.title">
+    </div>
+    <div class="form-group">
+      <label>Format:</label>
+      <input type="text" class="form-control" name="format" readonly required [(ngModel)]="file.format" [value]="getFormat()">
+    </div>
+
+    <div class="form-group">
+      <label>Genre:</label>
+      <select class="form-control" name="genre" required [(ngModel)]="file.genre">
+        <option value="image">Image</option>
+        <option value="video">Video</option>
+        <option value="audio">Audio</option>
+        <option value="document">Document</option>
+        <option value="executable">Executable</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Path:</label>
+      <input type="text" class="form-control" name="path" required [(ngModel)]="file.path">
+    </div>
+    <button type="submit" class="btn btn-primary my-3">Update Multimedia File</button>
+  </form>
+  <hr>
+  <div class="my-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Browse Multimedia</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

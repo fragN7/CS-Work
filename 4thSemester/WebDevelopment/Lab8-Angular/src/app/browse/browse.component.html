@@ -1,0 +1,64 @@
+<div class="center-container">
+  <div class="container-fluid">
+
+    <h1 class="text-center mb-4">Multimedia Files</h1>
+    <hr class="style13">
+
+    <div class="center-container">
+      <div class="row">
+        <div class="col-md-12">
+          <form id="search-form">
+            <div class="form-group">
+              <div class="input-group mb-3 d-flex justify-content-center">
+                <div class="input-group-prepend">
+                  <select class="form-select" id="filter-by-genre" #genreSelect (change)="browseFiles(genreSelect.value)">
+                    <option value="">All</option>
+                    <option value="image">Image</option>
+                    <option value="video">Video</option>
+                    <option value="audio">Audio</option>
+                    <option value="document">Document</option>
+                    <option value="executable">Executable</option>
+                  </select>
+                </div>
+                <div class="btn-group-vertical ml-5">
+                  <a routerLink="/add" class="btn btn-success">Add File</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div id="results" class="center-container">
+
+          <table class="mt-1 table table-striped mx-auto" style="width: 80%">
+            <thead>
+            <tr>
+              <th style="width: 30%">Title</th>
+              <th style="width: 20%">Format</th>
+              <th style="width: 30%">Genre</th>
+              <th style="width: 50%">Path</th>
+              <th style="width: 50%">Options</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let multimedia of files">
+              <td style="width: 30%">{{ multimedia.title }}</td>
+              <td style="width: 30%">{{ multimedia.format }}</td>
+              <td style="width: 30%">{{ multimedia.genre }}</td>
+              <td style="width: 30%">{{ multimedia.path }}</td>
+              <td>
+                <button class="btn btn-primary" (click)="updateFile(multimedia.id)">Update</button>
+                <button class="btn btn-danger" (click)="deleteFile(multimedia.id)">Delete</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
