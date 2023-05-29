@@ -9,7 +9,7 @@
     </div>
     <div class="form-group">
       <label>Format:</label>
-      <input type="text" id="formatInput" class="form-control" name="format" readonly required [(ngModel)]="file.format" [value]="getFormat()"> <!--(ngModelChange)="getFormat()"-->
+      <input type="text" class="form-control" name="format" readonly required [(ngModel)]="file.format">
     </div>
     <div class="form-group">
       <label>Genre:</label>
@@ -23,7 +23,7 @@
     </div>
     <div class="form-group">
       <label>Path:</label>
-      <input type="text" id="pathInput" class="form-control" name="path" required [(ngModel)]="file.path">
+      <input type="text" class="form-control" name="path" required [(ngModel)]="file.path" (ngModelChange)="getFormat($event)">
     </div>
     <button type="submit" class="btn btn-primary my-3">Add Multimedia File</button>
   </form>

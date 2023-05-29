@@ -18,39 +18,16 @@ export class AddComponent implements OnInit {
 
   ngOnInit() {}
 
-
-  /*ngOnChanges(changes: SimpleChanges) {
-    if (changes['file'] && changes['file'].currentValue && changes['file'].currentValue['path']) {
-      const pathValue = this['file']['path'];
-      console.log(pathValue);
-      const dotPosition = pathValue.lastIndexOf('.');
-      if (dotPosition !== -1) {
-        const substringAfterDot = pathValue.substring(dotPosition + 1);
-        this['file']['format'] = substringAfterDot;
-        console.log(substringAfterDot);
-      }
-    }
-  }*/
-
-  getFormat() {
-    const pathValue = this.file.path;
-    console.log(pathValue);
-
-    const dotPosition = pathValue.lastIndexOf('.');
+  getFormat(event: any) {
+    const dotPosition = event.lastIndexOf('.');
     if (dotPosition !== -1) {
-      const substringAfterDot = pathValue.substring(dotPosition + 1);
-      this.file.format = substringAfterDot;
-    }
-    return this.file.format;
-
-    /*const dotPosition = this.file.path.lastIndexOf('.');
-    if (dotPosition !== -1) {
-      const substringAfterDot = this.file.path.substring(dotPosition + 1);
+      const substringAfterDot = event.substring(dotPosition + 1);
       this.file.format = substringAfterDot;
     } else {
       this.file.format = '';
-    }*/
+    }
   }
+
 
   addFile() {
     const error = this.validateForm();
