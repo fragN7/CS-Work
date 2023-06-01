@@ -24,11 +24,6 @@ export class ServiceComponent {
   private addFilesURL = 'http://localhost/WebLab/add.php';
   private updateFilesURL = 'http://localhost/WebLab/update.php';
   private deleteFilesURL = 'http://localhost/WebLab/delete.php';
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  };
   constructor(private http: HttpClient, private router: Router) { }
   getBrowsedFiles(filterByGenre: string) : Observable<any> {
     const params = {
