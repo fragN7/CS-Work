@@ -91,7 +91,6 @@ C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\WebDevelopment\Lab10-D
 C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\WebDevelopment\Lab10-Dotnet\Lab10-Dotnet\bin\Debug\net7.0\Lab10-Dotnet.pdb
 C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\WebDevelopment\Lab10-Dotnet\Lab10-Dotnet\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\WebDevelopment\Lab10-Dotnet\Lab10-Dotnet\bin\Debug\net7.0\Azure.Identity.dll
-C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\WebDevelopment\Lab10-Dotnet\Lab10-Dotnet\bin\Debug\net7.0\BCrypt.Net.dll
 C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\WebDevelopment\Lab10-Dotnet\Lab10-Dotnet\bin\Debug\net7.0\Humanizer.dll
 C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\WebDevelopment\Lab10-Dotnet\Lab10-Dotnet\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\WebDevelopment\Lab10-Dotnet\Lab10-Dotnet\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll

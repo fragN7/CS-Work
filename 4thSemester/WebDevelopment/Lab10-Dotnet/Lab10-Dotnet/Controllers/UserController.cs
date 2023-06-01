@@ -3,7 +3,6 @@ using System.Security.Claims;
 using System.Text;
 using Lab10_Dotnet.Data;
 using Lab10_Dotnet.Repository;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 
@@ -37,21 +36,9 @@ public class UserController : ControllerBase
             throw new Exception("Password is incorrect.");
         }
 
-        /*if (!BCrypt.Net.BCrypt.Verify(user.Password, actualUser.Password))
-        {
-            throw new Exception("Username or password are incorrect.");
-        }*/
-
         var token = CreateJwtToken(actualUser);
 
         return token;
-    }
-    
-    [Authorize]
-    [HttpGet("test")]
-    public ActionResult<string> Test()
-    {
-        return "yassir";
     }
 
     private string CreateJwtToken(User user) 
