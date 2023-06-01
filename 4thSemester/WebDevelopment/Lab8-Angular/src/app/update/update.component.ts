@@ -40,15 +40,13 @@ export class UpdateComponent implements OnInit{
     });
   }
 
-  getFormat() {
-    const pathValue = this.file.path;
-
-    const dotPosition = pathValue.lastIndexOf('.');
+  getFormat(event: any) {
+    const dotPosition = event.lastIndexOf('.');
     if (dotPosition !== -1) {
-      const substringAfterDot = pathValue.substring(dotPosition + 1);
-      this.file.format = substringAfterDot;
+      this.file.format = event.substring(dotPosition + 1);
+    } else {
+      this.file.format = '';
     }
-    return this.file.format;
   }
 
   updateFile() {
