@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lghz815c5S4XwfAUjXJ/ibHoDt4GFtVGNIyRrqrkxwwlP0Q0MGNlBIu6+8NPoztq2Ww5shdwOeGhANTpyyWMlg==",
+  "dgSpecHash": "76XbPIWHxIdX51P3npn9q1CjFSu4A245eqVur6XOw5dHIN+AQI0+6YXWb0fXPbtYWCeohd1ksxMXFX1HgSbSEA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alen\\Documents\\GithubPrivate\\CS-Work\\4thSemester\\WebDevelopment\\Lab10-Dotnet\\Lab10-Dotnet\\Lab10-Dotnet.csproj",
+  "projectFilePath": "C:\\Users\\Alen\\Documents\\GithubPrivate\\CS-Work\\4thSemester\\WebDevelopment\\Lab10-Dotnet\\MultimediaFiles\\MultimediaFiles.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alen\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Alen\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
