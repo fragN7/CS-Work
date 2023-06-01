@@ -1,0 +1,19 @@
+<div class="container my-3 d-flex justify-content-center align-items-center" style="height: 90vh;">
+  <form id="loginForm" autocomplete="off" (submit)="login()">
+    <h1>Welcome, please login </h1>
+    <div class="container my-3">
+
+      <div class="form-group mb-3">
+        <label for="usInput">Username:</label>
+        <input type="text" name="username" class="form-control" id="usInput" [(ngModel)]="user.username">
+      </div>
+      <div class="form-group mb-3">
+        <label for="psInput">Password:</label>
+        <input type="password" name="password" class="form-control" id="psInput" [(ngModel)]="user.password">
+      </div>
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary">Log in</button>
+      </div>
+    </div>
+  </form>
+</div>

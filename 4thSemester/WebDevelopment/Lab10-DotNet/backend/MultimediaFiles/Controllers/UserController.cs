@@ -22,7 +22,7 @@ public class UserController : ControllerBase
     }
     
     [HttpPost("login")]
-    public ActionResult<string> Login([FromBody] UserDTO user)
+    public ActionResult<LoginResponseDTO> Login([FromBody] UserDTO user)
     {
         var actualUser = this.context.Users.FirstOrDefault(u => u.Username == user.Username);
             
@@ -37,8 +37,13 @@ public class UserController : ControllerBase
         }
 
         var token = CreateJwtToken(actualUser);
+        var response = new LoginResponseDTO
+        {
+            Username = user.Username,
+            Token = token
+        };
 
-        return token;
+        return Ok(response);
     }
 
     private string CreateJwtToken(User user) 

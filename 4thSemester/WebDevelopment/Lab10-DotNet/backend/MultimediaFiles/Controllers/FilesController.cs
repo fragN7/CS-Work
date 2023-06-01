@@ -17,11 +17,21 @@ public class FilesController : ControllerBase
         this.context = context;
     }
 
-    [HttpGet]
+    [HttpGet("genre/{genre}")]
     [Authorize]
-    public async Task<ActionResult<IEnumerable<Multimedia>>> GetFiles()
+    public async Task<ActionResult<IEnumerable<Multimedia>>> GetFiles(string genre)
     {
-        var files = await this.context.MultimediaFiles.ToListAsync();
+        List<Multimedia>? files = null;
+
+        if (genre != "All")
+        {
+            files = await this.context.MultimediaFiles.Where(f => f.Genre == genre).ToListAsync();
+        }
+        else
+        {
+            files = await this.context.MultimediaFiles.ToListAsync();
+        }
+        
         return Ok(files);
     }
     
