@@ -1,7 +1,15 @@
 <div class="center-container">
   <div class="container-fluid">
 
-    <h1 class="text-center mb-4">Multimedia Files</h1>
+    <div class="d-flex flex-column align-items-center">
+      <h1 class="text-center mb-4">Multimedia Files</h1>
+      <div class="d-flex flex-column align-items-center">
+        <p class="text-center">Logged in as: <span id="username">{{username}}</span></p>
+        <button class="btn btn-primary" (click)="userLogout()">Logout</button>
+      </div>
+    </div>
+
+
     <hr class="style13">
 
     <div class="center-container">

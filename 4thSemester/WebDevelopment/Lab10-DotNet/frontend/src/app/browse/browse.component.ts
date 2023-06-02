@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Multimedia, ServiceComponent} from "../service/service.component";
 import {Router} from "@angular/router";
+import {AuthService} from "../service/auth.service";
 @Component({
   selector: 'app-browse',
   templateUrl: './browse.component.html',
@@ -9,11 +10,13 @@ import {Router} from "@angular/router";
 
 export class BrowseComponent implements OnInit{
   files: Multimedia[] = [];
+  username?: string = '';
 
-  constructor(private service: ServiceComponent, private router: Router) { }
+  constructor(private service: ServiceComponent, private userService: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.browseFiles('all');
+    this.username = localStorage.getItem('user')?.toString();
   }
 
   browseFiles(filterByGenre: string){
@@ -44,5 +47,9 @@ export class BrowseComponent implements OnInit{
 
   updateFile(id: number) {
     this.router.navigate(['/update', id]);
+  }
+
+  userLogout(){
+    this.userService.logout();
   }
 }
