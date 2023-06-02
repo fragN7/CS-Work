@@ -26,11 +26,10 @@ export class UpdateComponent implements OnInit{
         this.file.id = id;
         this.service.getFile(id).subscribe(
           (data) => {
-            console.log(data);
-            this.file.title = data[0].title;
-            this.file.format = data[0].format;
-            this.file.genre = data[0].genre;
-            this.file.path = data[0].path;
+            this.file.title = data.title;
+            this.file.format = data.format;
+            this.file.genre = data.genre;
+            this.file.path = data.path;
           },
           (error) => {
             console.error(error);

@@ -28,15 +28,17 @@ export class ServiceComponent {
       .append('Authorization', `Bearer ${token}`)
       .append('Content-Type', 'application/json');
 
-    return this.http.get<any[]>(`${this.baseURL}/files/genre/${filterByGenre}`, {headers});
+    return this.http.get<any[]>(`${this.baseURL}/genre/${filterByGenre}`, {headers});
   }
 
   getFile(id: string): Observable<any> {
-    const params = {
-      id: id
-    };
 
-    return this.http.get<Multimedia>(this.baseURL, {params: params});
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders()
+      .append('Authorization', `Bearer ${token}`)
+      .append('Content-Type', 'application/json');
+
+    return this.http.get<any>(`${this.baseURL}/${id}`, {headers});
   }
 
   addFiles(title: string, format: string, genre: string, path: string): Observable<any> {
@@ -53,7 +55,7 @@ export class ServiceComponent {
       .append('Authorization', `Bearer ${token}`)
       .append('Content-Type', 'application/json');
 
-    return this.http.post<Multimedia>(this.baseURL, body, {headers}).pipe(
+    return this.http.post<any>(this.baseURL, body, {headers}).pipe(
       tap(() => {
         alert("File has been added.");
         this.router.navigate(['/browse']);
@@ -62,28 +64,34 @@ export class ServiceComponent {
   }
   updateFiles(id: string, title: string, format: string, genre: string, path: string) {
 
-    console.log(title);
-    console.log(id);
+    const body = {
+      'id': id,
+      'title': title,
+      'format': format,
+      'genre': genre,
+      'path': path
+    };
 
-    const body = new FormData();
-    body.append("Id", id.toString());
-    body.append("Title", title.toString());
-    body.append("Format", format.toString());
-    body.append("Genre", genre.toString());
-    body.append("Path", path.toString());
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders()
+      .append('Authorization', `Bearer ${token}`)
+      .append('Content-Type', 'application/json');
 
-    return this.http.put<any>(`${this.baseURL}/${id}`, body).pipe(
+    return this.http.put<any>(`${this.baseURL}/${id}`, body, {headers}).pipe(
       tap(() => {
         alert("File has been updated.");
-        this.router.navigate(['/']);
+        this.router.navigate(['/browse']);
       })
     );
   }
 
   deleteFiles(id: number): Observable<any> {
-    const body = new FormData();
-    body.append('id', id.toString());
 
-    return this.http.delete<any>(`${this.baseURL}/${id}`);
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders()
+      .append('Authorization', `Bearer ${token}`)
+      .append('Content-Type', 'application/json');
+
+    return this.http.delete<any>(`${this.baseURL}/${id}`, {headers});
   }
 }

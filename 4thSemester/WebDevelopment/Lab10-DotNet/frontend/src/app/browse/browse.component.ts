@@ -13,7 +13,7 @@ export class BrowseComponent implements OnInit{
   constructor(private service: ServiceComponent, private router: Router) { }
 
   ngOnInit() {
-    this.browseFiles('');
+    this.browseFiles('all');
   }
 
   browseFiles(filterByGenre: string){
@@ -33,7 +33,7 @@ export class BrowseComponent implements OnInit{
       this.service.deleteFiles(id).subscribe(
         () => {
           // Reload the browse page to show the updated list of multimedia files
-          this.browseFiles('');
+          this.browseFiles('all');
         },
         (error: any) => {
           console.error('Error deleting multimedia file: ', error);

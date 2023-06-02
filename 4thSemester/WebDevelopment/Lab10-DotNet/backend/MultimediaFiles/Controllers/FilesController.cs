@@ -23,7 +23,7 @@ public class FilesController : ControllerBase
     {
         List<Multimedia>? files = null;
 
-        if (genre != "All")
+        if (genre != "all")
         {
             files = await this.context.MultimediaFiles.Where(f => f.Genre == genre).ToListAsync();
         }
