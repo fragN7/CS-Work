@@ -1,5 +1,6 @@
 using System.Text;
 using Lab10_Dotnet.Repository;
+using Lab10_Dotnet.Validation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -39,6 +40,7 @@ builder.Services.AddDbContext<MultimediaDbContext>(opt => opt.UseNpgsql(builder.
 
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<Validator>();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(options => {

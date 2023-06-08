@@ -1,5 +1,6 @@
 using Lab10_Dotnet.Data;
 using Lab10_Dotnet.Repository;
+using Lab10_Dotnet.Validation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,10 +12,12 @@ namespace Lab10_Dotnet.Controllers;
 public class FilesController : ControllerBase
 {
     private readonly MultimediaDbContext context;
+    private readonly Validator validator;
 
-    public FilesController(MultimediaDbContext context)
+    public FilesController(MultimediaDbContext context, Validator validator)
     {
         this.context = context;
+        this.validator = validator;
     }
 
     [HttpGet("genre/{genre}")]
@@ -54,8 +57,12 @@ public class FilesController : ControllerBase
             Genre = file.Genre,
             Path = file.Path
         };
-        
-        // TODO: Validate stuff 
+
+        var result = this.validator.validate(file);
+        if (result != string.Empty)
+        {
+            throw new Exception(result);
+        }
 
         this.context.MultimediaFiles.Add(newFile);
         await this.context.SaveChangesAsync();
@@ -77,8 +84,12 @@ public class FilesController : ControllerBase
         fileToUpdate.Format = file.Format;
         fileToUpdate.Genre = file.Genre;
         fileToUpdate.Path = file.Path;
-        
-        // TODO: Validate stuff
+
+        var result = this.validator.validate(file);
+        if (result != string.Empty)
+        {
+            throw new Exception(result);
+        }
 
         await this.context.SaveChangesAsync();
         return Ok(fileToUpdate);

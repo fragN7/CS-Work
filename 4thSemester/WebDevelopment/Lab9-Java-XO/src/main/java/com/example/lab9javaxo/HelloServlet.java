@@ -7,7 +7,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
+@WebServlet(name = "HelloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
     private String message;
     Connection connection = null;
@@ -15,10 +15,9 @@ public class HelloServlet extends HttpServlet {
     String username = "postgres";
     String password = "rootroot";
 
-
     public void init() {
         message = "Hello World!";
-        System.out.println("Starting to connect database!");
+        /*System.out.println("Starting to connect database!");
         try {
             connection = DriverManager.getConnection(url, username, password);
             System.out.println("Connected to the PostgreSQL database!");
@@ -36,7 +35,7 @@ public class HelloServlet extends HttpServlet {
                     e.printStackTrace();
                 }
             }
-        }
+        }*/
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
