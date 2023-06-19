@@ -2,6 +2,6 @@
 
 public class ResponseDTO
 {
-    public List<Book> Books { get; set; } = null!;
-    public List<Article> Articles { get; set; } = null!;
+    public List<BookDTO> Books { get; set; } = null!;
+    public List<ArticleDTO> Articles { get; set; } = null!;
 }
