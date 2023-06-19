@@ -1,4 +1,4 @@
-Write a web application in PHP which uses the following 3 database tables:
+Write a web application in PHP/JSP/ASP which uses the following 3 database tables:
 -	table Persoane: id (integer), nume_prenume (String), varsta (integer),
 salariu (integer)
 titlu (string), editura (string), an_aparitie (integer)
