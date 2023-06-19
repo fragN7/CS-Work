@@ -1,0 +1,40 @@
+<div class="container">
+  <h2 class="text-center">Books</h2>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let book of books">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ book.title }}</h5>
+          <p class="card-text">{{ book.brand }}</p>
+          <p class="card-text">{{ book.releaseYear }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="text-center">Articles</h2>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let article of articles">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ article.title }}</h5>
+          <p class="card-text">{{ article.type }}</p>
+          <p class="card-text">{{ article.numPages }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="text-center">History of searched authors</h2>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let author of history">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ author }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-primary mt-4" (click)="goBack()">Go Back</button>
+</div>
