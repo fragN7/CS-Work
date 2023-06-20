@@ -1,0 +1,37 @@
+<div class="container">
+  <h2 class="text-center">Siblings</h2>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let sibling of siblings">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ sibling }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="text-center">Mothers</h2>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let mother of mothers">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ mother }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="text-center">Fathers</h2>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let father of fathers">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ father }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-primary mt-4" (click)="goBack()">Go Back</button>
+  <button class="btn btn-primary mt-4" (click)="addRedirect()">Add Relation</button>
+</div>
