@@ -42,7 +42,7 @@ public class MyController : ControllerBase
             throw new Exception("Relation not found");
         }
 
-        return Ok(relation);
+        return Ok(user.Id);
     }
 
     [HttpPost("add")]
@@ -104,7 +104,7 @@ public class MyController : ControllerBase
         return Ok(siblings);
     }
 
-    [HttpGet("father")]
+    [HttpGet("fathers")]
     [AllowAnonymous]
     public ActionResult<HashSet<string>> GetFathers(int userId)
     {
@@ -149,7 +149,7 @@ public class MyController : ControllerBase
         }
     }
     
-    [HttpGet("mother")]
+    [HttpGet("mothers")]
     [AllowAnonymous]
     public ActionResult<HashSet<string>> GetMothers(int userId)
     {
