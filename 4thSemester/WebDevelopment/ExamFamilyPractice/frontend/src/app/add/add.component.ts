@@ -17,7 +17,8 @@ export class AddComponent {
   add(){
     this.service.add(this.family.mother, this.family.father).subscribe(
       (response: any) => {
-        alert('Added');
+        alert('Added' + `${response}`);
+        this.router.navigateByUrl("/browse");
       },
       (error: any) => {
         alert(error.error);

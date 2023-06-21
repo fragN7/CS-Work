@@ -47,7 +47,7 @@ public class MyController : ControllerBase
 
     [HttpPost("add")]
     [AllowAnonymous]
-    public ActionResult AddRelation(FamilyRelationDTO relation)
+    public ActionResult AddRelation([FromBody] FamilyRelationDTO relation)
     {
         var user = _context.Users.FirstOrDefault(x => x.Id == relation.UserId);
 

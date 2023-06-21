@@ -26,12 +26,7 @@ export class ServiceComponent {
       UserId: userId
     }
 
-    return this.http.post<any>(`${this.URL}/add`, body).pipe(
-      tap(() => {
-        alert("File has been added.");
-        this.router.navigateByUrl("browse");
-      })
-    );
+    return this.http.post<any>(`${this.URL}/add`, body);
   }
 
   getSiblings(){
