@@ -7,12 +7,14 @@ import { ServiceComponent } from './service/service.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { RouteComponent } from './route/route.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BrowseComponent,
-    ServiceComponent
+    ServiceComponent,
+    RouteComponent
   ],
   imports: [
     BrowserModule,

@@ -9,12 +9,20 @@ import {Router} from "@angular/router";
 })
 export class ServiceComponent {
 
-  private URL = 'https"//localhost:7178/api';
+  private URL = 'https://localhost:7178/api';
 
   constructor(private http: HttpClient, private router: Router) {}
 
+  getCity(id: number){
+    return this.http.get(`${this.URL}/city/${id}`);
+  }
+
   getCities(){
-    return this.http.get<any>(`${this.URL}/cities`);
+    return this.http.get<any[]>(`${this.URL}/cities`);
+  }
+
+  getLinks(cityName: string){
+    return this.http.get<any[]>(`${this.URL}/links/${cityName}`)
   }
 
 }

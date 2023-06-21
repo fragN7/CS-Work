@@ -2,7 +2,6 @@
 using backend.Repo;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 
 namespace backend.Controllers;
 
@@ -31,6 +30,13 @@ public class MyController : ControllerBase
         FirstCityId = link.FirstCityId,
         SecondCityId = link.SecondCityId
     };
+
+    [HttpGet("city/{id}")]
+    [AllowAnonymous]
+    public ActionResult<CityDTO> GetCity(int id)
+    {
+        return CityToDTO(_context.Cities.FirstOrDefault(x => x.Id == id)!);
+    }
 
     [HttpGet("cities")]
     [AllowAnonymous]

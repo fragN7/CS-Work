@@ -11,7 +11,7 @@ export class BrowseComponent implements OnInit {
 
   cities: any[] = [];
 
-  constructor(private service: ServiceComponent, private route: Router) {}
+  constructor(private service: ServiceComponent, private router: Router) {}
   ngOnInit(){
     this.getCities();
   }
@@ -26,7 +26,8 @@ export class BrowseComponent implements OnInit {
     );
   }
 
-  addRoute(city: string){
-    alert('LOOL');
+  addFirstRoute(city: string){
+    localStorage.setItem('firstRoute', city);
+    this.router.navigateByUrl("route")
   }
 }
