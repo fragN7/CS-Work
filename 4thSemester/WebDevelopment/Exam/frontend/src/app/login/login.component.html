@@ -1,0 +1,15 @@
+<div class="container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div style="text-align: center;">
+    <form (ngSubmit)="login()" style="display: inline-block;">
+      <div class="form-group">
+        <label for="user">Username</label>
+        <input type="text" class="form-control" id="user" [(ngModel)]="this.form.username" name="user">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="text" class="form-control" id="password" [(ngModel)]="this.form.password" name="password">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
