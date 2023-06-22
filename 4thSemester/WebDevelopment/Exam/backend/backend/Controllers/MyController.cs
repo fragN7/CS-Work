@@ -16,13 +16,18 @@ public class MyController : ControllerBase
     
     [HttpGet("login")]
     [AllowAnonymous]
-    public ActionResult Login(string username)
+    public ActionResult Login(string username, string password)
     {
         var user = _context.Users.FirstOrDefault(x => x.Username == username);
-
+            
         if (user == null)
         {
             throw new Exception("User not found");
+        }
+
+        if (user.Password != password)
+        {
+            throw new Exception("Incorrect password");
         }
 
         return Ok(user);
