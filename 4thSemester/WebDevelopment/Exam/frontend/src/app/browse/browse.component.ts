@@ -9,16 +9,29 @@ import {Router} from "@angular/router";
 })
 export class BrowseComponent implements OnInit{
 
-  data: any[] = [];
-
+  messages: any[] = [];
+  username: string = '';
   constructor(private service: ServiceComponent, private route: Router) {}
   ngOnInit() {
-
+    this.username = localStorage.getItem('user')!;
+    this.getMessages();
+    this.service.deleteMessage(this.username).subscribe(
+      (response: any) => {},
+      (error: any) => {}
+    );
   }
 
-  goBack(){
-    localStorage.removeItem('userId');
-    localStorage.removeItem('user');
-    this.route.navigateByUrl("/");
+  getMessages(){
+    this.service.getMessages(this.username).subscribe(
+      (response: any) => {
+        this.messages = response;
+      }, (error: any) => {
+        alert(error.error);
+      });
   }
+
+  send(){
+    this.route.navigateByUrl("send");
+  }
+
 }

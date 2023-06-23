@@ -2,8 +2,8 @@
   <div style="text-align: center;">
     <form (ngSubmit)="login()" style="display: inline-block;">
       <div class="form-group">
-        <label for="user">Username</label>
-        <input type="text" class="form-control" id="user" [(ngModel)]="this.username" name="user">
+        <h5 class="card-title">{{ this.question }}</h5>
+        <input type="text" class="form-control" id="user" [(ngModel)]="this.answer" name="user">
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

@@ -8,16 +8,13 @@ import {Router} from "@angular/router";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  form = {
-    username: '',
-    password: ''
-  }
+  username: string = '';
   constructor(private service: ServiceComponent, private router: Router) {}
   login(){
-    this.service.login(this.form.username, this.form.password).subscribe((response: any) => {
-      localStorage.setItem('userId', response);
-      localStorage.setItem('user', this.form.username);
-      this.router.navigateByUrl("/browse");
+    this.service.login(this.username).subscribe((response: any) => {
+      localStorage.setItem('user', this.username);
+      localStorage.setItem('question', response.secretQuestion);
+      this.router.navigateByUrl("/security");
     }, (error: any) => {
       alert(error.error);
     });

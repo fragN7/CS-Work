@@ -8,13 +8,17 @@ import { ServiceComponent } from './service/service.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { SecurityComponent } from './security/security.component';
+import { SendComponent } from './send/send.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     BrowseComponent,
-    ServiceComponent
+    ServiceComponent,
+    SecurityComponent,
+    SendComponent
   ],
   imports: [
     BrowserModule,
