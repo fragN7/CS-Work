@@ -1,0 +1,65 @@
+<html>
+<head>
+  <title>Table Example</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+<h1>Hangman</h1>
+<table>
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Game ID</th>
+    <th>Letters</th>
+    <th>Lives</th>
+    <th>Result</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><strong>1</strong></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><strong>2</strong></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>
+<button class="create-channel-button" (click)="openDialog()">Create game</button>
+
+<div *ngIf="dialogVisible" class="modal">
+  <div class="modal-content">
+    <h2>Create Game</h2>
+    <form (ngSubmit)="saveGame()">
+      <label for="gameId">Game ID:</label>
+      <input type="text" id="gameId" name="gameId" [(ngModel)]="gameId" required><br><br>
+      <label for="word">Word:</label>
+      <input type="text" id="word" name="word" [(ngModel)]="word" required><br><br>
+      <label for="lives">Number of Lives:</label>
+      <input type="number" id="lives" name="lives" [(ngModel)]="lives" required><br><br>
+      <button type="submit">Save</button>
+      <button type="button" (click)="closeDialog()">Cancel</button>
+    </form>
+  </div>
+</div>
+
+
+
+</body>
+</html>

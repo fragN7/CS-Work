@@ -1,0 +1,32 @@
+<h1>
+  {{ "Playing a game with " + this.letters + " letters..."}}
+</h1>
+
+<h2>
+  {{ underscores.split('').join(' ') }}
+</h2>
+
+<table>
+  <ng-container *ngFor="let rowIndex of [0, 1]">
+    <tr>
+      <ng-container *ngFor="let colIndex of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; let i = index">
+        <td>
+          <button
+            [disabled]="usedLetters.includes(alphabet[rowIndex * 13 + i].letter)"
+            [style.backgroundColor]="alphabet[rowIndex * 13 + i].style"
+            (click)="onClickLetter(alphabet[rowIndex * 13 + i].letter)"
+          >
+            {{ alphabet[rowIndex * 13 + i].letter }}
+          </button>
+        </td>
+      </ng-container>
+    </tr>
+  </ng-container>
+</table>
+
+
+
+<h3>
+  Remaining lives: {{ lives }}
+</h3>
+
