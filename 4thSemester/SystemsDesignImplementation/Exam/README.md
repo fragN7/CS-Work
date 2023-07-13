@@ -1,4 +1,4 @@
-### 13.07.2023 - Retake session
+### 13.07.2023 - Retake session MADE ONLY THE FIRST 6 POINTS
 
 **Theory exam (`10 minutes`)**: [Click here](https://forms.gle/kYUceVot1aWTDUeH6).
 
