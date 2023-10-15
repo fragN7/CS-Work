@@ -1,0 +1,53 @@
+Alphabet:
+
+a. Upper (A-Z) and lower case letters (a-z) of the English alphabet
+
+b. Special characters '_'
+
+c. Decimal digits (0-9)
+
+Lexic:
+
+a) Special symbols, representing:
+
+- operators 
+
++ - * / % arithmetic
+= <> < <= >= > relational
+<- <+ assigment 
+
+- separators , [] () {} : \n space
+
+- reserved words:
+
+    inv met Perhaps Between Leave Enter InBetween and or num str bol GetOut 
+
+b) Identifiers
+
+  -a sequence of letters or digits, such that the first character is a lowercase letter; the rule is:
+
+    identifier ::= letter{letter | uppercaseLetter | digit}
+
+    letter ::= "a" | "b" |...| "z"
+    
+    uppercaseLetter ::= "A" | "B" |...| "Z"
+
+    digit ::= "0" | "1" |...| "9"
+
+c) Constants
+
+1.integer:
+
+      number:= "0" | ["-"] nonZeroDigit{digit}
+
+      nonZeroDigit ::= "1" | "2" |...| "9"
+
+	
+2.string:
+
+      string:= {char}
+
+      char:= letter | upperCaseLetter | digit	
+
+      stringConst:= "(" {char} ")"
+

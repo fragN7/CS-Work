@@ -1,0 +1,37 @@
+-inv ale 
+
+met num GetMaxNumbers{a: num, b: num, c: num}{
+	Perhaps{ a >= b & a >= c}{
+		Leave{a}
+		GetOut{}
+	}
+	Perhaps{ b >= a & b >= c}{
+		Leave{b}
+		GetOut{}
+	}
+	Perhaps{ c >= a & c >= b}{
+		Leave{c}
+		GetOut{}
+	}
+}
+
+met num GetMinNumbers{a: num, b: num, c: num}{
+	Perhaps{ a <= b & a <= c}{
+		Leave{a}
+		GetOut{}
+	}
+	Perhaps{ b <= a & b <= c}{
+		Leave{b}
+		GetOut{}
+	}
+	Perhaps{ c <= a & c <= b}{
+		Leave{c}
+		GetOut{}
+	}
+}
+
+Leave{(The greatest number is: )}
+Leave{GetMaxNumbers{a, b, c}}
+
+Leave{(The smallest number is: )}
+Leave{GetMinNumbers{a, b, c}}

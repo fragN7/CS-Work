@@ -1,0 +1,31 @@
+-inv ale
+-inv mth
+
+myList <- [4, 5, 10, 23, 41]: num
+
+met bol IsPrime{x: num}{
+	d <- 3: num
+	Perhaps{x = 0 or x = 1}{
+		GetOut{fls}
+	}
+	Perhaps{x = 2 or IsEven{x}}{
+		GetOut{fls}
+	}
+	Between{d*d, x, 2, i: num}{
+		Perhaps{x % d = 0}{
+			GetOut{fls}
+		}
+	}
+	GetOut{tru}
+}
+
+resultList <- []: num
+
+InBetween{myList, item, i: num}{
+	 Perhaps{IsPrime{item} = tru}{
+		resultList <+ myList{i}
+}
+
+Leave{resultList}
+		
+	

@@ -1,0 +1,45 @@
+program ::= "Start" cmpdstmt
+
+
+type ::= "num" | "str" | "bol"
+
+arrayDecl ::= IDENTIFIER "<-" "[" IDENTIFIER | CONST | nothing "]" ":" type1
+
+normalDecl ::= IDENTIFIER "<-" IDENTIFIER | CONST ":" type1
+
+emptyDecl ::= IDENTIFIER ":" type
+
+decl  ::= normalDecl | arrayDecl | emptyDecl
+
+
+cmpdstmt ::= "{" stmtlist "}"
+
+stmtlist ::= stmt | stmt "\n" stmtlist
+
+stmt ::= simplstmt | structstmt
+
+simplstmt ::= assignstmt | iostmt
+
+assignstmt ::= IDENTIFIER "<-" expression
+
+iostmt ::= "Enter" "{" IDENTIFIER "}" | "Leave" "{" IDENTIFIER "}" | "Leave" "{" CONST "}"
+
+structstmt ::= cmpdstmt | ifstmt | whileforstmt | arrayParsing
+
+ifstmt ::= "Perhaps" "{" condition "}" "{"  stmtlist "}"
+
+whileforstmt ::= "Between"  "{" condition "}" "{"  stmtlist "}" | "Between"  "{" start "," end ","  jump "," index "}" "{"  stmtlist "}"
+
+arrayParsing ::= "InBetween" "{" array "," itemIdentifier "," indexIdentifier ":" type "}" "{" stmtlist "}"
+
+
+
+expression ::= expression "+" term | expression "-" term | term
+
+term ::= term "*" factor | term "/" factor | term "%" factor | factor 
+
+factor ::= "{" expression "}" | IDENTIFIER | CONST
+
+condition ::= expression RELATION expression
+
+RELATION ::= "<" | "<=" | "=" | "<>" | ">=" | ">"
