@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/t1_913_Iaguta_Alen_Mihael_1.dir/main.cpp.o CMakeFiles/t1_913_Iaguta_Alen_Mihael_1.dir/repo.cpp.o CMakeFiles/t1_913_Iaguta_Alen_Mihael_1.dir/service.cpp.o CMakeFiles/t1_913_Iaguta_Alen_Mihael_1.dir/ui.cpp.o CMakeFiles/t1_913_Iaguta_Alen_Mihael_1.dir/domain.cpp.o CMakeFiles/t1_913_Iaguta_Alen_Mihael_1.dir/tests.cpp.o -o t1_913_Iaguta_Alen_Mihael_1 
