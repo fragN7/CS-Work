@@ -1,46 +1,84 @@
 #include <iostream>
+#include <vector>
+#include <thread>
 #include <mutex>
+#include <map>
+#include <random>
 
-struct Account {
-    unsigned balance{};
-    std::mutex mtx;
+struct Product {
+    int quantity;
+    double unitPrice;
 };
 
-bool transfer(Account* a, Account* b, unsigned amount) {
-    a->mtx.lock();
-    if(a->balance < amount) {
-        a->mtx.unlock();
-        return false;
+struct Bill {
+    std::map<std::string, int> items; // Product name -> Quantity
+    double totalPrice;
+};
+
+struct SupermarketInventory {
+    std::map<std::string, Product> products;
+    double money;
+    std::vector<Bill> sales;
+    std::mutex inventoryMutex;
+    std::mutex moneyMutex;
+    std::mutex salesMutex;
+};
+
+void sellProduct(SupermarketInventory& inventory, const std::string& productName, int quantity) {
+    std::lock_guard<std::mutex> lock(inventory.inventoryMutex);
+    if (inventory.products.find(productName) != inventory.products.end() && inventory.products[productName].quantity >= quantity) {
+        std::lock_guard<std::mutex> lock2(inventory.moneyMutex);
+        std::lock_guard<std::mutex> lock3(inventory.salesMutex);
+        double totalPrice = inventory.products[productName].unitPrice * quantity;
+        inventory.products[productName].quantity -= quantity;
+        inventory.money += totalPrice;
+        Bill bill;
+        bill.items[productName] = quantity;
+        bill.totalPrice = totalPrice;
+        inventory.sales.push_back(bill);
     }
-    a->balance -= amount;
-    a->mtx.unlock();
-    b->mtx.lock();
-    b->balance += amount;
-    b->mtx.unlock();
-    return true;
+}
+
+void inventoryCheck(const SupermarketInventory& inventory) {
+    std::lock_guard<std::mutex> lock(inventory.inventoryMutex);
+    std::lock_guard<std::mutex> lock2(inventory.moneyMutex);
+    std::lock_guard<std::mutex> lock3(inventory.salesMutex);
+    double totalMoney = 0;
+    for (const auto& bill : inventory.sales) {
+        for (const auto& item : bill.items) {
+            totalMoney += inventory.products.at(item.first).unitPrice * item.second;
+            if (inventory.products.find(item.first) != inventory.products.end()) {
+                inventory.products.at(item.first).quantity -= item.second;
+            }
+        }
+    }
+    if (totalMoney == inventory.money) {
+        std::cout << "Inventory check passed." << std::endl;
+    } else {
+        std::cout << "Inventory check failed." << std::endl;
+    }
 }
 
 int main() {
+    SupermarketInventory inventory;
+    inventory.products["Bread"] = {100, 2.5};
+    inventory.products["Milk"] = {50, 3.0};
+    inventory.products["Eggs"] = {30, 1.0};
 
-    Account acc1;
-    acc1.balance = 100;
-
-    Account acc2;
-    acc2.balance = 50;
-
-    // Example 1: Successful transfer
-    if (transfer(&acc1, &acc2, 30)) {
-        std::cout << "Transfer successful." << std::endl;
-    } else {
-        std::cout << "Insufficient funds for transfer." << std::endl;
+    std::vector<std::thread> threads;
+    for (int i = 0; i < 5; ++i) {
+        threads.emplace_back([&inventory]() {
+            sellProduct(inventory, "Bread", 2);
+            sellProduct(inventory, "Milk", 1);
+            sellProduct(inventory, "Eggs", 3);
+        });
     }
 
-    // Example 2: Insufficient funds
-    if (transfer(&acc1, &acc2, 1000)) {
-        std::cout << "Transfer successful." << std::endl;
-    } else {
-        std::cout << "Insufficient funds for transfer." << std::endl;
+    for (auto& thread : threads) {
+        thread.join();
     }
+
+    inventoryCheck(inventory);
 
     return 0;
 }
