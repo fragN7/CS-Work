@@ -1,0 +1,47 @@
+# Chess Championship Application
+
+## Main Idea
+
+The chess management application will offer users a platform to organise and track their chess game history. will integrate essential CRUD operations, enabling users to create, review, update and delete their game records. The app may feature a filtering mechanism, allowing users to categorise and sort their game based on date, opponent rating or game outcome. focus is to provide a captivating experience, empowering chess enthusiasts to a better way of managing their chess adventures.
+
+## Domain Details
+
+There is one entity in the app - Chess record - featuring the below attributes (some types may change):
+
+Your Rating - your chess rating at the time of play (number)
+Opponent Details - opponent name (maybe hyperlink to a profile) & rating at the time of play (string, number)
+Date & Time played - timestamp of when the game was played (datetime)
+Game Outcome - outcome of the game (W/D/L), type of win/draw/loss (resignation, stalemate), blunders, mistakes, good moves etc (string)
+Opening - chess opening used in the game (string)
+Moves History(optional) - a record of all the moves made during the game (list of strings) 
+End board(optional) - a image type which represents the final stage of the board at the end of the game (png, jpg, etc.)
+Notes - any notes or remarks observed during the game (free-text of the user) (string)
+Game Tag - custom tag used to assign the game to a category for easy filtering and sorting
+
+## CRUD Details
+
+### Create
+
+The creation of the entity will also add it to the database. Some attributes may be optional or not required when in the creation screen and after adding the entity will be displayed at the top of the list. If the required attributes are filled and validated(optional), a "Insert/Create" button will be available for the user to press. If the user leaves the screen 
+
+### Read/Review
+
+The reading/reviewing part of the application will always be present. All of the records will be displayed in a list at the start of the application and there will also be another screen to display the entities individually.
+
+### Update
+
+When accessing the view individually screen there will be an icon which represents the edit part. This will redirect to the updating screen where the majority (maybe all) of attributes can be changed to the liking of the user. The attributes of the current entity will be automatically filled. Also in order to save the changes, the user will need to press a save button which will be at the top of the screen. When the user leaves the screen and made some changes, but they didn't press the save button, a pop-up will appear notifying that changes are not saved, and instructions to press the save button or to leave.
+
+### Delete
+
+In the viewing individual items screen, next to the update icon button, there will be a "trashcan" icon, which represents the deleting of the entity. When the user presses the button, a pop-up will appear, notifying the user if they are sure of this action. 
+
+## Persistence Details
+
+Create, Update & Delete operations will update (at first) the in memory database (when the user leaves the application the data will be erased). Plans are to make the crud operations to be persisted on the database.
+
+## Offline Details
+
+When the device is offline, only view and view individual screens will work appropriately. The Create operation will work, so the user can create a chess record and save it to the local database. When the device goes online, the app will notice this and push the changes. The Update & Delete operations are not available offline and a message will be shown.
+
+When the device is online, everything should be working appropriately.

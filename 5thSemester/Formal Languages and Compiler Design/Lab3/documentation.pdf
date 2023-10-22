@@ -1,0 +1,31 @@
+https://github.com/fragN7/CS-Work/tree/main/5thSemester/Formal%20Languages%20and%20Compiler%20Design
+
+The Symbol Table implements a list of Hash Tables, which is used for both identifiers and constants.
+The Hash Table is a simple hash table with linked list collision resolution.
+Additionally, the Cell class is implemented to act as a Pair class.
+
+The Symbol Table has the current methods: 
+
+put(String key, Object value) {}
+- acts as the 'add' function by calculating the index using the hash function and inserting it in the correct table using the put method from the Hash Table implemented
+
+hash(String key) {}
+- simple hash function which gets the length of the key and maps it to the size of the Symbol Table
+
+The Hash Table has the current methods:
+
+put(K key, V value) {} 
+- inserts a key-value pair into the hash table, updating the value if the key already exists.
+get(K key) {} 
+- retrieves the value associated with the given key from the hash table, or returns null if the key is not found.
+keys() {} 
+- returns an iterable collection of all the keys stored in the hash table.
+
+Cell(K key, V value) {} 
+- initializes a cell with a key-value pair.
+getKey() {} 
+- retrieves the key associated with the cell.
+getValue() {} 
+- retrieves the value associated with the cell.
+setValue(V value) {} 
+- updates the value of the cell with the provided value.
