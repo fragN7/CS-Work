@@ -44,7 +44,7 @@ class HashTable<K, V> {
         return keys;
     }
 
-    private static class Cell<K, V> {
+    public static class Cell<K, V> {
         private final K key;
         private V value;
 

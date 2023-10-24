@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class SymbolTable {
     private static final int SIZE = 16;
     private HashTable<String, Object>[] table;
@@ -26,5 +28,23 @@ class SymbolTable {
             }
             System.out.println();
         }
+    }
+
+    public HashTable.Cell<Integer, Integer> findPositionOfTerm(String token) {
+        int pos = hash(token);
+
+        if(!table.get(pos).isEmpty()){
+            ArrayList<String> elems = this.table.get(pos);
+            for(int i = 0; i < elems.size(); i++){
+                if(elems.get(i).equals(token)){
+                    return new HashTable.Cell<>(pos, i);
+                }
+            }
+        }
+
+        return null;
+    }
+
+    public void add(String token) {
     }
 }

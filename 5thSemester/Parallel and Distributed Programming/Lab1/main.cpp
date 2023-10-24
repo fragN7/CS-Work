@@ -6,79 +6,110 @@
 #include <random>
 
 struct Product {
+    std::string name;
+    double price;
     int quantity;
-    double unitPrice;
+
+    Product(std::string n, double p, int q) : name(std::move(n)), price(p), quantity(q) {}
 };
 
 struct Bill {
-    std::map<std::string, int> items; // Product name -> Quantity
+    std::vector<std::pair<Product, int>> items;
     double totalPrice;
 };
 
-struct SupermarketInventory {
-    std::map<std::string, Product> products;
-    double money;
-    std::vector<Bill> sales;
-    std::mutex inventoryMutex;
+struct Inventory {
+
+    std::vector<Product> products;
+    double money{};
+    std::vector<Bill> bills;
+
+    std::mutex productsMutex;
     std::mutex moneyMutex;
-    std::mutex salesMutex;
-};
+    std::mutex billsMutex;
 
-void sellProduct(SupermarketInventory& inventory, const std::string& productName, int quantity) {
-    std::lock_guard<std::mutex> lock(inventory.inventoryMutex);
-    if (inventory.products.find(productName) != inventory.products.end() && inventory.products[productName].quantity >= quantity) {
-        std::lock_guard<std::mutex> lock2(inventory.moneyMutex);
-        std::lock_guard<std::mutex> lock3(inventory.salesMutex);
-        double totalPrice = inventory.products[productName].unitPrice * quantity;
-        inventory.products[productName].quantity -= quantity;
-        inventory.money += totalPrice;
-        Bill bill;
-        bill.items[productName] = quantity;
-        bill.totalPrice = totalPrice;
-        inventory.sales.push_back(bill);
-    }
-}
+    void sell(std::vector<std::pair<Product, int>> items, double totalPrice) {
+        std::lock_guard<std::mutex> lock(productsMutex);
+        std::lock_guard<std::mutex> moneyLock(moneyMutex);
+        std::lock_guard<std::mutex> billsLock(billsMutex);
 
-void inventoryCheck(const SupermarketInventory& inventory) {
-    std::lock_guard<std::mutex> lock(inventory.inventoryMutex);
-    std::lock_guard<std::mutex> lock2(inventory.moneyMutex);
-    std::lock_guard<std::mutex> lock3(inventory.salesMutex);
-    double totalMoney = 0;
-    for (const auto& bill : inventory.sales) {
-        for (const auto& item : bill.items) {
-            totalMoney += inventory.products.at(item.first).unitPrice * item.second;
-            if (inventory.products.find(item.first) != inventory.products.end()) {
-                inventory.products.at(item.first).quantity -= item.second;
+        for (const auto &item : items) {
+            for (auto &product : products) {
+                if (product.name == item.first.name) {
+                    product.quantity -= item.second;
+                    break;
+                }
             }
         }
+
+        money += totalPrice;
+
+        std::cout << "Inventory after sale: " << std::endl;
+        for (const auto &product : products) {
+            std::cout << "Product: " << product.name << ", Quantity: " << product.quantity << std::endl;
+        }
+        std::cout << "Total money: " << money << std::endl;
+        std::cout << std::endl;
+
+        bills.push_back({std::move(items), totalPrice});
     }
-    if (totalMoney == inventory.money) {
-        std::cout << "Inventory check passed." << std::endl;
-    } else {
-        std::cout << "Inventory check failed." << std::endl;
+
+    void inventoryCheck() {
+
+        std::lock_guard<std::mutex> lock(productsMutex);
+        std::lock_guard<std::mutex> moneyLock(moneyMutex);
+        std::lock_guard<std::mutex> billsLock(billsMutex);
+
+        double totalInventoryValue = 0.0;
+        for (const auto &product : products) {
+            totalInventoryValue += product.price * product.quantity;
+        }
+
+        double totalBillsValue = 0.0;
+        for (const auto &bill : bills) {
+            totalBillsValue += bill.totalPrice;
+        }
+
+        std::cout << "Inventory checked. Total money: " << money << ", Total inventory value: " << totalInventoryValue
+                  << ", Total bills value: " << totalBillsValue << std::endl;
     }
+};
+
+
+void performSale(Inventory &inventory) {
+    std::vector<std::pair<Product, int>> items;
+    double totalPrice = 0.0;
+    for (auto &product : inventory.products) {
+        int quantitySold = (rand() % (product.quantity + 1)) / 2;
+        if (quantitySold > 0) {
+            items.emplace_back(product, quantitySold);
+            totalPrice += product.price * quantitySold;
+        }
+    }
+
+    inventory.sell(items, totalPrice);
+    inventory.inventoryCheck();
 }
 
+
+
 int main() {
-    SupermarketInventory inventory;
-    inventory.products["Bread"] = {100, 2.5};
-    inventory.products["Milk"] = {50, 3.0};
-    inventory.products["Eggs"] = {30, 1.0};
+    Inventory inventory;
+
+    inventory.products.emplace_back("Product1", 10.0, 50);
+    inventory.products.emplace_back("Product2", 20.0, 30);
+    inventory.products.emplace_back("Product3", 15.0, 40);
 
     std::vector<std::thread> threads;
     for (int i = 0; i < 5; ++i) {
-        threads.emplace_back([&inventory]() {
-            sellProduct(inventory, "Bread", 2);
-            sellProduct(inventory, "Milk", 1);
-            sellProduct(inventory, "Eggs", 3);
-        });
+        threads.emplace_back(performSale, std::ref(inventory));
     }
 
-    for (auto& thread : threads) {
+    for (auto &thread : threads) {
         thread.join();
     }
 
-    inventoryCheck(inventory);
+    inventory.inventoryCheck();
 
     return 0;
 }
