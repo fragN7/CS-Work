@@ -44,12 +44,12 @@ struct Inventory {
 
         money += totalPrice;
 
-        std::cout << "Inventory after sale: " << std::endl;
+        /*std::cout << "Inventory after sale: " << std::endl;
         for (const auto &product : products) {
             std::cout << "Product: " << product.name << ", Quantity: " << product.quantity << std::endl;
         }
         std::cout << "Total money: " << money << std::endl;
-        std::cout << std::endl;
+        std::cout << std::endl;*/
 
         bills.push_back({std::move(items), totalPrice});
     }
@@ -88,20 +88,21 @@ void performSale(Inventory &inventory) {
     }
 
     inventory.sell(items, totalPrice);
-    inventory.inventoryCheck();
+    //inventory.inventoryCheck();
 }
-
-
 
 int main() {
     Inventory inventory;
 
-    inventory.products.emplace_back("Product1", 10.0, 50);
-    inventory.products.emplace_back("Product2", 20.0, 30);
-    inventory.products.emplace_back("Product3", 15.0, 40);
+    inventory.products.emplace_back("Bukayo Saka", 1.0, 5000000);
+    inventory.products.emplace_back("Nikola Jokic", 2.0, 3000000);
+    inventory.products.emplace_back("Lewis Hamilton", 1.5, 400000);
+    inventory.products.emplace_back("Novak Djokovic", 5.0, 1500000);
+
+    auto start = std::chrono::steady_clock::now();
 
     std::vector<std::thread> threads;
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < 4; ++i) {
         threads.emplace_back(performSale, std::ref(inventory));
     }
 
@@ -110,6 +111,10 @@ int main() {
     }
 
     inventory.inventoryCheck();
+
+    auto end = std::chrono::steady_clock::now();
+    std::chrono::duration<double> elapsed_seconds = end - start;
+    std::cout << "Time taken: " << elapsed_seconds.count() << " seconds." << std::endl;
 
     return 0;
 }
