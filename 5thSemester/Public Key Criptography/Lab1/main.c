@@ -38,11 +38,10 @@ int gcdDivision(int a, int b) {
 
 // Normal
 int gcdBasic(int a, int b){
-
     if(a == 0)
         return b;
 
-    int min = 0;
+    int min;
     if(a < b){
         min = a;
     } else {
@@ -54,12 +53,14 @@ int gcdBasic(int a, int b){
     }
 
     int i = min / 2;
+
     while(i > 2){
         if(a % i == 0 && b % i == 0){
             return i;
         }
         i = i - 1;
     }
+
     return 1;
 }
 
