@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b92d2e03-c997-40ff-a369-1332b1b31873" name="Changes" comment="Checo Perez">
+      <change beforePath="$PROJECT_DIR$/../../Cellular Application Programming/idea.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab1/p1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab1/p1_err.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab1/p2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab1/p3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab2/Lexic.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab2/Syntax.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab2/token.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/SymbolTable/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/SymbolTable/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/SymbolTable/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/SymbolTable/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/SymbolTable/SymbolTable.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/SymbolTable/out/production/SymbolTable/HashTable$Cell.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/SymbolTable/out/production/SymbolTable/HashTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/SymbolTable/out/production/SymbolTable/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/SymbolTable/out/production/SymbolTable/ProgramInternalForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/SymbolTable/out/production/SymbolTable/Scanner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/SymbolTable/src/HashTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/SymbolTable/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/SymbolTable/src/ProgramInternalForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/SymbolTable/src/Scanner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/SymbolTable/src/SymbolTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Formal Languages and Compiler Design/Lab3+/documentation.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Lab1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-5077235a44f60e85d12a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-3533bda94e84bedd88cb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-cca0f0928921f526664e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-10-25T11-04-52-0058.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Lab1-Debug-78b57e661e1874ca60be.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-1ff34807591441c9d567.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab1.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Lab1.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/.idea/Lab1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/.cmake/api/v1/reply/cache-v2-5c66858436df180777c5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-8392044a3dfaf65a4f33.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-8ec57abca0e705519530.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/.cmake/api/v1/reply/index-2023-10-22T11-12-24-0361.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/.cmake/api/v1/reply/target-Lab1-Debug-f426f7371e3f501cd298.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-d04890c20359b2f2df21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/CMakeFiles/Lab1.dir/main.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/Lab1.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Public Key Criptography/Lab1/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/.idea/.idea.RayTracer/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/.idea/.idea.RayTracer/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/.idea/.idea.RayTracer/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/.idea/.idea.RayTracer/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/Camera.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/Color.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/Geometry.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/Image.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/Intersection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/Light.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/Line.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/Material.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/RayTracer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/RayTracer.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/Sphere.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/Vector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/RayTracer.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/RayTracer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/RayTracer.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/RayTracer.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/RayTracer.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/System.Drawing.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/004.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/006.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/007.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/008.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/010.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/011.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/012.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/013.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/014.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/015.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/016.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/017.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/018.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/019.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/020.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/021.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/022.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/026.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/027.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/028.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/029.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/030.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/031.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/032.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/033.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/034.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/035.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/036.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/037.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/038.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/039.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/040.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/041.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/042.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/043.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/044.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/045.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/046.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/047.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/048.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/049.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/050.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/051.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/052.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/053.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/054.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/055.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/056.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/057.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/058.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/059.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/060.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/061.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/062.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/063.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/064.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/065.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/066.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/067.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/068.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/069.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/070.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/071.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/072.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/073.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/074.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/075.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/076.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/077.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/078.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/079.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/080.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/081.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/082.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/083.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/084.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/085.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/086.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/087.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/088.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/089.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/frames/090.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/bin/Debug/net6.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.csproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.genruntimeconfig.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/apphost.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/ref/RayTracer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/Debug/net6.0/refint/RayTracer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/RayTracer.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/RayTracer.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/RayTracer.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/project.packagespec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/rider.project.model.nuget.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/RayTracer/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Virtual Reality/RayTracer/global.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="2.2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2X0yKlUAdi3F50udc87Zm4m5T5U" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b92d2e03-c997-40ff-a369-1332b1b31873" name="Changes" comment="" />
+      <created>1697780230184</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697780230184</updated>
+      <workItem from="1697780232903" duration="2522000" />
+      <workItem from="1697973092052" duration="114000" />
+      <workItem from="1697978594035" duration="2383000" />
+      <workItem from="1698155393915" duration="5248000" />
+      <workItem from="1698231884404" duration="4021000" />
+      <workItem from="1698328355649" duration="24000" />
+      <workItem from="1698665819686" duration="439000" />
+    </task>
+    <task id="LOCAL-00001" summary="Dalind mi yama te yama">
+      <option name="closed" value="true" />
+      <created>1697781522604</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697781522604</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Cheloo">
+      <option name="closed" value="true" />
+      <created>1697782096846</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697782096846</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Cheloo">
+      <option name="closed" value="true" />
+      <created>1697980983520</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697980983528</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Checo Perez">
+      <option name="closed" value="true" />
+      <created>1698160639192</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698160639192</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Dalind mi yama te yama" />
+    <MESSAGE value="Cheloo" />
+    <MESSAGE value="Checo Perez" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checo Perez" />
+  </component>
+</project>

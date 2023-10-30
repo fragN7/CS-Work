@@ -1,0 +1,32 @@
+index0: 
+index1: a, Identifier| smallest, Identifier| 
+index2: b, Identifier| 
+index3: c, Identifier| 
+index4: GetMaxNumbers, Identifier| 
+index5: 
+index6: num, ReservedWord| &, Identifier| 
+index7: 
+index8: (, StringConstant| 
+index9: 	, Identifier| ), Separator| 
+index10: is, Identifier| 
+index11: 
+index12: ,, Separator| 
+index13: -, Operator| , Identifier| 
+index14: GetMinNumbers, Identifier| 
+index15: 
+index16: 	Perhaps, Identifier| 
+index17: inv, ReservedWord| The, Identifier| 
+index18: 
+index19: 
+index20: 
+index21: 
+index22: 
+index23: Leave, ReservedWord| number, Identifier| 
+index24: GetOut, ReservedWord| 
+index25: greatest, Identifier| 
+index26: ale, Identifier| :, Separator| 
+index27: {, Separator| 
+index28: met, ReservedWord| <, Operator| 
+index29: }, Separator| =, Operator| 
+index30: >, Operator| 
+index31: 
