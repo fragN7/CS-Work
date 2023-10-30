@@ -1,15 +1,3 @@
-    Main idea of this application is to protect resources from being "stolen". I created 3 products,
-each with their own price and quantity. A Bill object which takes care of the product - quantity pair and total
-transaction money made. A Inventory object is also created which "connects" the product with the bills, making each
-transaction updating the bill based on the products. The products are chosen one by one and each thread is trying to
-access randomly the same product. A lock mechanism is made, making sure that no other thread is accessing the resource
-whilst it is currently used. It can access it once the resource is being freed, this happens at the end of the methods
-of the Inventory object (sell & checkInventory). The bills are updated in the sell method and (not recommended) I print
-the result after every transaction of the products. All different products sold == inventory printed. In order to verify
-that all transactions are made and none of them are missing a final inventory check is being made at last, and if that
-inventory check is equal to the previous one (last printed after the last transaction) then all operations went smoothly.
-
-50 threads - 3 products - 0.930091 seconds
-100 threads - 3 products - 1.65127 seconds
-1000 threads - 3 products - 13.9378 seconds
-1000 threads - 4 products - 15.1066 secondsD Ryzen 7 4.2 GHZ, 16 GB RAM
+2 threads - 500 bills - 4 products - 0.0174482
+4 threads - 500 bills - 4 products - 0.0166488
+16 threads - 500 bills - 4 products - 0.0159944

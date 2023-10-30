@@ -1,4 +1,5 @@
 #include <iostream>
+#include <utility>
 #include <vector>
 #include <thread>
 #include <mutex>
@@ -16,6 +17,8 @@ struct Product {
 struct Bill {
     std::vector<std::pair<Product, int>> items;
     double totalPrice;
+
+    Bill(std::vector<std::pair<Product, int>> items, double totalPrice) : items(std::move(items)), totalPrice(totalPrice) {}
 };
 
 struct Inventory {
@@ -28,37 +31,31 @@ struct Inventory {
     std::mutex moneyMutex;
     std::mutex billsMutex;
 
-    void sell(std::vector<std::pair<Product, int>> items, double totalPrice) {
+    void sell() {
         std::lock_guard<std::mutex> lock(productsMutex);
         std::lock_guard<std::mutex> moneyLock(moneyMutex);
         std::lock_guard<std::mutex> billsLock(billsMutex);
 
-        for (const auto &item : items) {
-            for (auto &product : products) {
-                if (product.name == item.first.name) {
-                    product.quantity -= item.second;
-                    break;
+        int iterationCount = 0;
+
+        for (auto it = bills.begin(); it != bills.end(); ) {
+            for (const auto &productItems : it->items) {
+                for (auto &prod : products) {
+                    if (productItems.first.name == prod.name) {
+                        prod.quantity -= productItems.second;
+                    }
                 }
             }
+            money += it->totalPrice;
+            it = bills.erase(it);
+
+            if (++iterationCount % 49 == 0) {
+                inventoryCheck();
+            }
         }
-
-        money += totalPrice;
-
-        /*std::cout << "Inventory after sale: " << std::endl;
-        for (const auto &product : products) {
-            std::cout << "Product: " << product.name << ", Quantity: " << product.quantity << std::endl;
-        }
-        std::cout << "Total money: " << money << std::endl;
-        std::cout << std::endl;*/
-
-        bills.push_back({std::move(items), totalPrice});
     }
 
     void inventoryCheck() {
-
-        std::lock_guard<std::mutex> lock(productsMutex);
-        std::lock_guard<std::mutex> moneyLock(moneyMutex);
-        std::lock_guard<std::mutex> billsLock(billsMutex);
 
         double totalInventoryValue = 0.0;
         for (const auto &product : products) {
@@ -75,45 +72,63 @@ struct Inventory {
     }
 };
 
-
 void performSale(Inventory &inventory) {
-    std::vector<std::pair<Product, int>> items;
-    double totalPrice = 0.0;
-    for (auto &product : inventory.products) {
-        int quantitySold = (rand() % (product.quantity + 1)) / 2;
-        if (quantitySold > 0) {
-            items.emplace_back(product, quantitySold);
-            totalPrice += product.price * quantitySold;
+
+    while (true) {
+        inventory.sell();
+        std::lock_guard<std::mutex> billsLock(inventory.billsMutex);
+        if (inventory.bills.empty()) {
+            break;
         }
     }
-
-    inventory.sell(items, totalPrice);
-    //inventory.inventoryCheck();
 }
 
 std::vector<std::pair<Product, int>> generateRandomBills(const std::vector<Product> &products) {
     std::vector<std::pair<Product, int>> billItems;
-    for (const auto &product : products) {
-        int quantitySold = (rand() % (10));
+
+    for(int i = 0; i <= 5; i++){
+        int index = rand() % 4;
+        int quantitySold = (rand() % (50));
         if (quantitySold > 0) {
-            billItems.emplace_back(product, quantitySold);
+            billItems.emplace_back(products[index], quantitySold);
         }
     }
+
     return billItems;
 }
 
 int main() {
     Inventory inventory;
 
-    inventory.products.emplace_back("Bukayo Saka", 1.0, 5000000);
-    inventory.products.emplace_back("Nikola Jokic", 2.0, 3000000);
-    inventory.products.emplace_back("Lewis Hamilton", 1.5, 400000);
-    inventory.products.emplace_back("Novak Djokovic", 5.0, 1500000);
+    std::vector<Product> products;
+    products.emplace_back("Bukayo Saka", 1.0, 500000);
+    products.emplace_back("Nikola Jokic", 2.0, 30000);
+    products.emplace_back("Lewis Hamilton", 1.5, 40000);
+    products.emplace_back("Novak Djokovic", 5.0, 15000);
+
+    inventory.products.emplace_back("Bukayo Saka", 1.0, 50000);
+    inventory.products.emplace_back("Nikola Jokic", 2.0, 30000);
+    inventory.products.emplace_back("Lewis Hamilton", 1.5, 40000);
+    inventory.products.emplace_back("Novak Djokovic", 5.0, 15000);
+
+    std::vector<Bill> bills;
+
+    for(int i = 0; i < 500; i++){
+        auto productsBill = generateRandomBills(products);
+        double money = 0;
+
+        for(const auto& bill: productsBill){
+            money += bill.first.price * bill.second;
+        }
+        inventory.bills.emplace_back(productsBill, money);
+    }
+
+    inventory.inventoryCheck();
 
     auto start = std::chrono::steady_clock::now();
 
     std::vector<std::thread> threads;
-    for (int i = 0; i < 4; ++i) {
+    for (int i = 0; i < 16; ++i) {
         threads.emplace_back(performSale, std::ref(inventory));
     }
 
@@ -121,9 +136,10 @@ int main() {
         thread.join();
     }
 
+    auto end = std::chrono::steady_clock::now();
+
     inventory.inventoryCheck();
 
-    auto end = std::chrono::steady_clock::now();
     std::chrono::duration<double> elapsed_seconds = end - start;
     std::cout << "Time taken: " << elapsed_seconds.count() << " seconds." << std::endl;
 

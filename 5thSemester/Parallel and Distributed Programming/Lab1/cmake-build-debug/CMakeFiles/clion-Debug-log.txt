@@ -1,1 +1,0 @@
-CMakeLists.txt not found in C:\Users\Alen\Documents\GithubPrivate\CS-Work\5thSemester\Parallel and Distributed Programming\Lab1 Select CMakeLists.txt
