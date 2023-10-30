@@ -37,7 +37,7 @@ public class Scanner {
 
     private String readFile() throws FileNotFoundException {
         StringBuilder fileContent = new StringBuilder();
-        Scanner scanner = new Scanner(new File(this.filePath));
+        Scanner scanner = new Scanner(this.filePath);
 
         return fileContent.toString().replace("\t", "");
     }
