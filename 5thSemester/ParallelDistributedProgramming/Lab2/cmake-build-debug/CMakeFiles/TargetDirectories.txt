@@ -1,0 +1,3 @@
+C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab2/cmake-build-debug/CMakeFiles/Lab2.dir
+C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
