@@ -4,14 +4,15 @@ index2: b, Identifier|
 index3: c, Identifier| 
 index4: GetMaxNumbers, Identifier| 
 index5: 
-index6: num, ReservedWord| &, Identifier| 
+index6: num, ReservedWord| &, Operator|
 index7: 
-index8: (, StringConstant| 
-index9: 	, Identifier| ), Separator| 
+index8: (, Separator|
+index9: 	, Separator| ), Separator|
 index10: is, Identifier| 
 index11: 
 index12: ,, Separator| 
-index13: -, Operator| , Identifier| 
+index13: -, Operator| 
+, Identifier| 
 index14: GetMinNumbers, Identifier| 
 index15: 
 index16: 	Perhaps, Identifier| 

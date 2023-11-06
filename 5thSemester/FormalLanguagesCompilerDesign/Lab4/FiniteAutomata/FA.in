@@ -1,0 +1,5 @@
+states: p, r, s
+alphas: t1, t2, t3
+initial state: p
+final states: s, r
+transactions: p, t1, r | r, t2, s |

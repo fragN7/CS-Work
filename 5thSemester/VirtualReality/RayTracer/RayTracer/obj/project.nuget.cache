@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8zSmjXG50YOLbV5Kd6wUPk/797lZG1QNGLEctllROfkQP0yKangSuubHOCD6XK9qqrMxFfsy4rVkPVz+jnRVAg==",
+  "dgSpecHash": "tDm1XNX6ab0hrouehbUB9ycrGtsnoVUEtAj942PRmxtaiNyV7KBtTGrSFLjzvKUz5p7LmPaJvk/bobu/rsvs0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alen\\Documents\\GithubPrivate\\CS-Work\\5thSemester\\Virtual Reality\\RayTracer\\RayTracer\\RayTracer.csproj",
+  "projectFilePath": "C:\\Users\\Alen\\Documents\\GithubPrivate\\CS-Work\\5thSemester\\VirtualReality\\RayTracer\\RayTracer\\RayTracer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alen\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Alen\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

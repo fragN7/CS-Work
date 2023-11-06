@@ -103,12 +103,12 @@ int main() {
     std::vector<Product> products;
     products.emplace_back("Bukayo Saka", 1.0, 500000);
     products.emplace_back("Nikola Jokic", 2.0, 30000);
-    products.emplace_back("Lewis Hamilton", 1.5, 40000);
-    products.emplace_back("Novak Djokovic", 5.0, 15000);
+    products.emplace_back("Lewis Hamilton", 3.0, 40000);
+    products.emplace_back("Novak Djokovic" ,5.0, 15000);
 
     inventory.products.emplace_back("Bukayo Saka", 1.0, 50000);
     inventory.products.emplace_back("Nikola Jokic", 2.0, 30000);
-    inventory.products.emplace_back("Lewis Hamilton", 1.5, 40000);
+    inventory.products.emplace_back("Lewis Hamilton", 3.0, 40000);
     inventory.products.emplace_back("Novak Djokovic", 5.0, 15000);
 
     std::vector<Bill> bills;

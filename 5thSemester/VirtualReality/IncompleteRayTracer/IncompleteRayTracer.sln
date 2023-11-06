@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncompleteRayTracer", "IncompleteRayTracer\IncompleteRayTracer.csproj", "{A5E17ACC-9D0F-4CEC-85C4-8C52834F196B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5E17ACC-9D0F-4CEC-85C4-8C52834F196B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E17ACC-9D0F-4CEC-85C4-8C52834F196B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E17ACC-9D0F-4CEC-85C4-8C52834F196B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E17ACC-9D0F-4CEC-85C4-8C52834F196B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

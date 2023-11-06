@@ -1,6 +1,4 @@
-﻿using System;
-using System.Runtime.InteropServices;
-
+﻿
 namespace RayTracer
 {
     class RayTracer
@@ -46,24 +44,66 @@ namespace RayTracer
 
         private bool IsLit(Vector point, Light light)
         {
-            // ADD CODE HERE: Detect whether the given point has a clear line of sight to the given light
-            return true;
+            var ray = new Line(light.Position, point);
+            var intersection = FindFirstIntersection(ray, 0.0, (light.Position - point).Length());
+            
+            return intersection.Valid;
         }
 
         public void Render(Camera camera, int width, int height, string filename)
         {
-            var background = new Color();
-            var viewParallel = (camera.Up ^ camera.Direction).Normalize();
-
             var image = new Image(width, height);
-
-            var vecW = camera.Direction * camera.ViewPlaneDistance;
             for (var i = 0; i < width; i++)
             {
                 for (var j = 0; j < height; j++)
                 {
-                    // ADD CODE HERE: Implement pixel color calculation
-                    image.SetPixel(i, j, background);
+                    var x0 = camera.Position;
+                    var x1 = camera.Position +
+                        camera.Direction * camera.ViewPlaneDistance +
+                        (camera.Up ^ camera.Direction) * ImageToViewPlane(i, width, camera.ViewPlaneWidth) +
+                        camera.Up * ImageToViewPlane(j, height, camera.ViewPlaneHeight);
+                    
+                    var intersection = FindFirstIntersection(new Line(x0, x1), camera.FrontPlaneDistance, camera.BackPlaneDistance);
+                    
+                    if (intersection.Geometry == null)
+                    {
+                        image.SetPixel(i, j, new Color());
+                    }
+                    else
+                    {
+                        var color = new Color();
+                        var material = intersection.Geometry.Material;
+
+                        foreach (var light in lights)
+                        {
+                            var lightColor = material.Ambient * light.Ambient;
+
+                            if (IsLit(intersection.Position, light))
+                            {
+                                var n = (intersection.Position - ((Sphere)intersection.Geometry).GetCenter()).Normalize();
+                                var t = (light.Position - intersection.Position).Normalize();
+
+                                if (n * t > 0)
+                                {
+                                    lightColor += material.Diffuse * light.Diffuse * (n * t);
+                                }
+
+                                var e = (camera.Position - intersection.Position).Normalize();
+                                var r = n * (n * t) * 2 - t;
+
+                                if (e * r > 0)
+                                {
+                                    lightColor += material.Specular * light.Specular * Math.Pow((e * r), material.Shininess);
+                                }
+
+                                lightColor *= light.Intensity;
+                            }
+
+                            color += lightColor;
+                        }
+
+                        image.SetPixel(i, j, color);
+                    }
                 }
             }
 

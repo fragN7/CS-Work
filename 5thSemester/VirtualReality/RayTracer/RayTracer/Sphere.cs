@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace RayTracer
 {
     public class Sphere : Geometry
@@ -13,9 +12,24 @@ namespace RayTracer
             Radius = radius;
         }
 
+        public Vector GetCenter()
+        {
+            return Center;
+        }
+
         public override Intersection GetIntersection(Line line, double minDist, double maxDist)
         {
-            // ADD CODE HERE: Calculate the intersection between the given line and this sphere
+            var timeClosest = (Center - line.X0) * line.Dx;
+            var pointAfterTime = line.CoordinateToPosition(timeClosest);
+            var lengthCenterAndPoint = (Center - pointAfterTime).Length();
+            var distanceInPoints = Math.Sqrt(Radius * Radius - lengthCenterAndPoint * lengthCenterAndPoint);
+
+            if (timeClosest > minDist && timeClosest < maxDist && lengthCenterAndPoint <= Radius)
+            {
+                var firstIntersection = timeClosest - distanceInPoints;
+                return new Intersection(true, true, this, line, firstIntersection);
+            }
+            
             return new Intersection();
         }
 

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="Lab2" targetName="Lab2" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="20b7f963-f4d4-4e9c-8f00-0e95d690551a" name="Changes" comment="Prod then cons, or prod fin then cons fin?">
+      <change afterPath="$PROJECT_DIR$/.idea/Lab2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Lab2.dir/main.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Lab2.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PublicKeyCriptography/Miller-Rabin-Test/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/.idea/.idea.IncompleteRayTracer/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/.idea/.idea.IncompleteRayTracer/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/.idea/.idea.IncompleteRayTracer/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/.idea/.idea.IncompleteRayTracer/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/Camera.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/Color.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/Ellipsoid.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/Geometry.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/Image.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/IncompleteRayTracer.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/Intersection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/Light.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/Line.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/Material.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/RayTracer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/Sphere.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/Vector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/global.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/obj/Debug/net7.0/IncompleteRayTracer.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/obj/Debug/net7.0/IncompleteRayTracer.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/obj/Debug/net7.0/IncompleteRayTracer.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/obj/Debug/net7.0/IncompleteRayTracer.GlobalUsings.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/obj/Debug/net7.0/IncompleteRayTracer.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/obj/Debug/net7.0/IncompleteRayTracer.csproj.AssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/obj/IncompleteRayTracer.csproj.nuget.dgspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/obj/IncompleteRayTracer.csproj.nuget.g.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/obj/IncompleteRayTracer.csproj.nuget.g.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/obj/project.assets.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/obj/project.nuget.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/obj/project.packagespec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../VirtualReality/IncompleteRayTracer/IncompleteRayTracer/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../1stSemester/FundamentalsOfProgramming/A10/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../1stSemester/FundamentalsOfProgramming/A10/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../3rdSemester/Map/TheToyLanguage/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../3rdSemester/Map/TheToyLanguage/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../4thSemester/WebDevelopment/ExamFamilyPractice/backend/backend/backend/bin/Debug/net7.0/backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../../4thSemester/WebDevelopment/ExamFamilyPractice/backend/backend/backend/bin/Debug/net7.0/backend.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../4thSemester/WebDevelopment/ExamFamilyPractice/backend/backend/backend/bin/Debug/net7.0/backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../4thSemester/WebDevelopment/ExamFamilyPractice/backend/backend/backend/bin/Debug/net7.0/backend.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../4thSemester/WebDevelopment/ExamFamilyPractice/backend/backend/backend/obj/Debug/net7.0/backend.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../../4thSemester/WebDevelopment/ExamFamilyPractice/backend/backend/backend/obj/Debug/net7.0/backend.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../4thSemester/WebDevelopment/ExamFamilyPractice/backend/backend/backend/obj/Debug/net7.0/backend.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../4thSemester/WebDevelopment/ExamFamilyPractice/backend/backend/backend/obj/Debug/net7.0/backend.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/cmake-build-debug/Lab1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/cmake-build-debug/Lab1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/RayTracer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/RayTracer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/Sphere.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/Sphere.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/RayTracer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/RayTracer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/RayTracer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/RayTracer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/001.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/002.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/003.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/004.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/005.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/006.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/007.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/008.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/008.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/009.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/009.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/010.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/010.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/011.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/011.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/012.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/012.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/013.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/013.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/014.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/014.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/015.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/015.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/016.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/016.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/017.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/017.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/018.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/018.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/019.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/019.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/020.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/020.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/021.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/021.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/022.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/022.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/023.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/023.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/024.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/024.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/025.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/025.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/026.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/026.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/027.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/027.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/028.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/028.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/029.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/029.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/030.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/030.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/031.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/031.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/032.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/032.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/033.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/033.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/034.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/034.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/035.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/035.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/036.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/036.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/037.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/037.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/038.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/038.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/039.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/039.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/040.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/040.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/041.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/041.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/042.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/042.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/043.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/043.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/044.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/044.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/045.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/045.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/046.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/046.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/047.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/047.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/048.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/048.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/049.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/049.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/050.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/050.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/051.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/051.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/052.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/052.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/053.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/053.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/054.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/054.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/055.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/055.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/056.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/056.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/057.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/057.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/058.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/058.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/059.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/059.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/060.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/060.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/061.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/061.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/062.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/062.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/063.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/063.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/064.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/064.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/065.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/065.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/066.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/066.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/067.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/067.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/068.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/068.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/069.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/069.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/070.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/070.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/071.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/071.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/072.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/072.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/073.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/073.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/074.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/074.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/075.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/075.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/076.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/076.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/077.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/077.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/078.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/078.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/079.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/079.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/080.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/080.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/081.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/081.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/082.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/082.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/083.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/083.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/084.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/084.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/085.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/085.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/086.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/086.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/087.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/087.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/088.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/088.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/089.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/089.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/090.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/bin/Debug/net6.0/frames/090.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/RayTracer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/ref/RayTracer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/ref/RayTracer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/refint/RayTracer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/Debug/net6.0/refint/RayTracer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/RayTracer.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/RayTracer.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/RayTracer.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/RayTracer.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../VirtualReality/RayTracer/RayTracer/obj/rider.project.restore.info" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="2.2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2XU9MWWlaF42s6yR3vPtlivixYr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Lab2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Lab2" TARGET_NAME="Lab2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Lab2" RUN_TARGET_NAME="Lab2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20b7f963-f4d4-4e9c-8f00-0e95d690551a" name="Changes" comment="" />
+      <created>1698672743269</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698672743269</updated>
+      <workItem from="1698672744934" duration="1353000" />
+      <workItem from="1698992127596" duration="5226000" />
+    </task>
+    <task id="LOCAL-00001" summary="Prod then cons, or prod fin then cons fin?">
+      <option name="closed" value="true" />
+      <created>1698673875183</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698673875183</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Prod then cons, or prod fin then cons fin?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prod then cons, or prod fin then cons fin?" />
+  </component>
+</project>

@@ -44,6 +44,17 @@ class HashTable<K, V> {
         return keys;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        for (LinkedList<Cell<K, V>> list : table) {
+            for (Cell<K, V> cell : list) {
+                result.append(cell.getKey()).append(" => ").append(cell.getValue()).append("\n");
+            }
+        }
+        return result.toString();
+    }
+
     public static class Cell<K, V> {
         private final K key;
         private V value;
@@ -63,6 +74,11 @@ class HashTable<K, V> {
 
         void setValue(V value) {
             this.value = value;
+        }
+
+        @Override
+        public String toString() {
+            return key + " => " + value;
         }
     }
 }
