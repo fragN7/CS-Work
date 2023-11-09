@@ -16,7 +16,7 @@ namespace RayTracer
         {
             return Center;
         }
-
+        
         public override Intersection GetIntersection(Line line, double minDist, double maxDist)
         {
             var timeClosest = (Center - line.X0) * line.Dx;

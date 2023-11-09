@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "dx6HcaqX5sAQhuu3GfcrG47g7ejmMUxAkxqr4vOXV8gxByT902+acXYJk2ckNMw/SFs8PtQ//Y/9HYwkWq/L3w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alen\\Documents\\GithubPrivate\\CS-Work\\5thSemester\\VirtualReality\\VolumetricRayTracer\\VolumetricRayTracer\\VolumetricRayTracer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alen\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\Alen\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

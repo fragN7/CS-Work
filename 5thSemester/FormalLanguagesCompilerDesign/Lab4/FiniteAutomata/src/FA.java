@@ -49,20 +49,30 @@ public class FA {
 
     public String transactionResult(String transactions){
         String[] transactionList = transactions.split("\\s+");
+        String currentState = this.initialState;
 
         for (String transaction: transactionList) {
 
             if(!this.alphas.contains(transaction))
                 return "Alpha " + transaction + " not in transaction list";
 
+            boolean validTransaction = false;
             for (TransactionStructure trs: this.transactions) {
-                if(trs.getTransaction().equals(transaction)){
-                    //TODO: implement
+                if(trs.getTransaction().equals(transaction) && trs.getInitial().equals(currentState)){
+                    currentState = trs.getFinalValue();
+                    validTransaction = true;
+                    break;
                 }
             }
+
+            if(!validTransaction)
+                return "Invalid transaction sequence";
         }
 
-        return "Good";
+        if(this.finalStates.contains(currentState))
+            return "Valid transaction sequence";
+        else
+            return "Transaction sequence does not end in a final state";
     }
 
     public void displayStates(){
