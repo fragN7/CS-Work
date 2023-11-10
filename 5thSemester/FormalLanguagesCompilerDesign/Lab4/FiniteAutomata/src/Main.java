@@ -32,6 +32,7 @@ public class Main {
         System.out.println("3 - Display initial state");
         System.out.println("4 - Display final states");
         System.out.println("5 - Display transactions");
+        System.out.println("6 - Enter transactions");
         System.out.println("0 - Exit");
     }
 
