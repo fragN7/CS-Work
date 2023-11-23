@@ -3,10 +3,10 @@
 
 void getFactors(int number, int *n1, int *n2)
 {
-    if(number == 1)
+    if(number < 7)
     {
         *n1 = 1;
-        *n2 = 1;
+        *n2 = number;
     }
 
     // parsing k's
@@ -31,8 +31,6 @@ int main() {
     scanf("%d", &number);
 
     getFactors(number, &n1, &n2);
-
-
 
     printf("%d = %d * %d", number, n1, n2);
 

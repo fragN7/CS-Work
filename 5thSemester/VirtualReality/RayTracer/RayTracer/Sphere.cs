@@ -19,19 +19,22 @@ namespace RayTracer
         
         public override Intersection GetIntersection(Line line, double minDist, double maxDist)
         {
-            var timeClosest = (Center - line.X0) * line.Dx;
-            var pointAfterTime = line.CoordinateToPosition(timeClosest);
-            var lengthCenterAndPoint = (Center - pointAfterTime).Length();
-            var distanceInPoints = Math.Sqrt(Radius * Radius - lengthCenterAndPoint * lengthCenterAndPoint);
+            var timeClosestToCenter = (Center - line.X0) * line.Dx;
 
-            if (timeClosest > minDist && timeClosest < maxDist && lengthCenterAndPoint <= Radius)
+            var pointReachedAfterTime = line.CoordinateToPosition(timeClosestToCenter);
+
+            var lengthBetweenCenterAndPoint = (Center - pointReachedAfterTime).Length();
+
+            var distanceBetweenPoints = Math.Sqrt(Radius * Radius - lengthBetweenCenterAndPoint * lengthBetweenCenterAndPoint);
+
+            if (timeClosestToCenter > minDist && timeClosestToCenter < maxDist && lengthBetweenCenterAndPoint <= Radius)
             {
-                var firstIntersection = timeClosest - distanceInPoints;
-                return new Intersection(true, true, this, line, firstIntersection);
+                //timeClosestToCenter-distanceBetweenPoints = the first intersection
+                return new Intersection(true, true, this, line, timeClosestToCenter-distanceBetweenPoints);
             }
-            
             return new Intersection();
         }
+
 
         public override Vector Normal(Vector v)
         {

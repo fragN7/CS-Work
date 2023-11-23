@@ -44,15 +44,17 @@ namespace RayTracer
 
         private bool IsLit(Vector point, Light light)
         {
-            var ray = new Line(light.Position, point);
+            Line ray = new Line(light.Position, point);
             var intersection = FindFirstIntersection(ray, 0.0, (light.Position - point).Length());
-            
+
             return intersection.Valid;
+
         }
 
         public void Render(Camera camera, int width, int height, string filename)
         {
             var image = new Image(width, height);
+
             for (var i = 0; i < width; i++)
             {
                 for (var j = 0; j < height; j++)
@@ -62,17 +64,15 @@ namespace RayTracer
                         camera.Direction * camera.ViewPlaneDistance +
                         (camera.Up ^ camera.Direction) * ImageToViewPlane(i, width, camera.ViewPlaneWidth) +
                         camera.Up * ImageToViewPlane(j, height, camera.ViewPlaneHeight);
-                    
                     var intersection = FindFirstIntersection(new Line(x0, x1), camera.FrontPlaneDistance, camera.BackPlaneDistance);
-                    
                     if (intersection.Geometry == null)
                     {
                         image.SetPixel(i, j, new Color());
                     }
                     else
                     {
-                        var color = new Color();
-                        var material = intersection.Geometry.Material;
+                        Color color = new Color();
+                        Material material = intersection.Geometry.Material;
 
                         foreach (var light in lights)
                         {
