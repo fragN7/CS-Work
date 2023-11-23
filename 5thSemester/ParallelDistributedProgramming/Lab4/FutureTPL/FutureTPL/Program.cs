@@ -1,14 +1,21 @@
 ﻿using System;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
+using FutureTPL.Implementations;
 
 namespace FutureTPL
 {
-    class Program
+    public static class Program
     {
-        static async Task Main(string[] args)
+        private static List<String> hts = new List<String>();
+
+        static void Main()
         {
+            hts.Add("www.cs.ubbcluj.ro/~rlupsa/edu/pdp");
+            hts.Add("youtube.com");
+            hts.Add("google.com");
+
+            DirCallbacks.run(hts);
+            //BaseTask.run(hts, false);
         }
 
     }
