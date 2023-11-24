@@ -10,11 +10,13 @@ namespace FutureTPL
 
         static void Main()
         {
-            hts.Add("www.cs.ubbcluj.ro/~rlupsa/edu/pdp");
-            hts.Add("youtube.com");
-            hts.Add("google.com");
+            hts.Add("www.cs.ubbcluj.ro/~rlupsa/edu/pdp/lecture-2-handling-concurrency.html");
+            hts.Add("www.zhr-ucr.ro/index.php");
+            hts.Add("www.flashscore.ro");
 
             DirCallbacks.run(hts);
+            //BaseTask.run(hts, true);
+            //Console.WriteLine("\n\n\n Test test \n\n\n");
             //BaseTask.run(hts, false);
         }
 

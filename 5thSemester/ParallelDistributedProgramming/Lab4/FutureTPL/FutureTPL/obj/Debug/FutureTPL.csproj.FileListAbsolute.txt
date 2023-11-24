@@ -1,0 +1,7 @@
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\5thSemester\ParallelDistributedProgramming\Lab4\FutureTPL\FutureTPL\bin\Debug\FutureTPL.exe
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\5thSemester\ParallelDistributedProgramming\Lab4\FutureTPL\FutureTPL\bin\Debug\FutureTPL.pdb
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\5thSemester\ParallelDistributedProgramming\Lab4\FutureTPL\FutureTPL\obj\Debug\FutureTPL.csproj.AssemblyReference.cache
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\5thSemester\ParallelDistributedProgramming\Lab4\FutureTPL\FutureTPL\obj\Debug\FutureTPL.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\5thSemester\ParallelDistributedProgramming\Lab4\FutureTPL\FutureTPL\obj\Debug\FutureTPL.csproj.CoreCompileInputs.cache
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\5thSemester\ParallelDistributedProgramming\Lab4\FutureTPL\FutureTPL\obj\Debug\FutureTPL.exe
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\5thSemester\ParallelDistributedProgramming\Lab4\FutureTPL\FutureTPL\obj\Debug\FutureTPL.pdb

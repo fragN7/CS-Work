@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "3v2ah5YQwvkLhubXLT1UVO36RqLL5DRhx+2KjTaiHSM9GhHBelA2jjf9gdzQVh7tnywmC9p6iDfStyqAVcHMCA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alen\\Documents\\GithubPrivate\\ray-tracing-fragN7\\RayTracerVolumetric\\RayTracerVolumetric\\RayTracerVolumetric.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alen\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Alen\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Alen\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\Alen\\.nuget\\packages\\system.drawing.common\\8.0.0\\system.drawing.common.8.0.0.nupkg.sha512",
+    "C:\\Users\\Alen\\.nuget\\packages\\system.drawing.primitives\\4.3.0\\system.drawing.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\Alen\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Alen\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

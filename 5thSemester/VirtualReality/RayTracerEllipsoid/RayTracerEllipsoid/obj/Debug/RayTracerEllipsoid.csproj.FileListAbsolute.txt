@@ -1,0 +1,10 @@
+C:\Users\Alen\Documents\GithubPrivate\ray-tracing-fragN7\RayTracerEllipsoid\RayTracerEllipsoid\bin\Debug\RayTracerEllipsoid.exe
+C:\Users\Alen\Documents\GithubPrivate\ray-tracing-fragN7\RayTracerEllipsoid\RayTracerEllipsoid\bin\Debug\RayTracerEllipsoid.pdb
+C:\Users\Alen\Documents\GithubPrivate\ray-tracing-fragN7\RayTracerEllipsoid\RayTracerEllipsoid\bin\Debug\System.Drawing.Common.dll
+C:\Users\Alen\Documents\GithubPrivate\ray-tracing-fragN7\RayTracerEllipsoid\RayTracerEllipsoid\bin\Debug\System.Drawing.Common.xml
+C:\Users\Alen\Documents\GithubPrivate\ray-tracing-fragN7\RayTracerEllipsoid\RayTracerEllipsoid\obj\Debug\RayTracerEllipsoid.csproj.AssemblyReference.cache
+C:\Users\Alen\Documents\GithubPrivate\ray-tracing-fragN7\RayTracerEllipsoid\RayTracerEllipsoid\obj\Debug\RayTracerEllipsoid.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alen\Documents\GithubPrivate\ray-tracing-fragN7\RayTracerEllipsoid\RayTracerEllipsoid\obj\Debug\RayTracerEllipsoid.csproj.CoreCompileInputs.cache
+C:\Users\Alen\Documents\GithubPrivate\ray-tracing-fragN7\RayTracerEllipsoid\RayTracerEllipsoid\obj\Debug\RayTracerEllipsoid.csproj.CopyComplete
+C:\Users\Alen\Documents\GithubPrivate\ray-tracing-fragN7\RayTracerEllipsoid\RayTracerEllipsoid\obj\Debug\RayTracerEllipsoid.exe
+C:\Users\Alen\Documents\GithubPrivate\ray-tracing-fragN7\RayTracerEllipsoid\RayTracerEllipsoid\obj\Debug\RayTracerEllipsoid.pdb
