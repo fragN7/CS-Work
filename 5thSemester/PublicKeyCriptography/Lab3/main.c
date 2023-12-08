@@ -3,6 +3,7 @@
 
 void getFactors(int number, int *n1, int *n2)
 {
+    
     if(number < 7)
     {
         *n1 = 1;

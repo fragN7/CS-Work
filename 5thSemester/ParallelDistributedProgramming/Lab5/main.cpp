@@ -4,28 +4,47 @@
 #include <mutex>
 #include <chrono>
 #include <future>
+#include <algorithm>
 
 struct Polynomial {
     std::vector<int> coefficients;
 
     Polynomial(std::vector<int> coeffs) : coefficients(coeffs) {}
 
+    Polynomial() = default;
+
+    void padZeros(int n) {
+        coefficients.insert(coefficients.begin(), n, 0);
+    }
+
+    Polynomial operator+(const Polynomial& other) const {
+        Polynomial result;
+        result.coefficients.resize(std::max(coefficients.size(), other.coefficients.size()), 0);
+
+        for (size_t i = 0; i < coefficients.size(); ++i) {
+            result.coefficients[i] += coefficients[i];
+        }
+
+        for (size_t i = 0; i < other.coefficients.size(); ++i) {
+            result.coefficients[i] += other.coefficients[i];
+        }
+
+        return result;
+    }
+
     Polynomial operator-(const Polynomial& other) const {
-        size_t size = std::max(coefficients.size(), other.coefficients.size());
-        std::vector<int> result(size, 0);
+        Polynomial result;
+        result.coefficients.resize(std::max(coefficients.size(), other.coefficients.size()), 0);
 
-        for (size_t i = 0; i < size; ++i) {
-            int coef1 = (i < coefficients.size()) ? coefficients[i] : 0;
-            int coef2 = (i < other.coefficients.size()) ? other.coefficients[i] : 0;
-            result[i] = coef1 - coef2;
+        for (size_t i = 0; i < coefficients.size(); ++i) {
+            result.coefficients[i] += coefficients[i];
         }
 
-        // Remove leading zeros
-        while (result.size() > 1 && result.back() == 0) {
-            result.pop_back();
+        for (size_t i = 0; i < other.coefficients.size(); ++i) {
+            result.coefficients[i] -= other.coefficients[i];
         }
 
-        return Polynomial(result);
+        return result;
     }
 };
 
@@ -42,6 +61,34 @@ Polynomial multiplyPolynomialsRegularSequential(const Polynomial& poly1, const P
     }
 
     return Polynomial(result);
+}
+
+std::ostream& operator<<(std::ostream& os, const Polynomial& poly) {
+    int degree = static_cast<int>(poly.coefficients.size()) - 1;
+
+    for (int i = degree; i >= 0; --i) {
+        if (poly.coefficients[i] != 0) {
+            if (i != degree) {
+                os << ((poly.coefficients[i] > 0) ? " + " : " - ");
+            }
+
+            if (std::abs(poly.coefficients[i]) != 0 || i == 0) {
+                os << std::abs(poly.coefficients[i]);
+                if (i != 0) {
+                    os << "x";
+                    if (i != 1) {
+                        os << "^" << i;
+                    }
+                }
+            } else {
+                if (i == 1) {
+                    os << "x";
+                }
+            }
+        }
+    }
+
+    return os;
 }
 
 // Function to perform polynomial multiplication in a thread
@@ -85,7 +132,6 @@ Polynomial multiplyPolynomialsRegularParallel(const Polynomial& poly1, const Pol
     return Polynomial(result);
 }
 
-// Karatsuba polynomial multiplication (Sequential)
 Polynomial multiplyPolynomialsKaratsubaSequential(const Polynomial& poly1, const Polynomial& poly2) {
     int m = poly1.coefficients.size();
     int n = poly2.coefficients.size();
@@ -114,42 +160,20 @@ Polynomial multiplyPolynomialsKaratsubaSequential(const Polynomial& poly1, const
     Polynomial z0 = multiplyPolynomialsKaratsubaSequential(a0, b0);
     Polynomial z2 = multiplyPolynomialsKaratsubaSequential(a1, b1);
 
-    Polynomial a_sum = a0;
-    for (int i = 0; i < a1.coefficients.size(); ++i) {
-        if (i < a_sum.coefficients.size()) {
-            a_sum.coefficients[i] += a1.coefficients[i];
-        } else {
-            a_sum.coefficients.push_back(a1.coefficients[i]);
-        }
-    }
+    a0.coefficients.resize(std::max(a0.coefficients.size(), b1.coefficients.size()), 0);
+    b1.coefficients.resize(std::max(a0.coefficients.size(), b1.coefficients.size()), 0);
 
-    Polynomial b_sum = b0;
-    for (int i = 0; i < b1.coefficients.size(); ++i) {
-        if (i < b_sum.coefficients.size()) {
-            b_sum.coefficients[i] += b1.coefficients[i];
-        } else {
-            b_sum.coefficients.push_back(b1.coefficients[i]);
-        }
-    }
+    Polynomial a_sum = a0 + a1;
+    Polynomial b_sum = b0 + b1;
 
     Polynomial z1 = multiplyPolynomialsKaratsubaSequential(a_sum, b_sum) - z0 - z2;
 
-    std::vector<int> result(2 * half + std::max(a1.coefficients.size(), b1.coefficients.size()) - 1, 0);
-    for (int i = 0; i < z0.coefficients.size(); ++i) {
-        result[i] += z0.coefficients[i];
-    }
-    for (int i = 0; i < z1.coefficients.size(); ++i) {
-        result[i + half] += z1.coefficients[i];
-    }
-    for (int i = 0; i < z2.coefficients.size(); ++i) {
-        result[i + 2 * half] += z2.coefficients[i];
-    }
+    z0.padZeros(2 * half);
+    z1.padZeros(half);
 
-    return Polynomial(result);
+    return z0 + z1 + z2;
 }
 
-
-// Karatsuba polynomial multiplication (Parallelized)
 Polynomial multiplyPolynomialsKaratsubaParallel(const Polynomial& poly1, const Polynomial& poly2) {
     int m = poly1.coefficients.size();
     int n = poly2.coefficients.size();
@@ -181,81 +205,59 @@ Polynomial multiplyPolynomialsKaratsubaParallel(const Polynomial& poly1, const P
     Polynomial z0 = z0_future.get();
     Polynomial z2 = z2_future.get();
 
-    Polynomial a_sum = a0;
-    for (int i = 0; i < a1.coefficients.size(); ++i) {
-        if (i < a_sum.coefficients.size()) {
-            a_sum.coefficients[i] += a1.coefficients[i];
-        } else {
-            a_sum.coefficients.push_back(a1.coefficients[i]);
-        }
-    }
+    a0.coefficients.resize(std::max(a0.coefficients.size(), b1.coefficients.size()), 0);
+    b1.coefficients.resize(std::max(a0.coefficients.size(), b1.coefficients.size()), 0);
 
-    Polynomial b_sum = b0;
-    for (int i = 0; i < b1.coefficients.size(); ++i) {
-        if (i < b_sum.coefficients.size()) {
-            b_sum.coefficients[i] += b1.coefficients[i];
-        } else {
-            b_sum.coefficients.push_back(b1.coefficients[i]);
-        }
-    }
+    Polynomial a_sum = a0 + a1;
+    Polynomial b_sum = b0 + b1;
 
     auto z1_future = std::async(std::launch::async, multiplyPolynomialsKaratsubaParallel, std::ref(a_sum), std::ref(b_sum));
     Polynomial z1 = z1_future.get() - z0 - z2;
 
-    std::vector<int> result(2 * half + std::max(a1.coefficients.size(), b1.coefficients.size()) - 1, 0);
-    for (int i = 0; i < z0.coefficients.size(); ++i) {
-        result[i] += z0.coefficients[i];
-    }
-    for (int i = 0; i < z1.coefficients.size(); ++i) {
-        result[i + half] += z1.coefficients[i];
-    }
-    for (int i = 0; i < z2.coefficients.size(); ++i) {
-        result[i + 2 * half] += z2.coefficients[i];
-    }
+    z0.padZeros(2 * half);
+    z1.padZeros(half);
 
-    return Polynomial(result);
+    return z0 + z1 + z2;
 }
 
 
 int main() {
-    // Test polynomials
-    Polynomial poly1({1, 2, 3}); // 1 + 2x + 3x^2
-    Polynomial poly2({2, 1});    // 2 + x
+    Polynomial poly1({-1, 1});
+    Polynomial poly2({1, 1});
 
-    // Regular Multiplication (Sequential)
     auto startRegularSequential = std::chrono::steady_clock::now();
     Polynomial resultRegularSequential = multiplyPolynomialsRegularSequential(poly1, poly2);
     auto endRegularSequential = std::chrono::steady_clock::now();
     std::chrono::duration<double> elapsedRegularSequential = endRegularSequential - startRegularSequential;
     std::cout << "Regular Multiplication (Sequential) Time: " << elapsedRegularSequential.count() << " seconds\n";
-    std::cout << "Regular Multiplication (Sequential) Result: ";
+    std::cout << "Regular Multiplication (Sequential) Result: " << resultRegularSequential << std::endl;
     std::cout << std::endl;
 
-    // Regular Multiplication (Parallel)
     auto startRegularParallel = std::chrono::steady_clock::now();
     Polynomial resultRegularParallel = multiplyPolynomialsRegularParallel(poly1, poly2);
     auto endRegularParallel = std::chrono::steady_clock::now();
     std::chrono::duration<double> elapsedRegularParallel = endRegularParallel - startRegularParallel;
     std::cout << "Regular Multiplication (Parallel) Time: " << elapsedRegularParallel.count() << " seconds\n";
-    std::cout << "Regular Multiplication (Parallel) Result: ";
+    std::cout << "Regular Multiplication (Parallel) Result: " << resultRegularParallel << std::endl;
     std::cout << std::endl;
 
-    // Karatsuba Multiplication (Sequential)
+    std::reverse(poly1.coefficients.begin(), poly1.coefficients.end());
+    std::reverse(poly2.coefficients.begin(), poly2.coefficients.end());
+
     auto startKaratsubaSequential = std::chrono::steady_clock::now();
     Polynomial resultKaratsubaSequential = multiplyPolynomialsKaratsubaSequential(poly1, poly2);
     auto endKaratsubaSequential = std::chrono::steady_clock::now();
     std::chrono::duration<double> elapsedKaratsubaSequential = endKaratsubaSequential - startKaratsubaSequential;
     std::cout << "Karatsuba Multiplication (Sequential) Time: " << elapsedKaratsubaSequential.count() << " seconds\n";
-    std::cout << "Karatsuba Multiplication (Sequential) Result: ";
+    std::cout << "Karatsuba Multiplication (Sequential) Result: " << resultKaratsubaSequential << std::endl;
     std::cout << std::endl;
 
-    // Karatsuba Multiplication (Parallel) - Currently implemented as Sequential
     auto startKaratsubaParallel = std::chrono::steady_clock::now();
     Polynomial resultKaratsubaParallel = multiplyPolynomialsKaratsubaParallel(poly1, poly2);
     auto endKaratsubaParallel = std::chrono::steady_clock::now();
     std::chrono::duration<double> elapsedKaratsubaParallel = endKaratsubaParallel - startKaratsubaParallel;
     std::cout << "Karatsuba Multiplication (Parallel) Time: " << elapsedKaratsubaParallel.count() << " seconds\n";
-    std::cout << "Karatsuba Multiplication (Parallel) Result: ";
+    std::cout << "Karatsuba Multiplication (Parallel) Result: " << resultKaratsubaParallel << std::endl;
     std::cout << std::endl;
 
     return 0;
