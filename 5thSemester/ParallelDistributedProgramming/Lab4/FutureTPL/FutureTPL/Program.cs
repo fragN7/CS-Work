@@ -10,14 +10,20 @@ namespace FutureTPL
 
         static void Main()
         {
-            hts.Add("www.cs.ubbcluj.ro/~rlupsa/edu/pdp/lecture-2-handling-concurrency.html");
+            hts.Add("www.dspcluj.ro/HTML/CORONAVIRUS/incidenta.html");
             hts.Add("www.zhr-ucr.ro/index.php");
-            hts.Add("www.flashscore.ro");
-
-            DirCallbacks.run(hts);
-            //BaseTask.run(hts, true);
-            //Console.WriteLine("\n\n\n Test test \n\n\n");
-            //BaseTask.run(hts, false);
+            hts.Add("w");
+            
+            try
+            {
+                //DirCallbacks.run(hts);
+                BaseTask.run(hts, false);
+                // BaseTask.run(hts, true);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception handled");
+            }
         }
 
     }

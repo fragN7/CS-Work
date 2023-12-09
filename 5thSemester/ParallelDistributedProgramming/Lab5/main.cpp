@@ -48,7 +48,6 @@ struct Polynomial {
     }
 };
 
-// Regular O(n^2) polynomial multiplication (Sequential)
 Polynomial multiplyPolynomialsRegularSequential(const Polynomial& poly1, const Polynomial& poly2) {
     int m = poly1.coefficients.size();
     int n = poly2.coefficients.size();
@@ -91,7 +90,6 @@ std::ostream& operator<<(std::ostream& os, const Polynomial& poly) {
     return os;
 }
 
-// Function to perform polynomial multiplication in a thread
 void multiplyPartialPolynomials(const Polynomial& poly1, const Polynomial& poly2,
                                 std::vector<int>& result, int start, int end, std::mutex& mtx) {
     int m = poly1.coefficients.size();
@@ -106,21 +104,20 @@ void multiplyPartialPolynomials(const Polynomial& poly1, const Polynomial& poly2
     }
 }
 
-// Regular O(n^2) polynomial multiplication (Parallelized)
 Polynomial multiplyPolynomialsRegularParallel(const Polynomial& poly1, const Polynomial& poly2) {
     int m = poly1.coefficients.size();
     int n = poly2.coefficients.size();
     std::vector<int> result(m + n - 1, 0);
     std::mutex mtx;
 
-    int num_threads = std::thread::hardware_concurrency(); // Number of available threads
+    int num_threads = std::thread::hardware_concurrency();
 
     std::vector<std::thread> threads;
-    int chunk_size = m / num_threads;
+    int chunk_size = std::min(m / num_threads + 1, m); // Calculate chunk size
 
     for (int i = 0; i < num_threads; ++i) {
         int start = i * chunk_size;
-        int end = (i == num_threads - 1) ? m : (i + 1) * chunk_size;
+        int end = std::min((i + 1) * chunk_size, m); // Cap the end at m
         threads.emplace_back(multiplyPartialPolynomials, std::ref(poly1), std::ref(poly2),
                              std::ref(result), start, end, std::ref(mtx));
     }
@@ -140,7 +137,7 @@ Polynomial multiplyPolynomialsKaratsubaSequential(const Polynomial& poly1, const
         return Polynomial(std::vector<int>());
     }
 
-    if (m == 1 || n == 1) {
+    if (m > 16 || n > 16) {
         std::vector<int> result(m + n - 1, 0);
         for (int i = 0; i < m; ++i) {
             for (int j = 0; j < n; ++j) {
@@ -182,7 +179,7 @@ Polynomial multiplyPolynomialsKaratsubaParallel(const Polynomial& poly1, const P
         return Polynomial(std::vector<int>());
     }
 
-    if (m == 1 || n == 1) {
+    if (m > 16 || n > 16) {
         std::vector<int> result(m + n - 1, 0);
         for (int i = 0; i < m; ++i) {
             for (int j = 0; j < n; ++j) {
@@ -199,11 +196,11 @@ Polynomial multiplyPolynomialsKaratsubaParallel(const Polynomial& poly1, const P
     Polynomial b0(std::vector<int>(poly2.coefficients.begin(), poly2.coefficients.begin() + std::min(half, n)));
     Polynomial b1(std::vector<int>(poly2.coefficients.begin() + std::min(half, n), poly2.coefficients.end()));
 
-    auto z0_future = std::async(std::launch::async, multiplyPolynomialsKaratsubaParallel, std::ref(a0), std::ref(b0));
-    auto z2_future = std::async(std::launch::async, multiplyPolynomialsKaratsubaParallel, std::ref(a1), std::ref(b1));
+    auto z0_async = std::async(std::launch::async, multiplyPolynomialsKaratsubaParallel, std::ref(a0), std::ref(b0));
+    auto z2_async  = std::async(std::launch::async, multiplyPolynomialsKaratsubaParallel, std::ref(a1), std::ref(b1));
 
-    Polynomial z0 = z0_future.get();
-    Polynomial z2 = z2_future.get();
+    Polynomial z0 = z0_async.get();
+    Polynomial z2 = z2_async.get();
 
     a0.coefficients.resize(std::max(a0.coefficients.size(), b1.coefficients.size()), 0);
     b1.coefficients.resize(std::max(a0.coefficients.size(), b1.coefficients.size()), 0);
@@ -211,8 +208,8 @@ Polynomial multiplyPolynomialsKaratsubaParallel(const Polynomial& poly1, const P
     Polynomial a_sum = a0 + a1;
     Polynomial b_sum = b0 + b1;
 
-    auto z1_future = std::async(std::launch::async, multiplyPolynomialsKaratsubaParallel, std::ref(a_sum), std::ref(b_sum));
-    Polynomial z1 = z1_future.get() - z0 - z2;
+    auto z1_async = std::async(std::launch::async, multiplyPolynomialsKaratsubaParallel, std::ref(a_sum), std::ref(b_sum));
+    Polynomial z1 = z1_async.get() - z0 - z2;
 
     z0.padZeros(2 * half);
     z1.padZeros(half);
@@ -222,42 +219,54 @@ Polynomial multiplyPolynomialsKaratsubaParallel(const Polynomial& poly1, const P
 
 
 int main() {
-    Polynomial poly1({-1, 1});
-    Polynomial poly2({1, 1});
+   /* Polynomial poly1({-1, 1});
+    Polynomial poly2({1, 1});*/
+
+    srand(static_cast<unsigned int>(time(nullptr)));
+
+    int vectorSize = 10000;// Change this to the size you want
+    std::vector<int> randVector1(vectorSize);
+    std::vector<int> randVector2(vectorSize);
+
+    // Fill the vector with random numbers between 1 and 10
+    for (int i = 0; i < vectorSize; ++i) {
+        randVector1[i] = rand() % 10 + 1; // Generates a random number between 1 and 10
+        randVector2[i] = rand() % 10 + 1; // Generates a random number between 1 and 10
+    }
+
+    Polynomial poly1(randVector1);
+    Polynomial poly2(randVector2);
 
     auto startRegularSequential = std::chrono::steady_clock::now();
     Polynomial resultRegularSequential = multiplyPolynomialsRegularSequential(poly1, poly2);
     auto endRegularSequential = std::chrono::steady_clock::now();
     std::chrono::duration<double> elapsedRegularSequential = endRegularSequential - startRegularSequential;
-    std::cout << "Regular Multiplication (Sequential) Time: " << elapsedRegularSequential.count() << " seconds\n";
-    std::cout << "Regular Multiplication (Sequential) Result: " << resultRegularSequential << std::endl;
+    std::cout << "Regular Multiplication (Parallel) Time: " << elapsedRegularSequential.count() << " seconds\n";
+    //std::cout << "Regular Multiplication (Sequential) Result: " << resultRegularSequential << std::endl;
     std::cout << std::endl;
 
     auto startRegularParallel = std::chrono::steady_clock::now();
     Polynomial resultRegularParallel = multiplyPolynomialsRegularParallel(poly1, poly2);
     auto endRegularParallel = std::chrono::steady_clock::now();
     std::chrono::duration<double> elapsedRegularParallel = endRegularParallel - startRegularParallel;
-    std::cout << "Regular Multiplication (Parallel) Time: " << elapsedRegularParallel.count() << " seconds\n";
-    std::cout << "Regular Multiplication (Parallel) Result: " << resultRegularParallel << std::endl;
+    std::cout << "Regular Multiplication (Sequential) Time: " << elapsedRegularParallel.count() << " seconds\n";
+    //std::cout << "Regular Multiplication (Parallel) Result: " << resultRegularParallel << std::endl;
     std::cout << std::endl;
-
-    std::reverse(poly1.coefficients.begin(), poly1.coefficients.end());
-    std::reverse(poly2.coefficients.begin(), poly2.coefficients.end());
 
     auto startKaratsubaSequential = std::chrono::steady_clock::now();
     Polynomial resultKaratsubaSequential = multiplyPolynomialsKaratsubaSequential(poly1, poly2);
     auto endKaratsubaSequential = std::chrono::steady_clock::now();
     std::chrono::duration<double> elapsedKaratsubaSequential = endKaratsubaSequential - startKaratsubaSequential;
-    std::cout << "Karatsuba Multiplication (Sequential) Time: " << elapsedKaratsubaSequential.count() << " seconds\n";
-    std::cout << "Karatsuba Multiplication (Sequential) Result: " << resultKaratsubaSequential << std::endl;
+    std::cout << "Karatsuba Multiplication (Parallel) Time: " << elapsedKaratsubaSequential.count() << " seconds\n";
+    //std::cout << "Karatsuba Multiplication (Sequential) Result: " << resultRegularParallel << std::endl;
     std::cout << std::endl;
 
     auto startKaratsubaParallel = std::chrono::steady_clock::now();
     Polynomial resultKaratsubaParallel = multiplyPolynomialsKaratsubaParallel(poly1, poly2);
     auto endKaratsubaParallel = std::chrono::steady_clock::now();
     std::chrono::duration<double> elapsedKaratsubaParallel = endKaratsubaParallel - startKaratsubaParallel;
-    std::cout << "Karatsuba Multiplication (Parallel) Time: " << elapsedKaratsubaParallel.count() << " seconds\n";
-    std::cout << "Karatsuba Multiplication (Parallel) Result: " << resultKaratsubaParallel << std::endl;
+    std::cout << "Karatsuba Multiplication (Sequential) Time: " << elapsedKaratsubaParallel.count() << " seconds\n";
+    //std::cout << "Karatsuba Multiplication (Parallel) Result: " << resultRegularParallel << std::endl;
     std::cout << std::endl;
 
     return 0;

@@ -42,10 +42,10 @@ namespace RayTracerVolumetric
                 
                 new Sphere(   new Vector(-25.0, -50.0,  75.0),                           25.0, Color.ORANGE),
                 
-                new RawCtMask("C:\\Users\\Alen\\Documents\\GithubPrivate\\ray-tracing-fragN7\\RayTracerVolumetric\\RayTracerVolumetric\\walnut.dat", "C:\\Users\\Alen\\Documents\\GithubPrivate\\ray-tracing-fragN7\\RayTracerVolumetric\\RayTracerVolumetric\\walnut.raw", new Vector(-5.0, -20.0, 105.0), 0.2,
+                new RawCtMask("../../../walnut.dat", "../../../walnut.raw", new Vector(-5.0, -20.0, 105.0), 0.2,
                     new ColorMap()
-                        .Add(1, 1, new Color(0.7, 0.0, 0.0, 0.05))
-                        .Add(2, 2, new Color(0.0, 0.7, 0.0, 1.0))
+                        .Add(1, 1, new Color(0.36, 0.26, 0.16, 0.05))
+                        .Add(2, 2, new Color(0.87, 0.72, 0.52, 1.0))
                 ),  
             };
 
@@ -67,36 +67,41 @@ namespace RayTracerVolumetric
             var first = new Vector(0, 0, 1).Normalize();
             const double dist = 95.0;
             const int n = 90;
+            const int tasksCount = 15;
             const double step = 360.0 / n;
             
-            var tasks = new Task[n];
-            for (var i = 0; i < n; i++)
+            var tasks = new Task[tasksCount];
+            for (var i = 0; i < tasksCount; i++)
             {
                 var ind = new[]{i};
                 tasks[i] = Task.Run(() =>
                 {
                     var k = ind[0];
-                    var a = (step * k) * Math.PI / 180.0;
-                    var ca =  Math.Cos(a);
-                    var sa =  Math.Sin(a);
+                    while (k < n)
+                    {
+                        var a = (step * k) * Math.PI / 180.0;
+                        var ca =  Math.Cos(a);
+                        var sa =  Math.Sin(a);
             
-                    var dir = first * ca + (up ^ first) * sa + up * (up * first) * (1.0 - ca);
+                        var dir = first * ca + (up ^ first) * sa + up * (up * first) * (1.0 - ca);
             
-                    var camera = new Camera(
-                        middle - dir * dist,
-                        dir,
-                        up,
-                        65.0,
-                        160.0,
-                        120.0,
-                        0.0,
-                        1000.0
-                    );
+                        var camera = new Camera(
+                            middle - dir * dist,
+                            dir,
+                            up,
+                            65.0,
+                            160.0,
+                            120.0,
+                            0.0,
+                            1000.0
+                        );
             
-                    var filename = frames+"/" + $"{k + 1:000}" + ".png";
+                        var filename = frames+"/" + $"{k + 1:000}" + ".png";
             
-                    rt.Render(camera, width, height, filename);
-                    Console.WriteLine($"Frame {k+1}/{n} completed");
+                        rt.Render(camera, width, height, filename);
+                        Console.WriteLine($"Frame {k+1}/{n} completed");
+                        k += tasksCount;
+                    }
                 });
             }
             

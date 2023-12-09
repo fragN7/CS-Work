@@ -1,8 +1,7 @@
-﻿using System;
-using System.IO;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 namespace RayTracerVolumetric;
+
 
 public class RawCtMask: Geometry
 {

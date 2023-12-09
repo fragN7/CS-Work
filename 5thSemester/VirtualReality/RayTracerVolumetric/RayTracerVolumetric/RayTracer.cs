@@ -44,12 +44,16 @@ namespace RayTracerVolumetric
         private bool IsLit(Vector point, Light light)
         {
             // TODO: ADD CODE HERE
-            var line = new Line(light.Position, point);
-            var eps = 1e-10;
-            double segmentLength = (point - light.Position).Length() - eps;
+            var line = new Line(point, light.Position);
+            const double eps = 1e-10;
+            var segmentLength = (point - light.Position).Length();
             foreach (var geometry in geometries)
             {
-                Intersection inter = geometry.GetIntersection(line, eps, segmentLength);
+                if (geometry is RawCtMask)
+                {
+                    continue;
+                }
+                var inter = geometry.GetIntersection(line, eps, segmentLength, true);
                 if (inter.Visible)
                 {
                     return false;
@@ -80,33 +84,33 @@ namespace RayTracerVolumetric
                         image.SetPixel(i, j, background);
                         continue;
                     }
-                    var geometry = inter.Geometry;
-                    var material = geometry.Material;
+                    var material = inter.Material;
                     var globalColor = new Color();
                     var V = inter.Position;
                     var E = (camera.Position - V).Normalize();
                     var N = inter.Normal;
                     foreach (var light in lights)
                     {
-                        var Color = material.Ambient * light.Ambient;
+                        var color = material.Ambient * light.Ambient;
                         if (IsLit(V, light))
                         {
                             var T = (light.Position - V).Normalize();
-                            var R = N * (N * T) * 2 - T;
+                            var R = (N * (N * T) * 2 - T).Normalize();
                             var diffuseFactor = N * T;
                             var specularFactor = E * R;
                             if (diffuseFactor > 0)
                             {
-                                Color += material.Diffuse * light.Diffuse * diffuseFactor;
+                                color += material.Diffuse * light.Diffuse * diffuseFactor;
                             }
                             if (specularFactor > 0)
                             {
-                                Color += material.Specular * light.Specular * Math.Pow(specularFactor, material.Shininess);
+                                color += material.Specular * light.Specular * Math.Pow(specularFactor, material.Shininess);
                             }
+                            color *= light.Intensity;
                         }
-                        Color *= light.Intensity;
-                        globalColor += Color;
+                        globalColor += color;
                     }
+
                     image.SetPixel(i, j, globalColor);
                 }
             }
