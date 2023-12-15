@@ -137,7 +137,7 @@ Polynomial multiplyPolynomialsKaratsubaSequential(const Polynomial& poly1, const
         return Polynomial(std::vector<int>());
     }
 
-    if (m > 16 || n > 16) {
+    if (m < 16 || n < 16) {
         std::vector<int> result(m + n - 1, 0);
         for (int i = 0; i < m; ++i) {
             for (int j = 0; j < n; ++j) {
