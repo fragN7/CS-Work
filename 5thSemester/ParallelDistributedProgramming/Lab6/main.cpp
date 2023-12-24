@@ -1,129 +1,114 @@
 #include <iostream>
 #include <vector>
 #include <thread>
-#include <mutex>
 #include <atomic>
-#include <random>
+#include <mutex>
 
 using namespace std;
 
-auto start_time = std::chrono::high_resolution_clock::now();
+atomic<bool> isHamiltonian(false);
+mutex mtx;
 
-mutex mtx; // Mutex for synchronization
-atomic<bool> cycleFound(false); // Atomic flag to signal cycle found
+void addEdge(vector<vector<int>>& graph, int u, int v) {
+    graph[u].push_back(v);
+    graph[v].push_back(u);
+}
 
-// Function to generate a random directed graph
-vector<vector<int>> generateRandomGraph(int V) {
-    random_device rd;
-    mt19937 gen(rd());
-    uniform_int_distribution<int> dis(0, 1);
+vector<vector<int>> createHamiltonianCycleGraph(int numNodes) {
+    vector<vector<int>> graph(numNodes);
 
-    vector<vector<int>> graph(V, vector<int>(V, 0));
-
-    for (int i = 0; i < V; ++i) {
-        for (int j = 0; j < V; ++j) {
-            if (i != j) {
-                // Assigning random edge values (0 or 1) to represent the existence of edges
-                graph[i][j] = dis(gen);
-            }
-        }
+    for (int i = 0; i < numNodes - 1; ++i) {
+        addEdge(graph, i, i + 1);
     }
+    addEdge(graph, 0, numNodes - 1); // Closing the cycle
 
     return graph;
 }
 
-// A utility function to check if the current path is a Hamiltonian cycle
-bool isHamiltonianCycle(const vector<int>& path, vector<vector<int>>& graph) {
-    int V = graph.size();
-    // Check if all vertices are included and there is an edge from the last vertex to the starting vertex
-    if (path.size() == V && graph[path.back()][path[0]])
-        return true;
-    else
+bool isValidMove(int v, vector<int>& path, vector<vector<int>>& graph, int pos) {
+
+    if (graph[path[pos - 1]][v] == 0)
         return false;
+
+    for (int i = 0; i < pos; ++i)
+        if (path[i] == v)
+            return false;
+
+    return true;
 }
 
-// Function to explore paths in parallel using threads
-void explorePaths(vector<vector<int>>& graph, vector<int>& path, vector<bool>& visited) {
-    int V = graph.size();
-    if (path.size() == V) {
-        if (isHamiltonianCycle(path, graph)) {
-            lock_guard<mutex> lock(mtx);
-            cycleFound = true;
-            cout << "Hamiltonian Cycle Found: ";
-            for (int i : path) {
-                cout << i << " ";
-            }
-            cout << path[0] << endl;
+void printPath(const vector<int>& path) {
+    cout << "Hamiltonian cycle found: ";
+    for (int node : path) {
+        cout << node << " ";
+    }
+    cout << path[0] << endl;
+}
 
-            auto end_time = std::chrono::high_resolution_clock::now(); // Stop measuring time
-            std::chrono::duration<double> time = end_time - start_time;
+void printGraph(const vector<vector<int>>& graph) {
+    cout << "Entered graph adjacency matrix: " << endl;
+    for (const auto& row : graph) {
+        for (int val : row) {
+            cout << val << " ";
+        }
+        cout << endl;
+    }
+}
 
-            cout << "Time taken: " << time.count() << " seconds" << endl;
-            exit(0);
+void hamiltonianCycleUtil(vector<vector<int>>& graph, vector<int>& path, int pos, int numNodes) {
+    if (pos == numNodes) {
+        if (graph[path[pos - 1]][path[0]] == 1) {
+            lock_guard<mutex> guard(mtx);
+            isHamiltonian = true;
+            printPath(path);
         }
         return;
     }
 
-    int current = path.back();
+    for (int v = 1; v < numNodes; ++v) {
+        if (isHamiltonian) return;
 
-    for (int i = 0; i < V; ++i) {
-        if (!visited[i] && graph[current][i]) {
-            path.push_back(i);
-            visited[i] = true;
+        if (isValidMove(v, path, graph, pos)) {
+            path[pos] = v;
 
-            explorePaths(graph, path, visited);
+            hamiltonianCycleUtil(graph, path, pos + 1, numNodes);
 
-            path.pop_back();
-            visited[i] = false;
-
-            if (cycleFound) // If cycle found by another thread, stop exploring
-                return;
+            path[pos] = -1;
         }
     }
 }
 
-// Function to find the first Hamiltonian cycle in the graph using multiple threads
-void findFirstHamiltonianCycle(vector<vector<int>>& graph, int start) {
-    int V = graph.size();
-
-    vector<int> path;
-    path.push_back(start);
-    vector<bool> visited(V, false);
-    visited[start] = true;
+bool isHamiltonianCycle(vector<vector<int>>& graph) {
+    int numNodes = graph.size();
+    vector<int> path(numNodes, -1);
+    path[0] = 2;
 
     vector<thread> threads;
 
-    for (int i = 0; i < V; ++i) {
-        if (graph[start][i]) {
-            path.push_back(i);
-            visited[i] = true;
-
-            threads.emplace_back(explorePaths, ref(graph), ref(path), ref(visited));
-
-            path.pop_back();
-            visited[i] = false;
-        }
+    for (int i = 1; i < numNodes; ++i) {
+        path[1] = i;
+        threads.emplace_back(hamiltonianCycleUtil, ref(graph), ref(path), 2, numNodes);
     }
 
     for (auto& t : threads) {
         t.join();
     }
 
-    if (!cycleFound) {
-        cout << "No Hamiltonian Cycle Found" << endl;
-    }
+    return isHamiltonian;
 }
 
 int main() {
-    int V = 120;
+    int numNodes = 75;
 
-    vector<vector<int>> graph = generateRandomGraph(V);
-    int startVertex = 5;
+    vector<vector<int>> graph = createHamiltonianCycleGraph(numNodes);
 
+    bool result = isHamiltonianCycle(graph);
 
-    start_time = std::chrono::high_resolution_clock::now();
-
-    findFirstHamiltonianCycle(graph, startVertex);
+    if (result) {
+        cout << "The graph contains a Hamiltonian cycle." << endl;
+    } else {
+        cout << "The graph does not contain a Hamiltonian cycle." << endl;
+    }
 
     return 0;
 }
