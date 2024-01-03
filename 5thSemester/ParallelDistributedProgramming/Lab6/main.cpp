@@ -1,114 +1,93 @@
 #include <iostream>
 #include <vector>
-#include <thread>
-#include <atomic>
+#include <future>
 #include <mutex>
+#include <random>
+#include <algorithm>
 
-using namespace std;
+const int V = 50;
 
-atomic<bool> isHamiltonian(false);
-mutex mtx;
+std::mutex mtx;
 
-void addEdge(vector<vector<int>>& graph, int u, int v) {
-    graph[u].push_back(v);
-    graph[v].push_back(u);
-}
-
-vector<vector<int>> createHamiltonianCycleGraph(int numNodes) {
-    vector<vector<int>> graph(numNodes);
-
-    for (int i = 0; i < numNodes - 1; ++i) {
-        addEdge(graph, i, i + 1);
-    }
-    addEdge(graph, 0, numNodes - 1); // Closing the cycle
-
-    return graph;
-}
-
-bool isValidMove(int v, vector<int>& path, vector<vector<int>>& graph, int pos) {
-
-    if (graph[path[pos - 1]][v] == 0)
+// Function to check if the vertex can be included in the path
+bool isSafe(int v, bool graph[V][V], const std::vector<int> &path, int pos) {
+    if (!graph[path[pos - 1]][v]) // check if the vertex is adjacent to the previous vertex
         return false;
-
-    for (int i = 0; i < pos; ++i)
+    for (int i = 0; i < pos; i++) // check if the vertex has already been included
         if (path[i] == v)
             return false;
-
     return true;
 }
 
-void printPath(const vector<int>& path) {
-    cout << "Hamiltonian cycle found: ";
-    for (int node : path) {
-        cout << node << " ";
-    }
-    cout << path[0] << endl;
-}
-
-void printGraph(const vector<vector<int>>& graph) {
-    cout << "Entered graph adjacency matrix: " << endl;
-    for (const auto& row : graph) {
-        for (int val : row) {
-            cout << val << " ";
-        }
-        cout << endl;
-    }
-}
-
-void hamiltonianCycleUtil(vector<vector<int>>& graph, vector<int>& path, int pos, int numNodes) {
-    if (pos == numNodes) {
-        if (graph[path[pos - 1]][path[0]] == 1) {
-            lock_guard<mutex> guard(mtx);
-            isHamiltonian = true;
-            printPath(path);
-        }
-        return;
+// Recursive function to find the Hamiltonian Cycle
+std::vector<int> hamCycleUtil(bool graph[V][V], std::vector<int> path, int pos) {
+    if (pos == V) {
+        if (graph[path[pos - 1]][path[0]]) // check if the last vertex is adjacent to the first vertex
+            return path;
+        else
+            return std::vector<int>(); // return empty vector
     }
 
-    for (int v = 1; v < numNodes; ++v) {
-        if (isHamiltonian) return;
+    // create a vector of futures to store the results of the recursive calls
+    // this is done to avoid the overhead of creating threads for each recursive call
+    std::vector<std::future<std::vector<int>>> futures;
 
-        if (isValidMove(v, path, graph, pos)) {
-            path[pos] = v;
+    for (int v = 1; v < V; v++) {
+        if (isSafe(v, graph, path, pos)) { // check if the vertex can be included
 
-            hamiltonianCycleUtil(graph, path, pos + 1, numNodes);
-
-            path[pos] = -1;
+            std::vector<int> newPath = path; // create a new path
+            newPath[pos] = v; // add the vertex to the path
+            futures.push_back(std::async(std::launch::async, hamCycleUtil, graph, newPath, pos + 1)); // call the function recursively
         }
     }
+
+    for (auto &future: futures) {
+        std::vector<int> result = future.get(); // get the result from the future
+        if (!result.empty()) // if the result is not empty, return it
+            return result;
+    }
+
+    return std::vector<int>(); // return empty vector
 }
 
-bool isHamiltonianCycle(vector<vector<int>>& graph) {
-    int numNodes = graph.size();
-    vector<int> path(numNodes, -1);
-    path[0] = 2;
+// Function to find the Hamiltonian Cycle
+void findHamiltonianCycle(bool graph[V][V], int start_vertex) {
+    std::vector<int> path(V, -1); // create a path vector
+    path[0] = start_vertex; // add the start vertex to the path
 
-    vector<thread> threads;
-
-    for (int i = 1; i < numNodes; ++i) {
-        path[1] = i;
-        threads.emplace_back(hamiltonianCycleUtil, ref(graph), ref(path), 2, numNodes);
+    std::vector<int> resultPath = hamCycleUtil(graph, path, 1); // call the recursive function
+    std::lock_guard<std::mutex> lock(mtx); // lock the mutex
+    if (resultPath.empty()) {
+        std::cout << "No Hamiltonian Cycle found." << std::endl;
+    } else {
+        std::cout << "Hamiltonian Cycle found starting from vertex " << start_vertex << ": ";
+        for (int vertex: resultPath)
+            std::cout << vertex << " ";
+        std::cout << resultPath[0] << std::endl;
     }
-
-    for (auto& t : threads) {
-        t.join();
-    }
-
-    return isHamiltonian;
 }
 
 int main() {
-    int numNodes = 75;
 
-    vector<vector<int>> graph = createHamiltonianCycleGraph(numNodes);
-
-    bool result = isHamiltonianCycle(graph);
-
-    if (result) {
-        cout << "The graph contains a Hamiltonian cycle." << endl;
-    } else {
-        cout << "The graph does not contain a Hamiltonian cycle." << endl;
+    bool graph[V][V];
+    for (auto & i : graph) {
+        for (bool & j : i) {
+            j = false;
+        }
     }
+
+    for (int i = 0; i < V - 1; ++i) {
+        graph[i][i+1] = true;
+    }
+
+    graph[V-1][0] = true;
+
+    auto start_time = std::chrono::high_resolution_clock::now();
+    findHamiltonianCycle(graph, 0);
+    auto end_time = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> elapsed_time1 = end_time - start_time;
+    std::cout << elapsed_time1.count() << " seconds" << std::endl;
+    std::cout << std::endl;
 
     return 0;
 }
