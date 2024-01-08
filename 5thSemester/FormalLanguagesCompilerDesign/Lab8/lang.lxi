@@ -1,0 +1,49 @@
+%{
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int currentLine = 0;
+%}
+
+%option noyywrap
+
+letter          [A-Za-z]
+digit           [0-9]
+non_zero_digit  [1-9]
+identifier      {letter}({letter}|{digit})*
+integer         -?({non_zero_digit}{digit}*|0)
+string          \([^\)]*\)
+%%
+"-inv"|"Enter"|"Leave"|"Perhaps"|"Between"|"InBetween"|"num"|"str"|"bol"|"GetOut"|"Start"|"met"|"and"|"or"    {printf("Reserved word: %s\n", yytext);}
+"+"|"-"|"*"|"/"|"="|"<="|">="|">"|"<"|"<>"|"<-"|"<+"                                               {printf("Operator: %s\n", yytext);}
+"["|"]"|"{"|"}"|"("|")"|","|";"|":"|"'"                                                                {printf("Separator: %s\n", yytext);}
+{identifier}                                                                                       {printf("Identifier: %s\n", yytext);}
+{integer}                                                                                          {printf("Number: %s\n", yytext);}
+{string}                                                                                           {printf("String: %s\n", yytext);}
+
+[ \t]+                                                                                              {}
+[\n]+                                                                                              {currentLine++;}
+
+. {
+    printf("Unrecognized character at line %d: %s\n", currentLine, yytext);
+    /* Signal an error for unrecognized characters */
+    /* You can add further actions here if needed */
+}
+
+
+%%
+
+int main(int argc, char** argv) {
+    if (argc > 1) {
+        FILE *file;
+        file = fopen(argv[1], "r");
+        if (!file) {
+            fprintf(stderr, "Could not open %s\n", argv[1]);
+            exit(1);
+        }
+        yyin = file;
+    }
+
+    yylex();
+    return 0;
+}
