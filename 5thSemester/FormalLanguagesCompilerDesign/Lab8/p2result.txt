@@ -1,0 +1,79 @@
+Reserved word: -inv
+Identifier: ale
+Reserved word: -inv
+Identifier: mth
+Identifier: x
+Operator: <-
+Reserved word: Enter
+Separator: {
+String: (Give a number)
+Separator: }
+Separator: :
+Reserved word: num
+Identifier: y
+Operator: <-
+Reserved word: Enter
+Separator: {
+String: (Give another number)
+Separator: }
+Separator: :
+Reserved word: num
+Identifier: result
+Operator: <-
+Number: 0
+Separator: :
+Reserved word: num
+Reserved word: Between
+Separator: {
+Identifier: x
+Separator: ,
+Identifier: y
+Separator: ,
+Number: 1
+Separator: ,
+Identifier: i
+Separator: :
+Reserved word: num
+Separator: }
+Separator: {
+Reserved word: Perhaps
+Separator: {
+Identifier: IsOdd
+Separator: {
+Identifier: i
+Separator: }
+Operator: =
+Identifier: tru
+Separator: }
+Separator: {
+Identifier: result
+Operator: <-
+Identifier: result
+Operator: +
+Identifier: i
+Separator: }
+Separator: }
+Reserved word: Leave
+Separator: {
+String: (The result between )
+Separator: }
+Reserved word: Leave
+Separator: {
+Identifier: x
+Separator: }
+Reserved word: Leave
+Separator: {
+String: ( and )
+Separator: }
+Reserved word: Leave
+Separator: {
+Identifier: y
+Separator: }
+Reserved word: Leave
+Separator: {
+String: ( is )
+Separator: }
+Reserved word: Leave
+Separator: {
+Identifier: result
+Separator: }
