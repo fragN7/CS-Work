@@ -1,0 +1,1258 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.22621 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/g++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-hnp94k"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-hnp94k"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-hnp94k
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_58d4e && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.obj -c C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.1.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_58d4e.dir/'
+         C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_58d4e.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\Alen\\AppData\\Local\\Temp\\ccUHC0QQ.s
+        GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0-p4, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"
+        ignoring nonexistent directory "/win/include"
+        ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"
+        ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"
+        ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"
+        ignoring nonexistent directory "/mingw/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include
+         C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include
+         C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed
+         C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
+        End of search list.
+        Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_58d4e.dir/'
+         as -v -o CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.obj C:\\Users\\Alen\\AppData\\Local\\Temp\\ccUHC0QQ.s
+        GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40
+        COMPILER_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.'
+        [2/2] cmd.exe /C "cd . && C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe  -v CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.obj -o cmTC_58d4e.exe -Wl,--out-implib,libcmTC_58d4e.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe
+        COLLECT_LTO_WRAPPER=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.1.0 (GCC) 
+        COMPILER_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_58d4e.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_58d4e.'
+         C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_58d4e.exe C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_58d4e.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_58d4e.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_58d4e.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+          add: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
+          add: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+          add: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+        end of search list found
+        collapse include dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+        collapse include dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/include]
+        collapse include dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+        collapse include dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
+        implicit include dirs: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/include;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-hnp94k]
+        ignore line: []
+        ignore line: [Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_58d4e && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.obj -c C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.1.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_58d4e.dir/']
+        ignore line: [ C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_58d4e.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\Alen\\AppData\\Local\\Temp\\ccUHC0QQ.s]
+        ignore line: [GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)]
+        ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0-p4  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"]
+        ignore line: [ignoring nonexistent directory "/win/include"]
+        ignore line: [ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"]
+        ignore line: [ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"]
+        ignore line: [ignoring nonexistent directory "/mingw/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+        ignore line: [ C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
+        ignore line: [ C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+        ignore line: [ C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_58d4e.dir/']
+        ignore line: [ as -v -o CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.obj C:\\Users\\Alen\\AppData\\Local\\Temp\\ccUHC0QQ.s]
+        ignore line: [GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40]
+        ignore line: [COMPILER_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] cmd.exe /C "cd . && C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe  -v CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.obj -o cmTC_58d4e.exe -Wl --out-implib libcmTC_58d4e.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe]
+        ignore line: [COLLECT_LTO_WRAPPER=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.1.0 (GCC) ]
+        ignore line: [COMPILER_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_58d4e.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_58d4e.']
+        link line: [ C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_58d4e.exe C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_58d4e.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+          arg [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe] ==> ignore
+          arg [-m] ==> ignore
+          arg [i386pep] ==> ignore
+          arg [-Bdynamic] ==> search dynamic
+          arg [-o] ==> ignore
+          arg [cmTC_58d4e.exe] ==> ignore
+          arg [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
+          arg [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
+          arg [-LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0]
+          arg [-LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc]
+          arg [-LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib]
+          arg [-LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib]
+          arg [-LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib]
+          arg [-LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..]
+          arg [CMakeFiles/cmTC_58d4e.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [--out-implib] ==> ignore
+          arg [libcmTC_58d4e.dll.a] ==> ignore
+          arg [--major-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [--minor-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_eh] ==> lib [gcc_eh]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ladvapi32] ==> lib [advapi32]
+          arg [-lshell32] ==> lib [shell32]
+          arg [-luser32] ==> lib [user32]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-liconv] ==> lib [iconv]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_eh] ==> lib [gcc_eh]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o]
+          arg [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        remove lib [gcc_eh]
+        remove lib [msvcrt]
+        remove lib [gcc_eh]
+        remove lib [msvcrt]
+        collapse obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o]
+        collapse obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
+        collapse obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o]
+        collapse obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        collapse library dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0]
+        collapse library dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc]
+        collapse library dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib]
+        collapse library dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib]
+        implicit libs: [mingw32;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc;moldname;mingwex;kernel32]
+        implicit objs: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        implicit dirs: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-r1jtd6"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-r1jtd6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-r1jtd6
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_7f340 && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.1.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_7f340.dir/'
+         C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7f340.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\Alen\\AppData\\Local\\Temp\\ccxR37aj.s
+        GNU C++17 (GCC) version 13.1.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0-p4, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"
+        ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"
+        ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"
+        ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"
+        ignoring nonexistent directory "/win/include"
+        ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"
+        ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"
+        ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"
+        ignoring nonexistent directory "/mingw/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++
+         C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32
+         C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward
+         C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include
+         C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include
+         C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed
+         C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
+        End of search list.
+        Compiler executable checksum: e75de627edc3c57e31324b930b15b056
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_7f340.dir/'
+         as -v -o CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\Alen\\AppData\\Local\\Temp\\ccxR37aj.s
+        GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40
+        COMPILER_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] cmd.exe /C "cd . && C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -v CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_7f340.exe -Wl,--out-implib,libcmTC_7f340.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe
+        COLLECT_LTO_WRAPPER=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.1.0 (GCC) 
+        COMPILER_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7f340.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_7f340.'
+         C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_7f340.exe C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_7f340.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7f340.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_7f340.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++]
+          add: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32]
+          add: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward]
+          add: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+          add: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
+          add: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+          add: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+        end of search list found
+        collapse include dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++]
+        collapse include dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32]
+        collapse include dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward]
+        collapse include dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+        collapse include dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/include]
+        collapse include dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+        collapse include dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
+        implicit include dirs: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/include;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-r1jtd6]
+        ignore line: []
+        ignore line: [Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_7f340 && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.1.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_7f340.dir/']
+        ignore line: [ C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7f340.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\Alen\\AppData\\Local\\Temp\\ccxR37aj.s]
+        ignore line: [GNU C++17 (GCC) version 13.1.0 (x86_64-w64-mingw32)]
+        ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0-p4  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"]
+        ignore line: [ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"]
+        ignore line: [ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"]
+        ignore line: [ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"]
+        ignore line: [ignoring nonexistent directory "/win/include"]
+        ignore line: [ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"]
+        ignore line: [ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"]
+        ignore line: [ignoring nonexistent directory "/mingw/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++]
+        ignore line: [ C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32]
+        ignore line: [ C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward]
+        ignore line: [ C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+        ignore line: [ C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
+        ignore line: [ C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+        ignore line: [ C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: e75de627edc3c57e31324b930b15b056]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_7f340.dir/']
+        ignore line: [ as -v -o CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\Alen\\AppData\\Local\\Temp\\ccxR37aj.s]
+        ignore line: [GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40]
+        ignore line: [COMPILER_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] cmd.exe /C "cd . && C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -v CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_7f340.exe -Wl --out-implib libcmTC_7f340.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe]
+        ignore line: [COLLECT_LTO_WRAPPER=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.1.0 (GCC) ]
+        ignore line: [COMPILER_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7f340.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_7f340.']
+        link line: [ C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_7f340.exe C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_7f340.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+          arg [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe] ==> ignore
+          arg [-m] ==> ignore
+          arg [i386pep] ==> ignore
+          arg [-Bdynamic] ==> search dynamic
+          arg [-o] ==> ignore
+          arg [cmTC_7f340.exe] ==> ignore
+          arg [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
+          arg [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
+          arg [-LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0]
+          arg [-LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc]
+          arg [-LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib]
+          arg [-LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib]
+          arg [-LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib]
+          arg [-LC:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..]
+          arg [CMakeFiles/cmTC_7f340.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [--out-implib] ==> ignore
+          arg [libcmTC_7f340.dll.a] ==> ignore
+          arg [--major-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [--minor-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ladvapi32] ==> lib [advapi32]
+          arg [-lshell32] ==> lib [shell32]
+          arg [-luser32] ==> lib [user32]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-liconv] ==> lib [iconv]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o]
+          arg [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        remove lib [msvcrt]
+        remove lib [msvcrt]
+        collapse obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o]
+        collapse obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
+        collapse obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o]
+        collapse obj [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        collapse library dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0]
+        collapse library dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc]
+        collapse library dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib]
+        collapse library dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib]
+        implicit libs: [stdc++;mingw32;gcc_s;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc_s;gcc;moldname;mingwex;kernel32]
+        implicit objs: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        implicit dirs: [C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib/gcc;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib;C:/Users/Alen/AppData/Local/Programs/CLion/bin/mingw/lib]
+        implicit fwks: []
+      
+      
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:13 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4zc8ln"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4zc8ln"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4zc8ln
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_a5df6 && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_a5df6.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4zc8ln/test_mpi.c
+        FAILED: CMakeFiles/cmTC_a5df6.dir/test_mpi.c.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_a5df6.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4zc8ln/test_mpi.c
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4zc8ln/test_mpi.c:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:13 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-umtc14"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-umtc14"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-umtc14
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_1c37b && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_1c37b.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-umtc14/test_mpi.cpp
+        FAILED: CMakeFiles/cmTC_1c37b.dir/test_mpi.cpp.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_1c37b.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-umtc14/test_mpi.cpp
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-umtc14/test_mpi.cpp:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:13 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kajs48"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kajs48"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kajs48
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_f8e2d && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_f8e2d.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kajs48/test_mpi.c
+        FAILED: CMakeFiles/cmTC_f8e2d.dir/test_mpi.c.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_f8e2d.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kajs48/test_mpi.c
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kajs48/test_mpi.c:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:13 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-g0bnx3"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-g0bnx3"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-g0bnx3
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_77848 && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_77848.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-g0bnx3/test_mpi.cpp
+        FAILED: CMakeFiles/cmTC_77848.dir/test_mpi.cpp.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_77848.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-g0bnx3/test_mpi.cpp
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-g0bnx3/test_mpi.cpp:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:13 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3wxbwa"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3wxbwa"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3wxbwa
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_f83d0 && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_f83d0.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3wxbwa/test_mpi.c
+        \x1b[31mFAILED: \x1b[0mCMakeFiles/cmTC_f83d0.dir/test_mpi.c.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_f83d0.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3wxbwa/test_mpi.c
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3wxbwa/test_mpi.c:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:13 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-prx61r"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-prx61r"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-prx61r
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_a72e6 && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe    -o CMakeFiles/cmTC_a72e6.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-prx61r/test_mpi.cpp
+        \x1b[31mFAILED: \x1b[0mCMakeFiles/cmTC_a72e6.dir/test_mpi.cpp.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe    -o CMakeFiles/cmTC_a72e6.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-prx61r/test_mpi.cpp
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-prx61r/test_mpi.cpp:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:13 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8qm8qr"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8qm8qr"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8qm8qr
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_fc689 && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_fc689.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8qm8qr/test_mpi.c
+        FAILED: CMakeFiles/cmTC_fc689.dir/test_mpi.c.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_fc689.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8qm8qr/test_mpi.c
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-8qm8qr/test_mpi.c:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:13 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m3xuxk"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m3xuxk"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m3xuxk
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_0c743 && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_0c743.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m3xuxk/test_mpi.cpp
+        FAILED: CMakeFiles/cmTC_0c743.dir/test_mpi.cpp.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_0c743.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m3xuxk/test_mpi.cpp
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m3xuxk/test_mpi.cpp:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:9 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k76ez8"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k76ez8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k76ez8
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_6ea0d && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_6ea0d.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k76ez8/test_mpi.c
+        FAILED: CMakeFiles/cmTC_6ea0d.dir/test_mpi.c.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_6ea0d.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k76ez8/test_mpi.c
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k76ez8/test_mpi.c:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:9 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-torb02"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-torb02"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-torb02
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_59769 && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_59769.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-torb02/test_mpi.cpp
+        FAILED: CMakeFiles/cmTC_59769.dir/test_mpi.cpp.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_59769.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-torb02/test_mpi.cpp
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-torb02/test_mpi.cpp:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:9 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xnsi3d"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xnsi3d"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xnsi3d
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_6990a && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_6990a.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xnsi3d/test_mpi.c
+        FAILED: CMakeFiles/cmTC_6990a.dir/test_mpi.c.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_6990a.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xnsi3d/test_mpi.c
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xnsi3d/test_mpi.c:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:9 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ud9bk8"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ud9bk8"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ud9bk8
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_fffa5 && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_fffa5.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ud9bk8/test_mpi.cpp
+        FAILED: CMakeFiles/cmTC_fffa5.dir/test_mpi.cpp.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_fffa5.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ud9bk8/test_mpi.cpp
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ud9bk8/test_mpi.cpp:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m03pkk"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m03pkk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m03pkk
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_228fb && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_228fb.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m03pkk/test_mpi.c
+        FAILED: CMakeFiles/cmTC_228fb.dir/test_mpi.c.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_228fb.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m03pkk/test_mpi.c
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-m03pkk/test_mpi.c:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b1oyzz"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b1oyzz"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b1oyzz
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_80c0b && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_80c0b.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b1oyzz/test_mpi.cpp
+        FAILED: CMakeFiles/cmTC_80c0b.dir/test_mpi.cpp.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_80c0b.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b1oyzz/test_mpi.cpp
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b1oyzz/test_mpi.cpp:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-l8djgu"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-l8djgu"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-l8djgu
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_ebfc1 && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_ebfc1.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-l8djgu/test_mpi.c
+        FAILED: CMakeFiles/cmTC_ebfc1.dir/test_mpi.c.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_ebfc1.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-l8djgu/test_mpi.c
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-l8djgu/test_mpi.c:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1ggdnm"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1ggdnm"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1ggdnm
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_b2a0e && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_b2a0e.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1ggdnm/test_mpi.cpp
+        FAILED: CMakeFiles/cmTC_b2a0e.dir/test_mpi.cpp.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_b2a0e.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1ggdnm/test_mpi.cpp
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1ggdnm/test_mpi.cpp:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2n5n2x"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2n5n2x"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2n5n2x
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_405d1 && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_405d1.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2n5n2x/test_mpi.c
+        FAILED: CMakeFiles/cmTC_405d1.dir/test_mpi.c.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_405d1.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2n5n2x/test_mpi.c
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-2n5n2x/test_mpi.c:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-f9v2ac"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-f9v2ac"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-f9v2ac
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_4166f && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_4166f.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-f9v2ac/test_mpi.cpp
+        FAILED: CMakeFiles/cmTC_4166f.dir/test_mpi.cpp.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_4166f.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-f9v2ac/test_mpi.cpp
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-f9v2ac/test_mpi.cpp:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6uuxtp"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6uuxtp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6uuxtp
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_7daaf && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_7daaf.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6uuxtp/test_mpi.c
+        \x1b[31mFAILED: \x1b[0mCMakeFiles/cmTC_7daaf.dir/test_mpi.c.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_7daaf.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6uuxtp/test_mpi.c
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6uuxtp/test_mpi.c:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0bba96"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0bba96"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0bba96
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_9c8f7 && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe    -o CMakeFiles/cmTC_9c8f7.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0bba96/test_mpi.cpp
+        \x1b[31mFAILED: \x1b[0mCMakeFiles/cmTC_9c8f7.dir/test_mpi.cpp.obj 
+        C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe    -o CMakeFiles/cmTC_9c8f7.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0bba96/test_mpi.cpp
+        C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0bba96/test_mpi.cpp:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o83j90"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o83j90"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o83j90
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_a2933 && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe  -isystem "C:/Program Files (x86)/Microsoft SDKs/MPI/Include" -fdiagnostics-color=always -o CMakeFiles/cmTC_a2933.dir/test_mpi.c.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-o83j90/test_mpi.c
+        [2/2] cmd.exe /C "cd . && C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_a2933.dir/test_mpi.c.obj -o cmTC_a2933.exe -Wl,--out-implib,libcmTC_a2933.dll.a -Wl,--major-image-version,0,--minor-image-version,0  "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ahoemm"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ahoemm"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ahoemm
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_1f4a2 && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -isystem "C:/Program Files (x86)/Microsoft SDKs/MPI/Include" -fdiagnostics-color=always -o CMakeFiles/cmTC_1f4a2.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ahoemm/test_mpi.cpp
+        [2/2] cmd.exe /C "cd . && C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   CMakeFiles/cmTC_1f4a2.dir/test_mpi.cpp.obj -o cmTC_1f4a2.exe -Wl,--out-implib,libcmTC_1f4a2.dll.a -Wl,--major-image-version,0,--minor-image-version,0  "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "C:/Users/Alen/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fe0fv9"
+      binary: "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fe0fv9"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fe0fv9
+        
+        Run Build Command(s):C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_f766b && [1/2] C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -isystem "C:/Program Files (x86)/Microsoft SDKs/MPI/Include" -fdiagnostics-color=always -o CMakeFiles/cmTC_f766b.dir/test_mpi.cpp.obj -c C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fe0fv9/test_mpi.cpp
+        [2/2] cmd.exe /C "cd . && C:\\Users\\Alen\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   CMakeFiles/cmTC_f766b.dir/test_mpi.cpp.obj -o cmTC_f766b.exe -Wl,--out-implib,libcmTC_f766b.dll.a -Wl,--major-image-version,0,--minor-image-version,0  "C:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...

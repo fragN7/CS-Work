@@ -1,0 +1,4 @@
+C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/Lab7.dir
+C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/MPI.dir
+C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug/CMakeFiles/rebuild_cache.dir

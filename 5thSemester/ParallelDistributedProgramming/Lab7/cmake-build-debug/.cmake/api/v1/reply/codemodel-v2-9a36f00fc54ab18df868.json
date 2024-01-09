@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Lab7",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Lab7::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Lab7-Debug-9ff12f4467af3a8ae7eb.json",
+					"name" : "Lab7",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MPI::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MPI-Debug-0157f03490fdd4d70a6d.json",
+					"name" : "MPI",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7/cmake-build-debug",
+		"source" : "C:/Users/Alen/Documents/GithubPrivate/CS-Work/5thSemester/ParallelDistributedProgramming/Lab7"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}
