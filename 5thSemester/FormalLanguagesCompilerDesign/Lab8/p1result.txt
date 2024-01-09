@@ -1,0 +1,182 @@
+Reserved word: -inv
+Identifier: ale
+Reserved word: met
+Reserved word: num
+Identifier: GetMaxNumbers
+Separator: {
+Identifier: a
+Separator: :
+Reserved word: num
+Separator: ,
+Identifier: b
+Separator: :
+Reserved word: num
+Separator: ,
+Identifier: c
+Separator: :
+Reserved word: num
+Separator: }
+Separator: {
+Reserved word: Perhaps
+Separator: {
+Identifier: a
+Operator: >=
+Identifier: b
+Unrecognized character at line 2: &
+Identifier: a
+Operator: >=
+Identifier: c
+Separator: }
+Separator: {
+Reserved word: Leave
+Separator: {
+Identifier: a
+Separator: }
+Reserved word: GetOut
+Separator: {
+Separator: }
+Separator: }
+Reserved word: Perhaps
+Separator: {
+Identifier: b
+Operator: >=
+Identifier: a
+Unrecognized character at line 6: &
+Identifier: b
+Operator: >=
+Identifier: c
+Separator: }
+Separator: {
+Reserved word: Leave
+Separator: {
+Identifier: b
+Separator: }
+Reserved word: GetOut
+Separator: {
+Separator: }
+Separator: }
+Reserved word: Perhaps
+Separator: {
+Identifier: c
+Operator: >=
+Identifier: a
+Unrecognized character at line 10: &
+Identifier: c
+Operator: >=
+Identifier: b
+Separator: }
+Separator: {
+Reserved word: Leave
+Separator: {
+Identifier: c
+Separator: }
+Reserved word: GetOut
+Separator: {
+Separator: }
+Separator: }
+Separator: }
+Reserved word: met
+Reserved word: num
+Identifier: GetMinNumbers
+Separator: {
+Identifier: a
+Separator: :
+Reserved word: num
+Separator: ,
+Identifier: b
+Separator: :
+Reserved word: num
+Separator: ,
+Identifier: c
+Separator: :
+Reserved word: num
+Separator: }
+Separator: {
+Reserved word: Perhaps
+Separator: {
+Identifier: a
+Operator: <=
+Identifier: b
+Unrecognized character at line 16: &
+Identifier: a
+Operator: <=
+Identifier: c
+Separator: }
+Separator: {
+Reserved word: Leave
+Separator: {
+Identifier: a
+Separator: }
+Reserved word: GetOut
+Separator: {
+Separator: }
+Separator: }
+Reserved word: Perhaps
+Separator: {
+Identifier: b
+Operator: <=
+Identifier: a
+Unrecognized character at line 20: &
+Identifier: b
+Operator: <=
+Identifier: c
+Separator: }
+Separator: {
+Reserved word: Leave
+Separator: {
+Identifier: b
+Separator: }
+Reserved word: GetOut
+Separator: {
+Separator: }
+Separator: }
+Reserved word: Perhaps
+Separator: {
+Identifier: c
+Operator: <=
+Identifier: a
+Unrecognized character at line 24: &
+Identifier: c
+Operator: <=
+Identifier: b
+Separator: }
+Separator: {
+Reserved word: Leave
+Separator: {
+Identifier: c
+Separator: }
+Reserved word: GetOut
+Separator: {
+Separator: }
+Separator: }
+Separator: }
+Reserved word: Leave
+Separator: {
+String: (The greatest number is: )
+Separator: }
+Reserved word: Leave
+Separator: {
+Identifier: GetMaxNumbers
+Separator: {
+Identifier: a
+Separator: ,
+Identifier: b
+Separator: ,
+Identifier: c
+Separator: }
+Separator: }
+Reserved word: Leave
+Separator: {
+String: (The smallest number is: )
+Separator: }
+Reserved word: Leave
+Separator: {
+Identifier: GetMinNumbers
+Separator: {
+Identifier: a
+Separator: ,
+Identifier: b
+Separator: ,
+Identifier: c
+Separator: }
+Separator: }
