@@ -8,4 +8,4 @@
 #define Enter 264
 #define Leave 265
 #define identifier 266
-#define const 267
+#define constant 267

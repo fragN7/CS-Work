@@ -19,7 +19,7 @@ void yyerror(char *s);
 %token Leave
 
 %token identifier
-%token const
+%token constant
 
 %start program
 
@@ -39,29 +39,29 @@ simplstmt : assignstmt | decl | iostmt
 
 decl : normalDecl | arrayDecl | emptyDecl
 
-normalDecl : identifier '<-' identifier | const ':' type
+normalDecl : identifier '<-' identifier | constant ':' type
 
-arrayDecl : identifier '<-' '[' identifier | const ']' ':' type
+arrayDecl : identifier '<-' '[' identifier | constant ']' ':' type
 
 emptyDecl : identifier ':' type
 
 assignstmt : identifier '<-' expression
 
-iostmt : Enter '{' identifier '}' | Leave '{' identifier | const '}'
+iostmt : Enter '{' identifier '}' | Leave '{' identifier | constant '}'
 
 structstmt : cmpdstmt | ifstmt | whileforstmt | arrayParsing
 
 ifstmt : Perhaps '{' condition '}' '{' stmtlist '}'
 
-whileforstmt : Between  '{' condition '}' '{'  stmtlist '}' | Between  '{' identifier | const ',' identifier | const ','  const ',' identifier '}' '{'  stmtlist '}'
+whileforstmt : Between  '{' condition '}' '{'  stmtlist '}' | Between  '{' identifier | constant ',' identifier | constant ','  constant ',' identifier '}' '{'  stmtlist '}'
 
-arrayParsing : InBetween '{' identifier | const ',' identifier ',' identifier ':' type '}' '{' stmtlist '}'
+arrayParsing : InBetween '{' identifier | constant ',' identifier ',' identifier ':' type '}' '{' stmtlist '}'
 
 expression : expression '+' term | expression '-' term | term
 
 term : term '*' factor | term '/' factor | term '%' factor | factor 
 
-factor : '{' expression '}' | identifier | const
+factor : '{' expression '}' | identifier | constant
 
 condition : expression relation expression 
 

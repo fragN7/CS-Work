@@ -74,7 +74,7 @@ extern int YYPARSE_DECL();
 #define Enter 264
 #define Leave 265
 #define identifier 266
-#define const 267
+#define constant 267
 #define YYERRCODE 256
 typedef short YYINT;
 static const YYINT yylhs[] = {                           -1,
@@ -217,7 +217,7 @@ static const char *const yyname[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Start","InBetween","Between","num","str","bol",
-"Perhaps","Enter","Leave","identifier","const","\"<-\"","\"<=\"","\"<>\"",
+"Perhaps","Enter","Leave","identifier","constant","\"<-\"","\"<=\"","\"<>\"",
 "\">=\"",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"illegal-symbol",
 };
 static const char *const yyrule[] = {
@@ -238,14 +238,14 @@ static const char *const yyrule[] = {
 "decl : arrayDecl",
 "decl : emptyDecl",
 "normalDecl : identifier \"<-\" identifier",
-"normalDecl : const ':' type",
+"normalDecl : constant ':' type",
 "arrayDecl : identifier \"<-\" '[' identifier",
-"arrayDecl : const ']' ':' type",
+"arrayDecl : constant ']' ':' type",
 "emptyDecl : identifier ':' type",
 "assignstmt : identifier \"<-\" expression",
 "iostmt : Enter '{' identifier '}'",
 "iostmt : Leave '{' identifier",
-"iostmt : const '}'",
+"iostmt : constant '}'",
 "structstmt : cmpdstmt",
 "structstmt : ifstmt",
 "structstmt : whileforstmt",
@@ -253,10 +253,10 @@ static const char *const yyrule[] = {
 "ifstmt : Perhaps '{' condition '}' '{' stmtlist '}'",
 "whileforstmt : Between '{' condition '}' '{' stmtlist '}'",
 "whileforstmt : Between '{' identifier",
-"whileforstmt : const ',' identifier",
-"whileforstmt : const ',' const ',' identifier '}' '{' stmtlist '}'",
+"whileforstmt : constant ',' identifier",
+"whileforstmt : constant ',' constant ',' identifier '}' '{' stmtlist '}'",
 "arrayParsing : InBetween '{' identifier",
-"arrayParsing : const ',' identifier ',' identifier ':' type '}' '{' stmtlist '}'",
+"arrayParsing : constant ',' identifier ',' identifier ':' type '}' '{' stmtlist '}'",
 "expression : expression '+' term",
 "expression : expression '-' term",
 "expression : term",
@@ -266,7 +266,7 @@ static const char *const yyrule[] = {
 "term : factor",
 "factor : '{' expression '}'",
 "factor : identifier",
-"factor : const",
+"factor : constant",
 "condition : expression relation expression",
 "relation : '<'",
 "relation : \"<=\"",
