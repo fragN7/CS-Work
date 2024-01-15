@@ -2,10 +2,8 @@
 #include <vector>
 #include <future>
 #include <mutex>
-#include <random>
-#include <algorithm>
 
-const int V = 50;
+const int V = 1000;
 
 std::mutex mtx;
 
@@ -25,7 +23,7 @@ std::vector<int> hamCycleUtil(bool graph[V][V], std::vector<int> path, int pos) 
         if (graph[path[pos - 1]][path[0]]) // check if the last vertex is adjacent to the first vertex
             return path;
         else
-            return std::vector<int>(); // return empty vector
+            return {}; // return empty vector
     }
 
     // create a vector of futures to store the results of the recursive calls
@@ -47,7 +45,7 @@ std::vector<int> hamCycleUtil(bool graph[V][V], std::vector<int> path, int pos) 
             return result;
     }
 
-    return std::vector<int>(); // return empty vector
+    return {}; // return empty vector
 }
 
 // Function to find the Hamiltonian Cycle
