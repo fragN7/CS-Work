@@ -7,7 +7,6 @@ const int V = 1000;
 
 std::mutex mtx;
 
-// Function to check if the vertex can be included in the path
 bool isSafe(int v, bool graph[V][V], const std::vector<int> &path, int pos) {
     if (!graph[path[pos - 1]][v]) // check if the vertex is adjacent to the previous vertex
         return false;
@@ -17,8 +16,7 @@ bool isSafe(int v, bool graph[V][V], const std::vector<int> &path, int pos) {
     return true;
 }
 
-// Recursive function to find the Hamiltonian Cycle
-std::vector<int> hamCycleUtil(bool graph[V][V], std::vector<int> path, int pos) {
+std::vector<int> hamCycle(bool graph[V][V], std::vector<int> path, int pos) {
     if (pos == V) {
         if (graph[path[pos - 1]][path[0]]) // check if the last vertex is adjacent to the first vertex
             return path;
@@ -26,8 +24,6 @@ std::vector<int> hamCycleUtil(bool graph[V][V], std::vector<int> path, int pos) 
             return {}; // return empty vector
     }
 
-    // create a vector of futures to store the results of the recursive calls
-    // this is done to avoid the overhead of creating threads for each recursive call
     std::vector<std::future<std::vector<int>>> futures;
 
     for (int v = 1; v < V; v++) {
@@ -35,12 +31,12 @@ std::vector<int> hamCycleUtil(bool graph[V][V], std::vector<int> path, int pos) 
 
             std::vector<int> newPath = path; // create a new path
             newPath[pos] = v; // add the vertex to the path
-            futures.push_back(std::async(std::launch::async, hamCycleUtil, graph, newPath, pos + 1)); // call the function recursively
+            futures.push_back(std::async(std::launch::async, hamCycle, graph, newPath, pos + 1));
         }
     }
 
     for (auto &future: futures) {
-        std::vector<int> result = future.get(); // get the result from the future
+        std::vector<int> result = future.get();
         if (!result.empty()) // if the result is not empty, return it
             return result;
     }
@@ -50,11 +46,11 @@ std::vector<int> hamCycleUtil(bool graph[V][V], std::vector<int> path, int pos) 
 
 // Function to find the Hamiltonian Cycle
 void findHamiltonianCycle(bool graph[V][V], int start_vertex) {
-    std::vector<int> path(V, -1); // create a path vector
-    path[0] = start_vertex; // add the start vertex to the path
+    std::vector<int> path(V, -1);
+    path[0] = start_vertex;
 
-    std::vector<int> resultPath = hamCycleUtil(graph, path, 1); // call the recursive function
-    std::lock_guard<std::mutex> lock(mtx); // lock the mutex
+    std::vector<int> resultPath = hamCycle(graph, path, 1);
+    std::lock_guard<std::mutex> lock(mtx);
     if (resultPath.empty()) {
         std::cout << "No Hamiltonian Cycle found." << std::endl;
     } else {

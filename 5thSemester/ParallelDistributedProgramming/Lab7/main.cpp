@@ -90,15 +90,12 @@ Polynomial multiplyPolynomialsRegularMPI(const Polynomial& poly1, const Polynomi
     int n = poly2.coefficients.size();
     int result_size = m + n - 1;
 
-    // Each process will compute a part of the result
     std::vector<int> local_result(result_size, 0);
 
     std::vector<int> coeffs2 = poly2.coefficients;
 
-    // Broadcast the second polynomial to all processes
     MPI_Bcast(coeffs2.data(), n, MPI_INT, 0, MPI_COMM_WORLD);
 
-    // Calculate the range of indices this process will handle
     int local_start = world_rank * (m / world_size);
     int local_end = (world_rank == world_size - 1) ? m : (world_rank + 1) * (m / world_size);
 
@@ -113,10 +110,8 @@ Polynomial multiplyPolynomialsRegularMPI(const Polynomial& poly1, const Polynomi
     MPI_Reduce(local_result.data(), global_result.data(), result_size, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
 
     if (world_rank == 0) {
-        // The master process now has the complete result
         return Polynomial(global_result);
     } else {
-        // Other processes return an empty polynomial
         return {};
     }
 }
@@ -144,12 +139,37 @@ Polynomial multiplyPolynomialsKaratsubaMPI(const Polynomial& poly1, const Polyno
     int localStart = world_rank * (resultSize / world_size);
     int localEnd = (world_rank == world_size - 1) ? resultSize : (world_rank + 1) * (resultSize / world_size);
 
-    for (int i = localStart; i < localEnd; ++i) {
-        int coefficient = 0;
-        for (int j = std::max(0, i - n + 1); j < std::min(m, i + 1); ++j) {
-            coefficient += poly1.coefficients[j] * poly2.coefficients[i - j];
+    if (m <= 16 || n <= 16) {
+        for (int i = localStart; i < localEnd; ++i) {
+            for (int j = std::max(0, i - n + 1); j < std::min(m, i + 1); ++j) {
+                localResult[i] += poly1.coefficients[j] * poly2.coefficients[i - j];
+            }
         }
-        localResult[i] = coefficient;
+    } else {
+        int halfSize = std::max(m, n) / 2;
+
+        Polynomial a0({poly1.coefficients.begin(), poly1.coefficients.begin() + halfSize});
+        Polynomial a1({poly1.coefficients.begin() + halfSize, poly1.coefficients.end()});
+        Polynomial b0({poly2.coefficients.begin(), poly2.coefficients.begin() + halfSize});
+        Polynomial b1({poly2.coefficients.begin() + halfSize, poly2.coefficients.end()});
+
+        Polynomial z0 = multiplyPolynomialsKaratsubaMPI(a0, b0);
+        Polynomial z2 = multiplyPolynomialsKaratsubaMPI(a1, b1);
+        Polynomial z1 = multiplyPolynomialsKaratsubaMPI(a0 + a1, b0 + b1);
+
+        Polynomial temp = z1 - (z0 + z2);
+
+        for (int i = 0; i < temp.coefficients.size(); ++i) {
+            if (i + halfSize < localResult.size()) {
+                localResult[i + halfSize] += temp.coefficients[i];
+            }
+        }
+
+        for (int i = 0; i < z2.coefficients.size(); ++i) {
+            if (i + 2 * halfSize < localResult.size()) {
+                localResult[i + 2 * halfSize] += z2.coefficients[i];
+            }
+        }
     }
 
     MPI_Allreduce(localResult.data(), globalResult.data(), resultSize, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
@@ -164,29 +184,34 @@ int main(int argc, char** argv) {
     int world_rank;
     MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
 
-    // Define two polynomials (example coefficients)
-    // Note: In a real-world scenario, you might want to read these from input
-    srand(static_cast<unsigned int>(time(nullptr)));
+    //srand(static_cast<unsigned int>(time(nullptr)));
 
-    int vectorSize = 10000;// Change this to the size you want
+    int vectorSize = 5;
     std::vector<int> randVector1(vectorSize);
     std::vector<int> randVector2(vectorSize);
 
-    // Fill the vector with random numbers between 1 and 10
     for (int i = 0; i < vectorSize; ++i) {
         randVector1[i] = rand() % 10 + 1; // Generates a random number between 1 and 10
         randVector2[i] = rand() % 10 + 1; // Generates a random number between 1 and 10
     }
 
+
+
     Polynomial poly1(randVector1);
+
+
+
     Polynomial poly2(randVector2);
+
+    std::cout << poly1 << "\n";
+    std::cout << poly2 << "\n";
 
     // Multiply the polynomials using MPI
     auto startRegular = std::chrono::steady_clock::now();
-    Polynomial resultRegular = multiplyPolynomialsRegularMPI(poly1, poly2);
+    Polynomial result = multiplyPolynomialsRegularMPI(poly1, poly2);
     auto endRegular = std::chrono::steady_clock::now();
     std::chrono::duration<double> timeRegular = endRegular - startRegular;
-    std::cout << "Regular Multiplication Time: " << timeRegular.count() << " seconds\n";
+    std::cout << "Regular Multiplication Time: " << timeRegular.count() << " seconds\n" << result;
 
     auto startKaratsuba = std::chrono::steady_clock::now();
     Polynomial resultKaratsuba = multiplyPolynomialsKaratsubaMPI(poly1, poly2);
