@@ -1,0 +1,21 @@
+
+-inv ale
+-inv mth
+
+x <- Enter{(Give a number)}: num
+y <- Enter{(Give another number)}: num
+
+result <- 0: num
+
+Between{x, y, 1, i: num}{ 
+	Perhaps{IsOdd{i} = tru}{
+		result <- result + i
+	}
+}
+
+Leave{(The result between )}
+Leave{x}
+Leave{( and )}
+Leave{y}
+Leave{( is )}
+Leave{result}

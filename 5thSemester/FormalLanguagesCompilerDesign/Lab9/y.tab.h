@@ -1,0 +1,11 @@
+#define Start 257
+#define InBetween 258
+#define Between 259
+#define num 260
+#define str 261
+#define bol 262
+#define Perhaps 263
+#define Enter 264
+#define Leave 265
+#define identifier 266
+#define constant 267
