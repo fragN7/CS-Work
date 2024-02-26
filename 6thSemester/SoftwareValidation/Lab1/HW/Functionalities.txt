@@ -1,0 +1,5 @@
+1. display students and their data
+2. add student to list of students (no need for professor name)
+3. find student perfect flow
+4. deleted student doesn't display anymore
+5. update student data (can't change id)
