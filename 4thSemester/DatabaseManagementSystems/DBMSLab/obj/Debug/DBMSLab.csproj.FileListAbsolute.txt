@@ -9,3 +9,14 @@ C:\Users\Alen\Documents\UBB\4thSemester\DBMS\DBMSLab\obj\Debug\DBMSLab.csproj.Co
 C:\Users\Alen\Documents\UBB\4thSemester\DBMS\DBMSLab\obj\Debug\DBMSLab.exe
 C:\Users\Alen\Documents\UBB\4thSemester\DBMS\DBMSLab\obj\Debug\DBMSLab.pdb
 C:\Users\Alen\Documents\UBB\4thSemester\DBMS\DBMSLab\obj\Debug\DBMSLab.Form1.resources
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\DBMSLab\bin\Debug\DBMSLab.exe.config
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\DBMSLab\bin\Debug\DBMSLab.exe
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\DBMSLab\bin\Debug\DBMSLab.pdb
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\DBMSLab\obj\Debug\DBMSLab.csproj.AssemblyReference.cache
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\DBMSLab\obj\Debug\DBMSLab.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\DBMSLab\obj\Debug\DBMSLab.Form1.resources
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\DBMSLab\obj\Debug\DBMSLab.Properties.Resources.resources
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\DBMSLab\obj\Debug\DBMSLab.csproj.GenerateResource.cache
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\DBMSLab\obj\Debug\DBMSLab.csproj.CoreCompileInputs.cache
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\DBMSLab\obj\Debug\DBMSLab.exe
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\4thSemester\DatabaseManagementSystems\DBMSLab\obj\Debug\DBMSLab.pdb
