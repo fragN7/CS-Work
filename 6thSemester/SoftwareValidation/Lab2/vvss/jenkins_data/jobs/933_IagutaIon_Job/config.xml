@@ -5,7 +5,7 @@
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.38.0">
-      <projectUrl>https://github.com/andreeavescan/2023_Lecture02_BBT/</projectUrl>
+      <projectUrl>https://github.com/fragN7/ssvvv/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
   </properties>
@@ -13,7 +13,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/andreeavescan/2023_Lecture02_BBT.git</url>
+        <url>https://github.com/fragN7/ssvvv.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -41,8 +41,8 @@
     </hudson.tasks.Maven>
     <hudson.plugins.testlink.TestLinkBuilder plugin="testlink@3.16">
       <testLinkName>localhost</testLinkName>
-      <testProjectName>Lecture01_Demo_BBT</testProjectName>
-      <testPlanName>Lecture02_TestPlan_BBT</testPlanName>
+      <testProjectName>Project_IagutaIon</testProjectName>
+      <testPlanName>933_IagutaIon_TestPlan</testPlanName>
       <buildName>build_$BUILD_ID</buildName>
       <platformName></platformName>
       <customFields>JavaClassName,JavaTestMethodName</customFields>

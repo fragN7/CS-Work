@@ -1,0 +1,52 @@
+commit 2cf7c10c4c0f48270ec059fb335ab186d5c8d4a5
+tree 67451feaa2359c60d2877134dc7948bb47ee2d20
+parent 7f7419762f99161463c68a1baeec810c81c91752
+author Alen <132235388+fragN7@users.noreply.github.com> 2024-03-11 19:31:42 +0200
+committer Alen <132235388+fragN7@users.noreply.github.com> 2024-03-11 19:31:42 +0200
+
+    adsd
+
+
+:100644 100644 5ff6309b7199129c1afe4f4ec1906e640bec48c6 5ff6309b7199129c1afe4f4ec1906e640bec48c6 R100	ThemeProject/.gitignore	.gitignore
+:100644 100644 13566b81b018ad684f3a35fee301741b2734c8f4 13566b81b018ad684f3a35fee301741b2734c8f4 R100	ThemeProject/.idea/.gitignore	.idea/.gitignore
+:100644 100644 aa00ffab7828f4818589659c804ec2cfd99baed3 aa00ffab7828f4818589659c804ec2cfd99baed3 R100	ThemeProject/.idea/encodings.xml	.idea/encodings.xml
+:100644 100644 e5d62959271289a9b1b3570311149ea6f3a7c12b e5d62959271289a9b1b3570311149ea6f3a7c12b R100	ThemeProject/.idea/misc.xml	.idea/misc.xml
+:100644 100644 2b63946d5b31084bbb7dda418ceb3d75eb686373 2b63946d5b31084bbb7dda418ceb3d75eb686373 R100	ThemeProject/.idea/uiDesigner.xml	.idea/uiDesigner.xml
+:100644 100644 c2365ab11f9ba6b763735c8fd976420234bb3521 c2365ab11f9ba6b763735c8fd976420234bb3521 R100	ThemeProject/.idea/vcs.xml	.idea/vcs.xml
+:100644 100644 64fcb17677be93985e0a7ad9870e8398d395c11e 64fcb17677be93985e0a7ad9870e8398d395c11e R100	ThemeProject/fisiere/DataInceput.txt	fisiere/DataInceput.txt
+:100644 100644 83e705cd81db2b3c6c2133a6b5ae068f9127a137 83e705cd81db2b3c6c2133a6b5ae068f9127a137 R100	ThemeProject/fisiere/Note.txt	fisiere/Note.txt
+:100644 100644 3c9ff37329e1f0ecc3e02df8e20ae4d1edbff6db 3c9ff37329e1f0ecc3e02df8e20ae4d1edbff6db R100	ThemeProject/fisiere/Note.xml	fisiere/Note.xml
+:100644 100644 36ff456de01684f4e293d6763be7e28207e62547 36ff456de01684f4e293d6763be7e28207e62547 R100	ThemeProject/fisiere/Studenti.txt	fisiere/Studenti.txt
+:100644 100644 f41a1704186174a240cfad8d2084415b3e463b6b f41a1704186174a240cfad8d2084415b3e463b6b R100	ThemeProject/fisiere/Studenti.xml	fisiere/Studenti.xml
+:100644 100644 527b55195c928e8a9ff9b8ff154aa648828503c4 527b55195c928e8a9ff9b8ff154aa648828503c4 R100	ThemeProject/fisiere/Teme.txt	fisiere/Teme.txt
+:100644 100644 3b848f37d56bb81b3a5fbda63d66e709897b56f9 3b848f37d56bb81b3a5fbda63d66e709897b56f9 R100	ThemeProject/fisiere/Teme.xml	fisiere/Teme.xml
+:100644 100644 45b2b8fd97ccbcaaa20b7cae456fa197995174f9 45b2b8fd97ccbcaaa20b7cae456fa197995174f9 R100	ThemeProject/fisiere/a.txt	fisiere/a.txt
+:100644 100644 cbce78cbf1fdc89c2062cee0e12601c13063b55f cbce78cbf1fdc89c2062cee0e12601c13063b55f R100	ThemeProject/fisiere/eu.txt	fisiere/eu.txt
+:100644 100644 20fd0226be4699f0d5fd3f5bf18e48267341ae58 20fd0226be4699f0d5fd3f5bf18e48267341ae58 R100	ThemeProject/fisiere/la.txt	fisiere/la.txt
+:100644 100644 56d4d1ceae7c634ed74e8c9f93afac76c63f2e40 56d4d1ceae7c634ed74e8c9f93afac76c63f2e40 R100	ThemeProject/pom.xml	pom.xml
+:100644 100644 ed122e5faf89ee4479985fe67822c98e460fa47f ed122e5faf89ee4479985fe67822c98e460fa47f R100	ThemeProject/src/main/java/app/MainApplication.java	src/main/java/app/MainApplication.java
+:100644 100644 dcd22d3e308f527e53448ff19b25eec101e0e47e dcd22d3e308f527e53448ff19b25eec101e0e47e R100	ThemeProject/src/main/java/curent/Curent.java	src/main/java/curent/Curent.java
+:100644 100644 36203a53a70391ef17115c4399df8a92df2498ac 36203a53a70391ef17115c4399df8a92df2498ac R100	ThemeProject/src/main/java/domain/Nota.java	src/main/java/domain/Nota.java
+:100644 100644 eae172264e36fea089857c987686c2a4781e1d88 eae172264e36fea089857c987686c2a4781e1d88 R100	ThemeProject/src/main/java/domain/Student.java	src/main/java/domain/Student.java
+:100644 100644 b295ef18952aac5af037eb83514c45f66ff22eb9 b295ef18952aac5af037eb83514c45f66ff22eb9 R100	ThemeProject/src/main/java/domain/Tema.java	src/main/java/domain/Tema.java
+:100644 100644 59ab0148827db1a9f7fb49a71c41f32fe89e5e3c 59ab0148827db1a9f7fb49a71c41f32fe89e5e3c R100	ThemeProject/src/main/java/repository/AbstractCrudRepository.java	src/main/java/repository/AbstractCrudRepository.java
+:100644 100644 77820a3223bed3940976ee363ef0c200c60ac697 77820a3223bed3940976ee363ef0c200c60ac697 R100	ThemeProject/src/main/java/repository/AbstractFileRepository.java	src/main/java/repository/AbstractFileRepository.java
+:100644 100644 477785db2faf8620a42bf7ac2359c75f3cf7bc13 477785db2faf8620a42bf7ac2359c75f3cf7bc13 R100	ThemeProject/src/main/java/repository/AbstractXMLRepository.java	src/main/java/repository/AbstractXMLRepository.java
+:100644 100644 cbf8405eb71ebf2997d0a839f0fbc67ff61e7795 cbf8405eb71ebf2997d0a839f0fbc67ff61e7795 R100	ThemeProject/src/main/java/repository/CrudRepository.java	src/main/java/repository/CrudRepository.java
+:100644 100644 4b8995dc117dcc41bff7a9b6f597a2b9c168504e 4b8995dc117dcc41bff7a9b6f597a2b9c168504e R100	ThemeProject/src/main/java/repository/FileRepository.java	src/main/java/repository/FileRepository.java
+:100644 100644 e3233878d0d3113bb20967b8f4acdda172e99a8d e3233878d0d3113bb20967b8f4acdda172e99a8d R100	ThemeProject/src/main/java/repository/HasID.java	src/main/java/repository/HasID.java
+:100644 100644 5f0c6f46eba543eb2193ace3d56d76d3cdd90949 5f0c6f46eba543eb2193ace3d56d76d3cdd90949 R100	ThemeProject/src/main/java/repository/NotaFileRepository.java	src/main/java/repository/NotaFileRepository.java
+:100644 100644 276162ac175536dd26ace9ce306fc3d1c112e799 276162ac175536dd26ace9ce306fc3d1c112e799 R100	ThemeProject/src/main/java/repository/NotaXMLRepo.java	src/main/java/repository/NotaXMLRepo.java
+:100644 100644 56c0a05cf8c5ba08d65921de3aa572ef18e3076d 56c0a05cf8c5ba08d65921de3aa572ef18e3076d R100	ThemeProject/src/main/java/repository/StudentFileRepository.java	src/main/java/repository/StudentFileRepository.java
+:100644 100644 44606407288efcd5e444f98d96e067ba97df2438 44606407288efcd5e444f98d96e067ba97df2438 R100	ThemeProject/src/main/java/repository/StudentXMLRepo.java	src/main/java/repository/StudentXMLRepo.java
+:100644 100644 17806cad42725465102def06373abe73412919d1 17806cad42725465102def06373abe73412919d1 R100	ThemeProject/src/main/java/repository/TemaFileRepository.java	src/main/java/repository/TemaFileRepository.java
+:100644 100644 fee37c12d23ca6f7ba4b3fa0e9f101af771f4a88 fee37c12d23ca6f7ba4b3fa0e9f101af771f4a88 R100	ThemeProject/src/main/java/repository/TemaXMLRepo.java	src/main/java/repository/TemaXMLRepo.java
+:100644 100644 9149293451ae66161117644628cc44ffb4f356b8 9149293451ae66161117644628cc44ffb4f356b8 R100	ThemeProject/src/main/java/service/Service.java	src/main/java/service/Service.java
+:100644 100644 27b0cc59315ec6c4c9e26c5c918b9df5f3c7b3b2 27b0cc59315ec6c4c9e26c5c918b9df5f3c7b3b2 R100	ThemeProject/src/main/java/validation/NotaValidator.java	src/main/java/validation/NotaValidator.java
+:100644 100644 43e992920bcd413815a3a006f4c25839e3496c8e 43e992920bcd413815a3a006f4c25839e3496c8e R100	ThemeProject/src/main/java/validation/StudentValidator.java	src/main/java/validation/StudentValidator.java
+:100644 100644 c844962b3e2a6429575d5bcc18e76a60b9b0ec5f c844962b3e2a6429575d5bcc18e76a60b9b0ec5f R100	ThemeProject/src/main/java/validation/TemaValidator.java	src/main/java/validation/TemaValidator.java
+:100644 100644 3a272232afaf3a97b56beeb08bce4bf828f29889 3a272232afaf3a97b56beeb08bce4bf828f29889 R100	ThemeProject/src/main/java/validation/ValidationException.java	src/main/java/validation/ValidationException.java
+:100644 100644 a7bfd6e463cb156f0964b8aa1e1a45d60c549df5 a7bfd6e463cb156f0964b8aa1e1a45d60c549df5 R100	ThemeProject/src/main/java/validation/Validator.java	src/main/java/validation/Validator.java
+:100644 100644 3b7327c6bb7f3557d25e1b655479b35172ced97b 3b7327c6bb7f3557d25e1b655479b35172ced97b R100	ThemeProject/src/main/java/view/UI.java	src/main/java/view/UI.java
+:100644 100644 45110834a583db06c9ea2d80fd1b7273160a56fa 45110834a583db06c9ea2d80fd1b7273160a56fa R100	ThemeProject/src/test/java/ssvs/example/AppTest.java	src/test/java/ssvs/example/AppTest.java
+:100644 100644 806d27604368a994981f746990470ec5bf8e68e2 806d27604368a994981f746990470ec5bf8e68e2 R100	ThemeProject/src/test/java/ssvs/example/TestAddStudent.java	src/test/java/ssvs/example/TestAddStudent.java
