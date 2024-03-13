@@ -1,0 +1,20 @@
+1. display students and their data
+2. add student to list of students (no need for professor name)
+3. find student perfect flow
+4. deleted student doesn't display anymore
+5. update student data (can't change id)
+
+New functionalities:
+
+1. see all grades listed
+2. see a grade based on a student id and assignment id 
+3. delete a grade based on a student id and assignment id 
+4. add a grade to a assignment / homework
+
+5. see all lab themes listed 
+6. add a lab theme, which also persists onto xml file
+7. delete a assignment / lab theme
+8. update lab theme data (can't change id)
+9. can extend deadline
+
+ 

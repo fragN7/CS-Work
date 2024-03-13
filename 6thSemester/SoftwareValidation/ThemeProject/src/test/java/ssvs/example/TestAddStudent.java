@@ -15,6 +15,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import static junit.framework.Assert.assertNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -51,31 +52,131 @@ public class TestAddStudent {
     }
 
     @Test
-    void testAddStudentOnGroup() {
-        Student newStudent1 = new Student("100", "a", 933, "wasd");
-        Student newStudent2 = new Student("101", "a", -1, "wasd");
-        Student newStudent3 = new Student("102", "a", 0, "wasd");
-        this.service.addStudent(newStudent1);
-        assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent2));
-        this.service.addStudent(newStudent3);
-        java.util.Iterator<Student> students = this.service.getAllStudenti().iterator();
-        assertEquals(students.next(), newStudent1);
-//        assertEquals(students.next(), newStudent1);
-        assertEquals(students.next(), newStudent3);
+    public void testAddStudentDuplicate(){
+        Student newStudent = new Student("1", "Alen", 933, "arsenal@ucl.com");
 
-        this.service.deleteStudent("100");
-        this.service.deleteStudent("102");
+        Student stud1 = this.service.addStudent(newStudent);
+        assertNull(stud1);
+
+        Student stud2 = this.service.addStudent(newStudent);
+        assertEquals(newStudent.getID(), stud2.getID());
+
+        this.service.deleteStudent("1");
     }
 
     @Test
-    void testAddStudentOnName() {
-        Student newStudent1 = new Student("1111111", "Alen", 933, "wasd");
-        Student newStudent2 = new Student("1111112", "", 933, "wasd");
-        Student newStudent3 = new Student("1111113", null, 933, "wasd");
-        this.service.addStudent(newStudent1);
+    public void testAddStudentNonDuplicate(){
+        Student newStudent1 = new Student("1", "Alen", 933, "arsenal@ucl.com");
+        Student newStudent2 = new Student("2", "Alen", 933, "arsenal@ucl.com");
+
+
+        Student stud1 = this.service.addStudent(newStudent1);
+        assertNull(stud1);
+
+        Student stud2 = this.service.addStudent(newStudent2);
+        assertNull(stud2);
+
         java.util.Iterator<Student> students = this.service.getAllStudenti().iterator();
-        assertEquals(students.next(), newStudent1);
-        assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent2));
-        assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent3));
+        assertEquals(students.next().getID(), newStudent1.getID());
+        assertEquals(students.next().getID(), newStudent2.getID());
+
+        this.service.deleteStudent("1");
+        this.service.deleteStudent("2");
+    }
+
+    @Test
+    public void testAddStudentValidName(){
+        Student newStudent = new Student("1", "Alen", 933, "arsenal@ucl.com");
+        this.service.addStudent(newStudent);
+        java.util.Iterator<Student> students = this.service.getAllStudenti().iterator();
+        assertEquals(students.next().getID(), newStudent.getID());
+        this.service.deleteStudent("1");
+    }
+
+    @Test
+    public void testAddStudentEmptyName(){
+        Student newStudent = new Student("1", "", 933, "arsenal@ucl.com");
+        assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent));
+    }
+
+    @Test
+    public void testAddStudentNullName(){
+        Student newStudent = new Student("1", null, 933, "arsenal@ucl.com");
+        assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent));
+    }
+
+    @Test
+    public void testAddStudentValidGroup() {
+        Student newStudent = new Student("1", "Alen", 933, "arsenal@ucl.com");
+
+        this.service.addStudent(newStudent);
+        java.util.Iterator<Student> students = this.service.getAllStudenti().iterator();
+        assertEquals(students.next().getID(), newStudent.getID());
+
+        this.service.deleteStudent("1");
+    }
+
+    @Test
+    public void testAddStudentInvalidGroup() {
+        Student newStudent = new Student("1", "Alen", -933, "arsenal@ucl.com");
+        assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent));
+    }
+
+    @Test
+    public void testAddStudentValidEmail() {
+        Student newStudent = new Student("1", "Alen", 933, "arsenal@ucl.com");
+
+        this.service.addStudent(newStudent);
+        java.util.Iterator<Student> students = this.service.getAllStudenti().iterator();
+        assertEquals(students.next().getID(), newStudent.getID());
+
+        this.service.deleteStudent("1");
+    }
+
+    @Test
+    public void testAddStudentEmptyEmail() {
+        Student newStudent = new Student("1", "Alen", 933, "");
+        assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent));
+    }
+
+    @Test
+    public void testAddStudentNullEmail() {
+        Student newStudent = new Student("1", "Alen", 933, null);
+        assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent));
+    }
+
+    @Test
+    public void testAddStudentValidId() {
+        Student newStudent = new Student("1", "Alen", 933, "arsenal@ucl.com");
+
+        this.service.addStudent(newStudent);
+        java.util.Iterator<Student> students = this.service.getAllStudenti().iterator();
+        assertEquals(students.next().getID(), newStudent.getID());
+
+        this.service.deleteStudent("1");
+    }
+
+    @Test
+    public void testAddStudentEmptyId() {
+        Student newStudent = new Student("", "Alen", 933, "arsenal@ucl.com");
+        assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent));
+    }
+
+    @Test
+    public void testAddStudentNullId() {
+        Student newStudent = new Student(null, "Alen", 933, "arsenal@ucl.com");
+        assertThrows(NullPointerException.class, () -> this.service.addStudent(newStudent));
+        //assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent));
+    }
+
+    @Test
+    public void testAddStudentGroup0(){
+        Student newStudent = new Student("1", "Alen", 0, "arsenal@ucl.com");
+
+        this.service.addStudent(newStudent);
+        java.util.Iterator<Student> students = this.service.getAllStudenti().iterator();
+        assertEquals(students.next().getID(), newStudent.getID());
+
+        this.service.deleteStudent("1");
     }
 }
