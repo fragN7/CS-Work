@@ -1,0 +1,12 @@
+-stabilit cine este raspunzator de ce date (prim ecran)
+date venite din dispecerat?(confirma)
+-ce date se aduc din exterior, clarifica(fise prespicalitesti, interactiune cu spitalul) daca sunt date din spital, nu exact de la alte misiuni (alergii bonusuri)
+-cine si ce date sa fie populate, dedici un flux, ce date si unde sa ajunga si unde sunt utile, si sa vedem cui sunt utile
+-modul in care ajung la ei, ce meniuri au, istoric pacient, import imagini
+-de unde vin import imagini, istoric pacient, fise prespicalitesti, unde merg, la ce folosesc, transmit mai departe spitalului datele medicale, ambulanta ca sa si justifice activitatea, da diagnostic
+activitatii specifice echipajelor de ambulanta, despre pacient cand vorbim, unde pune pacientul
+-data exchange, fluxul de informatii, si provenienta lor pe categorii !!!!!
+
+-date de la dispatcher in mod real (nume, prenuma, varsta, locatie)...
+-ce date mai lipsesc de la dispatcher(ce le ar place sa stie si le ar ajuta), interconectarea cu baza de date a spitalelor (conexiune in timp real cu servicii de ambulanta si spital) 
+-cu ce pot ajuta mai mult serviciul medical

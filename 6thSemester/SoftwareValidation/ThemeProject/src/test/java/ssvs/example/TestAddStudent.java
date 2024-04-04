@@ -10,11 +10,6 @@ import service.Service;
 import validation.StudentValidator;
 import validation.ValidationException;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-
 import static junit.framework.Assert.assertNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -24,7 +19,7 @@ public class TestAddStudent {
     private StudentValidator studentValidator;
     private Service service;
 
-    @BeforeAll
+    /*@BeforeAll
     static void createXML() {
         File xml = new File("fisiere/studentiTest.xml");
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(xml))) {
@@ -39,20 +34,18 @@ public class TestAddStudent {
         }
     }
 
-    @BeforeEach
-    void setup() {
-        this.studentFileRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
-        this.studentValidator = new StudentValidator();
-        this.service = new Service(this.studentFileRepository, this.studentValidator, null, null, null, null);
-    }
-
     @AfterAll
     static void removeXML() {
         new File("fisiere/studentiTest.xml").delete();
-    }
+    }*/
 
     @Test
     public void testAddStudentDuplicate(){
+
+        this.studentFileRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
+        this.studentValidator = new StudentValidator();
+        this.service = new Service(this.studentFileRepository, this.studentValidator, null, null, null, null);
+
         Student newStudent = new Student("1", "Alen", 933, "arsenal@ucl.com");
 
         Student stud1 = this.service.addStudent(newStudent);
@@ -66,6 +59,11 @@ public class TestAddStudent {
 
     @Test
     public void testAddStudentNonDuplicate(){
+
+        this.studentFileRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
+        this.studentValidator = new StudentValidator();
+        this.service = new Service(this.studentFileRepository, this.studentValidator, null, null, null, null);
+
         Student newStudent1 = new Student("1", "Alen", 933, "arsenal@ucl.com");
         Student newStudent2 = new Student("2", "Alen", 933, "arsenal@ucl.com");
 
@@ -86,6 +84,11 @@ public class TestAddStudent {
 
     @Test
     public void testAddStudentValidName(){
+
+        this.studentFileRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
+        this.studentValidator = new StudentValidator();
+        this.service = new Service(this.studentFileRepository, this.studentValidator, null, null, null, null);
+
         Student newStudent = new Student("1", "Alen", 933, "arsenal@ucl.com");
         this.service.addStudent(newStudent);
         java.util.Iterator<Student> students = this.service.getAllStudenti().iterator();
@@ -95,18 +98,33 @@ public class TestAddStudent {
 
     @Test
     public void testAddStudentEmptyName(){
+
+        this.studentFileRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
+        this.studentValidator = new StudentValidator();
+        this.service = new Service(this.studentFileRepository, this.studentValidator, null, null, null, null);
+
         Student newStudent = new Student("1", "", 933, "arsenal@ucl.com");
         assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent));
     }
 
     @Test
     public void testAddStudentNullName(){
+
+        this.studentFileRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
+        this.studentValidator = new StudentValidator();
+        this.service = new Service(this.studentFileRepository, this.studentValidator, null, null, null, null);
+
         Student newStudent = new Student("1", null, 933, "arsenal@ucl.com");
         assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent));
     }
 
     @Test
     public void testAddStudentValidGroup() {
+
+        this.studentFileRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
+        this.studentValidator = new StudentValidator();
+        this.service = new Service(this.studentFileRepository, this.studentValidator, null, null, null, null);
+
         Student newStudent = new Student("1", "Alen", 933, "arsenal@ucl.com");
 
         this.service.addStudent(newStudent);
@@ -118,12 +136,22 @@ public class TestAddStudent {
 
     @Test
     public void testAddStudentInvalidGroup() {
+
+        this.studentFileRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
+        this.studentValidator = new StudentValidator();
+        this.service = new Service(this.studentFileRepository, this.studentValidator, null, null, null, null);
+
         Student newStudent = new Student("1", "Alen", -933, "arsenal@ucl.com");
         assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent));
     }
 
     @Test
     public void testAddStudentValidEmail() {
+
+        this.studentFileRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
+        this.studentValidator = new StudentValidator();
+        this.service = new Service(this.studentFileRepository, this.studentValidator, null, null, null, null);
+
         Student newStudent = new Student("1", "Alen", 933, "arsenal@ucl.com");
 
         this.service.addStudent(newStudent);
@@ -135,18 +163,33 @@ public class TestAddStudent {
 
     @Test
     public void testAddStudentEmptyEmail() {
+
+        this.studentFileRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
+        this.studentValidator = new StudentValidator();
+        this.service = new Service(this.studentFileRepository, this.studentValidator, null, null, null, null);
+
         Student newStudent = new Student("1", "Alen", 933, "");
         assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent));
     }
 
     @Test
     public void testAddStudentNullEmail() {
+
+        this.studentFileRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
+        this.studentValidator = new StudentValidator();
+        this.service = new Service(this.studentFileRepository, this.studentValidator, null, null, null, null);
+
         Student newStudent = new Student("1", "Alen", 933, null);
         assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent));
     }
 
     @Test
     public void testAddStudentValidId() {
+
+        this.studentFileRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
+        this.studentValidator = new StudentValidator();
+        this.service = new Service(this.studentFileRepository, this.studentValidator, null, null, null, null);
+
         Student newStudent = new Student("1", "Alen", 933, "arsenal@ucl.com");
 
         this.service.addStudent(newStudent);
@@ -158,12 +201,22 @@ public class TestAddStudent {
 
     @Test
     public void testAddStudentEmptyId() {
+
+        this.studentFileRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
+        this.studentValidator = new StudentValidator();
+        this.service = new Service(this.studentFileRepository, this.studentValidator, null, null, null, null);
+
         Student newStudent = new Student("", "Alen", 933, "arsenal@ucl.com");
         assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent));
     }
 
     @Test
     public void testAddStudentNullId() {
+
+        this.studentFileRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
+        this.studentValidator = new StudentValidator();
+        this.service = new Service(this.studentFileRepository, this.studentValidator, null, null, null, null);
+
         Student newStudent = new Student(null, "Alen", 933, "arsenal@ucl.com");
         assertThrows(NullPointerException.class, () -> this.service.addStudent(newStudent));
         //assertThrows(ValidationException.class, () -> this.service.addStudent(newStudent));
@@ -171,6 +224,11 @@ public class TestAddStudent {
 
     @Test
     public void testAddStudentGroup0(){
+
+        this.studentFileRepository = new StudentXMLRepo("fisiere/studentiTest.xml");
+        this.studentValidator = new StudentValidator();
+        this.service = new Service(this.studentFileRepository, this.studentValidator, null, null, null, null);
+
         Student newStudent = new Student("1", "Alen", 0, "arsenal@ucl.com");
 
         this.service.addStudent(newStudent);

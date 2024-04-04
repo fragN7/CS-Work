@@ -16,8 +16,8 @@
         <entry>
           <string>refs/remotes/origin/main</string>
           <hudson.plugins.git.util.Build>
-            <marked plugin="git-client@4.6.0">
-              <sha1>0482d4afc105637baa3d573aa7f2f6c5b7cf8c56</sha1>
+            <marked plugin="git-client@4.7.0">
+              <sha1>ddb383db4436b68d1ed4b79dc1f01665f5382aea</sha1>
               <branches class="list">
                 <hudson.plugins.git.Branch>
                   <sha1 reference="../../../sha1"/>
@@ -32,7 +32,7 @@
       </buildsByBranchName>
       <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
       <remoteUrls>
-        <string>https://github.com/andreeavescan/2023_Lecture02_BBT.git</string>
+        <string>https://github.com/fragN7/ssvvv.git</string>
       </remoteUrls>
     </hudson.plugins.git.util.BuildData>
     <hudson.scm.SCMRevisionState_-None/>
@@ -47,17 +47,17 @@
           <string>TESTLINK_BUILD_NAME</string>
           <string>build_1</string>
           <string>TESTLINK_TESTCASE_TOTAL</string>
-          <string>1</string>
+          <string>14</string>
           <string>TESTLINK_TESTPLAN_NAME</string>
-          <string>Lecture02_TestPlan_BBT</string>
+          <string>933_IagutaIon_TestPlan</string>
           <string>TESTLINK_TESTPROJECT_NAME</string>
-          <string>Lecture01_Demo_BBT</string>
+          <string>Project_IagutaIon</string>
         </tree-map>
       </val_-iterativeEnvVars>
       <outer-class>
         <testLinkName>localhost</testLinkName>
-        <testProjectName>Lecture01_Demo_BBT</testProjectName>
-        <testPlanName>Lecture02_TestPlan_BBT</testPlanName>
+        <testProjectName>Project_IagutaIon</testProjectName>
+        <testPlanName>933_IagutaIon_TestPlan</testPlanName>
         <buildName>build_$BUILD_ID</buildName>
         <platformName></platformName>
         <customFields>JavaClassName,JavaTestMethodName</customFields>
@@ -104,11 +104,11 @@ mv ./target/surefire-reports/TEST-$TESTLINK_TESTCASE_JAVACLASSNAME.xml ./target/
           <string>TESTLINK_BUILD_NAME</string>
           <string>build_1</string>
           <string>TESTLINK_TESTCASE_TOTAL</string>
-          <string>1</string>
+          <string>14</string>
           <string>TESTLINK_TESTPLAN_NAME</string>
-          <string>Lecture02_TestPlan_BBT</string>
+          <string>933_IagutaIon_TestPlan</string>
           <string>TESTLINK_TESTPROJECT_NAME</string>
-          <string>Lecture01_Demo_BBT</string>
+          <string>Project_IagutaIon</string>
         </tree-map>
       </val_-iterativeEnvVars>
       <outer-class reference="../../hudson.plugins.testlink.TestLinkBuilder_-1/outer-class"/>
@@ -116,38 +116,27 @@ mv ./target/surefire-reports/TEST-$TESTLINK_TESTCASE_JAVACLASSNAME.xml ./target/
     <hudson.plugins.testlink.TestLinkBuildAction plugin="testlink@3.16">
       <result>
         <report>
-          <passed>1</passed>
+          <passed>0</passed>
           <failed>0</failed>
           <blocked>0</blocked>
-          <notRun>0</notRun>
-          <buildId>5</buildId>
+          <notRun>14</notRun>
+          <buildId>19</buildId>
           <buildName>build_1</buildName>
           <testCases class="linked-list">
             <hudson.plugins.testlink.result.TestCaseWrapper>
-              <customFieldAndStatus>
-                <entry>
-                  <string>Lecture02MaxPointsParticipantsMV.AppTest#tc_3_AllParticipantsOnlyOne</string>
-                  <br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus>PASSED</br.eti.kinoshita.testlinkjavaapi.constants.ExecutionStatus>
-                </entry>
-              </customFieldAndStatus>
+              <customFieldAndStatus/>
               <attachments class="linked-list"/>
-              <notes>name: tc_3_AllParticipantsOnlyOne
-classname: Lecture02MaxPointsParticipantsMV.AppTest
-errors: 0
-failures: 0
-time: null
-
-Build no : 1</notes>
+              <notes></notes>
               <testCase>
-                <id>4</id>
-                <name>tc_3_AllParticipantsOnlyOne</name>
-                <testProjectId>1</testProjectId>
+                <id>11</id>
+                <name>validName</name>
+                <testProjectId>6</testProjectId>
                 <steps/>
                 <testCaseStatus>DRAFT</testCaseStatus>
                 <executionType>AUTOMATED</executionType>
                 <executionOrder>1</executionOrder>
-                <fullExternalId>BBT-1</fullExternalId>
-                <versionId>5</versionId>
+                <fullExternalId>pjIagutaIon-1</fullExternalId>
+                <versionId>12</versionId>
                 <version>1</version>
                 <customFields>
                   <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
@@ -168,7 +157,7 @@ Build no : 1</notes>
                     <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
                     <displayOrder>1</displayOrder>
                     <location>1</location>
-                    <value>Lecture02MaxPointsParticipantsMV.AppTest</value>
+                    <value>ssvs.example.TestAddStudent</value>
                   </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
                   <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
                     <id>2</id>
@@ -188,15 +177,860 @@ Build no : 1</notes>
                     <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
                     <displayOrder>1</displayOrder>
                     <location>1</location>
-                    <value>Lecture02MaxPointsParticipantsMV.AppTest#tc_3_AllParticipantsOnlyOne</value>
+                    <value>ssvs.example.TestAddStudent#testAddStudentValidName</value>
                   </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
                 </customFields>
-                <executionStatus>PASSED</executionStatus>
+                <executionStatus>NOT_RUN</executionStatus>
                 <platform>
                   <id>0</id>
                   <name></name>
                 </platform>
-                <featureId>1</featureId>
+                <featureId>2</featureId>
+              </testCase>
+            </hudson.plugins.testlink.result.TestCaseWrapper>
+            <hudson.plugins.testlink.result.TestCaseWrapper>
+              <customFieldAndStatus/>
+              <attachments class="linked-list"/>
+              <notes></notes>
+              <testCase>
+                <id>33</id>
+                <name>emptyId</name>
+                <testProjectId>6</testProjectId>
+                <steps/>
+                <testCaseStatus>DRAFT</testCaseStatus>
+                <executionType>AUTOMATED</executionType>
+                <executionOrder>1</executionOrder>
+                <fullExternalId>pjIagutaIon-12</fullExternalId>
+                <versionId>34</versionId>
+                <version>1</version>
+                <customFields>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>1</id>
+                    <name>JavaClassName</name>
+                    <label>name of the autotest class</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>2</id>
+                    <name>JavaTestMethodName</name>
+                    <label>name of the test method</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent#testAddStudentEmptyId</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                </customFields>
+                <executionStatus>NOT_RUN</executionStatus>
+                <platform>
+                  <id>0</id>
+                  <name></name>
+                </platform>
+                <featureId>6</featureId>
+              </testCase>
+            </hudson.plugins.testlink.result.TestCaseWrapper>
+            <hudson.plugins.testlink.result.TestCaseWrapper>
+              <customFieldAndStatus/>
+              <attachments class="linked-list"/>
+              <notes></notes>
+              <testCase>
+                <id>23</id>
+                <name>invalidGroup</name>
+                <testProjectId>6</testProjectId>
+                <steps/>
+                <testCaseStatus>DRAFT</testCaseStatus>
+                <executionType>AUTOMATED</executionType>
+                <executionOrder>1</executionOrder>
+                <fullExternalId>pjIagutaIon-7</fullExternalId>
+                <versionId>24</versionId>
+                <version>1</version>
+                <customFields>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>1</id>
+                    <name>JavaClassName</name>
+                    <label>name of the autotest class</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>2</id>
+                    <name>JavaTestMethodName</name>
+                    <label>name of the test method</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent#testAddStudentInvalidGroup</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                </customFields>
+                <executionStatus>NOT_RUN</executionStatus>
+                <platform>
+                  <id>0</id>
+                  <name></name>
+                </platform>
+                <featureId>10</featureId>
+              </testCase>
+            </hudson.plugins.testlink.result.TestCaseWrapper>
+            <hudson.plugins.testlink.result.TestCaseWrapper>
+              <customFieldAndStatus/>
+              <attachments class="linked-list"/>
+              <notes></notes>
+              <testCase>
+                <id>13</id>
+                <name>emptyName</name>
+                <testProjectId>6</testProjectId>
+                <steps/>
+                <testCaseStatus>DRAFT</testCaseStatus>
+                <executionType>AUTOMATED</executionType>
+                <executionOrder>1</executionOrder>
+                <fullExternalId>pjIagutaIon-2</fullExternalId>
+                <versionId>14</versionId>
+                <version>1</version>
+                <customFields>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>1</id>
+                    <name>JavaClassName</name>
+                    <label>name of the autotest class</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>2</id>
+                    <name>JavaTestMethodName</name>
+                    <label>name of the test method</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent#testAddStudentEmptyName</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                </customFields>
+                <executionStatus>NOT_RUN</executionStatus>
+                <platform>
+                  <id>0</id>
+                  <name></name>
+                </platform>
+                <featureId>3</featureId>
+              </testCase>
+            </hudson.plugins.testlink.result.TestCaseWrapper>
+            <hudson.plugins.testlink.result.TestCaseWrapper>
+              <customFieldAndStatus/>
+              <attachments class="linked-list"/>
+              <notes></notes>
+              <testCase>
+                <id>35</id>
+                <name>nullId</name>
+                <testProjectId>6</testProjectId>
+                <steps/>
+                <testCaseStatus>DRAFT</testCaseStatus>
+                <executionType>AUTOMATED</executionType>
+                <executionOrder>1</executionOrder>
+                <fullExternalId>pjIagutaIon-13</fullExternalId>
+                <versionId>36</versionId>
+                <version>1</version>
+                <customFields>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>1</id>
+                    <name>JavaClassName</name>
+                    <label>name of the autotest class</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>2</id>
+                    <name>JavaTestMethodName</name>
+                    <label>name of the test method</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent#testAddStudentNullId</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                </customFields>
+                <executionStatus>NOT_RUN</executionStatus>
+                <platform>
+                  <id>0</id>
+                  <name></name>
+                </platform>
+                <featureId>4</featureId>
+              </testCase>
+            </hudson.plugins.testlink.result.TestCaseWrapper>
+            <hudson.plugins.testlink.result.TestCaseWrapper>
+              <customFieldAndStatus/>
+              <attachments class="linked-list"/>
+              <notes></notes>
+              <testCase>
+                <id>25</id>
+                <name>validEmail</name>
+                <testProjectId>6</testProjectId>
+                <steps/>
+                <testCaseStatus>DRAFT</testCaseStatus>
+                <executionType>AUTOMATED</executionType>
+                <executionOrder>1</executionOrder>
+                <fullExternalId>pjIagutaIon-8</fullExternalId>
+                <versionId>26</versionId>
+                <version>1</version>
+                <customFields>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>1</id>
+                    <name>JavaClassName</name>
+                    <label>name of the autotest class</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>2</id>
+                    <name>JavaTestMethodName</name>
+                    <label>name of the test method</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent#testAddStudentValidEmail</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                </customFields>
+                <executionStatus>NOT_RUN</executionStatus>
+                <platform>
+                  <id>0</id>
+                  <name></name>
+                </platform>
+                <featureId>9</featureId>
+              </testCase>
+            </hudson.plugins.testlink.result.TestCaseWrapper>
+            <hudson.plugins.testlink.result.TestCaseWrapper>
+              <customFieldAndStatus/>
+              <attachments class="linked-list"/>
+              <notes></notes>
+              <testCase>
+                <id>37</id>
+                <name>group0</name>
+                <testProjectId>6</testProjectId>
+                <steps/>
+                <testCaseStatus>DRAFT</testCaseStatus>
+                <executionType>AUTOMATED</executionType>
+                <executionOrder>1</executionOrder>
+                <fullExternalId>pjIagutaIon-14</fullExternalId>
+                <versionId>38</versionId>
+                <version>1</version>
+                <customFields>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>1</id>
+                    <name>JavaClassName</name>
+                    <label>name of the autotest class</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>2</id>
+                    <name>JavaTestMethodName</name>
+                    <label>name of the test method</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent#testAddStudentGroup0</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                </customFields>
+                <executionStatus>NOT_RUN</executionStatus>
+                <platform>
+                  <id>0</id>
+                  <name></name>
+                </platform>
+                <featureId>5</featureId>
+              </testCase>
+            </hudson.plugins.testlink.result.TestCaseWrapper>
+            <hudson.plugins.testlink.result.TestCaseWrapper>
+              <customFieldAndStatus/>
+              <attachments class="linked-list"/>
+              <notes></notes>
+              <testCase>
+                <id>15</id>
+                <name>nullName</name>
+                <testProjectId>6</testProjectId>
+                <steps/>
+                <testCaseStatus>DRAFT</testCaseStatus>
+                <executionType>AUTOMATED</executionType>
+                <executionOrder>1</executionOrder>
+                <fullExternalId>pjIagutaIon-3</fullExternalId>
+                <versionId>16</versionId>
+                <version>1</version>
+                <customFields>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>1</id>
+                    <name>JavaClassName</name>
+                    <label>name of the autotest class</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>2</id>
+                    <name>JavaTestMethodName</name>
+                    <label>name of the test method</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent#testAddStudentNullName</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                </customFields>
+                <executionStatus>NOT_RUN</executionStatus>
+                <platform>
+                  <id>0</id>
+                  <name></name>
+                </platform>
+                <featureId>14</featureId>
+              </testCase>
+            </hudson.plugins.testlink.result.TestCaseWrapper>
+            <hudson.plugins.testlink.result.TestCaseWrapper>
+              <customFieldAndStatus/>
+              <attachments class="linked-list"/>
+              <notes></notes>
+              <testCase>
+                <id>27</id>
+                <name>emptyEmail</name>
+                <testProjectId>6</testProjectId>
+                <steps/>
+                <testCaseStatus>DRAFT</testCaseStatus>
+                <executionType>AUTOMATED</executionType>
+                <executionOrder>1</executionOrder>
+                <fullExternalId>pjIagutaIon-9</fullExternalId>
+                <versionId>28</versionId>
+                <version>1</version>
+                <customFields>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>1</id>
+                    <name>JavaClassName</name>
+                    <label>name of the autotest class</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>2</id>
+                    <name>JavaTestMethodName</name>
+                    <label>name of the test method</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent#testAddStudentEmptyEmail</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                </customFields>
+                <executionStatus>NOT_RUN</executionStatus>
+                <platform>
+                  <id>0</id>
+                  <name></name>
+                </platform>
+                <featureId>15</featureId>
+              </testCase>
+            </hudson.plugins.testlink.result.TestCaseWrapper>
+            <hudson.plugins.testlink.result.TestCaseWrapper>
+              <customFieldAndStatus/>
+              <attachments class="linked-list"/>
+              <notes></notes>
+              <testCase>
+                <id>17</id>
+                <name>addNonDuplicate</name>
+                <testProjectId>6</testProjectId>
+                <steps/>
+                <testCaseStatus>DRAFT</testCaseStatus>
+                <executionType>AUTOMATED</executionType>
+                <executionOrder>1</executionOrder>
+                <fullExternalId>pjIagutaIon-4</fullExternalId>
+                <versionId>18</versionId>
+                <version>1</version>
+                <customFields>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>1</id>
+                    <name>JavaClassName</name>
+                    <label>name of the autotest class</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>2</id>
+                    <name>JavaTestMethodName</name>
+                    <label>name of the test method</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent#testAddStudentNonDuplicate</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                </customFields>
+                <executionStatus>NOT_RUN</executionStatus>
+                <platform>
+                  <id>0</id>
+                  <name></name>
+                </platform>
+                <featureId>13</featureId>
+              </testCase>
+            </hudson.plugins.testlink.result.TestCaseWrapper>
+            <hudson.plugins.testlink.result.TestCaseWrapper>
+              <customFieldAndStatus/>
+              <attachments class="linked-list"/>
+              <notes></notes>
+              <testCase>
+                <id>29</id>
+                <name>nullEmail</name>
+                <testProjectId>6</testProjectId>
+                <steps/>
+                <testCaseStatus>DRAFT</testCaseStatus>
+                <executionType>AUTOMATED</executionType>
+                <executionOrder>1</executionOrder>
+                <fullExternalId>pjIagutaIon-10</fullExternalId>
+                <versionId>30</versionId>
+                <version>1</version>
+                <customFields>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>1</id>
+                    <name>JavaClassName</name>
+                    <label>name of the autotest class</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>2</id>
+                    <name>JavaTestMethodName</name>
+                    <label>name of the test method</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent#testAddStudentNullEmail</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                </customFields>
+                <executionStatus>NOT_RUN</executionStatus>
+                <platform>
+                  <id>0</id>
+                  <name></name>
+                </platform>
+                <featureId>8</featureId>
+              </testCase>
+            </hudson.plugins.testlink.result.TestCaseWrapper>
+            <hudson.plugins.testlink.result.TestCaseWrapper>
+              <customFieldAndStatus/>
+              <attachments class="linked-list"/>
+              <notes></notes>
+              <testCase>
+                <id>19</id>
+                <name>addDuplicate</name>
+                <testProjectId>6</testProjectId>
+                <steps/>
+                <testCaseStatus>DRAFT</testCaseStatus>
+                <executionType>AUTOMATED</executionType>
+                <executionOrder>1</executionOrder>
+                <fullExternalId>pjIagutaIon-5</fullExternalId>
+                <versionId>20</versionId>
+                <version>1</version>
+                <customFields>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>1</id>
+                    <name>JavaClassName</name>
+                    <label>name of the autotest class</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>2</id>
+                    <name>JavaTestMethodName</name>
+                    <label>name of the test method</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent#testAddStudentDuplicate</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                </customFields>
+                <executionStatus>NOT_RUN</executionStatus>
+                <platform>
+                  <id>0</id>
+                  <name></name>
+                </platform>
+                <featureId>12</featureId>
+              </testCase>
+            </hudson.plugins.testlink.result.TestCaseWrapper>
+            <hudson.plugins.testlink.result.TestCaseWrapper>
+              <customFieldAndStatus/>
+              <attachments class="linked-list"/>
+              <notes></notes>
+              <testCase>
+                <id>31</id>
+                <name>validId</name>
+                <testProjectId>6</testProjectId>
+                <steps/>
+                <testCaseStatus>DRAFT</testCaseStatus>
+                <executionType>AUTOMATED</executionType>
+                <executionOrder>1</executionOrder>
+                <fullExternalId>pjIagutaIon-11</fullExternalId>
+                <versionId>32</versionId>
+                <version>1</version>
+                <customFields>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>1</id>
+                    <name>JavaClassName</name>
+                    <label>name of the autotest class</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>2</id>
+                    <name>JavaTestMethodName</name>
+                    <label>name of the test method</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent#testAddStudentValidId</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                </customFields>
+                <executionStatus>NOT_RUN</executionStatus>
+                <platform>
+                  <id>0</id>
+                  <name></name>
+                </platform>
+                <featureId>7</featureId>
+              </testCase>
+            </hudson.plugins.testlink.result.TestCaseWrapper>
+            <hudson.plugins.testlink.result.TestCaseWrapper>
+              <customFieldAndStatus/>
+              <attachments class="linked-list"/>
+              <notes></notes>
+              <testCase>
+                <id>21</id>
+                <name>validGroup</name>
+                <testProjectId>6</testProjectId>
+                <steps/>
+                <testCaseStatus>DRAFT</testCaseStatus>
+                <executionType>AUTOMATED</executionType>
+                <executionOrder>1</executionOrder>
+                <fullExternalId>pjIagutaIon-6</fullExternalId>
+                <versionId>22</versionId>
+                <version>1</version>
+                <customFields>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>1</id>
+                    <name>JavaClassName</name>
+                    <label>name of the autotest class</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                  <br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                    <id>2</id>
+                    <name>JavaTestMethodName</name>
+                    <label>name of the test method</label>
+                    <type>0</type>
+                    <possibleValues></possibleValues>
+                    <defaultValue></defaultValue>
+                    <validRegexp></validRegexp>
+                    <lengthMin>0</lengthMin>
+                    <lengthMax>0</lengthMax>
+                    <showOnDesign>true</showOnDesign>
+                    <enableOnDesign>true</enableOnDesign>
+                    <showOnExecution>false</showOnExecution>
+                    <enableOnExecution>false</enableOnExecution>
+                    <showOnTestPlanDesign>false</showOnTestPlanDesign>
+                    <enableOnTestPlanDesign>false</enableOnTestPlanDesign>
+                    <displayOrder>1</displayOrder>
+                    <location>1</location>
+                    <value>ssvs.example.TestAddStudent#testAddStudentValidGroup</value>
+                  </br.eti.kinoshita.testlinkjavaapi.model.CustomField>
+                </customFields>
+                <executionStatus>NOT_RUN</executionStatus>
+                <platform>
+                  <id>0</id>
+                  <name></name>
+                </platform>
+                <featureId>11</featureId>
               </testCase>
             </hudson.plugins.testlink.result.TestCaseWrapper>
           </testCases>
@@ -204,11 +1038,11 @@ Build no : 1</notes>
       </result>
     </hudson.plugins.testlink.TestLinkBuildAction>
   </actions>
-  <queueId>1</queueId>
-  <timestamp>1710174208945</timestamp>
-  <startTime>1710174209113</startTime>
-  <result>UNSTABLE</result>
-  <duration>84941</duration>
+  <queueId>20</queueId>
+  <timestamp>1711380319879</timestamp>
+  <startTime>1711380319914</startTime>
+  <result>SUCCESS</result>
+  <duration>23621</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <builtOn></builtOn>

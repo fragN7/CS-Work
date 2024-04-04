@@ -3,46 +3,51 @@ Running as SYSTEM
 Building in workspace /var/jenkins_home/workspace/933_IagutaIon_Job
 The recommended git tool is: NONE
 No credentials specified
-Cloning the remote Git repository
-Cloning repository https://github.com/andreeavescan/2023_Lecture02_BBT.git
- > git init /var/jenkins_home/workspace/933_IagutaIon_Job # timeout=10
-Fetching upstream changes from https://github.com/andreeavescan/2023_Lecture02_BBT.git
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/933_IagutaIon_Job/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/fragN7/ssvvv.git # timeout=10
+Fetching upstream changes from https://github.com/fragN7/ssvvv.git
  > git --version # timeout=10
  > git --version # 'git version 2.39.2'
- > git fetch --tags --force --progress -- https://github.com/andreeavescan/2023_Lecture02_BBT.git +refs/heads/*:refs/remotes/origin/* # timeout=10
- > git config remote.origin.url https://github.com/andreeavescan/2023_Lecture02_BBT.git # timeout=10
- > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
-Avoid second fetch
+ > git fetch --tags --force --progress -- https://github.com/fragN7/ssvvv.git +refs/heads/*:refs/remotes/origin/* # timeout=10
  > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
-Checking out Revision 0482d4afc105637baa3d573aa7f2f6c5b7cf8c56 (refs/remotes/origin/main)
+Checking out Revision ddb383db4436b68d1ed4b79dc1f01665f5382aea (refs/remotes/origin/main)
  > git config core.sparsecheckout # timeout=10
- > git checkout -f 0482d4afc105637baa3d573aa7f2f6c5b7cf8c56 # timeout=10
-Commit message: "Fixes for the build"
+ > git checkout -f ddb383db4436b68d1ed4b79dc1f01665f5382aea # timeout=10
+Commit message: "Yaaa"
 First time build. Skipping changelog.
 [933_IagutaIon_Job] $ mvn compile
 [[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for ssvs.example:ThemeProject:jar:1.0-SNAPSHOT
+[[1;33mWARNING[m] 'dependencies.dependency.version' for org.junit.jupiter:junit-jupiter:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 27, column 20
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 33, column 15
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
 [[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--< [0;36mLecture02MaxPointsParticipantsMV:Lecture02MaxPointsParticipants[0;1m >---[m
-[[1;34mINFO[m] [1mBuilding Lecture02MaxPointsParticipants 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m---------------------< [0;36mssvs.example:ThemeProject[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding ThemeProject 1.0-SNAPSHOT[m
 [[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
 [[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.0.2:resources[m [1m(default-resources)[m @ [36mLecture02MaxPointsParticipants[0;1m ---[m
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mThemeProject[0;1m ---[m
 [[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
 [[1;34mINFO[m] skip non existing resourceDirectory /var/jenkins_home/workspace/933_IagutaIon_Job/src/main/resources
 [[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mLecture02MaxPointsParticipants[0;1m ---[m
-[[1;34mINFO[m] Changes detected - recompiling the module!
-[[1;34mINFO[m] Compiling 5 source files to /var/jenkins_home/workspace/933_IagutaIon_Job/target/classes
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mThemeProject[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 [[1;34mINFO[m] [1;32mBUILD SUCCESS[m
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
-[[1;34mINFO[m] Total time:  25.898 s
-[[1;34mINFO[m] Finished at: 2024-03-11T16:24:10Z
+[[1;34mINFO[m] Total time:  5.123 s
+[[1;34mINFO[m] Finished at: 2024-03-25T15:25:28Z
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 Preparing TestLink client API.
 Using TestLink URL: http://host.docker.internal:8090/lib/api/xmlrpc/v1/xmlrpc.php
 
-Found 1 automated test cases in TestLink.
+Found 14 automated test cases in TestLink.
 
 Sorting automated test cases by TestLink test plan execution order.
 
@@ -52,58 +57,71 @@ Merging build environment variables with data retrieved from TestLink.
 
 [933_IagutaIon_Job] $ mvn verify
 [[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for ssvs.example:ThemeProject:jar:1.0-SNAPSHOT
+[[1;33mWARNING[m] 'dependencies.dependency.version' for org.junit.jupiter:junit-jupiter:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 27, column 20
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 33, column 15
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
 [[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--< [0;36mLecture02MaxPointsParticipantsMV:Lecture02MaxPointsParticipants[0;1m >---[m
-[[1;34mINFO[m] [1mBuilding Lecture02MaxPointsParticipants 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m---------------------< [0;36mssvs.example:ThemeProject[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding ThemeProject 1.0-SNAPSHOT[m
 [[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
 [[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.0.2:resources[m [1m(default-resources)[m @ [36mLecture02MaxPointsParticipants[0;1m ---[m
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mThemeProject[0;1m ---[m
 [[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
 [[1;34mINFO[m] skip non existing resourceDirectory /var/jenkins_home/workspace/933_IagutaIon_Job/src/main/resources
 [[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mLecture02MaxPointsParticipants[0;1m ---[m
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mThemeProject[0;1m ---[m
 [[1;34mINFO[m] Nothing to compile - all classes are up to date
 [[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.0.2:testResources[m [1m(default-testResources)[m @ [36mLecture02MaxPointsParticipants[0;1m ---[m
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mThemeProject[0;1m ---[m
 [[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
 [[1;34mINFO[m] skip non existing resourceDirectory /var/jenkins_home/workspace/933_IagutaIon_Job/src/test/resources
 [[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mLecture02MaxPointsParticipants[0;1m ---[m
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mThemeProject[0;1m ---[m
 [[1;34mINFO[m] Changes detected - recompiling the module!
-[[1;34mINFO[m] Compiling 1 source file to /var/jenkins_home/workspace/933_IagutaIon_Job/target/test-classes
+[[1;34mINFO[m] Compiling 3 source files to /var/jenkins_home/workspace/933_IagutaIon_Job/target/test-classes
 [[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.1:test[m [1m(default-test)[m @ [36mLecture02MaxPointsParticipants[0;1m ---[m
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mThemeProject[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /var/jenkins_home/workspace/933_IagutaIon_Job/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running ssvs.example.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 sec
+Running ssvs.example.TestAddStudent
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.643 sec
+Running ssvv.example.TestAddTema
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+
+Results :
+
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0
+
 [[1;34mINFO[m] 
-[[1;34mINFO[m] -------------------------------------------------------
-[[1;34mINFO[m]  T E S T S
-[[1;34mINFO[m] -------------------------------------------------------
-[[1;34mINFO[m] Running Lecture02MaxPointsParticipantsMV.[1mAppTest[m
-[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.528 s - in Lecture02MaxPointsParticipantsMV.[1mAppTest[m
-[[1;34mINFO[m] 
-[[1;34mINFO[m] Results:
-[[1;34mINFO[m] 
-[[1;34mINFO[m] [1;32mTests run: 4, Failures: 0, Errors: 0, Skipped: 0[m
-[[1;34mINFO[m] 
-[[1;34mINFO[m] 
-[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:3.0.2:jar[m [1m(default-jar)[m @ [36mLecture02MaxPointsParticipants[0;1m ---[m
-[[1;34mINFO[m] Building jar: /var/jenkins_home/workspace/933_IagutaIon_Job/target/Lecture02MaxPointsParticipants-1.0-SNAPSHOT.jar
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mThemeProject[0;1m ---[m
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 [[1;34mINFO[m] [1;32mBUILD SUCCESS[m
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
-[[1;34mINFO[m] Total time:  32.691 s
-[[1;34mINFO[m] Finished at: 2024-03-11T16:24:48Z
+[[1;34mINFO[m] Total time:  11.228 s
+[[1;34mINFO[m] Finished at: 2024-03-25T15:25:41Z
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 Merging build environment variables with data retrieved from TestLink.
 
-[933_IagutaIon_Job] $ /bin/bash /tmp/jenkins9057068712378727192.sh
+[933_IagutaIon_Job] $ /bin/bash /tmp/jenkins6745222802195317634.sh
 RUN_TESTS_DISPLAY_URL=http://localhost:8080/job/933_IagutaIon_Job/1/display/redirect?page=tests
-HOSTNAME=bd92ce40c013
+HOSTNAME=593c8c4dad62
 JENKINS_UC_EXPERIMENTAL=https://updates.jenkins.io/experimental
 JENKINS_SERVER_COOKIE=27b70941f96f3dd0
 JAVA_HOME=/opt/java/openjdk
 JENKINS_INCREMENTALS_REPO_MIRROR=https://repo.jenkins-ci.org/incrementals
 RUN_CHANGES_DISPLAY_URL=http://localhost:8080/job/933_IagutaIon_Job/1/display/redirect?page=changes
-TESTLINK_TESTCASE_TOTAL=1
+TESTLINK_TESTCASE_TOTAL=14
 COPY_REFERENCE_FILE_LOG=/var/jenkins_home/copy_reference_file.log
 PWD=/var/jenkins_home/workspace/933_IagutaIon_Job
 HUDSON_HOME=/var/jenkins_home
@@ -125,16 +143,16 @@ JENKINS_UC=https://updates.jenkins.io
 HUDSON_URL=http://localhost:8080/
 NODE_NAME=built-in
 HUDSON_SERVER_COOKIE=27b70941f96f3dd0
-TESTLINK_TESTPROJECT_NAME=Lecture01_Demo_BBT
-GIT_URL=https://github.com/andreeavescan/2023_Lecture02_BBT.git
+TESTLINK_TESTPROJECT_NAME=Project_IagutaIon
+GIT_URL=https://github.com/fragN7/ssvvv.git
 SHLVL=1
 BUILD_TAG=jenkins-933_IagutaIon_Job-1
 EXECUTOR_NUMBER=1
-HUDSON_COOKIE=31ae8c50-47c5-4d28-bf34-5b45dd13f37a
+HUDSON_COOKIE=bc53d486-d291-4b9d-aade-8231e32b1c13
 JENKINS_HOME=/var/jenkins_home
-TESTLINK_TESTPLAN_NAME=Lecture02_TestPlan_BBT
+TESTLINK_TESTPLAN_NAME=933_IagutaIon_TestPlan
 REF=/usr/share/jenkins/ref
-GIT_COMMIT=0482d4afc105637baa3d573aa7f2f6c5b7cf8c56
+GIT_COMMIT=ddb383db4436b68d1ed4b79dc1f01665f5382aea
 NODE_LABELS=built-in
 WORKSPACE_TMP=/var/jenkins_home/workspace/933_IagutaIon_Job@tmp
 PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
@@ -151,28 +169,7 @@ Looking for the test results of TestLink test cases.
 
 Looking for test results in JUnit methods by its name.
 
-Updating TestLink test cases.
+Found 14 test result(s).
 
-br.eti.kinoshita.testlinkjavaapi.util.TestLinkAPIException: (uploadExecutionAttachment) - Error inserting attachment on DB
-	at br.eti.kinoshita.testlinkjavaapi.BaseService.checkResponseError(BaseService.java:105)
-	at br.eti.kinoshita.testlinkjavaapi.BaseService.executeXmlRpcCall(BaseService.java:84)
-	at br.eti.kinoshita.testlinkjavaapi.TestCaseService.uploadExecutionAttachment(TestCaseService.java:537)
-	at br.eti.kinoshita.testlinkjavaapi.TestLinkAPI.uploadExecutionAttachment(TestLinkAPI.java:968)
-	at hudson.plugins.testlink.TestLinkSite.uploadAttachment(TestLinkSite.java:246)
-	at hudson.plugins.testlink.result.AbstractJUnitResultSeeker.handleResult(AbstractJUnitResultSeeker.java:106)
-	at hudson.plugins.testlink.result.JUnitMethodNameResultSeeker.seek(JUnitMethodNameResultSeeker.java:105)
-	at hudson.plugins.testlink.TestLinkBuilder.perform(TestLinkBuilder.java:260)
-	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
-	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:818)
-	at hudson.model.Build$BuildExecution.build(Build.java:199)
-	at hudson.model.Build$BuildExecution.doRun(Build.java:164)
-	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:526)
-	at hudson.model.Run.execute(Run.java:1895)
-	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:44)
-	at hudson.model.ResourceController.execute(ResourceController.java:101)
-	at hudson.model.Executor.run(Executor.java:442)
-Found 1 test result(s).
-
-Build step 'Invoke TestLink' changed build result to UNSTABLE
 Archiving artifacts
-Finished: UNSTABLE
+Finished: SUCCESS
