@@ -34,3 +34,15 @@ Nota: 7.5
 Predata in saptamana: 6
 Deadline: 5
 Feedback: COYG
+
+Tema: 10
+Nota: 7.5
+Predata in saptamana: 6
+Deadline: 5
+Feedback: COYG
+
+Tema: 14
+Nota: 7.5
+Predata in saptamana: 6
+Deadline: 5
+Feedback: COYG
