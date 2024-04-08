@@ -4,13 +4,13 @@ Build-Jdk-Spec: 11
 Specification-Title: Pipeline: Model API
 Specification-Version: 0.0
 Implementation-Title: Pipeline: Model API
-Implementation-Version: 2.2175.v76a_fff0a_2618
+Implementation-Version: 2.2184.v0b_358b_953e69
 Group-Id: org.jenkinsci.plugins
 Artifact-Id: pipeline-model-api
 Short-Name: pipeline-model-api
 Long-Name: Pipeline: Model API
 Url: https://github.com/jenkinsci/pipeline-model-definition-plugin
-Plugin-Version: 2.2175.v76a_fff0a_2618
+Plugin-Version: 2.2184.v0b_358b_953e69
 Hudson-Version: 2.426.1
 Jenkins-Version: 2.426.1
 Plugin-Dependencies: joda-time-api:2.12.5-5.v5495a_235fedf,workflow-step
@@ -21,9 +21,9 @@ Plugin-License-Name: MIT
 Plugin-License-Url: https://opensource.org/licenses/MIT
 Plugin-ScmConnection: scm:git:https://github.com/jenkinsci/pipeline-mode
  l-definition-plugin.git
-Plugin-ScmTag: 76afff0a26188ad6ced215e4663cd2115c003a74
+Plugin-ScmTag: 0b358b953e697fc1589bc7fc2f962bb8b812c7c0
 Plugin-ScmUrl: https://github.com/jenkinsci/pipeline-model-definition-pl
  ugin
-Plugin-GitHash: 76afff0a26188ad6ced215e4663cd2115c003a74
-Implementation-Build: 76afff0a26188ad6ced215e4663cd2115c003a74
+Plugin-GitHash: 0b358b953e697fc1589bc7fc2f962bb8b812c7c0
+Implementation-Build: 0b358b953e697fc1589bc7fc2f962bb8b812c7c0
 

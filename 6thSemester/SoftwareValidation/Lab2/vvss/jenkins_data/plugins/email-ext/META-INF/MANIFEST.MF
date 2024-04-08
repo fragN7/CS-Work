@@ -2,9 +2,9 @@ Manifest-Version: 1.0
 Created-By: Maven Archiver 3.6.0
 Build-Jdk-Spec: 11
 Specification-Title: Email Extension Plugin
-Specification-Version: 2.104
+Specification-Version: 2.105
 Implementation-Title: Email Extension Plugin
-Implementation-Version: 2.104
+Implementation-Version: 2.105
 Plugin-Class: hudson.plugins.emailext.EmailExtensionPlugin
 Group-Id: org.jenkins-ci.plugins
 Artifact-Id: email-ext
@@ -12,10 +12,10 @@ Short-Name: email-ext
 Long-Name: Email Extension Plugin
 Url: https://github.com/jenkinsci/email-ext-plugin
 Compatible-Since-Version: 2.57.2
-Plugin-Version: 2.104
+Plugin-Version: 2.105
 Hudson-Version: 2.387.3
 Jenkins-Version: 2.387.3
-Plugin-Dependencies: jakarta-mail-api:2.0.1-3,workflow-job:1326.ve643e00
+Plugin-Dependencies: jakarta-mail-api:2.1.3-1,workflow-job:1326.ve643e00
  e9220;resolution:=optional,workflow-step-api:639.v6eca_cd8c04a_a_;resol
  ution:=optional,config-file-provider:959.vcff671a_4518b_;resolution:=op
  tional,credentials:1307.v3757c78f17c3,jackson2-api:2.15.2-350.v0c2f3f8f
@@ -28,8 +28,8 @@ Plugin-License-Name: The MIT License (MIT)
 Plugin-License-Url: https://opensource.org/licenses/MIT
 Plugin-ScmConnection: scm:git:https://github.com/jenkinsci/email-ext-plu
  gin.git
-Plugin-ScmTag: email-ext-2.104
+Plugin-ScmTag: email-ext-2.105
 Plugin-ScmUrl: https://github.com/jenkinsci/email-ext-plugin
-Plugin-GitHash: 8957f9f21af44abf97521418c1db645cb2b69294
-Implementation-Build: 8957f9f21af44abf97521418c1db645cb2b69294
+Plugin-GitHash: 8186bcff2876b04a9458a8940e77b74bf9e317c4
+Implementation-Build: 8186bcff2876b04a9458a8940e77b74bf9e317c4
 

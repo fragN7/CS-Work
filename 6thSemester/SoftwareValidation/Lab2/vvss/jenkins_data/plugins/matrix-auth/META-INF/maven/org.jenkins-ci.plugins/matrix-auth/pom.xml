@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>matrix-auth</artifactId>
-  <version>3.2.1</version>
+  <version>3.2.2</version>
   <packaging>hpi</packaging>
   <name>Matrix Authorization Strategy Plugin</name>
   <description>The Jenkins Plugins Parent POM Project</description>
@@ -19,7 +19,7 @@
   <scm>
     <connection>scm:git:https://github.com/jenkinsci/matrix-auth-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/matrix-auth-plugin.git</developerConnection>
-    <tag>matrix-auth-3.2.1</tag>
+    <tag>matrix-auth-3.2.2</tag>
     <url>https://github.com/jenkinsci/matrix-auth-plugin</url>
   </scm>
   <distributionManagement>

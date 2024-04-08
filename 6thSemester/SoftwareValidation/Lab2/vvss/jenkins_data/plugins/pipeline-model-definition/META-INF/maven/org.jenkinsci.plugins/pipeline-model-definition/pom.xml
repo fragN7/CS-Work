@@ -27,7 +27,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jenkinsci.plugins</groupId>
   <artifactId>pipeline-model-definition</artifactId>
-  <version>2.2175.v76a_fff0a_2618</version>
+  <version>2.2184.v0b_358b_953e69</version>
   <packaging>hpi</packaging>
   <name>Pipeline: Declarative</name>
   <description>An opinionated, declarative Pipeline</description>
@@ -49,7 +49,7 @@
   <scm child.scm.connection.inherit.append.path="false" child.scm.developerConnection.inherit.append.path="false" child.scm.url.inherit.append.path="false">
     <connection>scm:git:https://github.com/jenkinsci/pipeline-model-definition-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/pipeline-model-definition-plugin.git</developerConnection>
-    <tag>76afff0a26188ad6ced215e4663cd2115c003a74</tag>
+    <tag>0b358b953e697fc1589bc7fc2f962bb8b812c7c0</tag>
     <url>https://github.com/jenkinsci/pipeline-model-definition-plugin</url>
   </scm>
   <distributionManagement>
@@ -66,19 +66,19 @@
     <dependency>
       <groupId>org.jenkinsci.plugins</groupId>
       <artifactId>pipeline-model-api</artifactId>
-      <version>2.2175.v76a_fff0a_2618</version>
+      <version>2.2184.v0b_358b_953e69</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkinsci.plugins</groupId>
       <artifactId>pipeline-model-extensions</artifactId>
-      <version>2.2175.v76a_fff0a_2618</version>
+      <version>2.2184.v0b_358b_953e69</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jenkinsci.plugins</groupId>
       <artifactId>pipeline-stage-tags-metadata</artifactId>
-      <version>2.2175.v76a_fff0a_2618</version>
+      <version>2.2184.v0b_358b_953e69</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

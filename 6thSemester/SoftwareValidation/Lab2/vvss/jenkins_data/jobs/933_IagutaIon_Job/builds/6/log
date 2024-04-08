@@ -1,0 +1,23 @@
+Started by user [8mha:////4Jikxv8wZWqGtCE/EHBJViYz1/q5Tns5Q8J+RCYjVWayAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL94pLSlNS8EgDnZMOBwgAAAA==[0mStudent
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/933_IagutaIon_Job
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/933_IagutaIon_Job/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/fragN7/ssvvv.git # timeout=10
+Fetching upstream changes from https://github.com/fragN7/ssvvv.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git fetch --tags --force --progress -- https://github.com/fragN7/ssvvv.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 91edb6f96a2830d903104399791f9136e335310d (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 91edb6f96a2830d903104399791f9136e335310d # timeout=10
+Commit message: "again"
+ > git rev-list --no-walk 91edb6f96a2830d903104399791f9136e335310d # timeout=10
+[933_IagutaIon_Job] $ mvn compile
+Build was aborted
+Aborted by [8mha:////4Jikxv8wZWqGtCE/EHBJViYz1/q5Tns5Q8J+RCYjVWayAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/dLi1CL94pLSlNS8EgDnZMOBwgAAAA==[0mStudent
+Archiving artifacts
+Finished: ABORTED
