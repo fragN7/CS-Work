@@ -1,0 +1,19 @@
+so the idea is that someone inserts an edi message, a format description is created based on that message,  then an output message is inserted, a format description is created, and togheter there is a cde file type is created, which the user can edit and after use in later projects
+
+why i do this, because it is old software and we need an upgrade to this old school type thinking, because it is niched there are not so many tools on the market that make this easier, a lot of easy work but very hard to understand and to follow a rythm
+
+Abstract:
+Summary form only given. EDI is characterized by the possibility of sending/treating messages between information systems without any human intervention. A large number of translations are needed in order to enable the communication between an enterprise and its suppliers and clients. Therefore, translators and wrappers are needed to enable this task. We define a representative framework to map between different representations. We apply this framework for translating EDI messages. We examine the message translation process and show the problems and lack of existing solutions. We also identify the mapping between different messages. Finally, we suggest the use of semiautomatic transformation tool. This translator differs by being easy to use for managers and people with limited technical skills. It facilitates the task of definition of a large number of translations by using matching techniques between source and target message.
+
+@article{kim2012xml,
+  title={XML-based EDI document processing system with binary format mapping rules},
+  author={Kim, Chang-Su and Jung, Hoe-Kyung},
+  journal={Journal of information and communication convergence engineering},
+  volume={10},
+  number={3},
+  pages={258--263},
+  year={2012},
+  publisher={The Korea Institute of Information and Commucation Engineering}
+}
+
+

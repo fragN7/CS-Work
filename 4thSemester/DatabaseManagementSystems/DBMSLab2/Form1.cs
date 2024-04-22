@@ -146,7 +146,6 @@ namespace DBMSLab2
         private void childTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            // We take the index of the first selected row form the child table
             int index = this.childTable.SelectedRows[0].Index;
 
             string childTableName = ConfigurationSettings.AppSettings["ChildTableName"];
@@ -159,7 +158,6 @@ namespace DBMSLab2
 
         public void clearTextBoxes()
         {
-            // Like that we clear the contend form the textBoxes
             foreach (TextBox tb in textBoxes)
             {
                 tb.Clear();
@@ -170,28 +168,17 @@ namespace DBMSLab2
         {
             try
             {
-                // We take the insert command
                 string insertCommand = ConfigurationSettings.AppSettings["InsertQuery"];
-
-                // We create the insert command
                 this.daChild.InsertCommand = new SqlCommand(insertCommand, this.conn);
-
-                // We take the childTable's name
                 string childTableName = ConfigurationManager.AppSettings["ChildTableName"];
-
-                // We create a list with the column names of the child table which are splited by ','
-
                 List<string> columnNamesList = new List<string>(ConfigurationManager.AppSettings["ColumnNames"].Split(','));
 
-                // We go throguh all these columnNames
-                // And then we parse the list of textBoxes in order to find the one whose name is the same as the columnName 
-                foreach (string columnName in columnNamesList)
+               foreach (string columnName in columnNamesList)
                 {
                     foreach (TextBox tb in this.textBoxes)
                     {
                         if (tb.Name == columnName)
                         {
-                            // After we find it, we insert to the coresponding parameter, the text from the textBox 
                             this.daChild.InsertCommand.Parameters.AddWithValue("@" + columnName, tb.Text);
                         }
                     }
@@ -239,10 +226,6 @@ namespace DBMSLab2
 
                     // We create a list with the column names of the child table which are splited by ','
                     List<string> columnNamesList = new List<string>(ConfigurationManager.AppSettings["ColumnNames"].Split(','));
-
-                    // We go throguh all these columnNames
-                    // And then we parse the list of textBoxes in order to find the one whose name is the same as the columnName 
-
                     foreach (TextBox tb in this.textBoxes)
                     {
                         if (tb.Name == id)
@@ -287,22 +270,14 @@ namespace DBMSLab2
                 string updateCommand = ConfigurationManager.AppSettings["UpdateQuery"];
 
                 this.daChild.UpdateCommand = new SqlCommand(updateCommand, this.conn);
-
-                // We take the childTable's name
                 string childTableName = ConfigurationManager.AppSettings["ChildTableName"];
-
-                // We create a list with the column names of the child table which are splited by ','
                 List<string> columnNamesList = new List<string>(ConfigurationManager.AppSettings["ColumnNames"].Split(','));
-
-                // We go throguh all these columnNames
-                // And then we parse the list of textBoxes in order to find the one whose name is the same as the columnName 
                 foreach (string columnName in columnNamesList)
                 {
                     foreach (TextBox tb in this.textBoxes)
                     {
                         if (tb.Name == columnName)
                         {
-                            // After we find it, we insert to the coresponding parameter, the text from the textBox 
                             this.daChild.UpdateCommand.Parameters.AddWithValue("@" + columnName, tb.Text);
                         }
                     }
