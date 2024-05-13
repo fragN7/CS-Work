@@ -1,0 +1,2 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Login with invalid credentials story","Log in with invalid credentials should prompt with error","ERROR","2024-05-13T16:23:52.4501832+03:00[Europe/Athens]","0.0","29.96"

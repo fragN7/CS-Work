@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Login with invalid credentials story","Log in with invalid credentials should prompt with error","ERROR","2024-05-13T16:23:52.4501832+03:00[Europe/Athens]","0.0","29.96"
+"Login with good credentials story","Log in with valid credentials should prompt with user","ERROR","2024-05-13T16:26:17.1340783+03:00[Europe/Athens]","0.0","28.62"
+"Search by keyword story DDT","Search wiki by keyword test DDT","FAILURE","2024-04-22T18:43:59.6308984+03:00[Europe/Athens]","0.0","37.34"
+"Search by keyword story","Searching by keyword banana should display the corresponding article","FAILURE","2024-05-13T18:32:45.5877747+03:00[Europe/Athens]","0.0","16.14"
+"Search by keyword story","Searching by keyword apple should display the corresponding article","FAILURE","2024-05-13T18:33:02.1345619+03:00[Europe/Athens]","0.0","10.16"
