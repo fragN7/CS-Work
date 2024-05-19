@@ -6,4 +6,4 @@ COMMIT TRAN
 GO
 
 select * from ChessTitle;
-DELETE FROM ChessTitle WHERE tid=9
+DELETE FROM ChessTitle WHERE tid=15

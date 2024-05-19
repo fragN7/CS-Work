@@ -86,22 +86,28 @@ select * from Tactic
 --each of the three transactions are independent of the others
 GO
 
-CREATE OR ALTER PROCEDURE uspPerformAddsBadScenario
-AS 
-	EXEC uspAddPlayerTransactional 'Alen Iaguta', 5000, 3,2 -- enter the rating error branch so this will fail
-	EXEC uspAddTacticTransactional 'Berlin Defense' -- this will not 
-	EXEC uspAddTacticsHistoryTransactional 20, 2 -- this will fail because of the first fail i.e. there is no id 11
-GO
-
 CREATE OR ALTER PROCEDURE uspPerformAddsGoodScenario
 AS 
-	EXEC uspAddPlayerTransactional 'L.Ming', 1200, 1,2  -- these 3 will all succeed
-	EXEC uspAddTacticTransactional 'Spanish Opening'
-	EXEC uspAddTacticsHistoryTransactional 4,2
+	EXEC uspAddPlayerTransactional 'Mario Iaguta', 1200, 2,2 -- all 3 will succeed
+	EXEC uspAddTacticTransactional 'English Game' 
+	EXEC uspAddTacticsHistoryTransactional 2, 1 
 GO
+
+CREATE OR ALTER PROCEDURE uspPerformAddsBadScenario
+AS 
+	EXEC uspAddPlayerTransactional 'Alen Iaguta', 4500, 3, 2 -- enter the rating validation branch so this will fail
+	EXEC uspAddTacticTransactional 'Berlin Defense' 
+	EXEC uspAddTacticsHistoryTransactional 2, 2 
+GO
+
+SELECT * FROM ChessPlayer
+SELECT * FROM Tactic
+SELECT * FROM TacticsHistory
 
 EXEC uspPerformAddsGoodScenario
 EXEC uspPerformAddsBadScenario
 
-select * from LogTable
+delete from LogTable;
+
+SELECT * FROM LogTable
 -- 4 entries were added to the log table, showing the 4 transactions which succeeded
