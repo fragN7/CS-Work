@@ -13,10 +13,10 @@ class Segment {
 
 private:
     std::string segment;
-    char terminator;
+    std::string terminator;
 
 public:
-    Segment(std::string segment, char terminator) : segment(std::move(segment)), terminator(terminator) {}
+    explicit Segment(std::string segment, std::string terminator) : segment(std::move(segment)), terminator(std::move(terminator)) {}
     ~Segment() = default;
 
     std::vector<std::string> parseSegment();

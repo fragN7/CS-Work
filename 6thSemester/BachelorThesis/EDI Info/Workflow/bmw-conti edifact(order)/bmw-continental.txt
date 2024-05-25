@@ -1,0 +1,79 @@
+UNB+UNOA:1+BMW:1+CONTINENTAL:1+240521:1600+000000005'
+UNH+0005+ORDERS:D:96A:UN'
+BGM+220+PO87654321+9'
+DTM+137:20240521:102'
+NAD+BY+CONTINENTAL++123 Tyre Street+Hannover++30165+DE'
+NAD+SU+BMW++100 Car Avenue+Munich++80331+DE'
+LIN+1++ABC123:IN'
+QTY+21:100:PCE'
+UNS+S'
+CNT+2:1'
+UNT+10+0005'
+UNZ+1+000000005'
+
+UNB Segment: Interchange Header
+
+UNB+UNOA:1+BMW:1+CONTINENTAL:1+240521:1600+000000005'
+Element 1: Syntax Identifier. Specifies the syntax level and version of the EDIFACT standard (e.g., "UNOA:1" for UN/EDIFACT version 1).
+Element 2: Sender ID. Identifies the sender of the interchange (e.g., "BMW:1").
+Element 3: Receiver ID. Identifies the receiver of the interchange (e.g., "CONTINENTAL:1").
+Element 4: Date. Indicates the date when the interchange was created (YYMMDD format).
+Element 5: Time. Indicates the time when the interchange was created (HHMM format).
+Element 6: Interchange Control Reference. A unique reference number assigned to the interchange.
+UNH Segment: Message Header
+
+UNH+0005+ORDERS:D:96A:UN'
+Element 1: Message Reference Number. A unique reference number assigned to the message.
+Element 2: Message Type. Specifies the type of message (e.g., "ORDERS" for Purchase Order).
+Element 3: Message Version Number. Specifies the version of the message type (e.g., "D:96A" for version D of the message type 96A).
+Element 4: Message Release Number. Specifies the release number of the message type (e.g., "UN" for UN/EDIFACT).
+BGM Segment: Beginning of Message
+
+BGM+220+PO87654321+9'
+Element 1: Document Name Code. Specifies the type of document being transmitted (e.g., "220" for Purchase Order).
+Element 2: Document Number. A unique number assigned to the document (e.g., "PO87654321").
+Element 3: Message Function Code. Specifies the function of the message (e.g., "9" for Original).
+DTM Segment: Date/Time/Period
+
+DTM+137:20240521:102'
+Element 1: Date/Time Qualifier. Specifies the type of date/time (e.g., "137" for Delivery Requested).
+Element 2: Date. Indicates the date associated with the qualifier (YYMMDD format).
+Element 3: Time. Indicates the time associated with the qualifier (HHMM format).
+NAD Segment: Name and Address
+
+NAD+BY+CONTINENTAL++123 Tyre Street+Hannover++30165+DE'
+Element 1: Party Function Code. Specifies the function of the party (e.g., "BY" for Buyer).
+Element 2: Name. The name of the party (e.g., "CONTINENTAL").
+Element 3-9: Address Details.
+LIN Segment: Line Item
+
+LIN+1++ABC123:IN'
+Element 1: Line Item Identifier. A unique identifier for the line item (e.g., "1").
+Element 2: Action Code.
+Element 3: Item Number.
+Element 4: Item Number Type.
+QTY Segment: Quantity
+
+QTY+21:100:PCE'
+Element 1: Quantity Qualifier. Specifies the type of quantity (e.g., "21" for Ordered Quantity).
+Element 2: Quantity. The quantity of the item ordered (e.g., "100").
+Element 3: Unit of Measurement Code.
+UNS Segment: Section Control
+
+UNS+S'
+Element 1: Section Control Identifier. Specifies the type of section control (e.g., "S" for Section Control).
+CNT Segment: Control Total
+
+CNT+2:1'
+Element 1: Control Qualifier. Specifies the type of control (e.g., "2" for Total Line Items).
+Element 2: Control Total. The total number of line items (e.g., "1").
+UNT Segment: Message Trailer
+
+UNT+10+0005'
+Element 1: Number of Segments. Indicates the total number of segments included in the message.
+Element 2: Message Reference Number. Matches the reference number in the UNH segment.
+UNZ Segment: Interchange Trailer
+
+UNZ+1+000000005'
+Element 1: Number of Messages. Indicates the total number of messages included in the interchange.
+Element 2: Interchange Control Reference. Matches the reference number in the UNB segment.

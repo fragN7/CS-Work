@@ -13,7 +13,7 @@ std::vector<std::string> Segment::parseSegment() {
     while(end != std::string::npos){
         fields.push_back(segment.substr(start, end - start));
         start = end + 1;
-        end = segment.find(segment, terminator);
+        end = segment.find(segment, terminator[0]);
     }
 
     return fields;

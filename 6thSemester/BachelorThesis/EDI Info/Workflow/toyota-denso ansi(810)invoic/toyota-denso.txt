@@ -1,0 +1,110 @@
+ISA*00*          *00*          *01*FORD          *01*AUTOZONE      *240521*1500*U*00401*000000004*0*T*:
+GS*IN*FORD*DENSO*20240521*1500*4*X*004010
+ST*810*0004
+BIG*20240521*INV00098765
+REF*PO*PO567891234
+N1*BY*DENSO
+N3*123 Car Parts Road
+N4*Memphis*TN*38103
+ITD*01*3*2**30**45
+IT1*001*20*EA*15.50**VN*445566*A1*ZXCVB123
+TDS*31000
+SE*11*0004
+GE*1*4
+IEA*1*000000004
+
+ISA Segment: Interchange Control Header
+
+ISA*00* *00* *01*FORD *01*AUTOZONE *240521*1500*U*00401*000000004*0*T*:
+Element 01-03: ISA01 - ISA03: ISA header. Identifies the start of an interchange of one or more functional groups and assigns a control number.
+Element 04-05: ISA04 - ISA05: Sender ID. Identifies the sender of the transmission.
+Element 06-07: ISA06 - ISA07: Receiver ID. Identifies the receiver of the transmission.
+Element 08: ISA08: Date. Indicates the date when the transmission was generated (YYMMDD format).
+Element 09: ISA09: Time. Indicates the time when the transmission was generated (HHMM format).
+Element 10: ISA10: Interchange Control Standards Identifier. Specifies the EDI standard being used (e.g., "U" for UN/EDIFACT, "I" for ASC X12).
+Element 11: ISA11: Interchange Control Version Number. Specifies the version of the EDI standard being used (e.g., "00401" for X12 version 4010).
+Element 12: ISA12: Interchange Control Number. A unique number assigned to the interchange by the sender.
+Element 13: ISA13: Acknowledgment Requested. Indicates whether acknowledgment is requested ("1" for Yes, "0" for No).
+Element 14: ISA14: Usage Indicator. Indicates the usage of the data enclosed in the interchange ("T" for Test, "P" for Production).
+Element 15: ISA15: Component Element Separator. Specifies the character used to separate component elements (default is "*").
+Element 16: ISA16: Reserved. Usually set to " ": Space.
+GS Segment: Functional Group Header
+
+GS*IN*FORD*AUTOZONE*20240521*1500*4*X*004010
+Element 01: GS01: Functional Identifier Code. Indicates the type of transaction being sent (e.g., "IN" for Invoice).
+Element 02-03: GS02 - GS03: Sender ID. Identifies the sender of the functional group.
+Element 04-05: GS04 - GS05: Receiver ID. Identifies the receiver of the functional group.
+Element 06: GS06: Date. Indicates the date when the transaction was created (YYMMDD format).
+Element 07: GS07: Time. Indicates the time when the transaction was created (HHMM format).
+Element 08: GS08: Group Control Number. A unique number assigned to the functional group by the sender.
+Element 09: GS09: Responsible Agency Code. Specifies the agency responsible for the code list used in GS01 (default is "X").
+Element 10: GS10: Version/Release/Industry Identifier Code. Specifies the version of the EDI standard being used (e.g., "004010" for X12 version 4010).
+ST Segment: Transaction Set Header
+
+ST*810*0004
+Element 01: ST01: Transaction Set Identifier Code. Identifies the type of transaction set being sent (e.g., "810" for Invoice).
+Element 02: ST02: Transaction Set Control Number. A unique number assigned to the transaction set by the sender.
+BIG Segment: Beginning Segment for Invoice
+
+BIG*20240521*INV00098765
+Element 01: BIG01: Invoice Date. Indicates the date of the invoice (YYMMDD format).
+Element 02: BIG02: Invoice Number. A unique number assigned to the invoice.
+REF Segment: Reference Identification
+
+REF*PO*PO567891234
+Element 01: REF01: Reference Identification Qualifier. Specifies the type of reference being used (e.g., "PO" for Purchase Order).
+Element 02: REF02: Reference Identification. The actual reference number or code.
+N1 Segment: Name
+
+N1*BY*AutoZone Inc.
+Element 01: N101: Entity Identifier Code. Specifies the type of entity (e.g., "BY" for Buying Party).
+Element 02: N102: Name. The name of the entity.
+N3 Segment: Address Information
+
+N3*123 Car Parts Road
+Element 01: N301: Address Information. The address of the entity.
+N4 Segment: Geographic Location
+
+N4*Memphis*TN*38103
+Element 01: N401: City Name. The city where the entity is located.
+Element 02: N402: State or Province Code. The state or province where the entity is located.
+Element 03: N403: Postal Code. The postal code of the entity's location.
+ITD Segment: Terms of Sale/Deferred Terms of Sale
+
+ITD*01*3*2**30**45
+Element 01: ITD01: Terms Type Code. Specifies the type of terms being offered (e.g., "01" for Discount Percent).
+Element 02: ITD02: Terms Basis Date Code. Specifies the basis for the terms (e.g., "3" for Invoice Date).
+Element 03: ITD03: Terms Discount Percent. The percentage of discount offered.
+Element 04: ITD04: Terms Discount Due Date. The due date for the discount.
+Element 05: ITD05: Terms Discount Period. The period during which the discount is valid.
+IT1 Segment: Baseline Item Data
+
+IT1*001*20*EA*15.50**VN*445566*A1*ZXCVB123
+Element 01: IT101: Assigned Identification. A unique number assigned to the item.
+Element 02: IT102: Quantity Ordered. The quantity of the item ordered.
+Element 03: IT103: Unit of Measurement. The unit of measurement for the item (e.g., "EA" for Each).
+Element 04: IT104: Unit Price. The price per unit of the item.
+Element 05: IT105: Basis of Unit Price Code. Specifies the basis for the unit price (e.g., "VN" for Vendor's Net Price).
+Element 06: IT106: Product/Service ID Qualifier. Specifies the type of product or service (e.g., "A1" for Buyer's Part Number).
+Element 07: IT107: Product/Service ID. The identifier for the product or service.
+
+TDS Segment: Total Monetary Value Summary
+
+TDS*31000
+Element 01: TDS01: Amount Qualifier Code. Specifies the type of monetary amount (e.g., "3" for Total Invoice Amount).
+Element 02: TDS02: Monetary Amount. The total monetary amount.
+SE Segment: Transaction Set Trailer
+
+SE*11*0004
+Element 01: SE01: Number of Included Segments. Indicates the total number of segments included in the transaction set.
+Element 02: SE02: Transaction Set Control Number. Matches the control number in the ST segment.
+GE Segment: Functional Group Trailer
+
+GE*1*4
+Element 01: GE01: Number of Transaction Sets Included. Indicates the total number of transaction sets included in the functional group.
+Element 02: GE02: Group Control Number. Matches the control number in the GS segment.
+IEA Segment: Interchange Control Trailer
+
+IEA*1*000000004
+Element 01: IEA01: Number of Included Functional Groups. Indicates the total number of functional groups included in the interchange.
+Element 02: IEA02: Interchange Control Number. Matches the control number in the ISA segment.

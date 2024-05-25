@@ -67,12 +67,6 @@ build CMakeFiles/Project.dir/Segment.cpp.obj: CXX_COMPILER__Project_unscanned_De
   OBJECT_DIR = CMakeFiles\Project.dir
   OBJECT_FILE_DIR = CMakeFiles\Project.dir
 
-build CMakeFiles/Project.dir/ControlSegment.cpp.obj: CXX_COMPILER__Project_unscanned_Debug C$:/Users/Alen/Documents/GithubPrivate/CS-Work/6thSemester/BachelorThesis/Project/ControlSegment.cpp || cmake_object_order_depends_target_Project
-  DEP_FILE = CMakeFiles\Project.dir\ControlSegment.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Project.dir
-  OBJECT_FILE_DIR = CMakeFiles\Project.dir
-
 build CMakeFiles/Project.dir/Field.cpp.obj: CXX_COMPILER__Project_unscanned_Debug C$:/Users/Alen/Documents/GithubPrivate/CS-Work/6thSemester/BachelorThesis/Project/Field.cpp || cmake_object_order_depends_target_Project
   DEP_FILE = CMakeFiles\Project.dir\Field.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
@@ -87,7 +81,7 @@ build CMakeFiles/Project.dir/Field.cpp.obj: CXX_COMPILER__Project_unscanned_Debu
 #############################################
 # Link the executable Project.exe
 
-build Project.exe: CXX_EXECUTABLE_LINKER__Project_Debug CMakeFiles/Project.dir/main.cpp.obj CMakeFiles/Project.dir/Document.cpp.obj CMakeFiles/Project.dir/Segment.cpp.obj CMakeFiles/Project.dir/ControlSegment.cpp.obj CMakeFiles/Project.dir/Field.cpp.obj
+build Project.exe: CXX_EXECUTABLE_LINKER__Project_Debug CMakeFiles/Project.dir/main.cpp.obj CMakeFiles/Project.dir/Document.cpp.obj CMakeFiles/Project.dir/Segment.cpp.obj CMakeFiles/Project.dir/Field.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Project.dir
