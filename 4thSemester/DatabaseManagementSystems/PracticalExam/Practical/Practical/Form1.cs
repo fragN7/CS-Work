@@ -26,7 +26,7 @@ namespace Practical
 
             InitializeComponent();
             this.sportIDBox.ReadOnly = true;
-            this.dgvPlayers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTeams.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             parentTable_load();
         }
 
@@ -57,11 +57,12 @@ namespace Practical
 
         private void clearTextBoxes()
         {
-            this.pidBox.Clear();
+            this.teamIDBox.Clear();
             this.nameBox.Clear();
-            this.surnameBox.Clear();
-            this.dateBox.Clear(); 
-            this.genderBox.Clear();
+            this.membersBox.Clear();
+            this.startYearBox.Clear(); 
+            this.cityBox.Clear();
+            this.teamTypeIDBox.Clear();
             this.sportIDBox.Clear();
         }
 
@@ -75,31 +76,32 @@ namespace Practical
             {
                 int sportID = Convert.ToInt32(selectedParent.Cells[0].Value);
 
-                this.da.SelectCommand = new SqlCommand("select * from Players where sport_id = @id", this.connectionString);
+                this.da.SelectCommand = new SqlCommand("select * from Teams where SportID = @id", this.connectionString);
                 this.da.SelectCommand.Parameters.AddWithValue("@id", sportID);
 
                 this.ds = new DataSet();
-                this.da.Fill(this.ds, "Players");
-                this.dgvPlayers.DataSource = this.ds.Tables["Players"];
+                this.da.Fill(this.ds, "Teams");
+                this.dgvTeams.DataSource = this.ds.Tables["Teams"];
             }
         }
 
         private void childTable_click(Object sender, DataGridViewCellEventArgs e)
         {
-            int index = this.dgvPlayers.SelectedRows[0].Index;
+            int index = this.dgvTeams.SelectedRows[0].Index;
 
-            this.pidBox.Text = this.ds.Tables["Players"].Rows[index][0].ToString();
-            this.nameBox.Text = this.ds.Tables["Players"].Rows[index][2].ToString();
-            this.surnameBox.Text = this.ds.Tables["Players"].Rows[index][3].ToString();
-            this.dateBox.Text = this.ds.Tables["Players"].Rows[index][4].ToString();
-            this.genderBox.Text = this.ds.Tables["Players"].Rows[index][5].ToString();
-            this.sportIDBox.Text = this.ds.Tables["Players"].Rows[index][1].ToString();
+            this.teamIDBox.Text = this.ds.Tables["Teams"].Rows[index][0].ToString();
+            this.nameBox.Text = this.ds.Tables["Teams"].Rows[index][1].ToString();
+            this.membersBox.Text = this.ds.Tables["Teams"].Rows[index][2].ToString();
+            this.startYearBox.Text = this.ds.Tables["Teams"].Rows[index][3].ToString();
+            this.cityBox.Text = this.ds.Tables["Teams"].Rows[index][4].ToString();
+            this.teamTypeIDBox.Text = this.ds.Tables["Teams"].Rows[index][5].ToString();
+            this.sportIDBox.Text = this.ds.Tables["Teams"].Rows[index][6].ToString();
         }
 
         private static String GetConnectionString()
         {
             return "Data Source = ALENPC\\SQLEXPRESS;" +
-                    "Initial Catalog = SportPerformance;" +
+                    "Initial Catalog = Exam;" +
                     "Integrated Security = true;";
         }
 
@@ -107,14 +109,15 @@ namespace Practical
         {
             try
             {
-                this.da.InsertCommand = new SqlCommand("insert into Players (player_id, sport_id, name, surname, date_of_birth, gender) values (@pid, @sid, @n, @s, @d, @g)", connectionString);
+                this.da.InsertCommand = new SqlCommand("insert into Teams (TeamID, Name, NumberOfMembers, StartUpYear, City, TeamTypeID, SportID) values (@tid, @n, @m, @s, @c, @ttid, @sid)", connectionString);
 
-                this.da.InsertCommand.Parameters.Add("@pid", SqlDbType.Int).Value = Int32.Parse(pidBox.Text);
-                this.da.InsertCommand.Parameters.Add("@sid", SqlDbType.Int).Value = Int32.Parse(sportIDBox.Text);
+                this.da.InsertCommand.Parameters.Add("@tid", SqlDbType.Int).Value = Int32.Parse(teamIDBox.Text);
                 this.da.InsertCommand.Parameters.Add("@n", SqlDbType.VarChar).Value = nameBox.Text;
-                this.da.InsertCommand.Parameters.Add("@s", SqlDbType.VarChar).Value = surnameBox.Text;
-                this.da.InsertCommand.Parameters.Add("@d", SqlDbType.VarChar).Value = dateBox.Text;
-                this.da.InsertCommand.Parameters.Add("@g", SqlDbType.Char).Value = genderBox.Text;
+                this.da.InsertCommand.Parameters.Add("@m", SqlDbType.Int).Value = Int32.Parse(membersBox.Text);
+                this.da.InsertCommand.Parameters.Add("@s", SqlDbType.Int).Value = Int32.Parse(startYearBox.Text);
+                this.da.InsertCommand.Parameters.Add("@c", SqlDbType.VarChar).Value = cityBox.Text;
+                this.da.InsertCommand.Parameters.Add("@ttid", SqlDbType.Int).Value = Int32.Parse(teamTypeIDBox.Text);
+                this.da.InsertCommand.Parameters.Add("@sid", SqlDbType.Int).Value = Int32.Parse(sportIDBox.Text);
 
                 this.connectionString.Open();
                 this.da.InsertCommand.ExecuteNonQuery();
@@ -122,8 +125,8 @@ namespace Practical
                 this.connectionString.Close();
 
                 this.ds = new DataSet();
-                this.da.Fill(this.ds, "Players");
-                this.dgvPlayers.DataSource = this.ds.Tables["Players"];
+                this.da.Fill(this.ds, "Teams");
+                this.dgvTeams.DataSource = this.ds.Tables["Teams"];
 
                 this.clearTextBoxes();
             }
@@ -136,15 +139,15 @@ namespace Practical
 
         private void deleteButton_click(object sender, EventArgs e)
         {
-            int index = this.dgvPlayers.SelectedRows[0].Index;
+            int index = this.dgvTeams.SelectedRows[0].Index;
             DialogResult dr;
             dr = MessageBox.Show("Are you sure?\n No undo after delete!", "Confirm Deletion", MessageBoxButtons.YesNo);
             if (dr == DialogResult.Yes)
             {
 
                 // We create the delete command
-                this.da.DeleteCommand = new SqlCommand("DELETE FROM Players WHERE player_id=@pid", connectionString);
-                this.da.DeleteCommand.Parameters.Add("@pid", SqlDbType.Int).Value = this.ds.Tables["Players"].Rows[index][0];
+                this.da.DeleteCommand = new SqlCommand("DELETE FROM Teams WHERE TeamID=@tid", connectionString);
+                this.da.DeleteCommand.Parameters.Add("@tid", SqlDbType.Int).Value = this.ds.Tables["Teams"].Rows[index][0];
 
                 this.connectionString.Open();
                 this.da.DeleteCommand.ExecuteNonQuery();
@@ -154,8 +157,8 @@ namespace Practical
                 this.sportIDBox.Clear();
 
                 this.ds = new DataSet();
-                this.da.Fill(this.ds, "Players");
-                this.dgvPlayers.DataSource = this.ds.Tables["Players"];
+                this.da.Fill(this.ds, "Teams");
+                this.dgvTeams.DataSource = this.ds.Tables["Teams"];
 
                 this.clearTextBoxes();
             }
@@ -171,18 +174,19 @@ namespace Practical
             try
             {
                 // We take the index of the selected row
-                int index = this.dgvPlayers.SelectedRows[0].Index;
+                int index = this.dgvTeams.SelectedRows[0].Index;
 
-                // We create the Update command
-                this.da.UpdateCommand = new SqlCommand("Update Players set name = @n, surname = @s, date_of_birth = @d, gender = @g where player_id = @pid", this.connectionString);
+                // We create the Update command(TeamID, Name, NumberOfMembers, StartUpYear, City, TeamTypeID, SportID
+                this.da.UpdateCommand = new SqlCommand("Update Teams set Name = @n, NumberOfMembers = @m, StartUpYear = @s, City = @c, TeamTypeID = @ttid, SportID = @sid where TeamID = @tid", this.connectionString);
 
                 // We add the values for each parameter from the command
-                this.da.UpdateCommand.Parameters.Add("@pid", SqlDbType.Int).Value = Int32.Parse(pidBox.Text);
-                this.da.UpdateCommand.Parameters.Add("@sid", SqlDbType.Int).Value = Int32.Parse(sportIDBox.Text);
+                this.da.UpdateCommand.Parameters.Add("@tid", SqlDbType.Int).Value = Int32.Parse(teamIDBox.Text);
                 this.da.UpdateCommand.Parameters.Add("@n", SqlDbType.VarChar).Value = nameBox.Text;
-                this.da.UpdateCommand.Parameters.Add("@s", SqlDbType.VarChar).Value = surnameBox.Text;
-                this.da.UpdateCommand.Parameters.Add("@d", SqlDbType.VarChar).Value = dateBox.Text;
-                this.da.UpdateCommand.Parameters.Add("@g", SqlDbType.VarChar).Value = genderBox.Text;
+                this.da.UpdateCommand.Parameters.Add("@m", SqlDbType.Int).Value = Int32.Parse(membersBox.Text);
+                this.da.UpdateCommand.Parameters.Add("@s", SqlDbType.Int).Value = Int32.Parse(startYearBox.Text);
+                this.da.UpdateCommand.Parameters.Add("@c", SqlDbType.VarChar).Value = cityBox.Text;
+                this.da.UpdateCommand.Parameters.Add("@ttid", SqlDbType.Int).Value = Int32.Parse(teamTypeIDBox.Text);
+                this.da.UpdateCommand.Parameters.Add("@sid", SqlDbType.Int).Value = Int32.Parse(sportIDBox.Text);
 
                 // We open the connection
                 this.connectionString.Open();
@@ -192,8 +196,8 @@ namespace Practical
 
                 // We repopulate the table
                 this.ds = new DataSet();
-                this.da.Fill(this.ds, "Players");
-                this.dgvPlayers.DataSource = this.ds.Tables["Players"];
+                this.da.Fill(this.ds, "Teams");
+                this.dgvTeams.DataSource = this.ds.Tables["Teams"];
 
                 this.clearTextBoxes();
 

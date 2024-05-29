@@ -1,11 +1,12 @@
 -- T1 nonrepeatable reads 
 -- just update a field
+use Sports;
+
 BEGIN TRAN
 WAITFOR DELAY '00:00:07'
-UPDATE ChessTitle SET title_name='Test' WHERE tid=1
+UPDATE Players SET FirstName='JOHN CENA' WHERE PlayerID=1
 COMMIT TRAN
 GO
 
-INSERT INTO ChessTitle (title_name) VALUES ('Normal')
-select * from ChessTitle
-DELETE FROM ChessTitle WHERE tid=4
+UPDATE Players SET FirstName='Alen' WHERE PlayerID=1
+select * from Players;

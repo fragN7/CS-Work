@@ -19,20 +19,22 @@ namespace Practical
         private System.Windows.Forms.Button deleteButton;
 
         private System.Windows.Forms.DataGridView dgvSports;
-        private System.Windows.Forms.DataGridView dgvPlayers;
+        private System.Windows.Forms.DataGridView dgvTeams;
         
-        private System.Windows.Forms.TextBox pidBox;
+        private System.Windows.Forms.TextBox teamIDBox;
         private System.Windows.Forms.TextBox nameBox;
-        private System.Windows.Forms.TextBox surnameBox;
-        private System.Windows.Forms.TextBox dateBox;
-        private System.Windows.Forms.TextBox genderBox;
+        private System.Windows.Forms.TextBox membersBox;
+        private System.Windows.Forms.TextBox startYearBox;
+        private System.Windows.Forms.TextBox cityBox;
+        private System.Windows.Forms.TextBox teamTypeIDBox;
         private System.Windows.Forms.TextBox sportIDBox;
         
-        private System.Windows.Forms.Label pidLabel;
+        private System.Windows.Forms.Label teamIDLabel;
         private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.Label surnameLabel;
-        private System.Windows.Forms.Label dateLabel;
-        private System.Windows.Forms.Label genderLabel;
+        private System.Windows.Forms.Label membersLabel;
+        private System.Windows.Forms.Label startYearLabel;
+        private System.Windows.Forms.Label cityLabel;
+        private System.Windows.Forms.Label teamTypeIDLabel;
         private System.Windows.Forms.Label sportIDLabel;
 
 
@@ -66,21 +68,23 @@ namespace Practical
             this.updateButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.dgvSports = new System.Windows.Forms.DataGridView();
-            this.dgvPlayers = new System.Windows.Forms.DataGridView();
-            this.pidBox = new System.Windows.Forms.TextBox();
+            this.dgvTeams = new System.Windows.Forms.DataGridView();
+            this.teamIDBox = new System.Windows.Forms.TextBox();
             this.nameBox = new System.Windows.Forms.TextBox();
-            this.surnameBox = new System.Windows.Forms.TextBox();
-            this.dateBox = new System.Windows.Forms.TextBox();
+            this.membersBox = new System.Windows.Forms.TextBox();
+            this.startYearBox = new System.Windows.Forms.TextBox();
+            this.cityBox = new System.Windows.Forms.TextBox();
+            this.teamTypeIDBox = new System.Windows.Forms.TextBox();
             this.sportIDBox = new System.Windows.Forms.TextBox();
-            this.pidLabel = new System.Windows.Forms.Label();
+            this.teamIDLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
-            this.surnameLabel = new System.Windows.Forms.Label();
-            this.dateLabel = new System.Windows.Forms.Label();
+            this.membersLabel = new System.Windows.Forms.Label();
+            this.startYearLabel = new System.Windows.Forms.Label();
+            this.cityLabel = new System.Windows.Forms.Label();
+            this.teamTypeIDLabel = new System.Windows.Forms.Label();
             this.sportIDLabel = new System.Windows.Forms.Label();
-            this.genderBox = new System.Windows.Forms.TextBox();
-            this.genderLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSports)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPlayers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTeams)).BeginInit();
             this.SuspendLayout();
             // 
             // insertButton
@@ -117,41 +121,41 @@ namespace Practical
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_click);
             // 
-            // parentTable
+            // dgvSports
             // 
             this.dgvSports.AllowUserToAddRows = false;
             this.dgvSports.AllowUserToDeleteRows = false;
             this.dgvSports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSports.Location = new System.Drawing.Point(13, 13);
             this.dgvSports.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvSports.Name = "parentTable";
+            this.dgvSports.Name = "dgvSports";
             this.dgvSports.ReadOnly = true;
             this.dgvSports.RowHeadersWidth = 51;
             this.dgvSports.Size = new System.Drawing.Size(919, 225);
             this.dgvSports.TabIndex = 1;
             this.dgvSports.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.parentTable_click);
             // 
-            // dgvPlayers
+            // dgvTeams
             // 
-            this.dgvPlayers.AllowUserToAddRows = false;
-            this.dgvPlayers.AllowUserToDeleteRows = false;
-            this.dgvPlayers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPlayers.Location = new System.Drawing.Point(13, 293);
-            this.dgvPlayers.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvPlayers.Name = "dgvPlayers";
-            this.dgvPlayers.ReadOnly = true;
-            this.dgvPlayers.RowHeadersWidth = 51;
-            this.dgvPlayers.Size = new System.Drawing.Size(919, 269);
-            this.dgvPlayers.TabIndex = 2;
-            this.dgvPlayers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.childTable_click);
+            this.dgvTeams.AllowUserToAddRows = false;
+            this.dgvTeams.AllowUserToDeleteRows = false;
+            this.dgvTeams.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTeams.Location = new System.Drawing.Point(13, 293);
+            this.dgvTeams.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvTeams.Name = "dgvTeams";
+            this.dgvTeams.ReadOnly = true;
+            this.dgvTeams.RowHeadersWidth = 51;
+            this.dgvTeams.Size = new System.Drawing.Size(919, 269);
+            this.dgvTeams.TabIndex = 2;
+            this.dgvTeams.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.childTable_click);
             // 
-            // pidBox
+            // teamIDBox
             // 
-            this.pidBox.Location = new System.Drawing.Point(1192, 29);
-            this.pidBox.Margin = new System.Windows.Forms.Padding(4);
-            this.pidBox.Name = "pidBox";
-            this.pidBox.Size = new System.Drawing.Size(204, 22);
-            this.pidBox.TabIndex = 3;
+            this.teamIDBox.Location = new System.Drawing.Point(1192, 29);
+            this.teamIDBox.Margin = new System.Windows.Forms.Padding(4);
+            this.teamIDBox.Name = "teamIDBox";
+            this.teamIDBox.Size = new System.Drawing.Size(204, 22);
+            this.teamIDBox.TabIndex = 3;
             // 
             // nameBox
             // 
@@ -161,127 +165,147 @@ namespace Practical
             this.nameBox.Size = new System.Drawing.Size(204, 22);
             this.nameBox.TabIndex = 4;
             // 
-            // surnameBox
+            // membersBox
             // 
-            this.surnameBox.Location = new System.Drawing.Point(1192, 120);
-            this.surnameBox.Margin = new System.Windows.Forms.Padding(4);
-            this.surnameBox.Name = "surnameBox";
-            this.surnameBox.Size = new System.Drawing.Size(204, 22);
-            this.surnameBox.TabIndex = 5;
+            this.membersBox.Location = new System.Drawing.Point(1192, 120);
+            this.membersBox.Margin = new System.Windows.Forms.Padding(4);
+            this.membersBox.Name = "membersBox";
+            this.membersBox.Size = new System.Drawing.Size(204, 22);
+            this.membersBox.TabIndex = 5;
             // 
-            // dateBox
+            // startYearBox
             // 
-            this.dateBox.Location = new System.Drawing.Point(1192, 170);
-            this.dateBox.Margin = new System.Windows.Forms.Padding(4);
-            this.dateBox.Name = "dateBox";
-            this.dateBox.Size = new System.Drawing.Size(204, 22);
-            this.dateBox.TabIndex = 6;
+            this.startYearBox.Location = new System.Drawing.Point(1192, 170);
+            this.startYearBox.Margin = new System.Windows.Forms.Padding(4);
+            this.startYearBox.Name = "startYearBox";
+            this.startYearBox.Size = new System.Drawing.Size(204, 22);
+            this.startYearBox.TabIndex = 6;
+            // 
+            // cityBox
+            // 
+            this.cityBox.Location = new System.Drawing.Point(1192, 220);
+            this.cityBox.Margin = new System.Windows.Forms.Padding(4);
+            this.cityBox.Name = "cityBox";
+            this.cityBox.Size = new System.Drawing.Size(204, 22);
+            this.cityBox.TabIndex = 7;
+            // 
+            // teamTypeIDBox
+            // 
+            this.teamTypeIDBox.Location = new System.Drawing.Point(1192, 270);
+            this.teamTypeIDBox.Margin = new System.Windows.Forms.Padding(4);
+            this.teamTypeIDBox.Name = "teamTypeIDBox";
+            this.teamTypeIDBox.Size = new System.Drawing.Size(204, 22);
+            this.teamTypeIDBox.TabIndex = 8;
             // 
             // sportIDBox
             // 
-            this.sportIDBox.Location = new System.Drawing.Point(1192, 253);
+            this.sportIDBox.Location = new System.Drawing.Point(1192, 320);
             this.sportIDBox.Margin = new System.Windows.Forms.Padding(4);
             this.sportIDBox.Name = "sportIDBox";
             this.sportIDBox.Size = new System.Drawing.Size(204, 22);
-            this.sportIDBox.TabIndex = 8;
+            this.sportIDBox.TabIndex = 9;
             // 
-            // pidLabel
+            // teamIDLabel
             // 
-            this.pidLabel.AutoSize = true;
-            this.pidLabel.Location = new System.Drawing.Point(1000, 29);
-            this.pidLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.pidLabel.Name = "pidLabel";
-            this.pidLabel.Size = new System.Drawing.Size(65, 17);
-            this.pidLabel.TabIndex = 9;
-            this.pidLabel.Text = "Player ID";
+            this.teamIDLabel.AutoSize = true;
+            this.teamIDLabel.Location = new System.Drawing.Point(1078, 32);
+            this.teamIDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.teamIDLabel.Name = "teamIDLabel";
+            this.teamIDLabel.Size = new System.Drawing.Size(61, 17);
+            this.teamIDLabel.TabIndex = 9;
+            this.teamIDLabel.Text = "Team ID";
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(1014, 71);
+            this.nameLabel.Location = new System.Drawing.Point(1094, 71);
             this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(45, 17);
             this.nameLabel.TabIndex = 10;
             this.nameLabel.Text = "Name";
             // 
-            // surnameLabel
+            // membersLabel
             // 
-            this.surnameLabel.AutoSize = true;
-            this.surnameLabel.Location = new System.Drawing.Point(1014, 125);
-            this.surnameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.surnameLabel.Name = "surnameLabel";
-            this.surnameLabel.Size = new System.Drawing.Size(65, 17);
-            this.surnameLabel.TabIndex = 11;
-            this.surnameLabel.Text = "Surname";
+            this.membersLabel.AutoSize = true;
+            this.membersLabel.Location = new System.Drawing.Point(1037, 120);
+            this.membersLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.membersLabel.Name = "membersLabel";
+            this.membersLabel.Size = new System.Drawing.Size(136, 17);
+            this.membersLabel.TabIndex = 11;
+            this.membersLabel.Text = "Number of Members";
             // 
-            // dateLabel
+            // startYearLabel
             // 
-            this.dateLabel.AutoSize = true;
-            this.dateLabel.Location = new System.Drawing.Point(1017, 173);
-            this.dateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(38, 17);
-            this.dateLabel.TabIndex = 12;
-            this.dateLabel.Text = "Date";
+            this.startYearLabel.AutoSize = true;
+            this.startYearLabel.Location = new System.Drawing.Point(1094, 170);
+            this.startYearLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.startYearLabel.Name = "startYearLabel";
+            this.startYearLabel.Size = new System.Drawing.Size(72, 17);
+            this.startYearLabel.TabIndex = 12;
+            this.startYearLabel.Text = "Start Date";
+            // 
+            // cityLabel
+            // 
+            this.cityLabel.AutoSize = true;
+            this.cityLabel.Location = new System.Drawing.Point(1101, 223);
+            this.cityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cityLabel.Name = "cityLabel";
+            this.cityLabel.Size = new System.Drawing.Size(31, 17);
+            this.cityLabel.TabIndex = 13;
+            this.cityLabel.Text = "City";
+            // 
+            // teamTypeIDLabel
+            // 
+            this.teamTypeIDLabel.AutoSize = true;
+            this.teamTypeIDLabel.Location = new System.Drawing.Point(1076, 275);
+            this.teamTypeIDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.teamTypeIDLabel.Name = "teamTypeIDLabel";
+            this.teamTypeIDLabel.Size = new System.Drawing.Size(97, 17);
+            this.teamTypeIDLabel.TabIndex = 14;
+            this.teamTypeIDLabel.Text = "Team Type ID";
             // 
             // sportIDLabel
             // 
             this.sportIDLabel.AutoSize = true;
-            this.sportIDLabel.Location = new System.Drawing.Point(1014, 253);
+            this.sportIDLabel.Location = new System.Drawing.Point(1094, 325);
             this.sportIDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sportIDLabel.Name = "sportIDLabel";
             this.sportIDLabel.Size = new System.Drawing.Size(59, 17);
-            this.sportIDLabel.TabIndex = 14;
+            this.sportIDLabel.TabIndex = 15;
             this.sportIDLabel.Text = "Sport ID";
-            // 
-            // genderBox
-            // 
-            this.genderBox.Location = new System.Drawing.Point(1192, 210);
-            this.genderBox.Margin = new System.Windows.Forms.Padding(4);
-            this.genderBox.Name = "genderBox";
-            this.genderBox.Size = new System.Drawing.Size(204, 22);
-            this.genderBox.TabIndex = 7;
-            // 
-            // genderLabel
-            // 
-            this.genderLabel.AutoSize = true;
-            this.genderLabel.Location = new System.Drawing.Point(1017, 210);
-            this.genderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(56, 17);
-            this.genderLabel.TabIndex = 13;
-            this.genderLabel.Text = "Gender";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1756, 608);
-            this.Controls.Add(this.pidBox);
-            this.Controls.Add(this.pidLabel);
-            this.Controls.Add(this.surnameBox);
-            this.Controls.Add(this.surnameLabel);
-            this.Controls.Add(this.dateBox);
-            this.Controls.Add(this.dateLabel);
+            this.Controls.Add(this.teamIDBox);
+            this.Controls.Add(this.teamIDLabel);
+            this.Controls.Add(this.membersBox);
+            this.Controls.Add(this.membersLabel);
+            this.Controls.Add(this.startYearBox);
+            this.Controls.Add(this.startYearLabel);
             this.Controls.Add(this.nameBox);
             this.Controls.Add(this.sportIDBox);
             this.Controls.Add(this.sportIDLabel);
+            this.Controls.Add(this.teamTypeIDBox);
+            this.Controls.Add(this.teamTypeIDLabel);
+            this.Controls.Add(this.cityBox);
+            this.Controls.Add(this.cityLabel);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.nameLabel);
-            this.Controls.Add(this.dgvPlayers);
+            this.Controls.Add(this.dgvTeams);
             this.Controls.Add(this.dgvSports);
             this.Controls.Add(this.insertButton);
-            this.Controls.Add(this.genderBox);
-            this.Controls.Add(this.genderLabel);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.form1_load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSports)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPlayers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTeams)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
