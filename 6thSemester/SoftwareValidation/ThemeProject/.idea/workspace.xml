@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1a580ad2-51ad-4ab8-847c-015f48966821" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Lab5/Lab5DemoSerenityJUnit/.gradle/8.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/Lab5DemoSerenityJUnit/.gradle/8.4/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/DataInceput.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/Note.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/Note.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/Odegaard.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/Studenti.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/Studenti.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/Teme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/Teme.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/a.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/eu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/la.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/noteTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/studentiTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fisiere/temeTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/MainApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/curent/Curent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Nota.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Tema.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AbstractCrudRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AbstractFileRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AbstractXMLRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/CrudRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/FileRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/HasID.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/NotaFileRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/NotaXMLRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/StudentFileRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/StudentXMLRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/TemaFileRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/TemaXMLRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/Service.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validation/NotaValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validation/StudentValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validation/TemaValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validation/ValidationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validation/Validator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/UI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ssvs/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ssvs/example/TestAddStudent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ssvs/example/TestAddTema.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ssvs/example/TestIntegration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ssvs/example/TestMockIntegration.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2cui9VdoyErRkmYLrZdgTOuWZ6R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.MainApplication.executor": "Run",
+    "JUnit.AppTest.executor": "Run",
+    "JUnit.TestAddStudent.executor": "Run",
+    "JUnit.TestAddStudent.testAddStudentOnGroup.executor": "Run",
+    "JUnit.TestAddStudent.testAddStudentOnName.executor": "Run",
+    "JUnit.TestAddTema (1).executor": "Run",
+    "JUnit.TestAddTema.executor": "Run",
+    "JUnit.TestBBT.executor": "Run",
+    "JUnit.TestBBT.testFindPairs.executor": "Run",
+    "JUnit.TestBBT.testFindPairsWithEmptyArray.executor": "Run",
+    "JUnit.TestBBT.testFindPairsWithNoPairs.executor": "Run",
+    "JUnit.TestBBT.testFindPairsWithOneElementArray.executor": "Run",
+    "JUnit.TestBBT.testFindPairsWithPairsPresent.executor": "Run",
+    "JUnit.TestIntegration.executor": "Run",
+    "JUnit.TestIntegration.testAddGrade.executor": "Run",
+    "JUnit.TestIntegration.testAddStudent.executor": "Run",
+    "JUnit.TestIntegration.testAddStudentTemaGrade.executor": "Run",
+    "JUnit.TestIntegration.testAddTema.executor": "Run",
+    "JUnit.TestIntegration.testBeFriends.executor": "Run",
+    "JUnit.TestIntegration.testBeFriendsIntegration.executor": "Run",
+    "JUnit.TestIntegration.testBeFriendsWithEmptyArray.executor": "Run",
+    "JUnit.TestIntegration.testBeFriendsWithMultiplePairs.executor": "Run",
+    "JUnit.TestIntegration.testBeFriendsWithNoPairs.executor": "Run",
+    "JUnit.TestIntegration.testBeFriendsWithSingleAnimal.executor": "Run",
+    "JUnit.TestMockIntegration.executor": "Run",
+    "JUnit.TestMockIntegration.testAddStudent.executor": "Run",
+    "JUnit.TestMockIntegration.testAddStudentAndAssignmentAndGrade.executor": "Run",
+    "JUnit.TestWBT.executor": "Run",
+    "JUnit.TestWBT.testInsertCow.executor": "Run",
+    "JUnit.TestWBT.testInsertCowEmptyArray.executor": "Run",
+    "JUnit.TestWBT.testInsertCowOutOfBounds.executor": "Run",
+    "JUnit.TestWBT.testInsertCowWithinBoundsAndFalseCondition.executor": "Run",
+    "JUnit.TestWBT.testInsertCowWithinBoundsAndTrueCondition.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Alen/Documents/GithubPrivate/CS-Work/6thSemester/SoftwareValidation/TakeHomeB/ThemeProject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alen\Documents\GithubPrivate\CS-Work\6thSemester\SoftwareValidation\ThemeProject\src\main\java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ssvs.example" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestIntegration">
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ThemeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvs.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvs.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvs.example.AppTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBBT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ThemeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvs.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvs.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvs.example.TestBBT" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBBT.testFindPairsWithPairsPresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ThemeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvs.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvs.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvs.example.TestBBT" />
+      <option name="METHOD_NAME" value="testFindPairsWithPairsPresent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ThemeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvs.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvs.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvs.example.TestIntegration" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestWBT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ThemeProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvs.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvs.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvs.example.TestWBT" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestIntegration" />
+        <item itemvalue="JUnit.TestWBT" />
+        <item itemvalue="JUnit.TestBBT.testFindPairsWithPairsPresent" />
+        <item itemvalue="JUnit.TestBBT" />
+        <item itemvalue="JUnit.AppTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a580ad2-51ad-4ab8-847c-015f48966821" name="Changes" comment="" />
+      <created>1708967712879</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708967712879</updated>
+      <workItem from="1708967713880" duration="1547000" />
+      <workItem from="1710150029499" duration="4028000" />
+      <workItem from="1710159368837" duration="1157000" />
+      <workItem from="1710173037170" duration="3671000" />
+      <workItem from="1710321472873" duration="2469000" />
+      <workItem from="1711372994593" duration="6192000" />
+      <workItem from="1712239986683" duration="915000" />
+      <workItem from="1712579323499" duration="2270000" />
+      <workItem from="1712588286244" duration="3001000" />
+      <workItem from="1713784716114" duration="1973000" />
+      <workItem from="1713789019333" duration="1974000" />
+      <workItem from="1713792133348" duration="121000" />
+      <workItem from="1713798050632" duration="1442000" />
+      <workItem from="1715604766721" duration="49000" />
+      <workItem from="1716998400576" duration="8815000" />
+      <workItem from="1717007681043" duration="21000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
