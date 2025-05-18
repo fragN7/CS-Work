@@ -24,19 +24,28 @@ public class CommunicationChannelController : ControllerBase
     [Authorize]
     public async Task<ActionResult<CommunicationChannel>> AddChannel([FromBody] CommunicationChannelDTO channel)
     {
-        var actualChannel = await this.context.CommunicationChannels.FirstOrDefaultAsync(c => c.PartnerId == channel.PartnerId);
+        /*var actualChannel = await this.context.CommunicationChannels.FirstOrDefaultAsync(c => c.PartnerId == channel.PartnerId);
 
         if (actualChannel != null)
         {
             throw new Exception("There already exists a communication channel with this partner");
+        }*/
+        
+        var partner = await this.context.Partners.FirstOrDefaultAsync(p => p.Id == channel.PartnerId);
+        
+        if (partner == null)
+        {
+            throw new Exception("There is no partner to be assigned with this communication channel");
         }
 
         var addChannel = new CommunicationChannel
         {
             Id = new Guid(),
-            Partner = channel.Partner,
-            PartnerId = channel.PartnerId
+            PartnerId = partner.Id
         };
+        
+        /*partner.CommunicationChannelId = addChannel.Id;
+        partner.CommunicationChannel = addChannel;*/
 
         await this.context.CommunicationChannels.AddAsync(addChannel);
         await this.context.SaveChangesAsync();
@@ -46,7 +55,7 @@ public class CommunicationChannelController : ControllerBase
     
     [HttpPut("channel/update/{id}")]
     [Authorize]
-    public async Task<ActionResult<CommunicationChannel>> UpdateChannel([FromBody] CommunicationChannelDTO channel, [FromQuery] string id)
+    public async Task<ActionResult<CommunicationChannel>> UpdateChannel([FromBody] CommunicationChannelDTO channel, string id)
     {
         var actualChannel = await this.context.CommunicationChannels.FirstOrDefaultAsync(c => c.Id.ToString() == id);
 
@@ -54,9 +63,16 @@ public class CommunicationChannelController : ControllerBase
         {
             throw new Exception("There doesn't exist a communication channel with this partner");
         }
+        
+        var partner = await this.context.Partners.FirstOrDefaultAsync(p => p.Id == channel.PartnerId);
+        
+        if (partner == null)
+        {
+            throw new Exception("There is no partner to be assigned with this communication channel");
+        }
 
         actualChannel.PartnerId = channel.PartnerId;
-        actualChannel.Partner = channel.Partner;
+        actualChannel.Partner = partner;
 
         await this.context.SaveChangesAsync();
 

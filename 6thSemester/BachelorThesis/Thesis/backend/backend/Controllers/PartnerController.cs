@@ -1,4 +1,5 @@
 ﻿using backend.Model;
+using backend.Model.DTO;
 using backend.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -30,7 +31,8 @@ public class PartnerController : ControllerBase
         var partners = await this.context.Partners.Where
         (p => EF.Functions.Like(p.Name, namePattern) && 
               EF.Functions.Like(p.IpAddress, ipAddressPattern) && 
-              EF.Functions.Like(p.Certificate, certificatePattern)).ToListAsync();
+              EF.Functions.Like(p.Certificate, certificatePattern))
+            .ToListAsync();
         
         if (partners == null)
         {
@@ -38,6 +40,20 @@ public class PartnerController : ControllerBase
         }
 
         return Ok(partners);
+    }
+    
+    [HttpGet("partners/{id}")]
+    [Authorize]
+    public async Task<ActionResult<List<Partner>>> GetPartnerById(string id)
+    {
+        var partner = await this.context.Partners.FirstOrDefaultAsync(p => p.Id.ToString() == id);
+        
+        if (partner == null)
+        {
+            throw new Exception("There are no partners");
+        }
+
+        return Ok(partner);
     }
     
     [HttpPost("partner/add")]
@@ -67,13 +83,13 @@ public class PartnerController : ControllerBase
     
     [HttpPut("partner/update/{id}")]
     [Authorize]
-    public async Task<ActionResult<Partner>> UpdatePartner([FromBody] PartnerDTO partner, [FromQuery] string id)
+    public async Task<ActionResult<Partner>> UpdatePartner([FromBody] PartnerDTO partner, string id)
     {
         var actualPartner = await this.context.Partners.FirstOrDefaultAsync(p => p.Id.ToString() == id);
 
         if (actualPartner == null)
         {
-            throw new Exception("There are no partners with this IP address");
+            throw new Exception("This partner doesn't exist");
         }
 
         actualPartner.Name = partner.Name;

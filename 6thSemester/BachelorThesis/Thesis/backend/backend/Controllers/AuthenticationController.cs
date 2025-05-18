@@ -72,6 +72,7 @@ public class AuthenticationController : ControllerBase
         var response = new LoginResponseDTO()
         {
             Id = actualUser.Id,
+            UserName = actualUser.UserName,
             Token = token
         };
         

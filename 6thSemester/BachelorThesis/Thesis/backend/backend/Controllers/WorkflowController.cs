@@ -35,6 +35,20 @@ public class WorkflowController : ControllerBase
         return Ok(workflows);
     }
     
+    [HttpGet("workflow/{id}")]
+    [Authorize]
+    public async Task<ActionResult<Workflow>> GetWorkflowById(string id)
+    {
+        var workflow = await this.context.Workflows.FirstOrDefaultAsync(w => w.Id.ToString() == id);
+
+        if (workflow == null)
+        {
+            throw new Exception("There is no workflow");
+        }
+
+        return Ok(workflow);
+    }
+    
     [HttpPost("workflow/add")]
     [Authorize]
     public async Task<ActionResult<Workflow>> AddWorkflow([FromBody] WorkflowDTO workflow)
@@ -61,7 +75,7 @@ public class WorkflowController : ControllerBase
     
     [HttpPut("workflow/update/{id}")]
     [Authorize]
-    public async Task<ActionResult<Workflow>> UpdateWorkflow([FromBody] WorkflowDTO workflow, [FromQuery] string id)
+    public async Task<ActionResult<Workflow>> UpdateWorkflow([FromBody] WorkflowDTO workflow, string id)
     {
         var actualWorkflow= await this.context.Workflows.FirstOrDefaultAsync(w => w.Id.ToString() == id);
 
@@ -87,6 +101,13 @@ public class WorkflowController : ControllerBase
         if (actualWorkflow == null)
         {
             throw new Exception("Workflow doesn't exist");
+        }
+
+        var rule = await this.context.Rules.FirstOrDefaultAsync(r => r.WorkflowId.ToString() == id);
+
+        if (rule != null)
+        {
+            throw new Exception("Workflow in use");
         }
 
         this.context.Workflows.Remove(actualWorkflow);

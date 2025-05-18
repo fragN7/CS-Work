@@ -1,4 +1,6 @@
-﻿namespace backend.Model;
+﻿using System.Text.Json.Serialization;
+
+namespace backend.Model;
 
 public class Partner
 {
@@ -8,5 +10,6 @@ public class Partner
     public string Certificate { get; set; } = string.Empty;
     
     public Guid CommunicationChannelId { get; set; }
+    [JsonIgnore]
     public CommunicationChannel CommunicationChannel { get; set; } = null!;
 }

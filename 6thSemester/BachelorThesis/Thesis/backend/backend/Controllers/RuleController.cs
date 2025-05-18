@@ -36,7 +36,9 @@ public class RuleController : ControllerBase
                     EF.Functions.Like(r.ObjectType, objectTypePattern) && 
                     EF.Functions.Like(r.Receiver, receiverPattern) && 
                     EF.Functions.Like(r.Workflow.Name, workflowPattern) && 
-                    EF.Functions.Like(r.Timestamp, timestampPattern)).ToListAsync();
+                    EF.Functions.Like(r.TimeStamp, timestampPattern))
+            .Include(r => r.Workflow)
+            .ToListAsync();
 
         if (rules == null)
         {
@@ -44,6 +46,22 @@ public class RuleController : ControllerBase
         }
 
         return Ok(rules);
+    }
+    
+    [HttpGet("rule/{id}")]
+    [Authorize]
+    public async Task<ActionResult<Rule>> GetRule(string id)
+    {
+        var rule = await this.context.Rules
+            .Include(r => r.Workflow)
+            .FirstOrDefaultAsync(r => r.Id.ToString() == id);
+
+        if (rule == null)
+        {
+            throw new Exception("There is no rule");
+        }
+
+        return Ok(rule);
     }
     
     [HttpPost("rule/add")]
@@ -61,12 +79,33 @@ public class RuleController : ControllerBase
             throw new Exception("There already exists a rule with these configurations");
         }
 
+        var workflow = await this.context.Workflows.FirstOrDefaultAsync(w => w.Id == rule.WorkflowId);
+
+        if (workflow == null)
+        {
+            throw new Exception("This workflow doesn't exist");
+        }
+        
+        var partner = await this.context.Partners
+            .Include(p => p.CommunicationChannel)
+            .FirstOrDefaultAsync(p => p.Name == rule.Sender);
+        
+        if (partner == null)
+        {
+            throw new Exception("This partner is not assigned to any communication channel or it doesn't exist");
+        }
+        
         var addRule = new Rule
         {
             Id = new Guid(),
             Sender = rule.Sender,
             ObjectType = rule.ObjectType,
-            Receiver = rule.Receiver
+            Receiver = rule.Receiver,
+            TimeStamp = rule.TimeStamp,
+            WorkflowId = workflow.Id,
+            Workflow = workflow,
+            CommunicationChannelId = partner.CommunicationChannelId,
+            CommunicationChannel = partner.CommunicationChannel
         };
 
         await this.context.Rules.AddAsync(addRule);
@@ -77,7 +116,7 @@ public class RuleController : ControllerBase
     
     [HttpPut("rule/update/{id}")]
     [Authorize]
-    public async Task<ActionResult<Rule>> UpdateRule([FromBody] RuleDTO rule, [FromQuery] string id)
+    public async Task<ActionResult<Rule>> UpdateRule([FromBody] RuleUpdateDTO rule, string id)
     {
         var actualRule = await this.context.Rules.FirstOrDefaultAsync(r => r.Id.ToString() == id);
 
@@ -88,16 +127,13 @@ public class RuleController : ControllerBase
 
         var workflow = await this.context.Workflows.FirstOrDefaultAsync(w => w.Id == rule.WorkflowId);
         
-        if (workflow != null)
+        if (workflow == null)
         {
             throw new Exception("Workflow doesn't exist");
         }
 
-        actualRule.Sender = rule.Sender;
-        actualRule.ObjectType = rule.ObjectType;
-        actualRule.Receiver = rule.Receiver;
         actualRule.WorkflowId = rule.WorkflowId;
-        actualRule.Workflow = workflow;
+        actualRule.Workflow = workflow!;
         
         await this.context.SaveChangesAsync();
 
@@ -113,6 +149,13 @@ public class RuleController : ControllerBase
         if (actualRule == null)
         {
             throw new Exception("There doesn't exist a rule with these configurations");
+        }
+
+        var message = await this.context.Messages.FirstOrDefaultAsync(m => m.RuleId.ToString() == id);
+        
+        if (message != null)
+        {
+            throw new Exception("Cannot delete rule because there are messages still being processed by it");
         }
 
         this.context.Rules.Remove(actualRule);

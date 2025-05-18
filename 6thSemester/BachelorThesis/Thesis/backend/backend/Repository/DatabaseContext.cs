@@ -19,6 +19,7 @@ public class DatabaseContext : DbContext
     public virtual DbSet<Workflow> Workflows { get; set; } = null!;
     public virtual DbSet<Rule> Rules { get; set; } = null!;
     public virtual DbSet<Message> Messages { get; set; } = null!;
+    public virtual DbSet<MessageStep> MessageSteps { get; set; } = null!;
     public virtual DbSet<Partner> Partners { get; set; } = null!;
     public virtual DbSet<CommunicationChannel> CommunicationChannels { get; set; } = null!;
     
@@ -31,6 +32,11 @@ public class DatabaseContext : DbContext
             .HasOne(m => m.Rule)
             .WithMany(r => r.Messages)
             .HasForeignKey(m => m.RuleId);
+        
+        modelBuilder.Entity<MessageStep>()
+            .HasOne(m => m.Message)
+            .WithMany(m => m.MessageSteps)
+            .HasForeignKey(m => m.MessageId);
 
         modelBuilder.Entity<Rule>()
             .HasOne(r => r.CommunicationChannel)
@@ -46,5 +52,6 @@ public class DatabaseContext : DbContext
             .HasOne(p => p.CommunicationChannel)
             .WithOne(c => c.Partner)
             .HasForeignKey<CommunicationChannel>(p => p.PartnerId);
+
     }
 }

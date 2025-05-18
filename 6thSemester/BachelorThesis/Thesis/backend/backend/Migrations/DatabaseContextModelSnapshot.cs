@@ -46,10 +46,6 @@ namespace backend.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("FilePath")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<Guid>("RuleId")
                         .HasColumnType("uuid");
 
@@ -60,7 +56,41 @@ namespace backend.Migrations
 
                     b.HasIndex("RuleId");
 
-                    b.ToTable("Message");
+                    b.ToTable("Messages");
+                });
+
+            modelBuilder.Entity("backend.Model.MessageStep", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("EndedTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("FilePath")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("MessageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Result")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("StartedTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("StepName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MessageId");
+
+                    b.ToTable("MessageSteps");
                 });
 
             modelBuilder.Entity("backend.Model.Partner", b =>
@@ -86,7 +116,7 @@ namespace backend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Partner");
+                    b.ToTable("Partners");
                 });
 
             modelBuilder.Entity("backend.Model.Rule", b =>
@@ -110,7 +140,7 @@ namespace backend.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Timestamp")
+                    b.Property<string>("TimeStamp")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -186,6 +216,17 @@ namespace backend.Migrations
                     b.Navigation("Rule");
                 });
 
+            modelBuilder.Entity("backend.Model.MessageStep", b =>
+                {
+                    b.HasOne("backend.Model.Message", "Message")
+                        .WithMany("MessageSteps")
+                        .HasForeignKey("MessageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Message");
+                });
+
             modelBuilder.Entity("backend.Model.Rule", b =>
                 {
                     b.HasOne("backend.Model.CommunicationChannel", "CommunicationChannel")
@@ -208,6 +249,11 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Model.CommunicationChannel", b =>
                 {
                     b.Navigation("Rules");
+                });
+
+            modelBuilder.Entity("backend.Model.Message", b =>
+                {
+                    b.Navigation("MessageSteps");
                 });
 
             modelBuilder.Entity("backend.Model.Partner", b =>

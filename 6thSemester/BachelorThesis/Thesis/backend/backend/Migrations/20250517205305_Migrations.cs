@@ -13,7 +13,7 @@ namespace backend.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Partner",
+                name: "Partners",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -24,7 +24,7 @@ namespace backend.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Partner", x => x.Id);
+                    table.PrimaryKey("PK_Partners", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -64,9 +64,9 @@ namespace backend.Migrations
                 {
                     table.PrimaryKey("PK_CommunicationChannels", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_CommunicationChannels_Partner_PartnerId",
+                        name: "FK_CommunicationChannels_Partners_PartnerId",
                         column: x => x.PartnerId,
-                        principalTable: "Partner",
+                        principalTable: "Partners",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -79,7 +79,7 @@ namespace backend.Migrations
                     Sender = table.Column<string>(type: "text", nullable: false),
                     ObjectType = table.Column<string>(type: "text", nullable: false),
                     Receiver = table.Column<string>(type: "text", nullable: false),
-                    Timestamp = table.Column<string>(type: "text", nullable: false),
+                    TimeStamp = table.Column<string>(type: "text", nullable: false),
                     WorkflowId = table.Column<Guid>(type: "uuid", nullable: false),
                     CommunicationChannelId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
@@ -101,21 +101,43 @@ namespace backend.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Message",
+                name: "Messages",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     TimeStamp = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    FilePath = table.Column<string>(type: "text", nullable: false),
                     RuleId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Message", x => x.Id);
+                    table.PrimaryKey("PK_Messages", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Message_Rules_RuleId",
+                        name: "FK_Messages_Rules_RuleId",
                         column: x => x.RuleId,
                         principalTable: "Rules",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MessageSteps",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    StepName = table.Column<string>(type: "text", nullable: false),
+                    StartedTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    EndedTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Result = table.Column<string>(type: "text", nullable: false),
+                    FilePath = table.Column<string>(type: "text", nullable: false),
+                    MessageId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MessageSteps", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_MessageSteps_Messages_MessageId",
+                        column: x => x.MessageId,
+                        principalTable: "Messages",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -127,9 +149,14 @@ namespace backend.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Message_RuleId",
-                table: "Message",
+                name: "IX_Messages_RuleId",
+                table: "Messages",
                 column: "RuleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MessageSteps_MessageId",
+                table: "MessageSteps",
+                column: "MessageId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Rules_CommunicationChannelId",
@@ -146,10 +173,13 @@ namespace backend.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Message");
+                name: "MessageSteps");
 
             migrationBuilder.DropTable(
                 name: "Users");
+
+            migrationBuilder.DropTable(
+                name: "Messages");
 
             migrationBuilder.DropTable(
                 name: "Rules");
@@ -161,7 +191,7 @@ namespace backend.Migrations
                 name: "Workflows");
 
             migrationBuilder.DropTable(
-                name: "Partner");
+                name: "Partners");
         }
     }
 }
