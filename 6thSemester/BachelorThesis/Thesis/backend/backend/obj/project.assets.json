@@ -111,6 +111,19 @@
           }
         }
       },
+      "indice.Edi/1.12.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/indice.Edi.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/indice.Edi.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.14": {
         "type": "package",
         "dependencies": {
@@ -1077,6 +1090,34 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "indice.Edi/1.12.0": {
+      "sha512": "XWdcwxSaMbOHIK/iB2iFECDjRKVqiIR+aSLn075LI7MJUPQP5bfvD/ZLa84d0KJD5ppZqYN34aprErI3XiQ8mg==",
+      "type": "package",
+      "path": "indice.edi/1.12.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon-256.png",
+        "indice.edi.1.12.0.nupkg.sha512",
+        "indice.edi.nuspec",
+        "lib/net451/indice.Edi.dll",
+        "lib/net451/indice.Edi.pdb",
+        "lib/net451/indice.Edi.xml",
+        "lib/net6.0/indice.Edi.dll",
+        "lib/net6.0/indice.Edi.pdb",
+        "lib/net6.0/indice.Edi.xml",
+        "lib/netstandard1.0/indice.Edi.dll",
+        "lib/netstandard1.0/indice.Edi.pdb",
+        "lib/netstandard1.0/indice.Edi.xml",
+        "lib/netstandard1.3/indice.Edi.dll",
+        "lib/netstandard1.3/indice.Edi.pdb",
+        "lib/netstandard1.3/indice.Edi.xml",
+        "lib/netstandard2.0/indice.Edi.dll",
+        "lib/netstandard2.0/indice.Edi.pdb",
+        "lib/netstandard2.0/indice.Edi.xml"
       ]
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.14": {
@@ -2573,7 +2614,8 @@
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.14",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.11",
       "Swashbuckle.AspNetCore >= 6.4.0",
-      "Swashbuckle.AspNetCore.Filters >= 7.0.12"
+      "Swashbuckle.AspNetCore.Filters >= 7.0.12",
+      "indice.Edi >= 1.12.0"
     ]
   },
   "packageFolders": {
@@ -2679,6 +2721,10 @@
           "Swashbuckle.AspNetCore.Filters": {
             "target": "Package",
             "version": "[7.0.12, )"
+          },
+          "indice.Edi": {
+            "target": "Package",
+            "version": "[1.12.0, )"
           }
         },
         "imports": [

@@ -20,7 +20,8 @@
           "Microsoft.EntityFrameworkCore.Tools": "7.0.14",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.11",
           "Swashbuckle.AspNetCore": "6.4.0",
-          "Swashbuckle.AspNetCore.Filters": "7.0.12"
+          "Swashbuckle.AspNetCore.Filters": "7.0.12",
+          "indice.Edi": "1.12.0"
         },
         "runtime": {
           "backend.dll": {}
@@ -104,6 +105,14 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "indice.Edi/1.12.0": {
+        "runtime": {
+          "lib/net6.0/indice.Edi.dll": {
+            "assemblyVersion": "1.12.0.0",
+            "fileVersion": "1.12.0.0"
           }
         }
       },
@@ -560,6 +569,13 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "indice.Edi/1.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XWdcwxSaMbOHIK/iB2iFECDjRKVqiIR+aSLn075LI7MJUPQP5bfvD/ZLa84d0KJD5ppZqYN34aprErI3XiQ8mg==",
+      "path": "indice.edi/1.12.0",
+      "hashPath": "indice.edi.1.12.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.14": {
       "type": "package",

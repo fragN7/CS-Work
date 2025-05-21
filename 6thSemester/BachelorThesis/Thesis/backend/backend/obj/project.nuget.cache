@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oKJKdwc6TAY=",
+  "dgSpecHash": "i03hcNq5C9A=",
   "success": true,
   "projectFilePath": "C:\\Users\\Alen\\Documents\\GithubPrivate\\CS-Work\\6thSemester\\BachelorThesis\\Thesis\\backend\\backend\\backend.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\Alen\\.nuget\\packages\\edifabric.templates.edifact\\2.7.6\\edifabric.templates.edifact.2.7.6.nupkg.sha512",
     "C:\\Users\\Alen\\.nuget\\packages\\edifabric.templates.x12\\2.7.6\\edifabric.templates.x12.2.7.6.nupkg.sha512",
     "C:\\Users\\Alen\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Alen\\.nuget\\packages\\indice.edi\\1.12.0\\indice.edi.1.12.0.nupkg.sha512",
     "C:\\Users\\Alen\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.14\\microsoft.aspnetcore.authentication.jwtbearer.7.0.14.nupkg.sha512",
     "C:\\Users\\Alen\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.4\\microsoft.aspnetcore.openapi.7.0.4.nupkg.sha512",
     "C:\\Users\\Alen\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

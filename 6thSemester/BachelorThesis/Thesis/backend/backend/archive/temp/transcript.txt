@@ -1,34 +1,16 @@
-﻿Laura (17.05.2025, 18:46:46): Bună! Eu sunt Laura, asistentul tău virtual. 
-Laura (17.05.2025, 18:46:47): Cu ce îți pot fi de folos? 
-Laura (17.05.2025, 18:46:49): Menu Options:
-	Livrare/ridicare comandă
-	Produse comandă
-	Modificare comandă
-	Anulare comandă
-	Modificare informații personale din contul Tazz
-	Black Friday - Informații generale vouchere 
-null (17.05.2025, 18:46:51): Anulare comandă 
-Laura (17.05.2025, 18:46:53): Imi poti spune cu ce te pot ajuta? 
-Laura (17.05.2025, 18:46:54): Menu Options:
-	Vreau să anulez comanda
-	Am anulat comanda. În cât timp primesc banii?
-	Întoarce-mă la meniul anterior 
-null (17.05.2025, 18:46:58): Vreau să anulez comanda 
-Laura (17.05.2025, 18:47:00): Ce te-a facut sa renunti la comanda ta? 
-Laura (17.05.2025, 18:47:02): Menu Options:
-	Estimat de livrare prea mare/mic
-	Livrare întârziată
-	Am greșit adresa de livrare
-	Nu mai doresc comanda 
-null (17.05.2025, 18:47:03): Estimat de livrare prea mare/mic 
-Laura (17.05.2025, 18:47:05): Comanda ta este in preparare si se livreaza aproximativ la ora 18:50. Iti livram comanda? 
-Laura (17.05.2025, 18:47:06): Menu Options:
-	Da
-	Nu 
-null (17.05.2025, 18:47:07): Nu 
-Laura (17.05.2025, 18:47:09): Doresti anularea comenzii? 
-Laura (17.05.2025, 18:47:10): Menu Options:
-	Da
-	Nu 
-null (17.05.2025, 18:47:12): Da 
-Laura (17.05.2025, 18:47:14): In cateva momente te voi transfera catre unul dintre colegii mei. 
+﻿UNB+UNOA:1+MHP+MERCEDES+240521:1430+123456789'
+UNH+1+ORDERS:D:96A:UN:EAN008'
+BGM+220+PO123456+9'
+DTM+137:20240521:102'
+NAD+BY+1234567890123::9'
+NAD+SU+9876543210987::9'
+LIN+1++1234567890123:EN'
+QTY+21:100'
+PRI+AAA:12.34'
+LIN+2++9876543210987:EN'
+QTY+21:50'
+PRI+AAA:45.67'
+UNS+S'
+CNT+2:2'
+UNT+12+1'
+UNZ+1+123456789'

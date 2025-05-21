@@ -103,6 +103,10 @@
             "Swashbuckle.AspNetCore.Filters": {
               "target": "Package",
               "version": "[7.0.12, )"
+            },
+            "indice.Edi": {
+              "target": "Package",
+              "version": "[1.12.0, )"
             }
           },
           "imports": [

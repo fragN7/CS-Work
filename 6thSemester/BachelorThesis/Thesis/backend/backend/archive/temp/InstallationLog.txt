@@ -1,0 +1,6 @@
+************************************* Invoked: Tue May 20 20:55:12 2025
+[0] Arguments: C:\Users\Alen\Downloads\msys2-x86_64-20250221.exe
+[5] Operations sanity check succeeded.
+[6] Warning: Cannot create lock file "C:\Users\Alen\AppData\Local\Temp\msys2-x86_64-202502211234865.lock": The process cannot access the file because it is being used by another process.
+ (0x00000020)
+[27] UnableToStart : Unable to start installer : Another msys2-x86_64-20250221 instance is already running. Wait until it finishes, close it, or restart your system.

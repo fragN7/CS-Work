@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Runtime.ConstrainedExecution;
 using backend.Model;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,11 +23,16 @@ public class DatabaseContext : DbContext
     public virtual DbSet<MessageStep> MessageSteps { get; set; } = null!;
     public virtual DbSet<Partner> Partners { get; set; } = null!;
     public virtual DbSet<CommunicationChannel> CommunicationChannels { get; set; } = null!;
+
+    public virtual DbSet<Certificate> Certificates { get; set; } = null!;
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<User>()
             .HasKey(u => u.Id);
+
+        modelBuilder.Entity<Certificate>()
+            .HasKey(c => c.Id);
 
         modelBuilder.Entity<Message>()
             .HasOne(m => m.Rule)

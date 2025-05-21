@@ -1,4 +1,5 @@
-﻿using backend.Model;
+﻿using System.Xml.Linq;
+using backend.Model;
 using backend.Model.DTO;
 using backend.Repository;
 using Microsoft.AspNetCore.Authorization;
@@ -108,6 +109,27 @@ public class MessageController : ControllerBase
         return Ok("Steps added and file saved");
     }
     
+    [HttpGet("messages/out/check")]
+    public IActionResult CheckForOutFiles()
+    {
+        var path = Path.Combine(Directory.GetCurrentDirectory(), "archive", "out");
+
+        if (!Directory.Exists(path))
+        {
+            return NotFound("Directory does not exist.");
+        }
+
+        var files = Directory.GetFiles(path);
+        
+        if (files.Length > 0)
+        {
+            // Process files
+            return Ok(new { message = "Files found", count = files.Length });
+        }
+
+        return Ok(new { message = "No files found" });
+    }
+    
     [HttpPost("message/store")]
     [Authorize]
     public async Task<ActionResult<string>> AddMessage([FromForm] IFormFile file, [FromForm] string ruleId)
@@ -144,6 +166,88 @@ public class MessageController : ControllerBase
 
         return Ok(addMessage);
     }
+    
+    private static string CopyFile(string filePath, string fileName)
+    {
+        var now = DateTime.UtcNow;
+        var archiveRoot = Path.Combine(Directory.GetCurrentDirectory(), "archive");
+
+        // Recursively find the source file anywhere inside "archive"
+        var allFiles = Directory.GetFiles(archiveRoot, "*", SearchOption.AllDirectories);
+        var normalizedPath = filePath.TrimStart(Path.DirectorySeparatorChar).Replace('\\', '/');
+
+        var sourceFilePath = allFiles
+            .FirstOrDefault(f => f.Replace('\\', '/').EndsWith(normalizedPath, StringComparison.OrdinalIgnoreCase));
+
+        if (sourceFilePath == null || !System.IO.File.Exists(sourceFilePath))
+        {
+            throw new Exception("Source file not found under archive directory.");
+        }
+
+        var ext = Path.GetExtension(fileName)?.TrimStart('.').ToLower() ?? "";
+
+        string targetFolder;
+        if (ext.Length >= 2 && ext.StartsWith("20"))
+        {
+            var yearFolder = now.Year.ToString();
+            var monthFolder = now.Month.ToString("D2");
+            targetFolder = Path.Combine(archiveRoot, yearFolder, monthFolder);
+        }
+        else
+        {
+            targetFolder = Path.Combine(archiveRoot, "temp");;
+        }
+
+        if (!Directory.Exists(targetFolder))
+        {
+            Directory.CreateDirectory(targetFolder);
+        }
+
+        var finalFilePath = Path.Combine(targetFolder, fileName);
+        System.IO.File.Copy(sourceFilePath, finalFilePath, overwrite: true);
+
+        var relativeFilePath = Path.Combine(
+            "archive",
+            targetFolder[archiveRoot.Length..].TrimStart(Path.DirectorySeparatorChar),
+            fileName);
+
+        return relativeFilePath;
+    }
+
+    private async Task<ActionResult<string>> PrepareNextStep(MessageStep currentStep, string filePath)
+    {
+        var messageSteps = await this.context.MessageSteps
+            .Where(ms => ms.MessageId == currentStep.MessageId)
+            .ToListAsync();
+        
+        var messageStepNext = messageSteps
+            .Where(ms => ms.StartedTime > currentStep.StartedTime && ms.Id != currentStep.Id)
+            .MinBy(ms => ms.StartedTime);
+
+        if (messageStepNext != null && messageStepNext.StepName != "REMOVE")
+        {
+            messageStepNext.FilePath = filePath;
+            await this.context.SaveChangesAsync();
+        }
+        
+        messageStepNext!.StartedTime = DateTime.UtcNow;
+        await this.context.SaveChangesAsync();
+        
+        var messageStepsAfter = messageSteps
+            .Where(ms => ms.StartedTime > currentStep.StartedTime && ms.Id != currentStep.Id && ms.Id != messageStepNext.Id)
+            .OrderBy(ms => ms.StartedTime)
+            .ToList();
+
+        foreach (var step in messageStepsAfter)
+        {
+            step.StartedTime = DateTime.UtcNow;
+        }
+        
+        await this.context.SaveChangesAsync();
+        
+        return Ok("Prepared next step");
+
+    }
 
     [HttpPut("message/process/step/{id}")]
     [Authorize]
@@ -160,58 +264,14 @@ public class MessageController : ControllerBase
         {
             case "COPY":
             {
-                var now = DateTime.UtcNow;
-                var archiveRoot = Path.Combine(Directory.GetCurrentDirectory(), "archive");
-                var tempFolder = Path.Combine(archiveRoot, "temp");
+                var relativeFilePath = CopyFile(filePath, fileName);
 
-                var sourceFilePath = Path.Combine(tempFolder, filePath.TrimStart(Path.DirectorySeparatorChar));
-
-                if (!System.IO.File.Exists(sourceFilePath))
-                {
-                    return NotFound("Source file not found in temp folder.");
-                }
-
-                var ext = Path.GetExtension(fileName)?.TrimStart('.').ToLower() ?? "";
-
-                string targetFolder;
-                if (ext.Length >= 2 && ext.StartsWith("20"))
-                {
-                    var yearFolder = now.Year.ToString();
-                    var monthFolder = now.Month.ToString("D2");
-                    targetFolder = Path.Combine(archiveRoot, yearFolder, monthFolder);
-                }
-                else
-                {
-                    targetFolder = tempFolder;
-                }
-
-                if (!Directory.Exists(targetFolder))
-                {
-                    Directory.CreateDirectory(targetFolder);
-                }
-
-                // Copy and rename the file to the new destination
-                var finalFilePath = Path.Combine(targetFolder, fileName);
-                System.IO.File.Copy(sourceFilePath, finalFilePath, overwrite: true);
-
-                // Set the relative path to store in DB
-                var relativeFilePath = Path.Combine(
-                    "archive",
-                    targetFolder[archiveRoot.Length..].TrimStart(Path.DirectorySeparatorChar),
-                    fileName);
-
-                // Update DB fields
                 messageStep.Result = "OK";
                 messageStep.EndedTime = DateTime.UtcNow;
                 messageStep.FilePath = relativeFilePath;
+                await this.context.SaveChangesAsync();
 
-                var messageSteps = await this.context.MessageSteps.Where(ms => ms.Id == messageStep.MessageId).ToListAsync();
-                foreach (var stepMessage in messageSteps)
-                {
-                    stepMessage.FilePath = relativeFilePath;
-                    await this.context.SaveChangesAsync();
-                }
-                
+                await this.PrepareNextStep(messageStep, relativeFilePath);
                 await this.context.SaveChangesAsync();
                 break;
             }
@@ -220,8 +280,18 @@ public class MessageController : ControllerBase
                 await this.DeleteMessage(messageStep.MessageId.ToString());
                 break;
             }
+            case "CONVERT":
+            {
+                var convertFilePath = messageStep.FilePath;
+                var partnerCertificate = messageStep.Message.Rule.CommunicationChannel.Partner.Certificate;
+                Console.WriteLine(partnerCertificate);
+                break;
+            }
+            case "SHELL":
+            {
+                break;
+            }
         }
-
 
         return Ok(messageStep);
     }

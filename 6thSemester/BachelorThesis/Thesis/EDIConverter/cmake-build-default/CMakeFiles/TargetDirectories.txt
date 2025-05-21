@@ -1,0 +1,3 @@
+C:/Users/Alen/Documents/GithubPrivate/CS-Work/6thSemester/BachelorThesis/Thesis/EDIConverter/cmake-build-default/CMakeFiles/EdiConverter.dir
+C:/Users/Alen/Documents/GithubPrivate/CS-Work/6thSemester/BachelorThesis/Thesis/EDIConverter/cmake-build-default/CMakeFiles/edit_cache.dir
+C:/Users/Alen/Documents/GithubPrivate/CS-Work/6thSemester/BachelorThesis/Thesis/EDIConverter/cmake-build-default/CMakeFiles/rebuild_cache.dir

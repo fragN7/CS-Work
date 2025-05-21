@@ -1,4 +1,5 @@
-﻿using backend.Model;
+﻿using System.Text.Json;
+using backend.Model;
 using backend.Model.DTO;
 using backend.Repository;
 using Microsoft.AspNetCore.Authorization;
@@ -56,9 +57,82 @@ public class PartnerController : ControllerBase
         return Ok(partner);
     }
     
+    private async void CopyCertificate(IFormFile file)
+    {
+        if (file == null || file.Length == 0)
+        {
+            throw new ArgumentException("Uploaded file is null or empty.");
+        }
+
+        var archiveRoot = Path.Combine(Directory.GetCurrentDirectory(), "archive");
+        var targetFolder = Path.Combine(archiveRoot, "certificates");
+
+        if (!Directory.Exists(targetFolder))
+        {
+            Directory.CreateDirectory(targetFolder);
+        }
+
+        var fileName = Path.GetFileName(file.FileName);
+        var finalFilePath = Path.Combine(targetFolder, fileName);
+
+        // Save the file
+        await using (var stream = new FileStream(finalFilePath, FileMode.Create))
+        {
+            await file.CopyToAsync(stream);
+        }
+
+        // Return path relative to archive folder
+        var relativeFilePath = Path.Combine("archive", "certificates", fileName);
+    }
+    
+    private static void DeleteCertificate(string fileName)
+    {
+        var archiveRoot = Path.Combine(Directory.GetCurrentDirectory(), "archive");
+        var certificatesFolder = Path.Combine(archiveRoot, "certificates");
+
+        var fullFilePath = Path.Combine(certificatesFolder, fileName);
+
+        if (System.IO.File.Exists(fullFilePath))
+        {
+            System.IO.File.Delete(fullFilePath);
+        }
+        else
+        {
+            throw new FileNotFoundException("Certificate file not found.", fullFilePath);
+        }
+    }
+
+    private async Task<ActionResult<Certificate>> AddCertificate(IFormFile certificate)
+    {
+        if (certificate == null || certificate.Length == 0)
+        {
+            throw new Exception("Invalid file");
+        }
+
+        using var stream = new StreamReader(certificate.OpenReadStream());
+        var content = await stream.ReadToEndAsync();
+
+        var cert = JsonSerializer.Deserialize<Certificate>(content, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        });
+
+        if (cert == null)
+        {
+            throw new Exception("Cannot parse file");
+        }
+
+        cert.Id = Guid.NewGuid();
+
+        this.context.Certificates.Add(cert);
+        await this.context.SaveChangesAsync();
+
+        return Ok(cert);
+    }
+    
     [HttpPost("partner/add")]
     [Authorize]
-    public async Task<ActionResult<Partner>> AddPartner([FromBody] PartnerDTO partner)
+    public async Task<ActionResult<Partner>> AddPartner([FromForm] PartnerDTO partner)
     {
         var actualPartner = await this.context.Partners.FirstOrDefaultAsync(p => p.IpAddress == partner.IpAddress);
 
@@ -75,6 +149,9 @@ public class PartnerController : ControllerBase
             Certificate = partner.Certificate
         };
 
+        this.AddCertificate(partner.CertificateFile);
+        this.CopyCertificate(partner.CertificateFile);
+
         await this.context.Partners.AddAsync(addPartner);
         await this.context.SaveChangesAsync();
 
@@ -83,7 +160,7 @@ public class PartnerController : ControllerBase
     
     [HttpPut("partner/update/{id}")]
     [Authorize]
-    public async Task<ActionResult<Partner>> UpdatePartner([FromBody] PartnerDTO partner, string id)
+    public async Task<ActionResult<Partner>> UpdatePartner([FromForm] PartnerDTO partner, string id)
     {
         var actualPartner = await this.context.Partners.FirstOrDefaultAsync(p => p.Id.ToString() == id);
 
@@ -91,10 +168,14 @@ public class PartnerController : ControllerBase
         {
             throw new Exception("This partner doesn't exist");
         }
+        
+        DeleteCertificate(actualPartner.Certificate);
 
         actualPartner.Name = partner.Name;
         actualPartner.IpAddress = partner.IpAddress;
         actualPartner.Certificate = partner.Certificate;
+        
+        this.CopyCertificate(partner.CertificateFile);
 
         await this.context.SaveChangesAsync();
 
@@ -112,6 +193,15 @@ public class PartnerController : ControllerBase
             throw new Exception("Partner doesn't exist");
         }
 
+        var certificate = await this.context.Certificates.FirstOrDefaultAsync(c => c.Sender == actualPartner.Name);
+
+        if (certificate == null)
+        {
+            throw new Exception("Certificate doesn't exist");
+        }
+        
+        this.context.Certificates.Remove(certificate);
+        DeleteCertificate(actualPartner.Certificate);
         this.context.Partners.Remove(actualPartner);
         await this.context.SaveChangesAsync();
 

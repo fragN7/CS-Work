@@ -182,3 +182,4 @@ C:\Users\Alen\Documents\GithubPrivate\CS-Work\6thSemester\BachelorThesis\Thesis\
 C:\Users\Alen\Documents\GithubPrivate\CS-Work\6thSemester\BachelorThesis\Thesis\backend\backend\bin\Debug\net7.0\System.ClientModel.dll
 C:\Users\Alen\Documents\GithubPrivate\CS-Work\6thSemester\BachelorThesis\Thesis\backend\backend\bin\Debug\net7.0\System.IO.Hashing.dll
 C:\Users\Alen\Documents\GithubPrivate\CS-Work\6thSemester\BachelorThesis\Thesis\backend\backend\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\Alen\Documents\GithubPrivate\CS-Work\6thSemester\BachelorThesis\Thesis\backend\backend\bin\Debug\net7.0\indice.Edi.dll

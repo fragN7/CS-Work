@@ -100,4 +100,26 @@ public class AuthenticationController : ControllerBase
 
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
+    
+    private string CreateCertificatePassword(User user) 
+    {   
+        var claims = new[]
+        {
+            new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            new Claim("id", user.Id.ToString()),
+            new Claim("username", user.UserName)
+        };
+        
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(this.configuration.GetSection("AppSettings:Key").Value!));
+        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+        
+        var token = new JwtSecurityToken(
+            claims: claims,
+            expires: DateTime.UtcNow.AddYears(1),
+            signingCredentials: creds
+        );
+
+        return new JwtSecurityTokenHandler().WriteToken(token);
+    }
 }

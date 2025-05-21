@@ -150,6 +150,13 @@ public class RuleController : ControllerBase
         {
             throw new Exception("There doesn't exist a rule with these configurations");
         }
+        
+        var warningRule = await this.context.Rules.FirstOrDefaultAsync(r => r.Id.ToString() == "61351627-73e5-420b-a829-2f83740f6ee6");
+
+        if (warningRule == null)
+        {
+            throw new Exception("This rule cannot be deleted");
+        }
 
         var message = await this.context.Messages.FirstOrDefaultAsync(m => m.RuleId.ToString() == id);
         

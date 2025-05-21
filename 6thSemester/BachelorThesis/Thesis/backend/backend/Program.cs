@@ -1,6 +1,7 @@
 using System.Text;
 using System.Text.Json.Serialization;
 using backend.Repository;
+using backend.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -20,6 +21,14 @@ builder.Services.AddCors(options => {
             .AllowAnyMethod();
     });
 });
+
+builder.Services.AddHostedService<FolderWatchService>();
+builder.Services.AddHttpClient("InsecureClient")
+    .ConfigurePrimaryHttpMessageHandler(() =>
+        new HttpClientHandler
+        {
+            ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true
+        });
 
 builder.Services.AddAuthentication(options => 
 {
