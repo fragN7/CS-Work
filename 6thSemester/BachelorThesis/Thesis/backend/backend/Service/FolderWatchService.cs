@@ -7,14 +7,16 @@ namespace backend.Service;
 public class FolderWatchService : BackgroundService
 {
     private readonly ILogger<FolderWatchService> _logger;
-    private readonly string _folderPath;
+    private readonly string _outFolderPath;
+    private readonly string _inFolderPath;
     private readonly IServiceProvider _services;
     private readonly IHttpClientFactory _httpClientFactory;
 
     public FolderWatchService(ILogger<FolderWatchService> logger, IServiceProvider services, IHttpClientFactory httpClientFactory)
     {
         _logger = logger;
-        _folderPath = Path.Combine(Directory.GetCurrentDirectory(), "archive", "out");
+        _outFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "archive", "out");
+        _inFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "archive", "in");
         _services = services;
         _httpClientFactory = httpClientFactory;
     }
@@ -30,6 +32,13 @@ public class FolderWatchService : BackgroundService
             {
                 if (File.Exists(filePath))
                 {
+                    var attributes = File.GetAttributes(filePath);
+                    if ((attributes & FileAttributes.Directory) == FileAttributes.Directory)
+                    {
+                        _logger.LogWarning("Attempted to delete a directory instead of a file: {FilePath}", filePath);
+                        return;
+                    }
+                    
                     File.Delete(filePath);
                     _logger.LogInformation("Deleted uploaded file: {FilePath}", filePath);
                 }
@@ -81,9 +90,46 @@ public class FolderWatchService : BackgroundService
             _logger.LogWarning("Upload failed: {StatusCode}, {Error}", response.StatusCode, error);
         }
     }
+    
+    private async Task SendInMessage(string filePath, Certificate certificate, Rule rule, CancellationToken cancellationToken)
+    {
+        await using var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+        using var streamContent = new StreamContent(fileStream); // explicitly dispose this
+        using var content = new MultipartFormDataContent();
+
+        content.Add(streamContent, "file", Path.GetFileName(filePath));
+        content.Add(new StringContent(rule.Id.ToString()), "ruleId");
+
+        var client = _httpClientFactory.CreateClient("InsecureClient");
+        var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbGVuIiwianRpIjoiNDNlYzU3ODQtYWUyZS00N2QwLWIwYzItYTg2ZGEwY2VkYjBhIiwiaWQiOiI3YmZjNjdlNy1iZjc5LTQwNmYtOTNhMC1kMmNiNmRiNDJhNDkiLCJ1c2VybmFtZSI6ImFsZW4iLCJleHAiOjE3NzkzOTM5MDJ9.pjcLjSiidLO6mcg5amWs06rp6IrHEbhWTK0Jh5MB7Ig";
+        client.DefaultRequestHeaders.Authorization =
+            new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+
+        var response = await client.PostAsync($"https://localhost:7003/api/Message/message/store", content, cancellationToken);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var responseContent = await response.Content.ReadAsStringAsync(cancellationToken);
+            _logger.LogInformation("Successfully uploaded file. Response: {Response}", responseContent);
+
+            try
+            {
+                _logger.LogInformation("Deleted uploaded file: {FilePath}", filePath);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Failed to delete file after upload: {FilePath}", filePath);
+            }
+        }
+        else
+        {
+            var error = await response.Content.ReadAsStringAsync(cancellationToken);
+            _logger.LogWarning("Upload failed: {StatusCode}, {Error}", response.StatusCode, error);
+        }
+    }
 
     
-    private async Task ProcessFileAsync(string filePath, CancellationToken cancellationToken)
+    private async Task ProcessFileAsync(string filePath, CancellationToken cancellationToken, string folder)
     {
         try
         {
@@ -105,6 +151,8 @@ public class FolderWatchService : BackgroundService
                     sender = segments[6];
                     receiver = segments[8];
                 }
+                
+                Console.WriteLine(sender, receiver);
 
                 segments = content.Split('~', StringSplitOptions.RemoveEmptyEntries);
                 var stSegment = segments.FirstOrDefault(s => s.TrimStart().StartsWith("ST"));
@@ -163,9 +211,17 @@ public class FolderWatchService : BackgroundService
                 rule = await dbContext.Rules
                     .FirstOrDefaultAsync(c => c.Sender == "WARNING", cancellationToken: cancellationToken);
             }
-            
-            await this.SendOutMessage(filePath, certificate!, rule!, cancellationToken: cancellationToken);
-            await TryDeleteFileAsync(filePath);
+
+            if (folder == "out")
+            {
+                await this.SendOutMessage(filePath, certificate!, rule!, cancellationToken: cancellationToken);
+                await TryDeleteFileAsync(filePath);
+            }
+            else
+            {
+                await this.SendInMessage(filePath, certificate!, rule!, cancellationToken: cancellationToken);
+                await TryDeleteFileAsync(filePath);
+            }
 
             _logger.LogInformation("Certificate: {certificate.sender}, Rule: {rule.receiver}",
                 certificate.Sender, rule.ObjectType);
@@ -185,18 +241,24 @@ public class FolderWatchService : BackgroundService
         {
             try
             {
-                var files = Directory.GetFiles(_folderPath);
+                var files = Directory.GetFiles(_outFolderPath);
                 foreach (var file in files)
                 {
-                    await ProcessFileAsync(file, stoppingToken);
+                    await ProcessFileAsync(file, stoppingToken, "out");
+                }
+                
+                var inFiles = Directory.GetFiles(_inFolderPath);
+                foreach (var file in inFiles)
+                {
+                    await ProcessFileAsync(file, stoppingToken, "in");
                 }
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error watching folder.");
+                _logger.LogError(ex, "Error watching folders.");
             }
 
-            await Task.Delay(10000, stoppingToken); // Check every 5 seconds
+            await Task.Delay(10000, stoppingToken); 
         }
 
         _logger.LogInformation("Folder watcher stopped.");

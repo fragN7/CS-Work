@@ -1,10 +1,18 @@
-﻿using System.Xml.Linq;
+﻿using System.Diagnostics;
+using System.Text;
+using System.Text.Json;
+using System.Xml.Linq;
+using System.Xml.Serialization;
 using backend.Model;
 using backend.Model.DTO;
 using backend.Repository;
+using EdiFabric.Core.Model.Edi;
+using EdiFabric.Framework.Readers;
+using EdiFabric.Templates.X12004010;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Exception = System.Exception;
 
 namespace backend.Controllers;
 
@@ -21,37 +29,7 @@ public class MessageController : ControllerBase
         this.configuration = configuration;
     }
     
-    [HttpGet("messages/{pattern}")]
-    [Authorize]
-    public async Task<ActionResult<List<Message>>> GetMessages(string pattern)
-    {
-        var likePattern = pattern.Replace('*', '%');
-        var messages = await this.context.Messages
-            .Include(m => m.Rule)
-            .Include(m => m.MessageSteps)
-            .ToListAsync();
-
-        return Ok(messages);
-    }
-    
-    [HttpGet("message/{id}")]
-    [Authorize]
-    public async Task<ActionResult<Message>> GetMessageById(string id)
-    {
-        var message = await this.context.Messages
-            .Include(m => m.Rule)
-            .Include(m => m.MessageSteps)
-            .FirstOrDefaultAsync(m => m.Id.ToString() == id);
-
-        if (message == null)
-        {
-            throw new Exception("Message doesn't exist");
-        }
-        
-        return Ok(message);
-    }
-
-    private async Task<ActionResult<string>> AddStepToMessage(List<string> steps, IFormFile file, Message message)
+    private async Task<ActionResult<string>> AddStepToMessage(List<WorkflowStep> steps, IFormFile file, Message message)
     {
         var now = DateTime.UtcNow;
         var archiveRoot = Path.Combine(Directory.GetCurrentDirectory(), "archive");
@@ -94,7 +72,7 @@ public class MessageController : ControllerBase
             var step = new MessageStep
             {
                 Id = Guid.NewGuid(),
-                StepName = steps[i],
+                StepName = steps[i].Name,
                 StartedTime = DateTime.UtcNow,
                 EndedTime = DateTime.UtcNow,
                 Result = "READY",
@@ -107,64 +85,6 @@ public class MessageController : ControllerBase
         }
 
         return Ok("Steps added and file saved");
-    }
-    
-    [HttpGet("messages/out/check")]
-    public IActionResult CheckForOutFiles()
-    {
-        var path = Path.Combine(Directory.GetCurrentDirectory(), "archive", "out");
-
-        if (!Directory.Exists(path))
-        {
-            return NotFound("Directory does not exist.");
-        }
-
-        var files = Directory.GetFiles(path);
-        
-        if (files.Length > 0)
-        {
-            // Process files
-            return Ok(new { message = "Files found", count = files.Length });
-        }
-
-        return Ok(new { message = "No files found" });
-    }
-    
-    [HttpPost("message/store")]
-    [Authorize]
-    public async Task<ActionResult<string>> AddMessage([FromForm] IFormFile file, [FromForm] string ruleId)
-    {
-        var rule = await this.context.Rules.FirstOrDefaultAsync(r => r.Id.ToString() == ruleId);
-
-        if (rule == null)
-        {
-            throw new Exception("Rule doesn't exist");
-        }
-
-        var workflow = await this.context.Workflows.FirstOrDefaultAsync(w => w.Id == rule.WorkflowId);
-
-        if (workflow == null)
-        {
-            throw new Exception("Workflow doesn't exist");
-        }
-
-        var id = new Guid();
-
-        var addMessage = new Message
-        {
-            Id = id,
-            RuleId = rule.Id,
-            Rule = rule
-        };
-        
-        await this.context.Messages.AddAsync(addMessage);
-        await this.context.SaveChangesAsync();
-
-        
-        await this.AddStepToMessage(workflow.Steps.ToList(), file, addMessage);
-        
-
-        return Ok(addMessage);
     }
     
     private static string CopyFile(string filePath, string fileName)
@@ -202,15 +122,46 @@ public class MessageController : ControllerBase
         {
             Directory.CreateDirectory(targetFolder);
         }
+        
 
         var finalFilePath = Path.Combine(targetFolder, fileName);
-        System.IO.File.Copy(sourceFilePath, finalFilePath, overwrite: true);
+        Console.WriteLine(finalFilePath);
 
+        using (var sourceStream = new FileStream(sourceFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+        using (var destinationStream = new FileStream(finalFilePath, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
+        {
+            sourceStream.CopyTo(destinationStream);
+            destinationStream.Flush();
+        }
+        
         var relativeFilePath = Path.Combine(
             "archive",
             targetFolder[archiveRoot.Length..].TrimStart(Path.DirectorySeparatorChar),
             fileName);
 
+        return relativeFilePath;
+    }
+    
+    private static string AddFileToArchiveIn(string filePath, string fileName)
+    {
+        var archiveRoot = Path.Combine(Directory.GetCurrentDirectory(), "archive");
+        var targetFolder = Path.Combine(archiveRoot, "in");
+
+        if (!Directory.Exists(targetFolder))
+        {
+            Directory.CreateDirectory(targetFolder);
+        }
+
+        var sourceFilePath = Path.GetFullPath(filePath);
+        if (!System.IO.File.Exists(sourceFilePath))
+        {
+            throw new Exception("Source file does not exist.");
+        }
+
+        var finalFilePath = Path.Combine(targetFolder, fileName);
+        System.IO.File.Copy(sourceFilePath, finalFilePath, overwrite: true);
+
+        var relativeFilePath = Path.Combine("archive", "in", fileName);
         return relativeFilePath;
     }
 
@@ -240,58 +191,468 @@ public class MessageController : ControllerBase
 
         foreach (var step in messageStepsAfter)
         {
-            step.StartedTime = DateTime.UtcNow;
+            step.StartedTime = DateTime.UtcNow.AddMilliseconds(100);
         }
         
         await this.context.SaveChangesAsync();
         
         return Ok("Prepared next step");
+        
+    }
+    
+    private async Task<string> RunShellScriptAsync(string filePath, string fileName)
+    {
+        var scriptPath = Path.Combine(Directory.GetCurrentDirectory(), "archive", "scripts", "shell", fileName);
 
+        if (!System.IO.File.Exists(scriptPath))
+            throw new Exception($"Shell script not found {scriptPath}.");
+        
+        
+        Console.WriteLine($"{scriptPath} --- {filePath}");
+        
+        var psi = new ProcessStartInfo
+        {
+            FileName = "powershell.exe",
+            Arguments = $"-ExecutionPolicy Bypass -File \"{scriptPath}\" -FilePath \"{filePath}\"",
+            RedirectStandardOutput = true,
+            RedirectStandardError = true,
+            UseShellExecute = false,
+            CreateNoWindow = true
+        };
+        
+        Console.WriteLine("Script started");
+
+        using var process = new Process { StartInfo = psi, EnableRaisingEvents = true };
+        
+        Console.WriteLine("Script is ongoing");
+
+        var outputBuilder = new StringBuilder();
+        var errorBuilder = new StringBuilder();
+
+        var timeout = TimeSpan.FromSeconds(30);
+        using var cts = new CancellationTokenSource(timeout);
+
+        process.OutputDataReceived += (sender, e) =>
+        {
+            if (!string.IsNullOrEmpty(e.Data))
+            {
+                Console.WriteLine($"OUTPUT: {e.Data}");
+                outputBuilder.AppendLine(e.Data);
+            }
+        };
+
+        process.ErrorDataReceived += (sender, e) =>
+        {
+            if (!string.IsNullOrEmpty(e.Data))
+            {
+                Console.WriteLine($"ERROR: {e.Data}");
+                errorBuilder.AppendLine(e.Data);
+            }
+        };
+
+        process.Start();
+        
+        Console.WriteLine("Script is ongoing during start");
+
+        // Begin async reading of output and error streams
+        process.BeginOutputReadLine();
+        process.BeginErrorReadLine();
+
+        await process.WaitForExitAsync(cts.Token); // Available in .NET 5+
+        
+        Console.WriteLine("Script is ongoing after start");
+
+        if (process.ExitCode != 0)
+            throw new Exception($"Script execution failed: {errorBuilder}");
+        
+        Console.WriteLine(outputBuilder.ToString());
+        Console.WriteLine("Script Ended");
+        return outputBuilder.ToString();
+    }
+    
+    /*
+     * ENDPOINTS
+     */
+    
+    [HttpGet("messages/{pattern}")]
+    [Authorize]
+    public async Task<ActionResult<List<Message>>> GetMessages(string pattern)
+    {
+        var likePattern = pattern.Replace('*', '%');
+        var messages = await this.context.Messages
+            .Include(m => m.User)
+            .Include(m => m.Rule)
+            .Include(m => m.MessageSteps)
+            .ToListAsync();
+
+        return Ok(messages);
+    }
+    
+    [HttpGet("message/{id}")]
+    [Authorize]
+    public async Task<ActionResult<Message>> GetMessageById(string id)
+    {
+        var message = await this.context.Messages
+            .Include(m => m.Rule)
+            .Include(m => m.MessageSteps)
+            .FirstOrDefaultAsync(m => m.Id.ToString() == id);
+
+        if (message == null)
+        {
+            throw new Exception("Message doesn't exist");
+        }
+        
+        return Ok(message);
+    }
+
+    [HttpPost("message/step/file")]
+    [Authorize]
+    public async Task<ActionResult> GetFileContent([FromBody] FilePathDTO file)
+    {
+        var path = Path.Combine(Directory.GetCurrentDirectory(), file.FilePath);
+        
+        if (string.IsNullOrWhiteSpace(path))
+            throw new Exception("File path doesn't exist");
+        
+        if (!System.IO.File.Exists(path))
+            throw new Exception("File not found.");
+        
+        var content = await System.IO.File.ReadAllTextAsync(path);
+
+        if (content == null)
+        {
+            throw new Exception($"Error reading file");
+        }
+        
+        return Ok(content);
+    }
+    
+    [HttpPut("message/user/assign/{id}")]
+    [Authorize]
+    public async Task<ActionResult<Message>> AssignMessageToUser(string id, [FromBody] AssignMessageRequestDTO  messageAssign)
+    {
+        var message = await this.context.Messages.FirstOrDefaultAsync(m => m.Id.ToString() == messageAssign.MessageId);
+
+        if (message == null)
+        {
+            throw new Exception("Message doesn't exist");
+        }
+
+        var user = await this.context.Users.FirstOrDefaultAsync(u => u.Id.ToString() == id);
+
+        if (user == null)
+        {
+            throw new Exception("User doesn't exist");
+        }
+
+        message.User = user;
+        message.UserId = user.Id;
+        
+        await this.context.SaveChangesAsync();
+
+        return Ok(message);
+    }
+
+    
+    
+    [HttpGet("messages/out/check")]
+    public IActionResult CheckForOutFiles()
+    {
+        var path = Path.Combine(Directory.GetCurrentDirectory(), "archive", "out");
+
+        if (!Directory.Exists(path))
+        {
+            return NotFound("Directory does not exist.");
+        }
+
+        var files = Directory.GetFiles(path);
+        
+        if (files.Length > 0)
+        {
+            // Process files
+            return Ok(new { message = "Files found", count = files.Length });
+        }
+
+        return Ok(new { message = "No files found" });
+    }
+    
+    [HttpGet("messages/in/check")]
+    public IActionResult CheckForInFiles()
+    {
+        var path = Path.Combine(Directory.GetCurrentDirectory(), "archive", "in");
+
+        if (!Directory.Exists(path))
+        {
+            return NotFound("Directory does not exist.");
+        }
+
+        var files = Directory.GetFiles(path);
+        
+        if (files.Length > 0)
+        {
+            // Process files
+            return Ok(new { message = "Files found", count = files.Length });
+        }
+
+        return Ok(new { message = "No files found" });
+    }
+    
+    [HttpPost("message/store")]
+    [Authorize]
+    public async Task<ActionResult<string>> AddMessage([FromForm] IFormFile file, [FromForm] string ruleId)
+    {
+        var rule = await this.context.Rules.FirstOrDefaultAsync(r => r.Id.ToString() == ruleId);
+
+        if (rule == null)
+        {
+            throw new Exception("Rule doesn't exist");
+        }
+
+        var workflow = await this.context.Workflows
+            .Include(workflow => workflow.WorkflowSteps)
+            .FirstOrDefaultAsync(w => w.Id == rule.WorkflowId);
+
+        if (workflow == null)
+        {
+            throw new Exception("Workflow doesn't exist");
+        }
+
+        var id = new Guid();
+
+        var addMessage = new Message
+        {
+            Id = id,
+            RuleId = rule.Id,
+            Rule = rule
+        };
+        
+        await this.context.Messages.AddAsync(addMessage);
+        await this.context.SaveChangesAsync();
+
+        
+        await this.AddStepToMessage(workflow.WorkflowSteps.ToList(), file, addMessage);
+        
+
+        return Ok(addMessage);
+    }
+    
+    [HttpPost("message/restart")]
+    [Authorize]
+    public async Task<ActionResult<string>> RestartMessage([FromForm] RestartMessageDTO restartMessage)
+    {
+        var rule = await this.context.Rules.FirstOrDefaultAsync(r => r.Id.ToString() == restartMessage.RuleId);
+
+        if (rule == null)
+        {
+            throw new Exception("Rule doesn't exist");
+        }
+
+        var workflow = await this.context.Workflows
+            .Include(workflow => workflow.WorkflowSteps)
+            .FirstOrDefaultAsync(w => w.Id == rule.WorkflowId);
+
+        if (workflow == null)
+        {
+            throw new Exception("Workflow doesn't exist");
+        }
+
+        var id = new Guid();
+
+        var addMessage = new Message
+        {
+            Id = id,
+            RuleId = rule.Id,
+            Rule = rule
+        };
+        
+        await this.context.Messages.AddAsync(addMessage);
+        await this.context.SaveChangesAsync();
+
+        await using var stream = new FileStream(restartMessage.FilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+        var file = new FormFile(stream, 0, stream.Length, "file", Path.GetFileName(restartMessage.FilePath));
+
+        await this.AddStepToMessage(workflow.WorkflowSteps.ToList(), file, addMessage);
+        
+        return Ok(addMessage);
     }
 
     [HttpPut("message/process/step/{id}")]
     [Authorize]
     public async Task<ActionResult<MessageStep>> ProcessStep([FromForm] string filePath, [FromForm] string fileName, string id, [FromForm] string step)
     {
-        var messageStep = await this.context.MessageSteps.FirstOrDefaultAsync(ms => ms.Id.ToString() == id);
+        var messageStep = await this.context.MessageSteps.Include(messageStep => messageStep.Message)
+            .ThenInclude(message => message.Rule).ThenInclude(rule => rule.CommunicationChannel)
+            .ThenInclude(communicationChannel => communicationChannel.Partner)
+            .Include(messageStep => messageStep.Message).ThenInclude(message => message.Rule)
+            .ThenInclude(rule => rule.Workflow).ThenInclude(workflow => workflow.WorkflowSteps).FirstOrDefaultAsync(ms => ms.Id.ToString() == id);
 
         if (messageStep == null)
         {
             throw new Exception("Message step doesn't exist");
         }
+        
+        messageStep.Result = "ACTIVE";
 
         switch (step)
         {
             case "COPY":
             {
-                var relativeFilePath = CopyFile(filePath, fileName);
+                try
+                {
+                    var relativeFilePath = CopyFile(filePath, fileName);
 
-                messageStep.Result = "OK";
-                messageStep.EndedTime = DateTime.UtcNow;
-                messageStep.FilePath = relativeFilePath;
-                await this.context.SaveChangesAsync();
+                    messageStep.Result = "OK";
+                    messageStep.EndedTime = DateTime.UtcNow;
+                    messageStep.FilePath = relativeFilePath;
+                    await this.context.SaveChangesAsync();
 
-                await this.PrepareNextStep(messageStep, relativeFilePath);
-                await this.context.SaveChangesAsync();
+                    await this.PrepareNextStep(messageStep, relativeFilePath);
+                    await this.context.SaveChangesAsync();
+                }
+                catch (Exception ex)
+                {
+                    messageStep.Result = "ERROR";
+                    messageStep.EndedTime = DateTime.UtcNow;
+                    await this.context.SaveChangesAsync(); 
+                }
+                
                 break;
             }
             case "REMOVE":
             {
-                await this.DeleteMessage(messageStep.MessageId.ToString());
+                try
+                {
+                    await this.DeleteMessage(messageStep.MessageId.ToString());
+                }
+                catch (Exception ex)
+                {
+                    messageStep.Result = "ERROR";
+                    messageStep.EndedTime = DateTime.UtcNow;
+                    await this.context.SaveChangesAsync(); 
+                }
+                
                 break;
             }
             case "CONVERT":
             {
-                var convertFilePath = messageStep.FilePath;
-                var partnerCertificate = messageStep.Message.Rule.CommunicationChannel.Partner.Certificate;
-                Console.WriteLine(partnerCertificate);
+                try
+                {
+                    var relativeFilePath = CopyFile(filePath, fileName);
+                    
+                    var partnerCertificate = messageStep.Message.Rule.CommunicationChannel.Partner.Certificate;
+                    var partnerCertificateFilePath = Path.Combine("archive", "certificates", partnerCertificate);
+                    var jsonString = await System.IO.File.ReadAllTextAsync(partnerCertificateFilePath);
+                    var certInfo = JsonSerializer.Deserialize<CertificateDTO>(jsonString);
+
+                    Console.WriteLine("JUICE WRLDDD 1");
+                    if (certInfo == null)
+                    {
+                        throw new Exception("Standard not available at the moment");
+                    }
+                    
+                    var standard = certInfo.Standard;
+                    
+                    await using var ediStream = System.IO.File.OpenRead(relativeFilePath);
+                    using var ediReader = new X12Reader(ediStream, "EdiFabric.Templates.X12");
+                    Console.WriteLine("JUICE WRLDDD 2");
+                    object ediTransaction = new Object();
+                    
+                    while (await ediReader.ReadAsync())
+                    {
+                        ediTransaction = ediReader.Item;
+                        break;
+                    }
+                    Console.WriteLine("JUICE WRLDDD 3");
+                    
+                    if (ediTransaction == null)
+                        throw new Exception("No transaction set found in the EDI file.");
+                    
+                    var serializer = new XmlSerializer(ediTransaction.GetType());
+                    await using var stringWriter = new StringWriter();
+                    serializer.Serialize(stringWriter, ediTransaction);
+                    Console.WriteLine(stringWriter.ToString());
+
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                    messageStep.Result = "ERROR";
+                    messageStep.EndedTime = DateTime.UtcNow;
+                    await this.context.SaveChangesAsync();
+                }
                 break;
             }
             case "SHELL":
             {
+                try
+                {
+                    var relativeFilePath = CopyFile(filePath, fileName);
+                    var scriptFile =
+                        messageStep.Message.Rule.Workflow.WorkflowSteps.FirstOrDefault(ws => ws.Name == "SHELL")!
+                            .FilePath;
+                    await this.context.SaveChangesAsync();
+                    await this.RunShellScriptAsync(relativeFilePath, scriptFile);
+
+                    messageStep.Result = "OK";
+                    messageStep.EndedTime = DateTime.UtcNow;
+                    await this.context.SaveChangesAsync();
+
+                    await this.PrepareNextStep(messageStep, relativeFilePath);
+                }
+                catch (Exception ex)
+                {
+                    messageStep.Result = "ERROR";
+                    messageStep.EndedTime = DateTime.UtcNow;
+                    await this.context.SaveChangesAsync();
+                }
+                
+                break;
+            }
+            case "SEND":
+            {
+                try
+                {
+                    var relativeFilePath = CopyFile(filePath, fileName);
+                    var sender = messageStep.Message.Rule.Sender;
+                    var receiver = messageStep.Message.Rule.Receiver;
+                    var certificate = await this.context.Certificates
+                        .FirstOrDefaultAsync(c => 
+                            c.Sender == sender &&
+                            c.Receiver == receiver);
+
+                    if (certificate == null)
+                    {
+                        messageStep.Result = "ERROR";
+                        messageStep.EndedTime = DateTime.UtcNow;
+                        await this.context.SaveChangesAsync();
+                        throw new Exception($"Certificate for this partner combination {sender} -> {receiver} doesn't exist");
+                    }
+                    
+                    messageStep.Result = "OK";
+                    messageStep.EndedTime = DateTime.UtcNow;
+                    AddFileToArchiveIn(filePath, fileName);
+                    await this.context.SaveChangesAsync();
+                    await this.PrepareNextStep(messageStep, relativeFilePath);
+                }
+                catch (Exception ex)
+                {
+                    messageStep.Result = "ERROR";
+                    messageStep.EndedTime = DateTime.UtcNow;
+                    await this.context.SaveChangesAsync();
+                }
+                
                 break;
             }
         }
+
+        if (messageStep?.Message?.Rule?.TimeStamp != "PRE-DEFAULT") 
+            return Ok(messageStep);
+        
+        var rule = await this.context.Rules.Where(r => r.TimeStamp == "PRE-DEFAULT")
+            .FirstOrDefaultAsync(r => r.Id == messageStep.Message.RuleId);
+        if (rule != null) rule.TimeStamp = "DEFAULTS";
+        await this.context.SaveChangesAsync();
 
         return Ok(messageStep);
     }

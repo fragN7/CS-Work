@@ -39,7 +39,9 @@ public class WorkflowController : ControllerBase
     [Authorize]
     public async Task<ActionResult<Workflow>> GetWorkflowById(string id)
     {
-        var workflow = await this.context.Workflows.FirstOrDefaultAsync(w => w.Id.ToString() == id);
+        var workflow = await this.context.Workflows
+            .Include(w => w.WorkflowSteps)
+            .FirstOrDefaultAsync(w => w.Id.ToString() == id);
 
         if (workflow == null)
         {
@@ -51,7 +53,7 @@ public class WorkflowController : ControllerBase
     
     [HttpPost("workflow/add")]
     [Authorize]
-    public async Task<ActionResult<Workflow>> AddWorkflow([FromBody] WorkflowDTO workflow)
+    public async Task<ActionResult<Workflow>> AddWorkflow([FromForm] WorkflowDTO workflow)
     {
         var actualWorkflow = await this.context.Workflows.FirstOrDefaultAsync(w => w.Name == workflow.Name);
 
@@ -59,23 +61,65 @@ public class WorkflowController : ControllerBase
         {
             throw new Exception("There already exists a workflow with this name");
         }
-
+        
         var addWorkflow = new Workflow
         {
             Id = new Guid(),
-            Name = workflow.Name,
-            Steps = workflow.Steps
+            Name = workflow.Name
         };
-
+        
         await this.context.Workflows.AddAsync(addWorkflow);
         await this.context.SaveChangesAsync();
+        
+        var xslFolder = Path.Combine("archive", "scripts", "xsl");
+        var shellFolder = Path.Combine("archive", "scripts", "shell");
+        
+        Directory.CreateDirectory(xslFolder);
+        Directory.CreateDirectory(shellFolder);
+        
+        foreach (var step in workflow.WorkflowSteps)
+        {
+            var addWorkflowStep = new WorkflowStep
+            {
+                Id = new Guid(),
+                Name = step.Name,
+                FilePath = step.FilePath,
+                Command = step.Command,
+                Workflow = addWorkflow,
+                WorkflowId = addWorkflow.Id
+            };
 
+            if (step.File.Length > 0)
+            {
+                var ext = Path.GetExtension(step.File.FileName).ToLowerInvariant();
+                var folderPath = ext switch
+                {
+                    ".xsl" => xslFolder,
+                    ".sh" => shellFolder,
+                    ".ps1" => shellFolder,
+                    _ => null
+                };
+
+                if (folderPath != null)
+                {
+                    var uniqueFileName = $"{step.File.FileName}";
+                    var fullPath = Path.Combine(folderPath, uniqueFileName);
+
+                    await using var stream = new FileStream(fullPath, FileMode.Create);
+                    await step.File.CopyToAsync(stream);
+                }
+            }
+
+            await this.context.WorkflowSteps.AddAsync(addWorkflowStep);
+            await this.context.SaveChangesAsync();
+        }
+        
         return Ok(addWorkflow);
     }
     
     [HttpPut("workflow/update/{id}")]
     [Authorize]
-    public async Task<ActionResult<Workflow>> UpdateWorkflow([FromBody] WorkflowDTO workflow, string id)
+    public async Task<ActionResult<Workflow>> UpdateWorkflow([FromForm] WorkflowEditDTO workflow, string id)
     {
         var actualWorkflow= await this.context.Workflows.FirstOrDefaultAsync(w => w.Id.ToString() == id);
 
@@ -85,7 +129,6 @@ public class WorkflowController : ControllerBase
         }
 
         actualWorkflow.Name = workflow.Name;
-        actualWorkflow.Steps = workflow.Steps;
 
         await this.context.SaveChangesAsync();
 

@@ -80,6 +80,15 @@
           }
         }
       },
+      "EdiFabric/10.7.5": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/EdiFabric.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/EdiFabric.dll": {}
+        }
+      },
       "EdiFabric.Templates.Edifact/2.7.6": {
         "type": "package",
         "compile": {
@@ -1042,6 +1051,25 @@
         "lib/netstandard2.1/BCrypt.Net-Next.dll",
         "lib/netstandard2.1/BCrypt.Net-Next.xml",
         "readme.md"
+      ]
+    },
+    "EdiFabric/10.7.5": {
+      "sha512": "4W2hMAXOCA/jy6SX4CzrKYCCGqp8rb7Yc0l1lhvB6xqQJo31Ul5EQblCsZuWxr7XitI49DLYt9WUIVOKUgJV+Q==",
+      "type": "package",
+      "path": "edifabric/10.7.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "edifabric-logo.png",
+        "edifabric.10.7.5.nupkg.sha512",
+        "edifabric.nuspec",
+        "eula.txt",
+        "lib/net45/EdiFabric.dll",
+        "lib/net48/EdiFabric.dll",
+        "lib/net6.0/EdiFabric.dll",
+        "lib/net7.0/EdiFabric.dll",
+        "lib/net8.0/EdiFabric.dll",
+        "lib/net9.0/EdiFabric.dll"
       ]
     },
     "EdiFabric.Templates.Edifact/2.7.6": {
@@ -2605,6 +2633,7 @@
       "Azure.Storage.Blobs >= 12.24.0",
       "BCrypt >= 1.0.0",
       "BCrypt.Net-Next >= 4.0.3",
+      "EdiFabric >= 10.7.5",
       "EdiFabric.Templates.Edifact >= 2.7.6",
       "EdiFabric.Templates.X12 >= 2.7.6",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.14",
@@ -2679,6 +2708,10 @@
           "BCrypt.Net-Next": {
             "target": "Package",
             "version": "[4.0.3, )"
+          },
+          "EdiFabric": {
+            "target": "Package",
+            "version": "[10.7.5, )"
           },
           "EdiFabric.Templates.Edifact": {
             "target": "Package",

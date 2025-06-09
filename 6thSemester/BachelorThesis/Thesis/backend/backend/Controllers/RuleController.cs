@@ -134,6 +134,7 @@ public class RuleController : ControllerBase
 
         actualRule.WorkflowId = rule.WorkflowId;
         actualRule.Workflow = workflow!;
+        actualRule.TimeStamp = rule.TimeStamp;
         
         await this.context.SaveChangesAsync();
 

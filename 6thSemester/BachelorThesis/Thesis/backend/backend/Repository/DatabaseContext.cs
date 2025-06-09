@@ -18,22 +18,24 @@ public class DatabaseContext : DbContext
 
     public virtual DbSet<User> Users { get; set; } = null!;
     public virtual DbSet<Workflow> Workflows { get; set; } = null!;
+    public virtual DbSet<WorkflowStep> WorkflowSteps { get; set; } = null!;
     public virtual DbSet<Rule> Rules { get; set; } = null!;
     public virtual DbSet<Message> Messages { get; set; } = null!;
     public virtual DbSet<MessageStep> MessageSteps { get; set; } = null!;
     public virtual DbSet<Partner> Partners { get; set; } = null!;
     public virtual DbSet<CommunicationChannel> CommunicationChannels { get; set; } = null!;
-
     public virtual DbSet<Certificate> Certificates { get; set; } = null!;
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<User>()
-            .HasKey(u => u.Id);
-
         modelBuilder.Entity<Certificate>()
             .HasKey(c => c.Id);
 
+        modelBuilder.Entity<Message>()
+            .HasOne(m => m.User)
+            .WithMany(u => u.Messages)
+            .HasForeignKey(m => m.UserId);
+        
         modelBuilder.Entity<Message>()
             .HasOne(m => m.Rule)
             .WithMany(r => r.Messages)
@@ -58,6 +60,11 @@ public class DatabaseContext : DbContext
             .HasOne(p => p.CommunicationChannel)
             .WithOne(c => c.Partner)
             .HasForeignKey<CommunicationChannel>(p => p.PartnerId);
+
+        modelBuilder.Entity<WorkflowStep>()
+            .HasOne(ws => ws.Workflow)
+            .WithMany(w => w.WorkflowSteps)
+            .HasForeignKey(ws => ws.WorkflowId);
 
     }
 }

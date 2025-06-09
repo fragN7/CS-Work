@@ -62,6 +62,10 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
+            "EdiFabric": {
+              "target": "Package",
+              "version": "[10.7.5, )"
+            },
             "EdiFabric.Templates.Edifact": {
               "target": "Package",
               "version": "[2.7.6, )"

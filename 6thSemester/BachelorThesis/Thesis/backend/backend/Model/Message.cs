@@ -9,4 +9,7 @@ public class Message
     public Guid RuleId { get; set; }
     public Rule Rule { get; set; } = null!;
     public ICollection<MessageStep> MessageSteps { get; set; } = null!;
+    
+    public Guid UserId { get; set; }
+    public User User { get; set; } = null!;
 }

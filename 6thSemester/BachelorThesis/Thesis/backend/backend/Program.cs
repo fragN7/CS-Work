@@ -12,17 +12,21 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddCors(options => {
-    options.AddDefaultPolicy(policy => 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularDev", policy =>
     {
         policy
-            .AllowAnyOrigin()
+            .WithOrigins("http://localhost:4200") // your frontend origin here
             .AllowAnyHeader()
-            .AllowAnyMethod();
+            .AllowAnyMethod()
+            .AllowCredentials(); // if you use cookies or auth tokens
     });
 });
 
 builder.Services.AddHostedService<FolderWatchService>();
+builder.Services.AddHostedService<DefaultMessageService>();
+
 builder.Services.AddHttpClient("InsecureClient")
     .ConfigurePrimaryHttpMessageHandler(() =>
         new HttpClientHandler
@@ -72,7 +76,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors();
+app.UseCors("AllowAngularDev");
 
 app.UseHttpsRedirection();
 
