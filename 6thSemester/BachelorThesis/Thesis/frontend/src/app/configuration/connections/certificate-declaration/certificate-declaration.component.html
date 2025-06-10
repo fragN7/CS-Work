@@ -1,0 +1,81 @@
+<div class="app-wrapper d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR (same style as before) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.png" alt="Logo" class="nav-logo me-2" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a routerLink="/" class="nav-link">Messages</a></li>
+          <li class="nav-item"><a routerLink="/partners" class="nav-link active">Partners</a></li>
+          <li class="nav-item"><a routerLink="/workflows" class="nav-link">Workflows</a></li>
+          <li class="nav-item"><a routerLink="/rules" class="nav-link">Rules</a></li>
+          <li class="nav-item" *ngIf="username==='actis'">
+            <a routerLink="/users" class="nav-link">Users</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center">
+          <a href="https://github.com/your-repo" target="_blank" class="btn btn-outline-light me-2">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a href="https://docs.yourapp.com" target="_blank" class="btn btn-outline-light me-3">
+            📚 Docs
+          </a>
+          <span class="navbar-text text-light me-3">Logged in as: <strong>{{username}}</strong></span>
+          <button class="btn btn-primary" (click)="userLogout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-grow-1 bg-light py-5">
+    <div class="container">
+      
+      <div class="text-center mb-5">
+        <h1 class="mb-3">Certificate Generation</h1>
+      </div>
+
+      <div class="form-card mx-auto p-5 bg-white rounded shadow-sm" style="max-width: 480px;">
+        
+        <div class="mb-4">
+          <label for="sender" class="form-label fw-semibold">Sender</label>
+          <input id="sender" type="text" class="form-control" [(ngModel)]="certificate.sender" placeholder="Enter sender code" />
+        </div>
+        
+        <div class="mb-4">
+          <label for="receiver" class="form-label fw-semibold">Receiver</label>
+          <input id="receiver" type="text" class="form-control" [(ngModel)]="certificate.receiver" placeholder="Enter receiver code" />
+        </div>
+        
+        <div class="mb-4">
+          <label for="standard" class="form-label fw-semibold">Standard</label>
+          <select id="standard" class="form-select" [(ngModel)]="certificate.standard">
+            <option value="" disabled selected>Select a standard</option>
+            <option value="ANSI X12">ANSI X12</option>
+            <option value="EDIFACT">EDIFACT</option>
+          </select>
+        </div>
+        
+        <div class="mb-4">
+          <label for="hostName" class="form-label fw-semibold">Hostname</label>
+          <input id="hostName" type="text" class="form-control" [(ngModel)]="certificate.hostName" placeholder="Enter hostname" />
+        </div>
+        
+        <div class="mb-5">
+          <label for="port" class="form-label fw-semibold">Port</label>
+          <input id="port" type="number" class="form-control" [(ngModel)]="certificate.port" placeholder="Enter port" />
+        </div>
+        
+        <button class="btn btn-success w-100" (click)="saveCertificate()">Save</button>
+      </div>
+
+    </div>
+  </main>
+</div>

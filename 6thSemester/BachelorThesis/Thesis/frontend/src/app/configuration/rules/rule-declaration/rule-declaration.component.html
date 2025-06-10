@@ -1,0 +1,156 @@
+<div class="app-wrapper d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="logo.png" alt="Logo" class="nav-logo me-2" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navMenu" aria-controls="navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a routerLink="/" class="nav-link">Messages</a></li>
+            <li class="nav-item"><a routerLink="/partners" class="nav-link">Partners</a></li>
+            <li class="nav-item"><a routerLink="/workflows" class="nav-link">Workflows</a></li>
+            <li class="nav-item"><a routerLink="/rules" class="nav-link" routerLinkActive="active">Rules</a></li>
+            <li class="nav-item" *ngIf="username==='actis'">
+              <a routerLink="/users" class="nav-link">Users</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <a href="https://github.com/your-repo" target="_blank" class="btn btn-outline-light me-2">
+               <i class="bi bi-github"></i> GitHub
+            </a>
+            <a href="https://docs.yourapp.com" target="_blank" class="btn btn-outline-light me-3">
+               📚 Docs
+            </a>
+            <span class="navbar-text text-light me-3">Logged in as: <strong>{{username}}</strong></span>
+            <button class="btn btn-primary" (click)="userLogout()">Logout</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-grow-1 bg-light py-4">
+    <div class="container-fluid">
+      <div class="table-card p-4 rounded shadow-sm bg-white">
+
+        <!-- Top Summary -->
+        <div class="mb-4">
+          <h4>Current Selections:</h4>
+          <p>Sender: {{ rule.sender || 'Not selected' }}</p>
+          <p>Object Type: {{ rule.objectType || 'Not set' }}</p>
+          <p>Receiver: {{ rule.receiver || 'Not selected' }}</p>
+          <p>Time Window: {{ rule.timeStamp || 'Not selected' }}</p>
+          <p>Workflow: {{ rule.workflow?.name || 'Not selected' }}</p>
+        </div>
+
+        <!-- Stepper UI -->
+        <mat-horizontal-stepper linear #stepper>
+          <!-- Step 1: Sender -->
+          <mat-step *ngIf="!isEditMode" [stepControl]="senderForm">
+            <form [formGroup]="senderForm">
+              <ng-template matStepLabel>Select Sender</ng-template>
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Sender</mat-label>
+                <mat-select formControlName="sender">
+                  <mat-option *ngFor="let partner of partners" [value]="partner.name">
+                    {{ partner.name }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <button mat-button matStepperNext [disabled]="!senderForm.valid">Next</button>
+            </form>
+          </mat-step>
+
+          <!-- Step 2: Object Type -->
+          <mat-step *ngIf="!isEditMode" [stepControl]="objectTypeForm">
+            <form [formGroup]="objectTypeForm">
+              <ng-template matStepLabel>Enter Object Type</ng-template>
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Object Type</mat-label>
+                <input matInput formControlName="objectType" />
+              </mat-form-field>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext [disabled]="!objectTypeForm.valid">Next</button>
+            </form>
+          </mat-step>
+
+          <!-- Step 3: Receiver -->
+          <mat-step *ngIf="!isEditMode" [stepControl]="receiverForm">
+            <form [formGroup]="receiverForm">
+              <ng-template matStepLabel>Select Receiver</ng-template>
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Receiver</mat-label>
+                <mat-select formControlName="receiver">
+                  <mat-option *ngFor="let partner of partners" [value]="partner.name">
+                    {{ partner.name }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext [disabled]="!receiverForm.valid">Next</button>
+            </form>
+          </mat-step>
+
+          <!-- Step 4: Time Window -->
+          <mat-step [stepControl]="timeStampForm">
+            <form [formGroup]="timeStampForm">
+              <ng-template matStepLabel>Select Time Window</ng-template>
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Time Window</mat-label>
+                <mat-select formControlName="timeStamp">
+                  <mat-option *ngFor="let tw of timeStamps" [value]="tw">
+                    {{ tw }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext [disabled]="!timeStampForm.valid">Next</button>
+            </form>
+          </mat-step>
+
+          <!-- Step 5: Workflow -->
+          <mat-step [stepControl]="workflowForm">
+            <form [formGroup]="workflowForm">
+              <ng-template matStepLabel>Select Workflow</ng-template>
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Workflow</mat-label>
+                <mat-select formControlName="workflow">
+                  <mat-option *ngFor="let wf of workflows" [value]="wf">
+                    {{ wf.name }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <button mat-button matStepperPrevious>Back</button>
+              <!-- Hidden duplicate finish button -->
+              <button mat-button color="primary" style="display:none;" (click)="saveRule()">Finish</button>
+            </form>
+          </mat-step>
+        </mat-horizontal-stepper>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Fixed Bottom Action Bar -->
+  <div
+    class="fixed-bottom-action-bar"
+    *ngIf="isEditMode || stepper.selectedIndex === 4"
+  >
+    <div class="d-flex justify-content-around p-3 bg-white border-top shadow">
+      <button class="btn btn-secondary btn-lg px-4" routerLink="/rules">Back to Rules</button>
+      <button
+        class="btn btn-success btn-lg px-4"
+        [disabled]="!allFormsValid()"
+        (click)="saveRule()"
+      >
+        Save Rule
+      </button>
+    </div>
+  </div>
+</div>

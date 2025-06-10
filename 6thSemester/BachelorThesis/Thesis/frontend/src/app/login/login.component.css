@@ -1,0 +1,56 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111;
+    color: #fff;
+  }
+  
+  .promo-panel {
+    background: url('../../../public/login-bg.jpg') center center / cover no-repeat;
+    padding: 3rem;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .glassmorphism {
+    backdrop-filter: blur(18px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .logo {
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+  }
+  
+  .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-color: #66d9ef;
+    box-shadow: 0 0 0 0.25rem rgba(102, 217, 239, 0.25);
+  }
+  
+  .btn-primary {
+    background-color: #66d9ef;
+    border-color: #66d9ef;
+  }
+  
+  .btn-primary:hover {
+    background-color: #50bcca;
+    border-color: #50bcca;
+  }
+  
+  .container-fluid {
+    height: 100vh; /* hard lock to full screen */
+    padding: 0;
+    margin: 0;
+  }

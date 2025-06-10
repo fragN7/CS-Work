@@ -1,0 +1,107 @@
+<div class="app-wrapper d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.png" alt="Logo" class="nav-logo me-2" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a routerLink="/" class="nav-link">Messages</a></li>
+          <li class="nav-item"><a routerLink="/partners" class="nav-link" routerLinkActive="active" >Partners</a></li>
+          <li class="nav-item"><a routerLink="/workflows" class="nav-link">Workflows</a></li>
+          <li class="nav-item"><a routerLink="/rules" class="nav-link">Rules</a></li>
+          <li class="nav-item" *ngIf="username==='actis'">
+            <a routerLink="/users" class="nav-link">Users</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center">
+          <a href="https://github.com/your-repo" target="_blank" class="btn btn-outline-light me-2">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a href="https://docs.yourapp.com" target="_blank" class="btn btn-outline-light me-3">📚 Docs</a>
+          <span class="navbar-text text-light me-3">Logged in as: <strong>{{ username }}</strong></span>
+          <button class="btn btn-primary" (click)="userLogout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-grow-1 bg-light py-5">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h1>Partner Declaration</h1>
+      </div>
+
+      <hr class="custom-hr" />
+
+      <!-- FORM -->
+      <form class="mx-auto" style="max-width: 400px;" (ngSubmit)="savePartner()">
+
+        <div class="mb-4">
+          <label for="partnerName" class="form-label">Partner Name</label>
+          <input
+            id="partnerName"
+            type="text"
+            class="form-control"
+            [(ngModel)]="partner.name"
+            name="partnerName"
+            placeholder="Enter partner name"
+            required
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="partnerIpAddress" class="form-label">Partner IP Address</label>
+          <input
+            id="partnerIpAddress"
+            type="text"
+            class="form-control"
+            [(ngModel)]="partner.ipAddress"
+            name="partnerIpAddress"
+            placeholder="Enter IP Address"
+            required
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="partnerCertificate" class="form-label">Partner Certificate</label>
+          <input
+            id="partnerCertificate"
+            type="file"
+            accept=".pem"
+            class="form-control"
+            (change)="handleFileUpload($event)"
+          />
+          <div class="mt-3">
+            <a routerLink="/certificate/generate" class="btn btn-primary w-100">
+              Generate Certificate
+            </a>
+          </div>
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-success btn-lg">Save</button>
+        </div>
+
+      </form>
+
+    </div>
+  </main>
+
+</div>

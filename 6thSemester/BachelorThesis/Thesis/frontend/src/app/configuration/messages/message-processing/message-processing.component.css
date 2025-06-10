@@ -1,0 +1,237 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+.min-vh-100 {
+  min-height: 100vh !important;
+}
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Navbar container */
+.navbar {
+  background: #101012;
+  padding: 0.8rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar-brand img.nav-logo {
+  height: 22px;
+  filter: grayscale(1) brightness(1.4);
+  transition: filter 0.2s ease;
+}
+.navbar-brand img.nav-logo:hover {
+  filter: brightness(1.8);
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+  color: #b2b2b2;
+  margin: 0 0.5rem;
+  padding: 0.3rem 0.6rem;
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link.active {
+  color: #0d6efd;
+}
+
+.navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #0d6efd, transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before {
+  transform: scaleX(1);
+}
+
+/* Right actions */
+.navbar-text {
+  color: #888;
+  font-size: 13px;
+  margin-right: 1.2rem;
+}
+
+.btn {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-light {
+  color: #d1d1d1;
+  background-color: transparent;
+  border: 1px solid #2b2b2b;
+}
+.btn-outline-light:hover {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+/* Toggler (for mobile) */
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Collapse */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    margin-top: 1rem;
+  }
+  .navbar-text {
+    margin-top: 1rem;
+  }
+}
+
+.table-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  max-width: 98%;
+  margin: auto;
+}
+
+.context-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.context-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+.btn-outline-light i,
+.btn-success i {
+  margin-right: 6px;
+  vertical-align: text-bottom;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+h1,
+h2,
+.navbar-brand {
+  font-weight: 600;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* Overlay and tabs (you can reuse your existing styles here) */
+.overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background: #fff;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  z-index: 1050;
+  border-top: 1px solid #ccc;
+}
+
+.resize-handle {
+  height: 6px;
+  background: #ccc;
+  cursor: ns-resize;
+}
+
+.tabs-bar {
+  display: flex;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+  overflow-x: auto;
+}
+
+.tabs-bar > div {
+  padding: 8px 14px;
+  cursor: pointer;
+  border-right: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.tabs-bar > div:hover {
+  background-color: #e0e0e0;
+}
+
+.tabs-bar > div.active {
+  background: white;
+  font-weight: bold;
+  border-bottom: 3px solid #007bff;
+}
+
+.tabs-bar button {
+  background: transparent;
+  border: none;
+  color: #b00;
+  margin-left: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.tab-content pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.9rem;
+  background-color: #f8f8f8;
+  padding: 12px;
+  border-radius: 4px;
+}

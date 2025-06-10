@@ -1,0 +1,133 @@
+<div class="app-wrapper d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="logo.png" alt="Logo" class="nav-logo me-2" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navMenu" aria-controls="navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a routerLink="/" routerLinkActive="active" class="nav-link">Messages</a></li>
+            <li class="nav-item"><a routerLink="/partners" class="nav-link">Partners</a></li>
+            <li class="nav-item"><a routerLink="/workflows" class="nav-link">Workflows</a></li>
+            <li class="nav-item"><a routerLink="/rules" class="nav-link">Rules</a></li>
+            <li class="nav-item" *ngIf="username==='actis'">
+              <a routerLink="/users" class="nav-link">Users</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <a href="https://github.com/your-repo" target="_blank" class="btn btn-outline-light me-2">
+               <i class="bi bi-github"></i> GitHub
+            </a>
+            <a href="https://docs.yourapp.com" target="_blank" class="btn btn-outline-light me-3">
+               📚 Docs
+            </a>
+            <span class="navbar-text text-light me-3">Logged in as: <strong>{{username}}</strong></span>
+            <button class="btn btn-primary" (click)="userLogout()">Logout</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="container flex-grow-1">
+    <div class="card shadow-sm p-4 rounded-3 mx-auto my-5" style="max-width: 700px;">
+
+      <h1 class="text-center mb-4 fw-bold">Message Generator</h1>
+
+      <!-- Rule Selector -->
+      <div class="mb-4 position-relative">
+        <button
+          class="btn btn-outline-primary w-100 d-flex justify-content-between align-items-center"
+          (click)="toggleRulesDropdown()"
+          [attr.aria-expanded]="showRules"
+          aria-haspopup="listbox"
+          aria-label="Select Rule"
+        >
+          <span>
+            {{ selectedRule ? formatRule(selectedRule) : 'Select Rule' }}
+          </span>
+          <i class="bi bi-caret-down-fill"></i>
+        </button>
+
+        <div
+          *ngIf="showRules"
+          class="dropdown-menu show mt-2 p-3 shadow rounded"
+          style="max-height: 320px; overflow-y: auto;"
+        >
+          <!-- Filters -->
+          <input
+            type="search"
+            class="form-control mb-3"
+            placeholder="Filter by sender"
+            [(ngModel)]="filter.sender"
+            (input)="filterRules()"
+            aria-label="Filter by sender"
+          />
+          <input
+            type="search"
+            class="form-control mb-3"
+            placeholder="Filter by object type"
+            [(ngModel)]="filter.objectType"
+            (input)="filterRules()"
+            aria-label="Filter by object type"
+          />
+          <input
+            type="search"
+            class="form-control mb-3"
+            placeholder="Filter by receiver"
+            [(ngModel)]="filter.receiver"
+            (input)="filterRules()"
+            aria-label="Filter by receiver"
+          />
+
+          <!-- Rule List -->
+          <div role="listbox" aria-label="Filtered Rules">
+            <button
+              *ngFor="let rule of filteredRules"
+              class="dropdown-item"
+              type="button"
+              (click)="selectRule(rule)"
+              role="option"
+            >
+              {{ formatRule(rule) }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- File Upload -->
+      <div class="mb-4">
+        <label for="file-upload" class="form-label fw-semibold"
+          >Upload JSON File</label
+        >
+        <input
+          id="file-upload"
+          type="file"
+          class="form-control"
+          (change)="onFileSelected($event)"
+          aria-describedby="fileHelp"
+        />
+        <div id="fileHelp" class="form-text">
+          Supported format: JSON files only.
+        </div>
+      </div>
+
+      <!-- Send Button -->
+      <div class="d-grid">
+        <button
+          class="btn btn-success btn-lg fw-semibold"
+          (click)="sendMessage()"
+          aria-label="Send Message"
+        >
+          <i class="bi bi-send-fill me-2"></i> Send Message
+        </button>
+      </div>
+    </div>
+  </main>
+</div>

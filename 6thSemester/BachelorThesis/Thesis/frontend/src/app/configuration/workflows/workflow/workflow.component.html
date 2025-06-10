@@ -1,0 +1,86 @@
+<div class="app-wrapper d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR -->
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="logo.png" alt="Logo" class="nav-logo me-2" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navMenu" aria-controls="navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a routerLink="/" class="nav-link">Messages</a></li>
+            <li class="nav-item"><a routerLink="/partners" class="nav-link">Partners</a></li>
+            <li class="nav-item"><a routerLink="/workflows" routerLinkActive="active" class="nav-link">Workflows</a></li>
+            <li class="nav-item"><a routerLink="/rules" class="nav-link">Rules</a></li>
+            <li class="nav-item" *ngIf="username==='actis'">
+              <a routerLink="/users" class="nav-link">Users</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <a href="https://github.com/your-repo" target="_blank" class="btn btn-outline-light me-2">
+               <i class="bi bi-github"></i> GitHub
+            </a>
+            <a href="https://docs.yourapp.com" target="_blank" class="btn btn-outline-light me-3">
+               📚 Docs
+            </a>
+            <span class="navbar-text text-light me-3">Logged in as: <strong>{{username}}</strong></span>
+            <button class="btn btn-primary" (click)="userLogout()">Logout</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="flex-grow-1 bg-light py-4">
+    <div class="container d-flex flex-column align-items-center">
+
+      <h1 class="text-center mb-4">Workflows</h1>
+
+      <div id="results" class="w-75">
+        <table class="table table-striped mt-1">
+          <thead>
+            <tr>
+              <th style="width: 5%">Select</th>
+              <th style="width: 30%">Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              *ngFor="let workflow of workflows"
+              [class.selected]="workflow.selected"
+              style="cursor: pointer"
+              (click)="toggleSelect(workflow)"
+            >
+              <td>
+                <input
+                  type="checkbox"
+                  [(ngModel)]="workflow.selected"
+                  (click)="$event.stopPropagation()"
+                />
+              </td>
+              <td>{{ workflow.name }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Fixed bottom action buttons -->
+<div class="fixed-bottom-button-group shadow-sm border-top bg-white p-3">
+  <div class="container d-flex justify-content-center gap-3">
+    <button class="btn btn-success btn-lg px-4" (click)="createWorkflow()">Create</button>
+    <button class="btn btn-warning btn-lg px-4" (click)="editWorkflow()" [disabled]="!canEdit()">Edit</button>
+    <button class="btn btn-info btn-lg px-4" (click)="copyWorkflow()" [disabled]="!canCopy()">Copy</button>
+    <button class="btn btn-danger btn-lg px-4" (click)="deleteWorkflow()" [disabled]="!canDelete()">Delete</button>
+  </div>
+</div>
+
+
+</div>

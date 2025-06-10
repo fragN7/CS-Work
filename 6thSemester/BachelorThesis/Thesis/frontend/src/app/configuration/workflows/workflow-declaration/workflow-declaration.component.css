@@ -1,0 +1,214 @@
+/* Navbar container */
+.navbar {
+  background: #101012;
+  padding: 0.8rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar-brand img.nav-logo {
+  height: 22px;
+  filter: grayscale(1) brightness(1.4);
+  transition: filter 0.2s ease;
+}
+.navbar-brand img.nav-logo:hover {
+  filter: brightness(1.8);
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+  color: #b2b2b2;
+  margin: 0 0.5rem;
+  padding: 0.3rem 0.6rem;
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link.active {
+  color: #0d6efd;
+}
+
+.navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #0d6efd, transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before {
+  transform: scaleX(1);
+}
+
+/* Right actions */
+.navbar-text {
+  color: #888;
+  font-size: 13px;
+  margin-right: 1.2rem;
+}
+
+.btn {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-light {
+  color: #d1d1d1;
+  background-color: transparent;
+  border: 1px solid #2b2b2b;
+}
+.btn-outline-light:hover {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+/* Toggler (for mobile) */
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Collapse */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    margin-top: 1rem;
+  }
+  .navbar-text {
+    margin-top: 1rem;
+  }
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Drop areas */
+.drop-area {
+  background-color: #fff;
+  min-height: 280px;
+  max-width: 400px;
+  width: 100%;
+  border: 1.5px solid #ddd;
+  border-radius: 12px;
+  transition: box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.drop-area:hover {
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+}
+
+.drop-area.empty {
+  border: 2px dashed #bbb;
+  background-color: #f9f9f9;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #777;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 1.5rem;
+}
+
+/* Step items */
+.step-item {
+  cursor: grab;
+  user-select: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.05);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.step-item:active {
+  cursor: grabbing;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  background-color: #e9ecef;
+}
+
+.step-item:hover {
+  background-color: #e2e6ea;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+}
+
+/* File input styling */
+input[type="file"] {
+  margin-top: 0.3rem;
+}
+
+/* Empty square */
+.empty-square p {
+  font-style: italic;
+  color: #999;
+  margin: 0;
+}
+
+/* Save button footer */
+.fixed-bottom {
+  z-index: 1050;
+}
+
+footer.fixed-bottom button {
+  min-width: 180px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgb(40 167 69 / 0.5);
+  transition: box-shadow 0.25s ease;
+}
+
+footer.fixed-bottom button:hover {
+  box-shadow: 0 6px 20px rgb(40 167 69 / 0.75);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .drop-area {
+    max-width: 100%;
+  }
+
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

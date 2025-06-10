@@ -1,0 +1,93 @@
+<div class="container-fluid min-vh-100 d-flex flex-column">
+  <div class="row h-100">
+
+    <!-- LEFT: Promo panel -->
+    <div class="col-md-6 d-none d-md-flex flex-column justify-content-center align-items-center text-white promo-panel">
+      <div class="text-center px-4">
+        <h1 class="display-5 fw-bold mb-3">Welcome to Luka Integration</h1>
+        <p class="lead mb-4">
+          A seamless system integration platform designed to connect your tools, automate workflows, and bring harmony to your infrastructure.
+        </p>
+
+        <div class="mb-4">
+          <a href="https://github.com/your-repo" target="_blank" class="btn btn-outline-light me-2">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a href="https://docs.integrafow.com" target="_blank" class="btn btn-light text-dark">
+            📚 Documentation
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Login Form -->
+    <div class="col-md-6 d-flex justify-content-center align-items-center bg-dark text-white">
+      <form
+        id="loginForm"
+        autocomplete="off"
+        (ngSubmit)="login()"
+        #form="ngForm"
+        class="login-card p-4 rounded glassmorphism shadow"
+      >
+        <div class="text-center mb-4">
+          <img src="logo.png" alt="App Logo" class="logo mb-3" />
+          <p class="text-light">Your integration dashboard awaits</p>
+        </div>
+
+        <div class="mb-3">
+          <label for="usInput" class="form-label text-white">Username</label>
+          <input
+            type="text"
+            name="username"
+            class="form-control"
+            id="usInput"
+            [(ngModel)]="user.userName"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="psInput" class="form-label text-white">Password</label>
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            id="psInput"
+            [(ngModel)]="user.password"
+            required
+          />
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-8 mb-3 mb-md-0">
+            <label for="hsInput" class="form-label text-white">Hostname</label>
+            <input
+              type="text"
+              name="hostname"
+              class="form-control"
+              id="hsInput"
+              [(ngModel)]="user.hostName"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="ptInput" class="form-label text-white">Port</label>
+            <input
+              type="text"
+              name="port"
+              class="form-control"
+              id="ptInput"
+              [(ngModel)]="user.port"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary btn-lg">Log In</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
