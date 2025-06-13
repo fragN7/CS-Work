@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {Partner, Rule, ServiceComponent} from '../../../../service/service.component';
-import {AuthService} from '../../../../service/authentication/authentication.service';
-import {Router} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Partner, Rule, ServiceComponent } from '../../../../service/service.component';
+import { AuthService } from '../../../../service/authentication/authentication.service';
+import { Router } from '@angular/router';
 
 interface PartnerUI extends Partner {
   selected?: boolean;
@@ -13,21 +13,32 @@ interface PartnerUI extends Partner {
   templateUrl: './partner.component.html',
   styleUrl: './partner.component.css'
 })
-export class PartnerComponent implements OnInit{
+export class PartnerComponent implements OnInit {
   partners: PartnerUI[] = [];
   username?: string = '';
   constructor(private service: ServiceComponent, private userService: AuthService, private router: Router) { }
+  nameFilter: string = '';
+  ipFilter: string = '';
+  certFilter: string = '';
+
+  get filteredPartners() {
+    return this.partners.filter(p =>
+      (!this.nameFilter || p.name?.toLowerCase().includes(this.nameFilter.toLowerCase())) &&
+      (!this.ipFilter || p.ipAddress?.toLowerCase().includes(this.ipFilter.toLowerCase())) &&
+      (!this.certFilter || p.certificate?.toLowerCase().includes(this.certFilter.toLowerCase()))
+    );
+  }
 
   ngOnInit() {
     this.getPartners();
     this.username = localStorage.getItem('user')?.toString();
   }
 
-  userLogout(){
+  userLogout() {
     this.userService.logout();
   }
 
-  getPartners(){
+  getPartners() {
     this.service.getPartners().subscribe(
       (response: PartnerUI[]) => {
         this.partners = response.map(pt => ({ ...pt, selected: false }));

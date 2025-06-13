@@ -126,15 +126,19 @@
         </ul>
       </section>
 
+      <div class="d-grid">
+        <button class="btn btn-success w-100 d-flex justify-content-center"
+                [disabled]="!workflow.name?.trim() || !workflow.workflowSteps.length"
+                (click)="saveWorkflow()">
+          Save Workflow
+        </button>
+
+        <div class="text-danger text-center mb-3" *ngIf="!workflow.name?.trim() || !workflow.workflowSteps.length">
+          Please fill out all fields.
+        </div>
+      </div>
     </div>
 
   </main>
-
-  <!-- SAVE BUTTON FIXED BOTTOM -->
-  <footer class="fixed-bottom bg-white border-top p-3 d-flex justify-content-center shadow-lg">
-    <button class="btn btn-success btn-lg px-5" (click)="saveWorkflow()">
-      Save Workflow
-    </button>
-  </footer>
 
 </div>

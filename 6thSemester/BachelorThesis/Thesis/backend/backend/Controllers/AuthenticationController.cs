@@ -57,8 +57,8 @@ public class AuthenticationController : ControllerBase
     public async Task<ActionResult<List<UserDTO>>> GetAllUsers()
     {
         var users = await this.context.Users
-            .Where(m => m.Id.ToString() != "00000000-0000-0000-0000-000000000000")
             .ToListAsync();
+        
         if (users == null)
         {
             throw new Exception("There are no users");
@@ -107,6 +107,11 @@ public class AuthenticationController : ControllerBase
         if (user == null)
         {
             throw new Exception("User doesn't exist");
+        }
+        
+        if (user.Id.ToString() == "00000000-0000-0000-0000-000000000000")
+        {
+            throw new Exception("Cannot delete actis user");
         }
 
         this.context.Users.Remove(user);

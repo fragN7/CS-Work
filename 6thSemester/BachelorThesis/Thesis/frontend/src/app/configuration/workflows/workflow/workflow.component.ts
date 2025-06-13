@@ -15,11 +15,16 @@ interface WorkflowUI extends Workflow {
 })
 export class WorkflowComponent implements OnInit {
   workflows: WorkflowUI[] = [];
-  filteredWorkflows: WorkflowUI[] = [];
   username?: string = '';
   nameFilter: string = '';
-  constructor(private service: ServiceComponent, private userService: AuthService, private router: Router) { }
+get filteredWorkflows() {
+  return this.workflows.filter(w =>
+    !this.nameFilter || w.name?.toLowerCase().includes(this.nameFilter.toLowerCase())
+  );
+}
 
+  constructor(private service: ServiceComponent, private userService: AuthService, private router: Router) { }
+  
   ngOnInit() {
     this.getWorkflows();
     this.username = localStorage.getItem('user')?.toString();
@@ -33,19 +38,13 @@ export class WorkflowComponent implements OnInit {
     this.service.getWorkflows().subscribe(
       (response: WorkflowUI[]) => {
         this.workflows = response.map(wf => ({ ...wf, selected: false }));
-        this.filteredWorkflows = response.map(wf => ({ ...wf, selected: false }));
       },
       (error: any) => {
         console.error('Error fetching workflows: ', error);
       }
     )
   }
-  onFilterChange() {
-    const filter = this.nameFilter.toLowerCase();
-    this.filteredWorkflows = this.workflows.filter(w =>
-      w.name.toLowerCase().includes(filter)
-    );
-  }
+
 
   toggleSelect(workflow: WorkflowUI): void {
     workflow.selected = !workflow.selected;

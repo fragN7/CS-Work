@@ -14,7 +14,7 @@ import {CdkDragDrop, DragDropModule, moveItemInArray, transferArrayItem} from '@
 export class WorkflowDeclarationComponent implements OnInit, OnDestroy{
   workflow: Workflow = { id: '', name: '', workflowSteps: [] };
   username?: string = '';
-  availableSteps: string[] = ['COPY', 'CONVERT', 'SHELL', 'SEND', 'REMOVE'];
+  availableSteps: string[] = ['COPY', 'SHELL', 'SEND', 'REMOVE'];
   saveType: string = '';
 
   constructor(private service: ServiceComponent, private userService: AuthService, private router: Router) { }
@@ -55,14 +55,20 @@ export class WorkflowDeclarationComponent implements OnInit, OnDestroy{
   saveWorkflow() {
 
     const type = localStorage.getItem('saveType');
+    const invalidShellStep = this.workflow.workflowSteps.find(step =>
+      step.name === 'SHELL' && (!step.filePath || step.filePath.trim() === '')
+    );
+
+    if (invalidShellStep) {
+      alert('Please select a folder for all Shell steps.');
+      return;
+    }
 
     if(type == 'edit'){
       this.service.editWorkflow(localStorage.getItem('workflowId')!, this.workflow.name);
     } else {
       this.service.addWorkflow(this.workflow.name, this.workflow.workflowSteps);
     }
-    console.log(this.workflow.workflowSteps);
-    this.router.navigateByUrl("/workflows");
   }
   onAvailableStepsDropped(event: CdkDragDrop<string[]>) {
     if (event.previousContainer !== event.container) {

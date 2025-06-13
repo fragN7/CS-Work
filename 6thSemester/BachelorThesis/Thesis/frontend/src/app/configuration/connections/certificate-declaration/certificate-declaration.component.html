@@ -37,23 +37,23 @@
   <!-- MAIN CONTENT -->
   <main class="flex-grow-1 bg-light py-5">
     <div class="container">
-      
+
       <div class="text-center mb-5">
         <h1 class="mb-3">Certificate Generation</h1>
       </div>
 
       <div class="form-card mx-auto p-5 bg-white rounded shadow-sm" style="max-width: 480px;">
-        
+
         <div class="mb-4">
           <label for="sender" class="form-label fw-semibold">Sender</label>
           <input id="sender" type="text" class="form-control" [(ngModel)]="certificate.sender" placeholder="Enter sender code" />
         </div>
-        
+
         <div class="mb-4">
           <label for="receiver" class="form-label fw-semibold">Receiver</label>
           <input id="receiver" type="text" class="form-control" [(ngModel)]="certificate.receiver" placeholder="Enter receiver code" />
         </div>
-        
+
         <div class="mb-4">
           <label for="standard" class="form-label fw-semibold">Standard</label>
           <select id="standard" class="form-select" [(ngModel)]="certificate.standard">
@@ -62,18 +62,31 @@
             <option value="EDIFACT">EDIFACT</option>
           </select>
         </div>
-        
+
         <div class="mb-4">
           <label for="hostName" class="form-label fw-semibold">Hostname</label>
           <input id="hostName" type="text" class="form-control" [(ngModel)]="certificate.hostName" placeholder="Enter hostname" />
         </div>
-        
+
         <div class="mb-5">
           <label for="port" class="form-label fw-semibold">Port</label>
           <input id="port" type="number" class="form-control" [(ngModel)]="certificate.port" placeholder="Enter port" />
         </div>
-        
-        <button class="btn btn-success w-100" (click)="saveCertificate()">Save</button>
+
+        <button class="btn btn-success w-100 d-flex justify-content-center"
+                [disabled]="
+                  !certificate.sender?.trim() ||
+                  !certificate.receiver?.trim() ||
+                  !certificate.standard?.trim() ||
+                  !certificate.hostName?.trim() ||
+                  !certificate.port"
+                (click)="saveCertificate()">Save
+        </button>
+
+        <div class="text-danger text-center mb-3" *ngIf="!certificate.sender?.trim() || !certificate.receiver?.trim() || !certificate.standard?.trim() || !certificate.hostName?.trim() || !certificate.port">
+          Please fill out all fields.
+        </div>
+
       </div>
 
     </div>

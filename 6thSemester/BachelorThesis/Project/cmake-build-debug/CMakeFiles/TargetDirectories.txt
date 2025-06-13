@@ -1,3 +1,0 @@
-C:/Users/Alen/Documents/GithubPrivate/CS-Work/6thSemester/BachelorThesis/Project/cmake-build-debug/CMakeFiles/Project.dir
-C:/Users/Alen/Documents/GithubPrivate/CS-Work/6thSemester/BachelorThesis/Project/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Alen/Documents/GithubPrivate/CS-Work/6thSemester/BachelorThesis/Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir

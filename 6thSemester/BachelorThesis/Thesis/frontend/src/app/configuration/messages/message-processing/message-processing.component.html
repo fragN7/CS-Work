@@ -1,13 +1,13 @@
 <div class="app-wrapper d-flex flex-column min-vh-100">
 
-   <!-- NAVBAR -->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="#">
         <img src="logo.png" alt="Logo" class="nav-logo me-2" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navMenu" aria-controls="navMenu">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
@@ -22,10 +22,10 @@
         </ul>
         <div class="d-flex align-items-center">
           <a href="https://github.com/your-repo" target="_blank" class="btn btn-outline-light me-2">
-             <i class="bi bi-github"></i> GitHub
+            <i class="bi bi-github"></i> GitHub
           </a>
           <a href="https://docs.yourapp.com" target="_blank" class="btn btn-outline-light me-3">
-             📚 Docs
+            📚 Docs
           </a>
           <span class="navbar-text text-light me-3">Logged in as: <strong>{{username}}</strong></span>
           <button class="btn btn-primary" (click)="userLogout()">Logout</button>
@@ -44,23 +44,30 @@
 
         <div *ngIf="message?.messageSteps?.length" class="table-responsive">
           <table class="table table-hover align-middle">
-            <thead class="table-dark">
-              <tr>
+            <thead>
+              <tr class="table-dark">
                 <th>Step Name</th>
                 <th>Started Time</th>
                 <th>Ended Time</th>
                 <th></th>
                 <th>Result</th>
               </tr>
+              <tr class="bg-light">
+                <th>
+                  <input class="form-control form-control-sm" [(ngModel)]="stepNameFilter" placeholder="Step Name" />
+                </th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>
+                  <input class="form-control form-control-sm" [(ngModel)]="resultFilter" placeholder="Result" />
+                </th>
+              </tr>
             </thead>
+
             <tbody>
-              <tr
-                *ngFor="let s of message.messageSteps; let i = index"
-                [class.table-active]="isSelected(s)"
-                (click)="toggleSelection(s)"
-                (dblclick)="s.filePath && selectStep(s)"
-                style="cursor: pointer"
-              >
+              <tr *ngFor="let s of filteredSteps; let i = index" [class.table-active]="isSelected(s)"
+                (click)="toggleSelection(s)" (dblclick)="s.filePath && selectStep(s)" style="cursor: pointer">
                 <td>{{ s.stepName }}</td>
                 <td>
                   <ng-container *ngIf="i === 0 || message.messageSteps[i - 1]?.result === 'OK'">
@@ -68,9 +75,7 @@
                   </ng-container>
                 </td>
                 <td>
-                  <ng-container
-                    *ngIf="!(allStepsReady() && i === 0) && (s.result === 'OK' || s.result === 'ERROR')"
-                  >
+                  <ng-container *ngIf="!(allStepsReady() && i === 0) && (s.result === 'OK' || s.result === 'ERROR')">
                     {{ s.endedTime | date: 'medium' }}
                   </ng-container>
                 </td>
@@ -80,10 +85,7 @@
                   </ng-container>
                   <ng-template #resultCheck>
                     <ng-container *ngIf="s.result !== 'OK'; else checkmark">
-                      <button
-                        class="btn btn-sm btn-success"
-                        (dblclick)="processStep(s); $event.stopPropagation()"
-                      >
+                      <button class="btn btn-sm btn-success" (dblclick)="processStep(s); $event.stopPropagation()">
                         ▶
                       </button>
                     </ng-container>
@@ -92,8 +94,7 @@
                     </ng-template>
                   </ng-template>
                 </td>
-                <td
-                  [ngStyle]="{
+                <td [ngStyle]="{
                     'background-color':
                       s.stepName === 'WARNING'
                         ? '#f44336'
@@ -102,8 +103,7 @@
                         : s.result === 'ERROR'
                         ? '#ffcdd2'
                         : ''
-                  }"
-                >
+                  }">
                   {{ s.stepName === 'WARNING' ? 'WARNING' : s.result }}
                 </td>
               </tr>
@@ -111,18 +111,11 @@
           </table>
         </div>
 
-        <div
-          *ngIf="overlayVisible"
-          class="overlay"
-          [style.height.px]="overlayHeight"
-        >
+        <div *ngIf="overlayVisible" class="overlay" [style.height.px]="overlayHeight">
           <div class="resize-handle" (mousedown)="startResize($event)"></div>
           <div class="tabs-bar">
-            <div
-              *ngFor="let tab of openTabs; let idx = index"
-              (click)="selectTab(idx)"
-              [class.active]="idx === selectedTabIndex"
-            >
+            <div *ngFor="let tab of openTabs; let idx = index" (click)="selectTab(idx)"
+              [class.active]="idx === selectedTabIndex">
               <span>{{ tab.stepName }}</span>
               <button (click)="closeTab(idx); $event.stopPropagation()">×</button>
             </div>

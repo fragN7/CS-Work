@@ -12,25 +12,16 @@ namespace backend.Controllers;
 public class CommunicationChannelController : ControllerBase
 {
     private readonly DatabaseContext context;
-    private readonly IConfiguration configuration;
 
-    public CommunicationChannelController(DatabaseContext context, IConfiguration configuration)
+    public CommunicationChannelController(DatabaseContext context)
     {
         this.context = context;
-        this.configuration = configuration;
     }
     
     [HttpPost("channel/add")]
     [Authorize]
     public async Task<ActionResult<CommunicationChannel>> AddChannel([FromBody] CommunicationChannelDTO channel)
     {
-        /*var actualChannel = await this.context.CommunicationChannels.FirstOrDefaultAsync(c => c.PartnerId == channel.PartnerId);
-
-        if (actualChannel != null)
-        {
-            throw new Exception("There already exists a communication channel with this partner");
-        }*/
-        
         var partner = await this.context.Partners.FirstOrDefaultAsync(p => p.Id == channel.PartnerId);
         
         if (partner == null)
@@ -43,9 +34,6 @@ public class CommunicationChannelController : ControllerBase
             Id = new Guid(),
             PartnerId = partner.Id
         };
-        
-        /*partner.CommunicationChannelId = addChannel.Id;
-        partner.CommunicationChannel = addChannel;*/
 
         await this.context.CommunicationChannels.AddAsync(addChannel);
         await this.context.SaveChangesAsync();

@@ -151,3 +151,8 @@ h1, h2, .navbar-brand {
     margin-top: 1rem;
   }
 }
+
+thead input.form-control-sm {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.4rem;
+}

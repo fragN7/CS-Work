@@ -34,7 +34,6 @@ import {UserComponent} from './configuration/users/user/user.component';
 import {UserDeclarationComponent} from './configuration/users/user-declaration/user-declaration.component';
 
 
-
 /*@NgModule({
   declarations: [
     LoginComponent,

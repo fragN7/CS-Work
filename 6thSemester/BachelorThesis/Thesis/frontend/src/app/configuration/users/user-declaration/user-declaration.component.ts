@@ -43,7 +43,23 @@ export class UserDeclarationComponent implements OnInit{
         this.router.navigateByUrl(`/users`);
       },
       error => {
-        console.error("Error while generating user", error);
+        console.error("Error while adding user", error.error);
+
+        let rawError = error.error;
+        let message = '';
+
+        if (typeof rawError === 'string') {
+          const match = rawError.match(/System\.Exception:\s*(.*)/);
+          if (match && match[1]) {
+            message = match[1].split('\n')[0].trim();
+          } else {
+            message = rawError.split('\n')[0].trim();
+          }
+        } else {
+          message = 'An unknown error occurred.';
+        }
+
+        alert(`Error while adding user:\n${message}`);
       }
     );
   }

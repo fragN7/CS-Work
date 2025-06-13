@@ -6,8 +6,8 @@
       <a class="navbar-brand d-flex align-items-center" href="#">
         <img src="logo.png" alt="Logo" class="nav-logo me-2" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
@@ -35,50 +35,71 @@
   </nav>
 
   <!-- MAIN CONTENT -->
-  <main class="flex-grow-1 bg-light py-5">
-    <div class="container">
+  <main class="flex-grow-1 bg-light py-4">
+    <div class="container-fluid">
 
-      <div class="text-center mb-5">
-        <h1>Partners</h1>
+
+      <div class="table-card p-4 rounded shadow-sm bg-white">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2 class="h5 mb-0">Partners</h2>
+          <div>
+            <button class="btn btn-success me-2" (click)="createPartner()">
+              <i class="bi bi-plus-circle"></i> Create
+            </button>
+            <button class="btn btn-warning me-2" (click)="editPartner()" [disabled]="!canEdit()">
+              <i class="bi bi-pencil-square"></i> Edit
+            </button>
+            <button class="btn btn-info me-2" (click)="copyPartner()" [disabled]="!canCopy()">
+              <i class="bi bi-files"></i> Copy
+            </button>
+            <button class="btn btn-danger" (click)="deletePartner()" [disabled]="!canDelete()">
+              <i class="bi bi-trash"></i> Delete
+            </button>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-hover table-striped align-middle">
+            <thead class="table-dark">
+              <tr>
+                <th style="width: 5%;">Select</th>
+                <th>Name</th>
+                <th>IP Address</th>
+                <th>Certificate</th>
+              </tr>
+              <tr class="table-light">
+                <th></th>
+                <th>
+                  <input class="form-control form-control-sm" type="text" placeholder="Filter name"
+                    [(ngModel)]="nameFilter" />
+                </th>
+                <th>
+                  <input class="form-control form-control-sm" type="text" placeholder="Filter IP"
+                    [(ngModel)]="ipFilter" />
+                </th>
+                <th>
+                  <input class="form-control form-control-sm" type="text" placeholder="Filter certificate"
+                    [(ngModel)]="certFilter" />
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let partner of filteredPartners" [class.table-active]="partner.selected"
+                style="cursor: pointer;">
+                <td>
+                  <input type="checkbox" [(ngModel)]="partner.selected" (click)="$event.stopPropagation()" />
+                </td>
+                <td (click)="toggleSelect(partner)">{{ partner.name }}</td>
+                <td (click)="toggleSelect(partner)">{{ partner.ipAddress }}</td>
+                <td (click)="toggleSelect(partner)">{{ partner.certificate }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
-      <hr class="custom-hr" />
-
-      <div class="table-responsive">
-        <table class="table table-hover table-striped align-middle mx-auto" style="max-width: 900px;">
-          <thead class="table-dark">
-            <tr>
-              <th style="width: 5%;">Select</th>
-              <th style="width: 30%;">Name</th>
-              <th style="width: 30%;">IP Address</th>
-              <th style="width: 30%;">Certificate</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let partner of partners" [class.table-active]="partner.selected" style="cursor: pointer;">
-              <td>
-                <input type="checkbox" [(ngModel)]="partner.selected" (click)="$event.stopPropagation()" />
-              </td>
-              <td (click)="toggleSelect(partner)">{{ partner.name }}</td>
-              <td (click)="toggleSelect(partner)">{{ partner.ipAddress }}</td>
-              <td (click)="toggleSelect(partner)">{{ partner.certificate }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <hr class="custom-hr" />
     </div>
   </main>
-
-  <!-- Fixed bottom action buttons -->
-  <div class="fixed-bottom-button-group shadow-sm border-top bg-white p-3">
-    <div class="container d-flex justify-content-center gap-3">
-      <button class="btn btn-success btn-lg px-4" (click)="createPartner()">Create</button>
-      <button class="btn btn-warning btn-lg px-4" (click)="editPartner()" [disabled]="!canEdit()">Edit</button>
-      <button class="btn btn-info btn-lg px-4" (click)="copyPartner()" [disabled]="!canCopy()">Copy</button>
-      <button class="btn btn-danger btn-lg px-4" (click)="deletePartner()" [disabled]="!canDelete()">Delete</button>
-    </div>
-  </div>
 
 </div>

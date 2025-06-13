@@ -15,6 +15,7 @@ export class PartnerDeclarationComponent implements OnInit, OnDestroy{
   partner: Partner = { id: '', name: '', ipAddress: '', certificate: '' };
   certificate: File = null!;
   username?: string = '';
+
   constructor(private service: ServiceComponent, private userService: AuthService, private router: Router) { }
 
   ngOnInit() {
@@ -49,7 +50,6 @@ export class PartnerDeclarationComponent implements OnInit, OnDestroy{
     if (input.files && input.files.length > 0) {
       const file = input.files![0];
 
-      // Ensure it's a .pem file
       if (!file.name.toLowerCase().endsWith('.pem')) {
         alert('Only .pem files are allowed.');
         return;
@@ -63,7 +63,6 @@ export class PartnerDeclarationComponent implements OnInit, OnDestroy{
   savePartner() {
 
     const type = localStorage.getItem('saveType');
-
     if(type == 'edit'){
       this.service.editPartner(localStorage.getItem('partnerId')!, this.partner.name, this.partner.ipAddress, this.partner.certificate, this.certificate);
     } else {
@@ -71,12 +70,28 @@ export class PartnerDeclarationComponent implements OnInit, OnDestroy{
         response => {
           console.log("Partner added successfully", response);
           this.service.addChannel(response.id.toString());
+          this.router.navigateByUrl("/partners");
         },
         error => {
-          console.error("Error while adding partner", error);
+          console.error("Error while adding partner", error.error);
+
+          let rawError = error.error;
+          let message = '';
+
+          if (typeof rawError === 'string') {
+            const match = rawError.match(/System\.Exception:\s*(.*)/);
+            if (match && match[1]) {
+              message = match[1].split('\n')[0].trim();
+            } else {
+              message = rawError.split('\n')[0].trim();
+            }
+          } else {
+            message = 'An unknown error occurred.';
+          }
+
+          alert(`Error while adding partner:\n${message}`);
         }
       );
     }
-    this.router.navigateByUrl("/partners");
   }
 }

@@ -1,7 +1,7 @@
-import {Component, HostListener, OnInit} from '@angular/core';
-import {Message, ServiceComponent, User} from '../service/service.component';
-import {Router} from '@angular/router';
-import {AuthService} from '../service/authentication/authentication.service';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { Message, ServiceComponent, User } from '../service/service.component';
+import { Router } from '@angular/router';
+import { AuthService } from '../service/authentication/authentication.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,15 @@ import {AuthService} from '../service/authentication/authentication.service';
   standalone: false,
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
+  senderFilter: string = '';
+  receiverFilter: string = '';
+  objectTypeFilter: string = '';
+  workflowIdFilter: string = '';
+  statusFilter: string = '';
+  assigneeFilter: string = '';
+
+
   messages: Message[] = [];
   username?: string = '';
   users: User[] = [];
@@ -25,24 +33,39 @@ export class HomeComponent implements OnInit{
   constructor(private service: ServiceComponent, private userService: AuthService, private router: Router) { }
 
   ngOnInit() {
-    
+
     this.getMessages();
     this.getUsers();
     this.username = localStorage.getItem('user')?.toString();
   }
 
-  getMessages(){
-    this.service.getMessages().subscribe(
-      (response: Message[]) => {
-        this.messages = response;
-      },
-      (error: any) => {
-        console.error('Error fetching messages: ', error);
-      }
-    )
+  get filteredMessages(): Message[] {
+    return this.messages.filter(m =>
+      (!this.workflowIdFilter || m.id?.toLowerCase().includes(this.workflowIdFilter.toLowerCase())) &&
+      (!this.senderFilter || m.rule?.sender?.toLowerCase().includes(this.senderFilter.toLowerCase())) &&
+      (!this.objectTypeFilter || m.rule?.objectType?.toLowerCase().includes(this.objectTypeFilter.toLowerCase())) &&
+      (!this.receiverFilter || m.rule?.receiver?.toLowerCase().includes(this.receiverFilter.toLowerCase())) &&
+      (!this.statusFilter || this.getMessageStep(m)?.toLowerCase().includes(this.statusFilter.toLowerCase())) &&
+      (!this.assigneeFilter || m.user?.userName?.toLowerCase().includes(this.assigneeFilter.toLowerCase()))
+    );
   }
 
-  getUsers(){
+
+
+getMessages() {
+  this.service.getMessages().subscribe(
+    (response: Message[]) => {
+      console.log('Fetched messages:', response); // ✅ Add this
+      this.messages = response;
+    },
+    (error: any) => {
+      console.error('Error fetching messages: ', error);
+    }
+  );
+}
+
+
+  getUsers() {
     this.service.getUsers().subscribe(
       (response: User[]) => {
         this.users = response;
@@ -106,7 +129,7 @@ export class HomeComponent implements OnInit{
 
 
 
-  userLogout(){
+  userLogout() {
     this.userService.logout();
   }
 
@@ -159,17 +182,19 @@ export class HomeComponent implements OnInit{
     this.showAssignModal = false;
   }
 
-  assignUserToSelected(userId: string) {
+  assignUserToSelected(event: Event) {
     const messageIds = this.selectedMessages.map(m => m.id);
     let completed = 0;
+    const selectElement = event.target as HTMLSelectElement;
+    const userId = selectElement.value;
 
     messageIds.forEach(id => {
       this.service.assignMessageToUser(id, userId);
-    });
-    window.location.reload();
+    });/*
+    window.location.reload();*/
   }
 
-  assignSelected(){
+  assignSelected() {
     this.showAssignModal = true;
   }
 

@@ -1,16 +1,16 @@
 <!-- app.component.html -->
 <div class="app-wrapper d-flex flex-column min-vh-100">
 
-  
-  
+
+
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="#">
         <img src="logo.png" alt="Logo" class="nav-logo me-2" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navMenu" aria-controls="navMenu">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
@@ -25,10 +25,10 @@
         </ul>
         <div class="d-flex align-items-center">
           <a href="https://github.com/your-repo" target="_blank" class="btn btn-outline-light me-2">
-             <i class="bi bi-github"></i> GitHub
+            <i class="bi bi-github"></i> GitHub
           </a>
           <a href="https://docs.yourapp.com" target="_blank" class="btn btn-outline-light me-3">
-             📚 Docs
+            📚 Docs
           </a>
           <span class="navbar-text text-light me-3">Logged in as: <strong>{{username}}</strong></span>
           <button class="btn btn-primary" (click)="userLogout()">Logout</button>
@@ -50,46 +50,77 @@
 
         <div class="table-responsive">
           <table class="table table-hover align-middle">
-            <thead class="table-dark">
-              <tr>
-                <th>Workflow ID</th><th>Sender</th><th>Object Type</th>
-                <th>Receiver</th><th>Step</th><th>Status</th><th>Assignee</th>
+            <thead>
+              <tr class="table-dark">
+                <th>Workflow ID</th>
+                <th>Sender</th>
+                <th>Object Type</th>
+                <th>Receiver</th>
+                <th>Step</th>
+                <th>Status</th>
+                <th>Assignee</th>
+              </tr>
+              <tr class="bg-light">
+                <th><input class="form-control form-control-sm" [(ngModel)]="workflowIdFilter" placeholder="ID" /></th>
+                <th><input class="form-control form-control-sm" [(ngModel)]="senderFilter" placeholder="Sender" /></th>
+                <th><input class="form-control form-control-sm" [(ngModel)]="objectTypeFilter"
+                    placeholder="Object Type" /></th>
+                <th><input class="form-control form-control-sm" [(ngModel)]="receiverFilter" placeholder="Receiver" />
+                </th>
+                <th></th>
+                <th><input class="form-control form-control-sm" [(ngModel)]="statusFilter" placeholder="Status" /></th>
+                <th><input class="form-control form-control-sm" [(ngModel)]="assigneeFilter" placeholder="Assignee" />
+                </th>
               </tr>
             </thead>
+
             <tbody>
-              <tr *ngFor="let m of messages; let i=index"
-                  [class.table-active]="isSelected(m)"
-                  (click)="onRowClick($event, m, i)"
-                  (dblclick)="onRowDoubleClick(m)"
-                  (contextmenu)="onRightClick($event, m)">
+              <tr *ngFor="let m of filteredMessages; let i = index" [class.table-active]="isSelected(m)"
+                (click)="onRowClick($event, m, i)" (dblclick)="onRowDoubleClick(m)"
+                (contextmenu)="onRightClick($event, m)">
                 <td>{{m.id}}</td>
                 <td>{{m.rule.sender}}</td>
                 <td>{{m.rule.objectType}}</td>
                 <td>{{m.rule.receiver}}</td>
                 <td>{{getWorkflowStep(m)}}</td>
                 <td [ngClass]="{
-                    'table-success': getMessageStep(m)==='ACTIVE',
-                    'table-warning': getMessageStep(m)==='READY',
-                    'table-danger':  getMessageStep(m)==='ERROR'
-                  }">
+
+        'table-success': getMessageStep(m)==='READY',
+        'table-danger':  getMessageStep(m)==='ERROR' || getWorkflowStep(m) === 'WARNING'
+      }">
                   {{getMessageStep(m)}}
                 </td>
                 <td>{{m.user?.userName || '-'}}</td>
               </tr>
             </tbody>
+
           </table>
         </div>
-        
+
         <!-- Context Menu -->
         <ul *ngIf="contextMenuVisible" [ngStyle]="{'left.px': contextMenuPosition.x, 'top.px': contextMenuPosition.y}"
-            class="context-menu list-unstyled p-2 bg-white shadow rounded">
+          class="context-menu list-unstyled p-2 bg-white shadow rounded">
           <li (click)="resumeSelected()">Resume</li>
           <li (click)="restartSelected()">Restart</li>
           <li (click)="assignSelected()">Assign</li>
           <li (click)="deleteSelected()">Delete</li>
         </ul>
+        <div *ngIf="showAssignModal" class="modal-backdrop-custom">
+          <div class="modal-dialog-custom bg-white rounded p-4 shadow">
+            <h5 class="mb-3">Assign Messages</h5>
 
+            <select class="form-select mb-3" (change)="assignUserToSelected($event)">
+              <option disabled selected value="">Select user</option>
+              <option *ngFor="let user of users" [value]="user.id">{{ user.userName }}</option>
+            </select>
+
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-secondary me-2" (click)="closeAssignModal()">Cancel</button>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </div>

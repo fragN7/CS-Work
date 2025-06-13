@@ -145,3 +145,15 @@ table th, table td {
   vertical-align: middle !important;
   text-align: center;
 }
+
+.table-card {
+  max-width: 98%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.table thead input.form-control-sm {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.4rem;
+  text-align: center;
+}

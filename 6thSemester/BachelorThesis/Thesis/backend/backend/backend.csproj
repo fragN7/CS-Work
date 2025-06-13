@@ -42,7 +42,7 @@
 
     <ItemGroup>
       <Folder Include="archive\certificates\" />
-      <Folder Include="archive\out\" />
+      <Folder Include="archive\in\" />
       <Folder Include="archive\scripts\xsl\" />
       <Folder Include="archive\temp\" />
       <Folder Include="Migrations\" />

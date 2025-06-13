@@ -19,6 +19,14 @@ export interface UserUI extends User {
 export class UserComponent implements OnInit{
   users: UserUI[] = [];
   username?: string = '';
+  userFilter: string = '';
+
+get filteredUsers() {
+  return this.users.filter(user =>
+    !this.userFilter || user.userName?.toLowerCase().includes(this.userFilter.toLowerCase())
+  );
+}
+
   constructor(private service: ServiceComponent, private userService: AuthService, private router: Router) { }
 
   ngOnInit() {
@@ -63,7 +71,11 @@ export class UserComponent implements OnInit{
           },
           error: (err) => {
             console.error(`Failed to delete User ${user.id}`, err);
-            alert('User in use, can not be deleted');
+            if(user.userName == "actis"){
+              alert('User actis cannot be deleted');
+            } else {
+              alert('User in use, cannot be deleted');
+            }
           }
         });
       });

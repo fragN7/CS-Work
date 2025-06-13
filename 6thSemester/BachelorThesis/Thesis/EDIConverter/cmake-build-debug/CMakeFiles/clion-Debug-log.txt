@@ -1,4 +1,0 @@
-C:\Users\Alen\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/Alen/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -DCMAKE_TOOLCHAIN_FILE=C:\Users\Alen\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x64-mingw-dynamic -G Ninja -S C:\Users\Alen\Documents\GithubPrivate\CS-Work\6thSemester\BachelorThesis\Thesis\EDIConverter -B C:\Users\Alen\Documents\GithubPrivate\CS-Work\6thSemester\BachelorThesis\Thesis\EDIConverter\cmake-build-debug
--- Configuring done (0.2s)
--- Generating done (0.1s)
--- Build files have been written to: C:/Users/Alen/Documents/GithubPrivate/CS-Work/6thSemester/BachelorThesis/Thesis/EDIConverter/cmake-build-debug

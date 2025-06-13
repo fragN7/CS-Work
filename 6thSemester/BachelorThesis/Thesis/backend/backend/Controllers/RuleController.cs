@@ -12,12 +12,10 @@ namespace backend.Controllers;
 public class RuleController : ControllerBase
 {
     private readonly DatabaseContext context;
-    private readonly IConfiguration configuration;
 
-    public RuleController(DatabaseContext context, IConfiguration configuration)
+    public RuleController(DatabaseContext context)
     {
         this.context = context;
-        this.configuration = configuration;
     }
     
     
@@ -36,7 +34,8 @@ public class RuleController : ControllerBase
                     EF.Functions.Like(r.ObjectType, objectTypePattern) && 
                     EF.Functions.Like(r.Receiver, receiverPattern) && 
                     EF.Functions.Like(r.Workflow.Name, workflowPattern) && 
-                    EF.Functions.Like(r.TimeStamp, timestampPattern))
+                    EF.Functions.Like(r.TimeStamp, timestampPattern) &&
+                    r.Id.ToString() != "61351627-73e5-420b-a829-2f83740f6ee6")
             .Include(r => r.Workflow)
             .ToListAsync();
 
@@ -71,8 +70,7 @@ public class RuleController : ControllerBase
         var actualRule = await this.context.Rules.FirstOrDefaultAsync(r => 
             r.Sender == rule.Sender && 
             r.ObjectType == rule.ObjectType &&
-            r.Receiver == rule.Receiver &&
-            r.WorkflowId == rule.WorkflowId);
+            r.Receiver == rule.Receiver);
 
         if (actualRule != null)
         {
@@ -133,7 +131,7 @@ public class RuleController : ControllerBase
         }
 
         actualRule.WorkflowId = rule.WorkflowId;
-        actualRule.Workflow = workflow!;
+        actualRule.Workflow = workflow;
         actualRule.TimeStamp = rule.TimeStamp;
         
         await this.context.SaveChangesAsync();

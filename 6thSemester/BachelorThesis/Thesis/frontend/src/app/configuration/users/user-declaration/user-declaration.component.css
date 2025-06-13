@@ -157,3 +157,13 @@
     }
   }
   
+
+  .input-group .btn {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+.fixed-bottom-button-group .btn {
+  min-width: 120px; /* Optional, for a wider button */
+  text-align: center; /* Ensure text is centered */
+}

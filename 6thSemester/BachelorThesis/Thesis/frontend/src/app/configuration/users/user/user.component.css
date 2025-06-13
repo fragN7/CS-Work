@@ -141,3 +141,8 @@ html, body {
 }
 
 /* Your existing CSS stays the same */
+.table thead input.form-control-sm {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+}

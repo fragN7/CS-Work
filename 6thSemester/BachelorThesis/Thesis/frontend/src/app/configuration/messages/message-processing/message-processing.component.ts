@@ -10,6 +10,9 @@ import {Router} from '@angular/router';
   styleUrl: './message-processing.component.css'
 })
 export class MessageProcessingComponent implements OnInit, OnDestroy{
+  stepNameFilter: string = '';
+resultFilter: string = '';
+
   message: Message = null!;
   selectedStepId: string | null = null;
   username?: string = '';
@@ -43,6 +46,14 @@ export class MessageProcessingComponent implements OnInit, OnDestroy{
   userLogout(){
     this.userService.logout();
   }
+
+  get filteredSteps() {
+  return this.message?.messageSteps?.filter(step =>
+    (!this.stepNameFilter || step.stepName?.toLowerCase().includes(this.stepNameFilter.toLowerCase())) &&
+    (!this.resultFilter || step.result?.toLowerCase().includes(this.resultFilter.toLowerCase()))
+  ) ?? [];
+}
+
 
   getMessageById(messageId: string){
     this.service.getMessageById(messageId).subscribe(

@@ -13,12 +13,10 @@ namespace backend.Controllers;
 public class PartnerController : ControllerBase
 {
     private readonly DatabaseContext context;
-    private readonly IConfiguration configuration;
 
-    public PartnerController(DatabaseContext context, IConfiguration configuration)
+    public PartnerController(DatabaseContext context)
     {
         this.context = context;
-        this.configuration = configuration;
     }
     
     [HttpGet("partners/{name}/{ipAddress}/{certificate}")]
@@ -32,7 +30,8 @@ public class PartnerController : ControllerBase
         var partners = await this.context.Partners.Where
         (p => EF.Functions.Like(p.Name, namePattern) && 
               EF.Functions.Like(p.IpAddress, ipAddressPattern) && 
-              EF.Functions.Like(p.Certificate, certificatePattern))
+              EF.Functions.Like(p.Certificate, certificatePattern) &&
+              p.Id.ToString() != "26a31e0a-1c62-46a8-a716-a6e8fe18a158")
             .ToListAsync();
         
         if (partners == null)
@@ -75,14 +74,8 @@ public class PartnerController : ControllerBase
         var fileName = Path.GetFileName(file.FileName);
         var finalFilePath = Path.Combine(targetFolder, fileName);
 
-        // Save the file
-        await using (var stream = new FileStream(finalFilePath, FileMode.Create))
-        {
-            await file.CopyToAsync(stream);
-        }
-
-        // Return path relative to archive folder
-        var relativeFilePath = Path.Combine("archive", "certificates", fileName);
+        await using var stream = new FileStream(finalFilePath, FileMode.Create);
+        await file.CopyToAsync(stream);
     }
     
     private static void DeleteCertificate(string fileName)
@@ -102,7 +95,7 @@ public class PartnerController : ControllerBase
         }
     }
 
-    private async Task<ActionResult<Certificate>> AddCertificate(IFormFile certificate)
+    private async Task AddCertificate(IFormFile certificate)
     {
         if (certificate == null || certificate.Length == 0)
         {
@@ -127,7 +120,7 @@ public class PartnerController : ControllerBase
         this.context.Certificates.Add(cert);
         await this.context.SaveChangesAsync();
 
-        return Ok(cert);
+        Ok(cert);
     }
     
     [HttpPost("partner/add")]
@@ -149,7 +142,7 @@ public class PartnerController : ControllerBase
             Certificate = partner.Certificate
         };
 
-        this.AddCertificate(partner.CertificateFile);
+        await this.AddCertificate(partner.CertificateFile);
         this.CopyCertificate(partner.CertificateFile);
 
         await this.context.Partners.AddAsync(addPartner);
@@ -168,8 +161,15 @@ public class PartnerController : ControllerBase
         {
             throw new Exception("This partner doesn't exist");
         }
-        
-        DeleteCertificate(actualPartner.Certificate);
+
+        try
+        {
+            DeleteCertificate(actualPartner.Certificate);
+        }
+        catch (Exception ex)
+        {
+            // ignored
+        }
 
         actualPartner.Name = partner.Name;
         actualPartner.IpAddress = partner.IpAddress;
@@ -191,6 +191,14 @@ public class PartnerController : ControllerBase
         if (actualPartner == null)
         {
             throw new Exception("Partner doesn't exist");
+        }
+        
+        var warningPartner = await this.context.Partners
+            .FirstOrDefaultAsync(r => r.Id.ToString() == "d6ef4e0b-e070-48a4-a466-a45426eeb135");
+
+        if (warningPartner == null)
+        {
+            throw new Exception("This partner cannot be deleted");
         }
 
         var certificate = await this.context.Certificates.FirstOrDefaultAsync(c => c.Sender == actualPartner.Name);

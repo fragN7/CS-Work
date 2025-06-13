@@ -16,6 +16,22 @@ export interface RuleUI extends Rule {
 export class RuleComponent implements OnInit{
   rules: RuleUI[] = [];
   username?: string = '';
+  // Filter fields
+senderFilter: string = '';
+objectTypeFilter: string = '';
+receiverFilter: string = '';
+workflowFilter: string = '';
+
+// Computed filtered list
+get filteredRules() {
+  return this.rules.filter(rule =>
+    (!this.senderFilter || rule.sender?.toLowerCase().includes(this.senderFilter.toLowerCase())) &&
+    (!this.objectTypeFilter || rule.objectType?.toLowerCase().includes(this.objectTypeFilter.toLowerCase())) &&
+    (!this.receiverFilter || rule.receiver?.toLowerCase().includes(this.receiverFilter.toLowerCase())) &&
+    (!this.workflowFilter || rule.workflow?.name?.toLowerCase().includes(this.workflowFilter.toLowerCase()))
+  );
+}
+
   constructor(private service: ServiceComponent, private userService: AuthService, private router: Router) { }
 
   ngOnInit() {

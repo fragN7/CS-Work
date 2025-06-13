@@ -12,12 +12,10 @@ namespace backend.Controllers;
 public class WorkflowController : ControllerBase
 {
     private readonly DatabaseContext context;
-    private readonly IConfiguration configuration;
 
-    public WorkflowController(DatabaseContext context, IConfiguration configuration)
+    public WorkflowController(DatabaseContext context)
     {
         this.context = context;
-        this.configuration = configuration;
     }
     
     [HttpGet("workflows/{pattern}")]
@@ -25,7 +23,9 @@ public class WorkflowController : ControllerBase
     public async Task<ActionResult<List<Workflow>>> GetWorkflows(string pattern)
     {
         var likePattern = pattern.Replace('*', '%');
-        var workflows = await this.context.Workflows.Where(w => EF.Functions.Like(w.Name, likePattern)).ToListAsync();
+        var workflows = await this.context.Workflows
+            .Where(w => EF.Functions.Like(w.Name, likePattern) &&
+                        w.Id.ToString() != "d6ef4e0b-e070-48a4-a466-a45426eeb135").ToListAsync();
 
         if (workflows == null)
         {
@@ -144,6 +144,14 @@ public class WorkflowController : ControllerBase
         if (actualWorkflow == null)
         {
             throw new Exception("Workflow doesn't exist");
+        }
+        
+        var warningWorkflow = await this.context.Workflows
+            .FirstOrDefaultAsync(r => r.Id.ToString() == "d6ef4e0b-e070-48a4-a466-a45426eeb135");
+
+        if (warningWorkflow == null)
+        {
+            throw new Exception("This workflow cannot be deleted");
         }
 
         var rule = await this.context.Rules.FirstOrDefaultAsync(r => r.WorkflowId.ToString() == id);

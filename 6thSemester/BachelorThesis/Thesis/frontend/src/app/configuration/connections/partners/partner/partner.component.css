@@ -157,3 +157,23 @@ html, body {
   font-weight: 600;
   min-width: 120px;
 }
+
+.table-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  margin: auto;
+  max-width: 98%;
+}
+
+.table thead th {
+  border-bottom: 2px solid #dee2e6 !important; /* keep header border */
+}
+
+.table tbody td {
+  border: none !important; /* remove row lines */
+}
+
+thead input.form-control-sm {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.4rem;
+}

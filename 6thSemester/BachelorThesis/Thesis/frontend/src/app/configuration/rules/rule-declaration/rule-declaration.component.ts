@@ -49,7 +49,7 @@ export class RuleDeclarationComponent implements OnInit, OnDestroy{
   }
 
   ngOnInit() {
-    
+
     const ruleId = localStorage.getItem('ruleId')?.toString();
     const saveType = localStorage.getItem('saveType');
     this.isEditMode = saveType === 'edit';
@@ -85,10 +85,7 @@ export class RuleDeclarationComponent implements OnInit, OnDestroy{
   }
 
   allFormsValid(): boolean {
-    return this.senderForm.valid &&
-           this.objectTypeForm.valid &&
-           this.receiverForm.valid &&
-           this.timeStampForm.valid &&
+    return this.timeStampForm.valid &&
            this.workflowForm.valid;
   }
 
@@ -141,7 +138,6 @@ export class RuleDeclarationComponent implements OnInit, OnDestroy{
     } else {
       this.service.addRule(this.rule.sender, this.rule.objectType, this.rule.receiver, this.rule.timeStamp, this.rule.workflow.id);
     }
-    this.router.navigateByUrl("/rules");
   }
 
 }

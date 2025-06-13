@@ -233,7 +233,8 @@ export class ServiceComponent implements OnInit{
       })
     ).subscribe(
       response => {
-        console.log("Cannot assign message", response);
+        console.log("Assigned message", response);
+        window.location.reload();
       },
       error => {
         console.error("Error while assigning message", error);
@@ -309,9 +310,26 @@ export class ServiceComponent implements OnInit{
     ).subscribe(
       response => {
         console.log("Workflow added successfully", response);
+        this.router.navigateByUrl("/workflows");
       },
       error => {
-        console.error("Error while adding workflow", error);
+        console.error("Error while adding workflow", error.error);
+
+        let rawError = error.error;
+        let message = '';
+
+        if (typeof rawError === 'string') {
+          const match = rawError.match(/System\.Exception:\s*(.*)/);
+          if (match && match[1]) {
+            message = match[1].split('\n')[0].trim();
+          } else {
+            message = rawError.split('\n')[0].trim();
+          }
+        } else {
+          message = 'An unknown error occurred.';
+        }
+
+        alert(`Error while adding workflow":\n${message}`);
       }
     );
   }
@@ -332,9 +350,27 @@ export class ServiceComponent implements OnInit{
     ).subscribe(
       response => {
         console.log("Workflow updated successfully", response);
+        this.router.navigateByUrl("/workflows");
+
       },
       error => {
-        console.error("Error while updating workflow", error);
+        console.error("Error while updating workflow", error.error);
+
+        let rawError = error.error;
+        let message = '';
+
+        if (typeof rawError === 'string') {
+          const match = rawError.match(/System\.Exception:\s*(.*)/);
+          if (match && match[1]) {
+            message = match[1].split('\n')[0].trim();
+          } else {
+            message = rawError.split('\n')[0].trim();
+          }
+        } else {
+          message = 'An unknown error occurred.';
+        }
+
+        alert(`Error while updating workflow":\n${message}`);
       }
     );
   }
@@ -398,9 +434,26 @@ export class ServiceComponent implements OnInit{
     ).subscribe(
       response => {
         console.log("Rule added successfully", response);
+        this.router.navigateByUrl("/rules");
       },
       error => {
-        console.error("Error while adding rule", error);
+        console.error("Error while adding rule", error.error);
+
+        let rawError = error.error;
+        let message = '';
+
+        if (typeof rawError === 'string') {
+          const match = rawError.match(/System\.Exception:\s*(.*)/);
+          if (match && match[1]) {
+            message = match[1].split('\n')[0].trim();
+          } else {
+            message = rawError.split('\n')[0].trim();
+          }
+        } else {
+          message = 'An unknown error occurred.';
+        }
+
+        alert(`Error while adding rule":\n${message}`);
       }
     );
   }
@@ -424,9 +477,26 @@ export class ServiceComponent implements OnInit{
     ).subscribe(
       response => {
         console.log("Rule updated successfully", response);
+        this.router.navigateByUrl("/rules");
       },
       error => {
-        console.error("Error while updating rule", error);
+        console.error("Error while updating rule", error.error);
+
+        let rawError = error.error;
+        let message = '';
+
+        if (typeof rawError === 'string') {
+          const match = rawError.match(/System\.Exception:\s*(.*)/);
+          if (match && match[1]) {
+            message = match[1].split('\n')[0].trim();
+          } else {
+            message = rawError.split('\n')[0].trim();
+          }
+        } else {
+          message = 'An unknown error occurred.';
+        }
+
+        alert(`Error while updating rule":\n${message}`);
       }
     );
   }
@@ -501,9 +571,26 @@ export class ServiceComponent implements OnInit{
     ).subscribe(
       response => {
         console.log("Partner updated successfully", response);
+        this.router.navigateByUrl("/partners");
       },
       error => {
-        console.error("Error while updating partner", error);
+        console.error("Error while adding partner", error.error);
+
+        let rawError = error.error;
+        let message = '';
+
+        if (typeof rawError === 'string') {
+          const match = rawError.match(/System\.Exception:\s*(.*)/);
+          if (match && match[1]) {
+            message = match[1].split('\n')[0].trim();
+          } else {
+            message = rawError.split('\n')[0].trim();
+          }
+        } else {
+          message = 'An unknown error occurred.';
+        }
+
+        alert(`Error while adding partner:\n${message}`);
       }
     );
   }
@@ -571,15 +658,13 @@ export class ServiceComponent implements OnInit{
       'receiver' : receiver,
       'standard' : standard,
       'hostName' : hostName,
-      'port' : port
+      'port' : port.toString()
     }
 
     const token = localStorage.getItem('token');
     const headers = new HttpHeaders()
       .append('Authorization', `Bearer ${token}`)
       .append('Content-Type', 'application/json');
-
-    console.log(body);
 
     return this.http.post<any>(`${this.URL}/Certificate/certificate/create/${userId}`, body, {headers});
   }

@@ -51,7 +51,7 @@
       <hr class="custom-hr" />
 
       <!-- FORM -->
-      <form class="mx-auto" style="max-width: 400px;" (ngSubmit)="savePartner()">
+      <form class="mx-auto" style="max-width: 400px;">
 
         <div class="mb-4">
           <label for="partnerName" class="form-label">Partner Name</label>
@@ -96,8 +96,19 @@
         </div>
 
         <div class="d-grid">
-          <button type="submit" class="btn btn-success btn-lg">Save</button>
+          <button class="btn btn-success w-100 d-flex justify-content-center"
+                  [disabled]="
+                  !partner.name?.trim() ||
+                  !partner.ipAddress?.trim() ||
+                  !partner.certificate?.trim() ||
+                  !certificate
+                  "
+                  (click)="savePartner()">Save</button>
         </div>
+        <div class="text-danger text-center mb-3" *ngIf="!partner.name?.trim() || !partner.ipAddress?.trim() || !partner.certificate?.trim() || !certificate">
+          Please fill out all fields.
+        </div>
+
 
       </form>
 

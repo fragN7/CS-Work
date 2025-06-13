@@ -1,3 +1,0 @@
-C:\Users\Alen\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\EdiConverter.dir/objects.a
-C:\Users\Alen\AppData\Local\Programs\CLion\bin\mingw\bin\ar.exe qc CMakeFiles\EdiConverter.dir/objects.a @CMakeFiles\EdiConverter.dir\objects1.rsp
-C:\Users\Alen\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe -Wl,--whole-archive CMakeFiles\EdiConverter.dir/objects.a -Wl,--no-whole-archive -o EdiConverter.exe -Wl,--out-implib,libEdiConverter.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\EdiConverter.dir\linkLibs.rsp

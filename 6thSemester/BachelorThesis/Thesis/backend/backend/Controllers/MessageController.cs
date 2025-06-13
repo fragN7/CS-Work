@@ -1,14 +1,11 @@
 ﻿using System.Diagnostics;
 using System.Text;
 using System.Text.Json;
-using System.Xml.Linq;
 using System.Xml.Serialization;
 using backend.Model;
 using backend.Model.DTO;
 using backend.Repository;
-using EdiFabric.Core.Model.Edi;
 using EdiFabric.Framework.Readers;
-using EdiFabric.Templates.X12004010;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -21,21 +18,19 @@ namespace backend.Controllers;
 public class MessageController : ControllerBase
 {
     private readonly DatabaseContext context;
-    private readonly IConfiguration configuration;
 
-    public MessageController(DatabaseContext context, IConfiguration configuration)
+    public MessageController(DatabaseContext context)
     {
         this.context = context;
-        this.configuration = configuration;
     }
     
-    private async Task<ActionResult<string>> AddStepToMessage(List<WorkflowStep> steps, IFormFile file, Message message)
+    private async Task AddStepToMessage(List<WorkflowStep> steps, IFormFile file, Message message)
     {
         var now = DateTime.UtcNow;
         var archiveRoot = Path.Combine(Directory.GetCurrentDirectory(), "archive");
         var tempFolder = Path.Combine(archiveRoot, "temp");
 
-        var ext = Path.GetExtension(file.FileName)?.TrimStart('.').ToLower() ?? "";
+        var ext = Path.GetExtension(file.FileName).TrimStart('.').ToLower();
 
         string targetFolder;
 
@@ -84,7 +79,7 @@ public class MessageController : ControllerBase
             await this.context.SaveChangesAsync();
         }
 
-        return Ok("Steps added and file saved");
+        Ok("Steps added and file saved");
     }
     
     private static string CopyFile(string filePath, string fileName)
@@ -92,7 +87,6 @@ public class MessageController : ControllerBase
         var now = DateTime.UtcNow;
         var archiveRoot = Path.Combine(Directory.GetCurrentDirectory(), "archive");
 
-        // Recursively find the source file anywhere inside "archive"
         var allFiles = Directory.GetFiles(archiveRoot, "*", SearchOption.AllDirectories);
         var normalizedPath = filePath.TrimStart(Path.DirectorySeparatorChar).Replace('\\', '/');
 
@@ -104,7 +98,7 @@ public class MessageController : ControllerBase
             throw new Exception("Source file not found under archive directory.");
         }
 
-        var ext = Path.GetExtension(fileName)?.TrimStart('.').ToLower() ?? "";
+        var ext = Path.GetExtension(fileName).TrimStart('.').ToLower();
 
         string targetFolder;
         if (ext.Length >= 2 && ext.StartsWith("20"))
@@ -115,7 +109,7 @@ public class MessageController : ControllerBase
         }
         else
         {
-            targetFolder = Path.Combine(archiveRoot, "temp");;
+            targetFolder = Path.Combine(archiveRoot, "temp");
         }
 
         if (!Directory.Exists(targetFolder))
@@ -142,7 +136,7 @@ public class MessageController : ControllerBase
         return relativeFilePath;
     }
     
-    private static string AddFileToArchiveIn(string filePath, string fileName)
+    private static void AddFileToArchiveIn(string filePath, string fileName)
     {
         var archiveRoot = Path.Combine(Directory.GetCurrentDirectory(), "archive");
         var targetFolder = Path.Combine(archiveRoot, "in");
@@ -160,12 +154,9 @@ public class MessageController : ControllerBase
 
         var finalFilePath = Path.Combine(targetFolder, fileName);
         System.IO.File.Copy(sourceFilePath, finalFilePath, overwrite: true);
-
-        var relativeFilePath = Path.Combine("archive", "in", fileName);
-        return relativeFilePath;
     }
 
-    private async Task<ActionResult<string>> PrepareNextStep(MessageStep currentStep, string filePath)
+    private async Task PrepareNextStep(MessageStep currentStep, string filePath)
     {
         var messageSteps = await this.context.MessageSteps
             .Where(ms => ms.MessageId == currentStep.MessageId)
@@ -195,12 +186,11 @@ public class MessageController : ControllerBase
         }
         
         await this.context.SaveChangesAsync();
-        
-        return Ok("Prepared next step");
-        
+
+        Ok("Prepared next step");
     }
     
-    private async Task<string> RunShellScriptAsync(string filePath, string fileName)
+    private async Task RunShellScriptAsync(string filePath, string fileName)
     {
         var scriptPath = Path.Combine(Directory.GetCurrentDirectory(), "archive", "scripts", "shell", fileName);
 
@@ -232,42 +222,29 @@ public class MessageController : ControllerBase
         var timeout = TimeSpan.FromSeconds(30);
         using var cts = new CancellationTokenSource(timeout);
 
-        process.OutputDataReceived += (sender, e) =>
+        process.OutputDataReceived += (_, e) =>
         {
-            if (!string.IsNullOrEmpty(e.Data))
-            {
-                Console.WriteLine($"OUTPUT: {e.Data}");
-                outputBuilder.AppendLine(e.Data);
-            }
+            if (string.IsNullOrEmpty(e.Data)) return;
+            Console.WriteLine($"OUTPUT: {e.Data}");
+            outputBuilder.AppendLine(e.Data);
         };
 
-        process.ErrorDataReceived += (sender, e) =>
+        process.ErrorDataReceived += (_, e) =>
         {
-            if (!string.IsNullOrEmpty(e.Data))
-            {
-                Console.WriteLine($"ERROR: {e.Data}");
-                errorBuilder.AppendLine(e.Data);
-            }
+            if (string.IsNullOrEmpty(e.Data)) return;
+            Console.WriteLine($"ERROR: {e.Data}");
+            errorBuilder.AppendLine(e.Data);
         };
 
         process.Start();
-        
-        Console.WriteLine("Script is ongoing during start");
 
-        // Begin async reading of output and error streams
         process.BeginOutputReadLine();
         process.BeginErrorReadLine();
 
-        await process.WaitForExitAsync(cts.Token); // Available in .NET 5+
+        await process.WaitForExitAsync(cts.Token); 
         
-        Console.WriteLine("Script is ongoing after start");
-
         if (process.ExitCode != 0)
             throw new Exception($"Script execution failed: {errorBuilder}");
-        
-        Console.WriteLine(outputBuilder.ToString());
-        Console.WriteLine("Script Ended");
-        return outputBuilder.ToString();
     }
     
     /*
@@ -367,13 +344,7 @@ public class MessageController : ControllerBase
 
         var files = Directory.GetFiles(path);
         
-        if (files.Length > 0)
-        {
-            // Process files
-            return Ok(new { message = "Files found", count = files.Length });
-        }
-
-        return Ok(new { message = "No files found" });
+        return files.Length > 0 ? Ok(new { message = "Files found", count = files.Length }) : Ok(new { message = "No files found" });
     }
     
     [HttpGet("messages/in/check")]
@@ -511,7 +482,7 @@ public class MessageController : ControllerBase
                 }
                 catch (Exception ex)
                 {
-                    messageStep.Result = "ERROR";
+                    messageStep.Result = $"ERROR {ex.Message}";
                     messageStep.EndedTime = DateTime.UtcNow;
                     await this.context.SaveChangesAsync(); 
                 }
@@ -526,7 +497,7 @@ public class MessageController : ControllerBase
                 }
                 catch (Exception ex)
                 {
-                    messageStep.Result = "ERROR";
+                    messageStep.Result = $"ERROR {ex.Message}";
                     messageStep.EndedTime = DateTime.UtcNow;
                     await this.context.SaveChangesAsync(); 
                 }
@@ -544,25 +515,20 @@ public class MessageController : ControllerBase
                     var jsonString = await System.IO.File.ReadAllTextAsync(partnerCertificateFilePath);
                     var certInfo = JsonSerializer.Deserialize<CertificateDTO>(jsonString);
 
-                    Console.WriteLine("JUICE WRLDDD 1");
                     if (certInfo == null)
                     {
                         throw new Exception("Standard not available at the moment");
                     }
                     
-                    var standard = certInfo.Standard;
-                    
                     await using var ediStream = System.IO.File.OpenRead(relativeFilePath);
                     using var ediReader = new X12Reader(ediStream, "EdiFabric.Templates.X12");
-                    Console.WriteLine("JUICE WRLDDD 2");
-                    object ediTransaction = new Object();
+                    var ediTransaction = new Object();
                     
                     while (await ediReader.ReadAsync())
                     {
                         ediTransaction = ediReader.Item;
                         break;
                     }
-                    Console.WriteLine("JUICE WRLDDD 3");
                     
                     if (ediTransaction == null)
                         throw new Exception("No transaction set found in the EDI file.");
@@ -570,14 +536,10 @@ public class MessageController : ControllerBase
                     var serializer = new XmlSerializer(ediTransaction.GetType());
                     await using var stringWriter = new StringWriter();
                     serializer.Serialize(stringWriter, ediTransaction);
-                    Console.WriteLine(stringWriter.ToString());
-
-
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex);
-                    messageStep.Result = "ERROR";
+                    messageStep.Result = $"ERROR {ex.Message}";
                     messageStep.EndedTime = DateTime.UtcNow;
                     await this.context.SaveChangesAsync();
                 }
@@ -602,7 +564,7 @@ public class MessageController : ControllerBase
                 }
                 catch (Exception ex)
                 {
-                    messageStep.Result = "ERROR";
+                    messageStep.Result = $"ERROR {ex.Message}";
                     messageStep.EndedTime = DateTime.UtcNow;
                     await this.context.SaveChangesAsync();
                 }
@@ -640,13 +602,14 @@ public class MessageController : ControllerBase
                     messageStep.Result = "ERROR";
                     messageStep.EndedTime = DateTime.UtcNow;
                     await this.context.SaveChangesAsync();
+                    throw new Exception($"ERROR: {ex.Message}");
                 }
                 
                 break;
             }
         }
 
-        if (messageStep?.Message?.Rule?.TimeStamp != "PRE-DEFAULT") 
+        if (messageStep.Message.Rule.TimeStamp != "PRE-DEFAULT") 
             return Ok(messageStep);
         
         var rule = await this.context.Rules.Where(r => r.TimeStamp == "PRE-DEFAULT")

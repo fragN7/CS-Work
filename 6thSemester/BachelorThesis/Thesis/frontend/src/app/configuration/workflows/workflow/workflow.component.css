@@ -148,3 +148,15 @@ table tbody tr:hover {
     width: 90% !important;
   }
 }
+
+.table-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 8px;
+  max-width: 98%;
+  margin: auto;
+}
+
+thead input.form-control-sm {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.4rem;
+}
