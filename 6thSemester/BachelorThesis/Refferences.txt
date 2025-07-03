@@ -1,2 +1,0 @@
-sistem de management de organizare a ambulantelor, a resurselor mobile, echipamente, suport decision, suport system sa sugereze diagnostic
-dispatcher - paramedici

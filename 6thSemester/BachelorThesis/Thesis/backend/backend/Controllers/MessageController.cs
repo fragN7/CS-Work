@@ -138,7 +138,10 @@ public class MessageController : ControllerBase
     
     private static void AddFileToArchiveIn(string filePath, string fileName)
     {
+        Console.WriteLine(fileName);
         var archiveRoot = Path.Combine(Directory.GetCurrentDirectory(), "archive");
+        
+        Console.WriteLine(archiveRoot);
         var targetFolder = Path.Combine(archiveRoot, "in");
 
         if (!Directory.Exists(targetFolder))
@@ -593,7 +596,7 @@ public class MessageController : ControllerBase
                     
                     messageStep.Result = "OK";
                     messageStep.EndedTime = DateTime.UtcNow;
-                    AddFileToArchiveIn(filePath, fileName);
+                    AddFileToArchiveIn(relativeFilePath, fileName);
                     await this.context.SaveChangesAsync();
                     await this.PrepareNextStep(messageStep, relativeFilePath);
                 }
